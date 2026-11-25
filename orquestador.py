@@ -59,6 +59,8 @@ no normalizás, no corregís, no completás, no buscás duplicados. Eso lo hace 
   el nombre y la descripción de un producto son los del bloque que contiene SU código, aunque el nombre vaya
   arriba del código: lo que viene después del código es del producto siguiente. Un título cortado por un
   salto de página pertenece al bloque que continúa en la página siguiente.
+- En "notas", llamá GTIN al código de barras del producto (no EAN), aunque la columna del archivo se llame de
+  otra forma. Los nombres de columna dentro de "campos" y "contexto" se copian tal cual.
 - Si una hoja de Excel lista productos discontinuados, retirados o dados de baja (no son productos nuevos),
   no la extraigas: anotala en "notas".
 - Si el archivo es una ficha de seguridad (FDS), no hay filas de producto: completá "fds". Para leerla pasale a
