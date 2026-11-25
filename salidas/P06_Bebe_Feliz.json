@@ -1,0 +1,1090 @@
+[
+  {
+    "item_id": "P06:BF-503",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7798993880961",
+      "descripcion": "LECHE INFANTIL CRECER ETAPA 1 X 400 G",
+      "marca": "CRECER",
+      "tipo": "LECHE INFANTIL",
+      "variante": "ETAPA 1",
+      "contenido": 400,
+      "unidad": "G",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-ALI-LEC",
+      "precio_costo": 707.39,
+      "moneda": "UYU",
+      "proveedor_id": "P06",
+      "codigo_proveedor": "BF-503"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "marca": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "tipo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "variante": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "contenido": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "unidad": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "unidades_por_envase": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "categoria": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "precio_costo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "moneda": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "proveedor_id": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      }
+    }
+  },
+  {
+    "item_id": "P06:BF-509",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7794244558504",
+      "descripcion": "PAÑALES PEQUEÑOS PASOS G X 60 UN PACK 2",
+      "marca": "PEQUEÑOS PASOS",
+      "tipo": "PAÑALES",
+      "variante": "G",
+      "contenido": 60,
+      "unidad": "UN",
+      "unidades_por_envase": 2,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-PAN-INF",
+      "precio_costo": 1101.14,
+      "moneda": "UYU",
+      "proveedor_id": "P06",
+      "codigo_proveedor": "BF-509"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "marca": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "tipo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "variante": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "contenido": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "unidad": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "unidades_por_envase": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "categoria": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "precio_costo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "moneda": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "proveedor_id": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      }
+    }
+  },
+  {
+    "item_id": "P06:BF-521",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7792102155315",
+      "descripcion": "PAÑALES PEQUEÑOS PASOS XG X 36 UN PACK 2",
+      "marca": "PEQUEÑOS PASOS",
+      "tipo": "PAÑALES",
+      "variante": "XG",
+      "contenido": 36,
+      "unidad": "UN",
+      "unidades_por_envase": 2,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-PAN-INF",
+      "precio_costo": 876.68,
+      "moneda": "UYU",
+      "proveedor_id": "P06",
+      "codigo_proveedor": "BF-521"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "marca": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "tipo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "variante": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "contenido": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "unidad": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "unidades_por_envase": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "categoria": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "precio_costo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "moneda": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "proveedor_id": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      }
+    }
+  },
+  {
+    "item_id": "P06:BF-593",
+    "estado": "a_revision",
+    "duplicado_de": "SKU102653",
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ],
+    "ficha": {
+      "gtin": null,
+      "descripcion": "TOALLITAS HUMEDAS PEQUEÑOS PASOS SIN PERFUME X 80 UN",
+      "marca": "PEQUEÑOS PASOS",
+      "tipo": "TOALLITAS HUMEDAS",
+      "variante": "SIN PERFUME",
+      "contenido": 80,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-PAN-TOA",
+      "precio_costo": 95.67,
+      "moneda": "UYU",
+      "proveedor_id": "P06",
+      "codigo_proveedor": "BF-593"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "marca": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "tipo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "variante": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "contenido": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "unidad": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "unidades_por_envase": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "categoria": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "precio_costo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "moneda": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "proveedor_id": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      }
+    }
+  },
+  {
+    "item_id": "P06:BF-596",
+    "estado": "a_revision",
+    "duplicado_de": "SKU102121",
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ],
+    "ficha": {
+      "gtin": null,
+      "descripcion": "TOALLITAS HUMEDAS PEQUEÑOS PASOS ALOE X 50 UN",
+      "marca": "PEQUEÑOS PASOS",
+      "tipo": "TOALLITAS HUMEDAS",
+      "variante": "ALOE",
+      "contenido": 50,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-PAN-TOA",
+      "precio_costo": 68.16,
+      "moneda": "UYU",
+      "proveedor_id": "P06",
+      "codigo_proveedor": "BF-596"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "marca": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "tipo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "variante": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "contenido": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "unidad": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "unidades_por_envase": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "categoria": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "precio_costo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "moneda": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "proveedor_id": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      }
+    }
+  },
+  {
+    "item_id": "P06:BF-533",
+    "estado": "duplicado",
+    "duplicado_de": "SKU102562",
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7793806669115",
+      "descripcion": "LECHE INFANTIL CRECER ETAPA 3 X 400 G",
+      "marca": "CRECER",
+      "tipo": "LECHE INFANTIL",
+      "variante": "ETAPA 3",
+      "contenido": 400,
+      "unidad": "G",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-ALI-LEC",
+      "precio_costo": 626.29,
+      "moneda": "UYU",
+      "proveedor_id": "P06",
+      "codigo_proveedor": "BF-533"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "marca": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "tipo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "variante": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "contenido": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "unidad": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "unidades_por_envase": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "categoria": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "precio_costo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "moneda": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "proveedor_id": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      }
+    }
+  },
+  {
+    "item_id": "P06:BF-575",
+    "estado": "duplicado",
+    "duplicado_de": "SKU103794",
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7796618742595",
+      "descripcion": "LECHE INFANTIL CRECER ETAPA 1 X 800 G",
+      "marca": "CRECER",
+      "tipo": "LECHE INFANTIL",
+      "variante": "ETAPA 1",
+      "contenido": 800,
+      "unidad": "G",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-ALI-LEC",
+      "precio_costo": 1202.01,
+      "moneda": "UYU",
+      "proveedor_id": "P06",
+      "codigo_proveedor": "BF-575"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "marca": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "tipo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "variante": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "contenido": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "unidad": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "unidades_por_envase": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "categoria": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "precio_costo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "moneda": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "proveedor_id": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      }
+    }
+  },
+  {
+    "item_id": "P06:BF-581",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7795958112549",
+      "descripcion": "LECHE INFANTIL CRECER ETAPA 3 X 800 G",
+      "marca": "CRECER",
+      "tipo": "LECHE INFANTIL",
+      "variante": "ETAPA 3",
+      "contenido": 800,
+      "unidad": "G",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-ALI-LEC",
+      "precio_costo": 1230.97,
+      "moneda": "UYU",
+      "proveedor_id": "P06",
+      "codigo_proveedor": "BF-581"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "marca": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "tipo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "variante": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "contenido": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "unidad": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "unidades_por_envase": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "categoria": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "precio_costo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "moneda": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "proveedor_id": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      }
+    }
+  },
+  {
+    "item_id": "P06:BF-563",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7792103310119",
+      "descripcion": "PAÑALES PEQUEÑOS PASOS XXG X 36 UN",
+      "marca": "PEQUEÑOS PASOS",
+      "tipo": "PAÑALES",
+      "variante": "XXG",
+      "contenido": 36,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-PAN-INF",
+      "precio_costo": 418.2,
+      "moneda": "UYU",
+      "proveedor_id": "P06",
+      "codigo_proveedor": "BF-563"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "marca": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "tipo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "variante": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "contenido": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "unidad": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "unidades_por_envase": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "categoria": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "precio_costo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "moneda": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "proveedor_id": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      }
+    }
+  },
+  {
+    "item_id": "P06:BF-527",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7797745670423",
+      "descripcion": "CREMA PEQUEÑOS PASOS OXIDO DE ZINC X 120 G",
+      "marca": "PEQUEÑOS PASOS",
+      "tipo": "CREMA",
+      "variante": "OXIDO DE ZINC",
+      "contenido": 120,
+      "unidad": "G",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-HIG-CRE",
+      "precio_costo": 252.88,
+      "moneda": "UYU",
+      "proveedor_id": "P06",
+      "codigo_proveedor": "BF-527"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "marca": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "tipo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "variante": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "contenido": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "unidad": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "unidades_por_envase": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "categoria": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "precio_costo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "moneda": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "proveedor_id": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      }
+    }
+  },
+  {
+    "item_id": "P06:BF-512",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7799123291527",
+      "descripcion": "LECHE INFANTIL CRECER ETAPA 2 X 800 G",
+      "marca": "CRECER",
+      "tipo": "LECHE INFANTIL",
+      "variante": "ETAPA 2",
+      "contenido": 800,
+      "unidad": "G",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-ALI-LEC",
+      "precio_costo": 1173.47,
+      "moneda": "UYU",
+      "proveedor_id": "P06",
+      "codigo_proveedor": "BF-512"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "marca": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "tipo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "variante": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "contenido": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "unidad": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "unidades_por_envase": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "categoria": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "precio_costo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "moneda": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "proveedor_id": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      }
+    }
+  },
+  {
+    "item_id": "P06:BF-587",
+    "estado": "duplicado",
+    "duplicado_de": "SKU100777",
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7799616137905",
+      "descripcion": "LECHE INFANTIL CRECER ETAPA 2 X 400 G",
+      "marca": "CRECER",
+      "tipo": "LECHE INFANTIL",
+      "variante": "ETAPA 2",
+      "contenido": 400,
+      "unidad": "G",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-ALI-LEC",
+      "precio_costo": 647.77,
+      "moneda": "UYU",
+      "proveedor_id": "P06",
+      "codigo_proveedor": "BF-587"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "marca": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "tipo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "variante": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "contenido": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "unidad": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "unidades_por_envase": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "categoria": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "precio_costo": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "moneda": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "proveedor_id": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      }
+    }
+  }
+]

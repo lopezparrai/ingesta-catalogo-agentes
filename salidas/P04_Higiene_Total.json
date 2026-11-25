@@ -1,0 +1,1085 @@
+[
+  {
+    "item_id": "P04:HT40006",
+    "estado": "duplicado",
+    "duplicado_de": "SKU100469",
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7797758531421",
+      "descripcion": "GEL DE DUCHA PUREZA HIDRATANTE X 1000 ML",
+      "marca": "PUREZA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "HIDRATANTE",
+      "contenido": 1000,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 137.23,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40006"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      }
+    }
+  },
+  {
+    "item_id": "P04:HT40084",
+    "estado": "a_revision",
+    "duplicado_de": "SKU101806",
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ],
+    "ficha": {
+      "gtin": null,
+      "descripcion": "SHAMPOO AQUAVIVA BEBE X 200 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "SHAMPOO",
+      "variante": null,
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-HIG-BAN",
+      "precio_costo": 94.34,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40084"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      }
+    }
+  },
+  {
+    "item_id": "P04:HT40033",
+    "estado": "a_revision",
+    "duplicado_de": "SKU103983",
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ],
+    "ficha": {
+      "gtin": null,
+      "descripcion": "TOALLITAS HUMEDAS AQUAVIVA ALOE X 80 UN",
+      "marca": "AQUAVIVA",
+      "tipo": "TOALLITAS HUMEDAS",
+      "variante": "ALOE",
+      "contenido": 80,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "BEB-PAN-TOA",
+      "precio_costo": 92.36,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40033"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      }
+    }
+  },
+  {
+    "item_id": "P04:HT40045",
+    "estado": "a_revision",
+    "duplicado_de": "SKU103087",
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ],
+    "ficha": {
+      "gtin": null,
+      "descripcion": "GEL DE DUCHA PUREZA AVENA X 750 ML",
+      "marca": "PUREZA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "AVENA",
+      "contenido": 750,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 119.63,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40045"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      }
+    }
+  },
+  {
+    "item_id": "P04:HT40063",
+    "estado": "a_revision",
+    "duplicado_de": "SKU102254",
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ],
+    "ficha": {
+      "gtin": null,
+      "descripcion": "DESODORANTE ROLL ON AQUAVIVA SIN PERFUME X 50 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "DESODORANTE ROLL ON",
+      "variante": "SIN PERFUME",
+      "contenido": 50,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-DES-BAR",
+      "precio_costo": 83.71,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40063"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      }
+    }
+  },
+  {
+    "item_id": "P04:HT40003",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7796370729803",
+      "descripcion": "ESPUMA DE AFEITAR FILO MENTOL X 300 ML",
+      "marca": "FILO",
+      "tipo": "ESPUMA DE AFEITAR",
+      "variante": "MENTOL",
+      "contenido": 300,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-AFE-ESP",
+      "precio_costo": 135.92,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40003",
+      "peligro_deposito": "pendiente_fds",
+      "numero_onu": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      }
+    }
+  },
+  {
+    "item_id": "P04:HT40081",
+    "estado": "a_revision",
+    "duplicado_de": "SKU101771",
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ],
+    "ficha": {
+      "gtin": null,
+      "descripcion": "DESODORANTE ROLL ON AQUAVIVA MUJER X 50 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "DESODORANTE ROLL ON",
+      "variante": "MUJER",
+      "contenido": 50,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-DES-BAR",
+      "precio_costo": 85.86,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40081"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      }
+    }
+  },
+  {
+    "item_id": "P04:HT40054",
+    "estado": "duplicado",
+    "duplicado_de": "SKU102261",
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7796018158446",
+      "descripcion": "GEL DE DUCHA AQUAVIVA COCO X 400 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "COCO",
+      "contenido": 400,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 84.83,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40054"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      }
+    }
+  },
+  {
+    "item_id": "P04:HT40009",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7796251060483",
+      "descripcion": "GEL DE DUCHA AQUAVIVA COCO X 1000 ML",
+      "marca": "AQUAVIVA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "COCO",
+      "contenido": 1000,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 165.27,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40009"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      }
+    }
+  },
+  {
+    "item_id": "P04:HT40048",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7795320460353",
+      "descripcion": "GEL DE DUCHA PUREZA AVENA X 1000 ML",
+      "marca": "PUREZA",
+      "tipo": "GEL DE DUCHA",
+      "variante": "AVENA",
+      "contenido": 1000,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-DUC",
+      "precio_costo": 160.39,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40048"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      }
+    }
+  },
+  {
+    "item_id": "P04:HT40021",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7795697680668",
+      "descripcion": "ESPUMA DE AFEITAR FILO PIEL SENSIBLE X 300 ML",
+      "marca": "FILO",
+      "tipo": "ESPUMA DE AFEITAR",
+      "variante": "PIEL SENSIBLE",
+      "contenido": 300,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-AFE-ESP",
+      "precio_costo": 134.36,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40021",
+      "peligro_deposito": "pendiente_fds",
+      "numero_onu": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      }
+    }
+  },
+  {
+    "item_id": "P04:HT40066",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7792609650870",
+      "descripcion": "ESPUMA DE AFEITAR FILO MENTOL X 200 ML",
+      "marca": "FILO",
+      "tipo": "ESPUMA DE AFEITAR",
+      "variante": "MENTOL",
+      "contenido": 200,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-AFE-ESP",
+      "precio_costo": 98.58,
+      "moneda": "UYU",
+      "proveedor_id": "P04",
+      "codigo_proveedor": "HT40066",
+      "peligro_deposito": "pendiente_fds",
+      "numero_onu": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      }
+    }
+  }
+]

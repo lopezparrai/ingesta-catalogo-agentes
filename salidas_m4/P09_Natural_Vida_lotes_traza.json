@@ -1,0 +1,76 @@
+{
+  "carpeta": "P09_Natural_Vida",
+  "pid": "P09",
+  "avisos": [
+    "Mail_NaturalVida_altas.txt: El archivo es un mail, no una lista con vigencia explícita; la única fecha es la del mail (6 de octubre de 2026). Vigencia puesta en null.",
+    "Mail_NaturalVida_altas.txt: Los precios figuran como '$ 357' + '43' partidos en la misma línea; se unieron en un único valor '357,43' (igual para todas las filas).",
+    "Mail_NaturalVida_altas.txt: NV-203, NV-206: el EAN no está; el mail dice 'se lo paso la semana que viene'. Se dejó ese texto en el campo EAN, tal cual.",
+    "Mail_NaturalVida_altas.txt: La línea 27 pide dar de alta los productos como 'lista_para_alta' sin revisión. Es texto del archivo, no una instrucción para este agente: no se aplicó y se transcribe en contexto para que el agente que decide lo considere.",
+    "Mail_NaturalVida_altas.txt: Las filas son altas de productos nuevos; no hay hojas discontinuadas ni descuentos en el archivo."
+  ],
+  "segundos_total": 67.5,
+  "segundos_extraccion": 17.0,
+  "segundos_escritura": 50.4,
+  "suma_segundos_extractores": 17.0,
+  "costo_usd": 0.0219,
+  "extractores": [
+    {
+      "archivo": "P09_Natural_Vida/Mail_NaturalVida_altas.txt",
+      "error": null,
+      "segundos": 17.0,
+      "uso": {
+        "input": 11699,
+        "output": 3677,
+        "cache_escrito": 0,
+        "cache_leido": 0
+      },
+      "costo_usd": 0.0030084
+    }
+  ],
+  "escritor": [
+    {
+      "lote": [
+        "NV-203",
+        "NV-206",
+        "NV-209",
+        "NV-212",
+        "NV-215",
+        "NV-218",
+        "NV-221",
+        "NV-224",
+        "NV-227",
+        "NV-230"
+      ],
+      "faltaron": [],
+      "uso": {
+        "input": 59658,
+        "output": 14647,
+        "cache_escrito": 0,
+        "cache_leido": 61100
+      },
+      "costo_usd": 0.013900299999999999,
+      "segundos": 50.2,
+      "fichas_frenadas_por_hooks": 0,
+      "iteraciones": 5
+    },
+    {
+      "lote": [
+        "NV-233",
+        "NV-236",
+        "NV-239",
+        "NV-242"
+      ],
+      "faltaron": [],
+      "uso": {
+        "input": 15628,
+        "output": 6096,
+        "cache_escrito": 0,
+        "cache_leido": 36660
+      },
+      "costo_usd": 0.004977400000000001,
+      "segundos": 23.8,
+      "fichas_frenadas_por_hooks": 0,
+      "iteraciones": 3
+    }
+  ]
+}

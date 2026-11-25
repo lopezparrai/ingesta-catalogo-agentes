@@ -369,6 +369,10 @@ Una diferencia de precio entre listas NO manda a revisión.
   el código del producto figura en «Códigos comerciales» de la sección 1 de esa FDS. Parecerse en el nombre no alcanza.
 - Producto de una familia con FDS (aerosoles, alcoholes, lavandinas, limpiadores, insecticidas, repelentes) cuyo código
   no figura en ninguna FDS: peligro_deposito = pendiente_fds, sin numero_onu y sin fuente para esos campos.
+- Son aerosoles por naturaleza y tratan como familia con FDS: DESODORANTE AEROSOL, LACA, SHAMPOO EN SECO, ESPUMA DE AFEITAR
+  y GEL DE AFEITAR, aunque la descripción del proveedor no diga «aerosol».
+- pendiente_fds NO es un dato obligatorio faltante ni manda a revisión: es un valor válido de peligro_deposito. Un producto sin
+  otro problema (GTIN válido, fuera del catálogo, datos completos) queda lista_para_alta con peligro_deposito = pendiente_fds.
 - Sección 14 «No regulado»: peligro_deposito = no_peligroso, sin numero_onu. Los demás productos no llevan estos campos.
 </fds>
 

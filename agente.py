@@ -1,4 +1,5 @@
 import asyncio
+import copy
 import csv
 import json
 import os
@@ -104,12 +105,13 @@ def texto_estandar() -> str:
     return "<estandar>\n" + "\n".join(partes) + "\n</estandar>"
 
 
-def armar_system(criterio: str) -> list[dict]:
+def armar_system(criterio: str, rol_extra: str = "") -> list[dict]:
     """Orden de la API: tools -> system -> messages. El cache_control en el ÚLTIMO bloque de system
     cachea tools + prompt + criterio + estándar juntos. Nada de esto cambia entre iteraciones."""
     return [
         {"type": "text", "text": SYSTEM_PROMPT},
         {"type": "text", "text": criterio},
+        *([{"type": "text", "text": rol_extra}] if rol_extra else []),
         {"type": "text", "text": texto_estandar(), "cache_control": {"type": "ephemeral"}},
     ]
 
@@ -145,6 +147,11 @@ REGISTRAR_FICHA = {
 PERMISOS = {
     "ingesta": {
         "listar_archivos_proveedores", "leer_lista_proveedor", "leer_excel", "leer_pdf_con_citas",
+        "validar_gtin_tool", "buscar_en_catalogo", "buscar_candidatos_en_catalogo", "leer_estandar",
+        "convertir_contenido_tool", "registrar_ficha",
+    },
+    # M4: el escritor no lee archivos (los leen los extractores); solo valida, consulta el catálogo y registra
+    "escritor": {
         "validar_gtin_tool", "buscar_en_catalogo", "buscar_candidatos_en_catalogo", "leer_estandar",
         "convertir_contenido_tool", "registrar_ficha",
     },
@@ -299,7 +306,7 @@ def correr_hooks_antes(agente: str, nombre: str, entrada: dict) -> str | None:
 
 def hook_despues_traza(traza: list, nombre: str, entrada: dict, texto: str, es_error: bool) -> None:
     """Después de cada tool: traza completa de la corrida (M4: el paso que falló se ve, no se deduce)."""
-    traza.append({"tool": nombre, "input": entrada, "es_error": es_error, "resultado": texto[:500]})
+    traza.append({"tool": nombre, "input": copy.deepcopy(entrada), "es_error": es_error, "resultado": texto[:500]})
 
 
 def _fuente_completa(f) -> bool:
@@ -316,6 +323,7 @@ def hook_al_terminar_fuentes(fichas: dict) -> list[str]:
         fuentes = r.get("fuentes") or {}
         sin_fuente = [c for c, v in (r.get("ficha") or {}).items()
                       if v not in (None, "", []) and c not in CAMPOS_SIN_FUENTE
+                      and not (c == "peligro_deposito" and v == "pendiente_fds")  # ausencia de FDS: no tiene archivo
                       and not _fuente_completa(fuentes.get(c))]
         if sin_fuente:
             problemas.append((item_id, sin_fuente))
@@ -377,7 +385,8 @@ def costo_usd(uso: dict) -> float:
 
 
 async def run_agent(tarea: str, esperados: list[str] | None = None,
-                    max_iteraciones: int = 20, agente: str = "ingesta") -> tuple[str, dict, dict]:
+                    max_iteraciones: int = 20, agente: str = "ingesta",
+                    rol_extra: str = "") -> tuple[str, dict, dict]:
     """Corre el loop. Devuelve (mensaje final, fichas registradas por item_id, métricas).
 
     Si se pasan 'esperados', el loop no deja terminar al agente hasta que estén todos registrados.
@@ -400,8 +409,7 @@ async def run_agent(tarea: str, esperados: list[str] | None = None,
             # M5: el criterio de revisión viene del servidor MCP como prompt
             prompt_mcp = await session.get_prompt("criterio_revision")
             criterio = "\n".join(m.content.text for m in prompt_mcp.messages if getattr(m.content, "text", None))
-            system = armar_system(criterio)
-
+            system = armar_system(criterio, rol_extra)
             tools_mcp = await session.list_tools()
             tools = [
                 {

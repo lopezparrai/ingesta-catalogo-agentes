@@ -1,0 +1,124 @@
+{
+  "carpeta": "P06_Bebe_Feliz",
+  "pid": "P06",
+  "avisos": [
+    "BebeFeliz_altas.xlsx: El libro tiene una sola hoja, 'Altas'. No hay hojas de productos discontinuados, retirados o dados de baja.",
+    "BebeFeliz_altas.xlsx: La hoja no indica vigencia, moneda ni si los precios incluyen IVA; los campos quedan en null.",
+    "BebeFeliz_altas.xlsx: La hoja trae dos columnas de precio: 'Precio lista' y 'Precio c/desc. 8%'. Se extraen ambas tal como aparecen, sin decidir cuál usar.",
+    "BebeFeliz_altas.xlsx: Celda EAN vacía en BF-593 (fila 11) y BF-596 (fila 28); se dejan en null.",
+    "BebeFeliz_altas.xlsx: Celda 'Talle / etapa' vacía en las toallitas y cremas; se deja en null. Los valores de 'Talle / etapa' y 'Cantidad' se mantienen tal como aparecen en el archivo."
+  ],
+  "segundos_total": 265.8,
+  "segundos_extraccion": 22.6,
+  "segundos_escritura": 243.2,
+  "suma_segundos_extractores": 22.6,
+  "costo_usd": 0.0715,
+  "extractores": [
+    {
+      "archivo": "P06_Bebe_Feliz/BebeFeliz_altas.xlsx",
+      "error": null,
+      "segundos": 22.6,
+      "uso": {
+        "input": 6662,
+        "output": 6053,
+        "cache_escrito": 0,
+        "cache_leido": 0
+      },
+      "costo_usd": 0.0036926999999999997
+    }
+  ],
+  "escritor": [
+    {
+      "lote": [
+        "BF-503",
+        "BF-506",
+        "BF-509",
+        "BF-512",
+        "BF-515",
+        "BF-518",
+        "BF-521",
+        "BF-524",
+        "BF-593",
+        "BF-527"
+      ],
+      "faltaron": [],
+      "uso": {
+        "input": 59820,
+        "output": 16182,
+        "cache_escrito": 0,
+        "cache_leido": 71124
+      },
+      "costo_usd": 0.01478424,
+      "segundos": 58.1,
+      "fichas_frenadas_por_hooks": 0,
+      "iteraciones": 6
+    },
+    {
+      "lote": [
+        "BF-530",
+        "BF-533",
+        "BF-536",
+        "BF-539",
+        "BF-542",
+        "BF-545",
+        "BF-548",
+        "BF-551",
+        "BF-554",
+        "BF-557"
+      ],
+      "faltaron": [],
+      "uso": {
+        "input": 111837,
+        "output": 23983,
+        "cache_escrito": 0,
+        "cache_leido": 82978
+      },
+      "costo_usd": 0.02400498,
+      "segundos": 82.6,
+      "fichas_frenadas_por_hooks": 0,
+      "iteraciones": 7
+    },
+    {
+      "lote": [
+        "BF-560",
+        "BF-563",
+        "BF-566",
+        "BF-569",
+        "BF-572",
+        "BF-596",
+        "BF-575",
+        "BF-578",
+        "BF-581",
+        "BF-584"
+      ],
+      "faltaron": [],
+      "uso": {
+        "input": 126236,
+        "output": 24926,
+        "cache_escrito": 0,
+        "cache_leido": 106686
+      },
+      "costo_usd": 0.02615346,
+      "segundos": 85.6,
+      "fichas_frenadas_por_hooks": 0,
+      "iteraciones": 9
+    },
+    {
+      "lote": [
+        "BF-587",
+        "BF-590"
+      ],
+      "faltaron": [],
+      "uso": {
+        "input": 7227,
+        "output": 3576,
+        "cache_escrito": 0,
+        "cache_leido": 35562
+      },
+      "costo_usd": 0.0028663200000000003,
+      "segundos": 15.4,
+      "fichas_frenadas_por_hooks": 0,
+      "iteraciones": 3
+    }
+  ]
+}

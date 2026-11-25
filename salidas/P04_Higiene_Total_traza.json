@@ -1,0 +1,379 @@
+{
+  "uso": {
+    "input": 19206,
+    "output": 6245,
+    "cache_escrito": 0,
+    "cache_leido": 62840
+  },
+  "costo_usd": 0.0056715,
+  "segundos": 27.0,
+  "fichas_frenadas_por_hooks": 0,
+  "traza": [
+    {
+      "tool": "listar_archivos_proveedores",
+      "input": {},
+      "es_error": false,
+      "resultado": "{\"archivos\":[\"P01_Laboratorio_Andes/Actualizacion_precios_Andes.xlsx\",\"P01_Laboratorio_Andes/Lista_de_precios_octubre_2026.pdf\",\"P02_Cosmetica_Rivera/ALTAS RIVERA OCT.xlsx\",\"P02_Cosmetica_Rivera/fichas_de_seguridad/FDS_Brisa_Frescor_desaer.pdf\",\"P02_Cosmetica_Rivera/fichas_de_seguridad/FDS_Brisa_laca.pdf\",\"P03_Distribuidora_Litoral/litoral_altas_102026.csv\",\"P04_Higiene_Total/HigieneTotal_novedades.xlsx\",\"P05_Dermalab/Dermalab_lanzamientos_2026.pdf\",\"P05_Dermalab/Dermalab_lista_precios.xlsx\",\"P0"
+    },
+    {
+      "tool": "leer_excel",
+      "input": {
+        "archivo": "P04_Higiene_Total/HigieneTotal_novedades.xlsx"
+      },
+      "es_error": false,
+      "resultado": "{\"archivo\":\"HigieneTotal_novedades.xlsx\",\"hojas\":{\"Altas\":[{\"fila\":1,\"valores\":[\"Item\",\"Descripcion\",\"Cont.\",\"UM\",\"EAN13\",\"Costo\"]},{\"fila\":2,\"valores\":[\"HT40003\",\"ESPUMA DE AFEITAR FILO MENTOL\",300,\"cc\",\"7796370729803\",135.92]},{\"fila\":3,\"valores\":[\"HT40006\",\"GEL DE DUCHA PUREZA HIDRATANTE\",1,\"Lts\",\"7797758531421\",137.23]},{\"fila\":4,\"valores\":[\"HT40084\",\"Shampoo Aquaviva Bebe\",200,\"cc\",null,94.34]},{\"fila\":5,\"valores\":[\"HT40009\",\"GEL DE DUCHA AQUAVIVA COCO\",1000,\"ml.\",\"7796251060483\",165.27]},{"
+    },
+    {
+      "tool": "validar_gtin_tool",
+      "input": {
+        "gtin": "7796370729803"
+      },
+      "es_error": false,
+      "resultado": "{\"gtin\":\"7796370729803\",\"valido\":true,\"motivo\":null}"
+    },
+    {
+      "tool": "validar_gtin_tool",
+      "input": {
+        "gtin": "7795697680668"
+      },
+      "es_error": false,
+      "resultado": "{\"gtin\":\"7795697680668\",\"valido\":true,\"motivo\":null}"
+    },
+    {
+      "tool": "validar_gtin_tool",
+      "input": {
+        "gtin": "7792609650870"
+      },
+      "es_error": false,
+      "resultado": "{\"gtin\":\"7792609650870\",\"valido\":true,\"motivo\":null}"
+    },
+    {
+      "tool": "buscar_en_catalogo",
+      "input": {
+        "gtin": "7796370729803"
+      },
+      "es_error": false,
+      "resultado": "{\"encontrado\":false,\"gtin\":\"7796370729803\"}"
+    },
+    {
+      "tool": "buscar_en_catalogo",
+      "input": {
+        "gtin": "7795697680668"
+      },
+      "es_error": false,
+      "resultado": "{\"encontrado\":false,\"gtin\":\"7795697680668\"}"
+    },
+    {
+      "tool": "buscar_en_catalogo",
+      "input": {
+        "gtin": "7792609650870"
+      },
+      "es_error": false,
+      "resultado": "{\"encontrado\":false,\"gtin\":\"7792609650870\"}"
+    },
+    {
+      "tool": "convertir_contenido_tool",
+      "input": {
+        "cantidad": 300,
+        "unidad": "cc"
+      },
+      "es_error": false,
+      "resultado": "{\"contenido\":300,\"unidad\":\"ML\"}"
+    },
+    {
+      "tool": "registrar_ficha",
+      "input": {
+        "item_id": "P04:HT40003",
+        "estado": "lista_para_alta",
+        "duplicado_de": null,
+        "motivos_revision": [],
+        "ficha": {
+          "gtin": "7796370729803",
+          "descripcion": "ESPUMA DE AFEITAR FILO MENTOL X 300 ML",
+          "marca": "FILO",
+          "tipo": "ESPUMA DE AFEITAR",
+          "variante": "MENTOL",
+          "contenido": 300,
+          "unidad": "ML",
+          "unidades_por_envase": 1,
+          "principio_activo": null,
+          "concentracion": null,
+          "condicion_venta": null,
+          "categoria": "CUI-AFE-ESP",
+          "precio_costo": 135.92,
+          "moneda": "UYU",
+          "proveedor_id": "P04",
+          "codigo_proveedor": "HT40003",
+          "peligro_deposito": "pendiente_fds",
+          "numero_onu": null
+        },
+        "fuentes": {
+          "gtin": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 2
+          },
+          "descripcion": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 2
+          },
+          "marca": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 2
+          },
+          "tipo": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 2
+          },
+          "variante": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 2
+          },
+          "contenido": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 2
+          },
+          "unidad": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 2
+          },
+          "unidades_por_envase": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 2
+          },
+          "categoria": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 2
+          },
+          "precio_costo": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 2
+          },
+          "moneda": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 2
+          },
+          "proveedor_id": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 2
+          },
+          "codigo_proveedor": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 2
+          }
+        }
+      },
+      "es_error": false,
+      "resultado": "Registrada P04:HT40003 (1 en total)"
+    },
+    {
+      "tool": "registrar_ficha",
+      "input": {
+        "item_id": "P04:HT40021",
+        "estado": "lista_para_alta",
+        "duplicado_de": null,
+        "motivos_revision": [],
+        "ficha": {
+          "gtin": "7795697680668",
+          "descripcion": "ESPUMA DE AFEITAR FILO PIEL SENSIBLE X 300 ML",
+          "marca": "FILO",
+          "tipo": "ESPUMA DE AFEITAR",
+          "variante": "PIEL SENSIBLE",
+          "contenido": 300,
+          "unidad": "ML",
+          "unidades_por_envase": 1,
+          "principio_activo": null,
+          "concentracion": null,
+          "condicion_venta": null,
+          "categoria": "CUI-AFE-ESP",
+          "precio_costo": 134.36,
+          "moneda": "UYU",
+          "proveedor_id": "P04",
+          "codigo_proveedor": "HT40021",
+          "peligro_deposito": "pendiente_fds",
+          "numero_onu": null
+        },
+        "fuentes": {
+          "gtin": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 9
+          },
+          "descripcion": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 9
+          },
+          "marca": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 9
+          },
+          "tipo": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 9
+          },
+          "variante": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 9
+          },
+          "contenido": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 9
+          },
+          "unidad": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 9
+          },
+          "unidades_por_envase": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 9
+          },
+          "categoria": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 9
+          },
+          "precio_costo": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 9
+          },
+          "moneda": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 9
+          },
+          "proveedor_id": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 9
+          },
+          "codigo_proveedor": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 9
+          }
+        }
+      },
+      "es_error": false,
+      "resultado": "Registrada P04:HT40021 (2 en total)"
+    },
+    {
+      "tool": "registrar_ficha",
+      "input": {
+        "item_id": "P04:HT40066",
+        "estado": "lista_para_alta",
+        "duplicado_de": null,
+        "motivos_revision": [],
+        "ficha": {
+          "gtin": "7792609650870",
+          "descripcion": "ESPUMA DE AFEITAR FILO MENTOL X 200 ML",
+          "marca": "FILO",
+          "tipo": "ESPUMA DE AFEITAR",
+          "variante": "MENTOL",
+          "contenido": 200,
+          "unidad": "ML",
+          "unidades_por_envase": 1,
+          "principio_activo": null,
+          "concentracion": null,
+          "condicion_venta": null,
+          "categoria": "CUI-AFE-ESP",
+          "precio_costo": 98.58,
+          "moneda": "UYU",
+          "proveedor_id": "P04",
+          "codigo_proveedor": "HT40066",
+          "peligro_deposito": "pendiente_fds",
+          "numero_onu": null
+        },
+        "fuentes": {
+          "gtin": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 24
+          },
+          "descripcion": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 24
+          },
+          "marca": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 24
+          },
+          "tipo": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 24
+          },
+          "variante": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 24
+          },
+          "contenido": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 24
+          },
+          "unidad": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 24
+          },
+          "unidades_por_envase": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 24
+          },
+          "categoria": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 24
+          },
+          "precio_costo": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 24
+          },
+          "moneda": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 24
+          },
+          "proveedor_id": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 24
+          },
+          "codigo_proveedor": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 24
+          }
+        }
+      },
+      "es_error": false,
+      "resultado": "Registrada P04:HT40066 (3 en total)"
+    }
+  ],
+  "iteraciones": 5
+}
