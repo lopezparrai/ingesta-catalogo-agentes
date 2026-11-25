@@ -14,7 +14,7 @@ pip install -r requirements.txt
 cp .env.example .env        # y completar ANTHROPIC_API_KEY
 ```
 
-El material del curso (`catalogo/`, `consultas/`, `estandar/`, `proveedores/`) va en `data/`; no está en el repo.
+El material del curso está en `data/` (`catalogo/`, `consultas/`, `estandar/`, `proveedores/`), así que el repo se puede correr tal cual está: solo falta la clave de la API en `.env`.
 
 ```bash
 # Todos los proveedores con un comando (Batch API, más barato)
@@ -276,6 +276,7 @@ un prompt (no es un hook) y es el punto más débil que queda.
 | `esquema.py` | Esquema pydantic de la ficha y de la salida; valida las salidas ya generadas. |
 | `orquestador.py` | El diseño multi-agente: extractores en paralelo, consolidación en código y escritor (tiempo real, por proveedor). |
 | `ingesta.py` | **Comando principal**: todos los proveedores, por Batch o en tiempo real, con costo y tiempo. Reusa la extracción y la consolidación del orquestador y ejecuta el escritor por rondas. |
+| `data/` | El material del curso (catálogo, estándar, consultas y los archivos de los 9 proveedores). Son los datos de entrada. |
 | `evaluador.py`, `evals/` | Evaluación contra fichas verificadas a mano. |
 | `prueba_hooks.py`, `prueba_ingesta.py` | Pruebas sin API de los hooks, del motor de rondas y de los controles de precio y de FDS. |
 | `ejercicios/` | Ejercicios sueltos del curso (prompt v2, salida estructurada); el sistema no los usa. |
