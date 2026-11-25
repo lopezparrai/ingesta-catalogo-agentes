@@ -104,6 +104,39 @@ def fuente_txt(f) -> str:
     return " · ".join(partes)
 
 
+def num(v, dec: int = 2) -> str:
+    """Número con formato argentino: 1.234,56."""
+    try:
+        return f"{float(v):,.{dec}f}".replace(",", "§").replace(".", ",").replace("§", ".")
+    except (TypeError, ValueError):
+        return str(v)
+
+
+def usd(v, dec: int = 4) -> str:
+    return f"USD {num(v or 0, dec)}"
+
+
+def pct(v, dec: int = 0) -> str:
+    return f"{num(v * 100, dec)} %"
+
+
+def cargar_extraccion(carpeta: str) -> dict:
+    """Lo que leyó el Agente 1 (extractores), por item_id: [(archivo, campos tal como vinieron, fuente)]."""
+    out = {}
+    if not carpeta:
+        return out
+    for f in sorted((RES / carpeta).glob("P*_extraccion.json")):
+        for e in leer_json(f, []) or []:
+            pid = str(e.get("archivo", f.stem))[:3]
+            for fila in (e.get("datos") or {}).get("filas") or []:
+                out.setdefault(f"{pid}:{fila.get('codigo')}", []).append(
+                    (str(e.get("archivo", "")).split("/")[-1], fila.get("campos") or {}, fila.get("fuente") or {}))
+    return out
+
+
+INSTRUCCION = re.compile(r"nota para el sistema|sin revis|ignor[aá]|dar de alta (todo|sin)|instrucci[oó]n", re.I)
+
+
 def df_fichas(fichas: list[dict]) -> pd.DataFrame:
     filas = []
     for x in fichas:
@@ -134,8 +167,12 @@ def pintar(df: pd.DataFrame):
     disp = disp[cols]
     vacio = lambda v: "" if v is None or v != v else str(v)
     for c in cols:   # todo como texto: así una celda sin dato queda en blanco y no dice "None"
-        disp[c] = disp[c].map(lambda v: f"{v:.2f}" if c == "Precio de costo" and isinstance(v, (int, float)) and v == v else vacio(v))
+        disp[c] = disp[c].map(lambda v: num(v) if c == "Precio de costo" and isinstance(v, (int, float)) and v == v else vacio(v))
     return disp.style.apply(fila, axis=1).set_properties(subset=["Precio de costo"], **{"text-align": "right"})
+
+
+# en la vista de todos los proveedores se suma la columna Proveedor: la descripción se angosta para que el precio no quede cortado
+ANCHO_TODOS = {"Descripción": st.column_config.TextColumn(width="medium")}
 
 
 def resumen_tokens_costo(carpeta: str):
@@ -153,6 +190,53 @@ def resumen_tokens_costo(carpeta: str):
             frenos += 1
             lista_frenos.append(fr)
     return inp, out, cache, costo, frenos, lista_frenos
+
+
+def datos_con_fuente(fichas: list[dict]) -> tuple:
+    """(datos con fuente, datos con valor) sobre todas las fichas."""
+    con = tot = 0
+    for x in fichas:
+        fu = x.get("fuentes") or {}
+        for k, v in (x.get("ficha") or {}).items():
+            if v is not None:
+                tot += 1
+                con += k in fu
+    return con, tot
+
+
+def _bajo_el_capo(carpeta: str, res: dict, fichas: list, extr: dict, inp: int, out: int, cache: int, frenos: int, lista: list):
+    """Vista técnica de una corrida: el recorrido por los agentes, tokens, caché, tiempos y hooks."""
+    trazas = [leer_json(f, {}) for f in sorted((RES / carpeta).glob("P*_traza.json"))]
+    escrito = sum((t.get("uso_escritor") or {}).get("cache_escrito", 0) for t in trazas)
+    lotes = [l for t in trazas for l in (t.get("lotes") or [])]
+    archivos = sorted({a for lect in extr.values() for a, _c, _f in lect})
+    filas = sum(len(v) for v in extr.values())
+    rondas = res.get("rondas") or []
+    st.markdown("#### Bajo el capó")
+    pasos = [("AGENTE 1 · EXTRACTORES", f"{filas} filas leídas de {len(archivos)} archivo(s), en paralelo y solo lectura",
+              f"{num(res.get('segundos_extraccion', 0), 1)} s"),
+             ("ORQUESTADOR · CÓDIGO", f"juntó las filas por código de producto: {len(extr)} productos", "—"),
+             ("AGENTE 2 · ESCRITOR", f"{len(fichas)} fichas en {len(lotes)} lote(s), "
+                                     f"{sum(l.get('iteraciones', 0) for l in lotes)} iteraciones con tools; {len(rondas)} rondas de API",
+              f"{num(res.get('segundos_escritura', 0), 1)} s"),
+             ("HOOKS · CÓDIGO", f"4 controles antes de registrar cada ficha; frenaron {frenos}", "—")]
+    html_pasos = "".join(
+        f"<div class='capo-paso'><div class='capo-t'>{t}</div><div class='capo-d'>{html.escape(d)}</div><div class='capo-s'>{s}</div></div>"
+        + ("<div class='capo-fl'>→</div>" if n < len(pasos) - 1 else "") for n, (t, d, s) in enumerate(pasos))
+    st.markdown(f"<div class='capo'>{html_pasos}</div>", unsafe_allow_html=True)
+    leida = inp + cache + escrito
+    t1, t2, t3, t4 = st.columns(4)
+    t1.metric("Tokens de entrada", num(leida, 0), help="Incluye lo leído de caché y lo escrito en caché.")
+    t2.metric("Tokens de salida", num(out, 0))
+    t3.metric("Entrada leída de caché", pct(cache / leida) if leida else "—",
+              help="Las instrucciones y el estándar se cachean: lo que se relee de caché cuesta una fracción.")
+    t4.metric("Modo", {"tiempo-real": "Tiempo real", "batch": "Batch"}.get(res.get("modo"), res.get("modo", "—")))
+    if lista:
+        st.markdown("**Cuando un hook frenó algo (y por qué):**")
+        for fr in lista:
+            st.markdown(f":red[{html.escape(json.dumps(fr, ensure_ascii=False)[:300])}]")
+    with st.expander("Traza de la corrida (JSON)"):
+        st.json({"resumen": res, "trazas": trazas}, expanded=False)
 
 
 def _cmap_coral():
@@ -196,6 +280,14 @@ div[data-testid="stButtonGroup"]{justify-content:flex-end}
 .paso{padding:6px 14px;border-radius:999px;border:1px solid #2F4254;color:#B8C4CE;font-size:.9rem}
 .paso.on{border-color:#E74C3C;color:#F9F9F9;font-weight:600}
 .paso.ok{background:#1F4D38;border-color:#3FA06F;color:#F9F9F9}
+.capo{display:flex;gap:8px;align-items:stretch;margin:4px 0 14px}
+.capo-paso{flex:1;background:#1E2D3B;border:1px solid #2F4254;border-top:3px solid #E0A33A;border-radius:10px;padding:10px 12px}
+.capo-t{font-size:.72rem;font-weight:800;letter-spacing:.08em;color:#E0A33A}
+.capo-d{font-size:.88rem;color:#F9F9F9;margin:4px 0;line-height:1.35}
+.capo-s{font-size:.8rem;color:#B8C4CE}
+.capo-fl{align-self:center;color:#8FA0AE;font-size:1.2rem}
+.tec{font-size:.8rem;color:#E0A33A;margin-top:4px}
+.tec code{color:#F9F9F9;background:#1E2D3B}
 </style>"""
 
 
@@ -237,9 +329,41 @@ def _filas_ficha(fi: dict, fu: dict) -> list:
             for k, n in claves if k in fi and (fi.get(k) is not None or k in fu)]
 
 
-def _tabla_con_origen(vista: list, dfv: pd.DataFrame, clave: str):
+CAMPOS_QUEDO = ["descripcion", "marca", "tipo", "variante", "contenido", "unidad", "unidades_por_envase", "concentracion",
+                "gtin", "precio_costo", "moneda", "categoria"]
+
+
+def _llego_quedo(x: dict, extr: dict):
+    """Así llegó (lo que leyó el Agente 1, tal cual) → así quedó (la ficha normalizada del Agente 2)."""
+    lecturas = extr.get(x.get("item_id"), [])
+    if not lecturas:
+        return
+    fi = x.get("ficha") or {}
+    texto_crudo = " ".join(str(v) for _a, campos, _f in lecturas for v in campos.values() if v is not None)
+    if INSTRUCCION.search(texto_crudo):
+        st.markdown(f"<div class='estado-box' style='background:#2F2A1E;border-color:#E0A33A'>⚠️ <b>El archivo traía una instrucción</b> "
+                    f"(«{html.escape(INSTRUCCION.search(texto_crudo).group(0))}…»). Se trató como dato: no entró a la ficha y los controles "
+                    f"se aplicaron igual.</div>", unsafe_allow_html=True)
+    c1, c2 = st.columns(2)
+    with c1:
+        st.markdown("**Así llegó**" + (" · <span class='nota'>Agente 1 · extractor (solo lee)</span>" if TECNICO else ""),
+                    unsafe_allow_html=True)
+        for archivo, campos, fuente in lecturas:
+            filas = [{"Campo del proveedor": k, "Valor tal como vino": "" if v is None else str(v)} for k, v in campos.items()]
+            st.caption(fuente_txt(fuente) or archivo)
+            st.dataframe(pd.DataFrame(filas), use_container_width=True, hide_index=True)
+    with c2:
+        st.markdown("**Así quedó en la ficha**" + (" · <span class='nota'>Agente 2 · escritor + hooks</span>" if TECNICO else ""),
+                    unsafe_allow_html=True)
+        st.caption("Normalizado al estándar del catálogo (unidades y números como se guardan)")
+        filas = [{"Campo": dict(ORDEN_FICHA).get(k, k), "Valor": str(fi[k])} for k in CAMPOS_QUEDO if fi.get(k) is not None]
+        st.dataframe(pd.DataFrame(filas), use_container_width=True, hide_index=True)
+
+
+def _tabla_con_origen(vista: list, dfv: pd.DataFrame, clave: str, extr: dict | None = None):
     """Tabla de productos; al hacer clic en una fila, abajo se ve de dónde salió cada dato de ese producto."""
-    ev = st.dataframe(pintar(dfv), use_container_width=True, hide_index=True, on_select="rerun", selection_mode="single-row", key=f"tabla_{clave}")
+    ev = st.dataframe(pintar(dfv), use_container_width=True, hide_index=True, on_select="rerun", selection_mode="single-row",
+                      key=f"tabla_{clave}", column_config=ANCHO_TODOS if "proveedor" in dfv.columns else None)
     st.caption("Verde: lista para alta · Gris: duplicado (con su SKU) · Coral: a revisión (con su motivo). "
                "Marcá la casilla de una fila para ver de dónde salió cada dato.")
     filas = list(ev.selection.rows) if ev is not None and getattr(ev, "selection", None) else []
@@ -257,9 +381,11 @@ def _tabla_con_origen(vista: list, dfv: pd.DataFrame, clave: str):
                 + (f" · ya existe como <b>{x['duplicado_de']}</b>" if x.get("duplicado_de") else "")
                 + (f" · motivo: <b>{', '.join(MOTIVO_CORTO.get(m, m) for m in (x.get('motivos_revision') or []))}</b>" if x.get("motivos_revision") else "")
                 + "</div>", unsafe_allow_html=True)
+    _llego_quedo(x, extr or {})
     fi, fu = x.get("ficha") or {}, x.get("fuentes") or {}
     campos = pd.DataFrame(_filas_ficha(fi, fu), columns=["Campo", "Valor", "De dónde salió"])
-    st.dataframe(campos, use_container_width=True, hide_index=True)
+    with st.expander("La ficha completa, con el origen de cada dato", expanded=not (extr or {}).get(x.get("item_id"))):
+        st.dataframe(campos, use_container_width=True, hide_index=True)
 
 
 # ----------------------------------------------------------------------------- app
@@ -293,6 +419,14 @@ with st.sidebar:
     if _modo == "Respaldo":
         st.caption("Se muestran corridas y respuestas guardadas; no se llama a la API.")
 RESPALDO = _modo == "Respaldo"
+# Interruptor a la vista, arriba a la derecha: se cambia en medio de la demo sin abrir el menú lateral
+_c_izq, _c_der = st.columns([4, 1])
+_c_der.toggle("Vista técnica", key="tecnico",
+              help="Apagada: lo que ve Compras. Prendida: agentes, tokens, caché, hooks, tools y log de cada paso.")
+TECNICO = bool(st.session_state.get("tecnico"))
+if TECNICO:
+    _c_izq.markdown("<div style='padding-top:6px;color:#E0A33A;font-size:.9rem;font-weight:600'>● Vista técnica: agentes, tokens, "
+                    "hooks y tools a la vista</div>", unsafe_allow_html=True)
 tab_ing, tab_asi, tab_cat, tab_prov = st.tabs(["Archivo nuevo", "Consultas", "Fichas por proveedor", "Scorecard de calidad"])
 
 # ============================================================================= Archivo nuevo
@@ -338,8 +472,13 @@ with tab_ing:
             estado = st.status("Procesando el archivo…", expanded=True)
             with estado:
                 pasos_ph, detalle_ph = st.empty(), st.empty()
-            with st.expander("Ver el log técnico"):
-                log_ph = st.empty()
+            class _SinLog:   # vista cliente: el log no se muestra
+                def code(self, *a, **k):
+                    pass
+            log_ph = _SinLog()
+            if TECNICO:
+                with st.expander("Log técnico de la corrida", expanded=True):
+                    log_ph = st.empty()
             fase, rondas, avisos, lineas, estado_batch = 0, 0, [], [], ""
             PASOS = ["Leer el archivo", "Extraer los datos", "Armar las fichas", "Listo"]
 
@@ -420,10 +559,12 @@ with tab_ing:
         if not guardadas:
             st.warning("Todavía no hay corrida guardada. Hacé el ensayo y copiá resultados\\demo a resultados\\demo_ensayo.")
         else:
-            elegida = st.selectbox("Corrida guardada", guardadas)
+            elegida = st.selectbox("Corrida guardada", guardadas,
+                                   format_func=lambda c: {"demo_ensayo": "Ensayo guardado", "demo": "Última corrida en vivo"}.get(c, c))
             st.info("Se muestra la salida guardada de una corrida anterior, no una nueva.")
-            st.caption(f"Sin archivo cargado se usa uno de ejemplo (`{CSV_DEMO.name}`, 6 productos). "
-                       f"Una corrida nueva reemplaza la salida de `resultados/demo` y de `data/proveedores/{PROV_DEMO}`; tarda 1 a 2 minutos.")
+            if TECNICO:
+                st.caption(f"Sin archivo cargado se usa uno de ejemplo (`{CSV_DEMO.name}`, 6 productos). Carpeta: `resultados/{elegida}`. "
+                           f"Una corrida nueva reemplaza `resultados/demo` y `data/proveedores/{PROV_DEMO}`; tarda 1 a 2 minutos.")
             if CSV_DEMO.exists():
                 with st.expander("Ver el archivo tal como llega"):
                     st.code(CSV_DEMO.read_text(encoding="utf-8"), language="text")
@@ -448,19 +589,20 @@ with tab_ing:
         k3.metric("Duplicados", int(c.get("duplicado", 0)))
         k4.metric("A revisión", int(c.get("a_revision", 0)))
         k5, k6, k7, k8 = st.columns(4)
-        k5.metric("Costo", f"USD {res.get('costo_usd', costo):.4f}")
-        k6.metric("Por ficha", f"USD {res.get('costo_por_ficha_usd', 0):.5f}")
-        k7.metric("Tiempo", f"{res.get('segundos_total', 0):.0f} s",
-                  help=f"extracción {res.get('segundos_extraccion', '?')} s, escritura {res.get('segundos_escritura', '?')} s")
-        k8.metric("Frenos de hooks", frenos, help=f"Tokens del escritor: entrada {inp}, salida {out}, caché leído {cache}")
-        if lista:
-            st.markdown("**Cuando un hook frenó algo (y por qué):**")
-            for fr in lista:
-                st.markdown(f":red[{html.escape(json.dumps(fr, ensure_ascii=False)[:300])}]")
+        k5.metric("Costo", usd(res.get("costo_usd", costo), 4))
+        k6.metric("Por ficha", usd(res.get("costo_por_ficha_usd", 0), 5))
+        k7.metric("Tiempo", f"{res.get('segundos_total', 0):.0f} s")
+        con_f, tot_f = datos_con_fuente(f_d)
+        k8.metric("Datos con su fuente", pct(con_f / tot_f, 0 if con_f == tot_f else 1) if tot_f else "—",
+                  help=f"{con_f} de {tot_f} datos de las fichas dicen de qué archivo y línea, hoja o página salieron.")
+
+        extr_d = cargar_extraccion(destino)
+        if TECNICO:
+            _bajo_el_capo(destino, res, f_d, extr_d, inp, out, cache, frenos, lista)
 
         st.markdown("#### Fichas")
         dfa = df_fichas(f_d)
-        _tabla_con_origen(f_d, dfa, "nuevo")
+        _tabla_con_origen(f_d, dfa, "nuevo", extr_d)
 
         cola = [x for x in f_d if x.get("estado") == "a_revision"]
         if cola:
@@ -540,7 +682,15 @@ def _pintar_respuesta(r: dict):
     fuentes = [x for x in (_fuente_humana(f) for f in resp.get("fuentes", [])) if x]
     if fuentes:
         st.markdown("**Fuente:** " + " · ".join(f"`{x}`" for x in fuentes))
-    st.caption(f"{r.get('segundos', '?')} s · USD {r.get('costo_usd', 0):.5f}")
+    st.caption(f"{num(r.get('segundos', 0), 1)} s · {usd(r.get('costo_usd', 0), 5)}")
+    if TECNICO:
+        u = r.get("uso") or {}
+        tools = " → ".join(f"<code>{html.escape(t)}</code>" for t in r.get("tools") or []) or "—"
+        rech = r.get("rechazos_del_hook") or []
+        st.markdown(
+            f"<div class='tec'>Agente 3 · asistente (solo lectura) · tools: {tools} · {r.get('iteraciones', '?')} iteraciones · "
+            f"tokens: entrada {num(u.get('input', 0), 0)}, salida {num(u.get('output', 0), 0)}, caché leído {num(u.get('cache_leido', 0), 0)} · "
+            f"rechazos del hook (esquema, fuente o producto no vistos en las tools): {len(rech)}</div>", unsafe_allow_html=True)
 
 
 def _respuesta_guardada(clave: str) -> dict:
@@ -689,14 +839,20 @@ with tab_cat:
         costo = sum((leer_json(f, {}).get("costo_usd", 0) or 0) for f in carpeta_costo.glob(patron) if f.stem.startswith("P") and f.stem[1:3].isdigit())
         st.markdown(f"### {'Todos los proveedores' if todos else html.escape(NOM.get(pid, pid))}")
         if es_demo:
-            st.caption(f"Es el archivo que entró en la demo (`resultados/{carpeta_demo}`): se actualiza cada vez que procesás uno nuevo. No forma parte de la carga completa de los 9 proveedores.")
+            st.caption("Es el archivo que entró en la demo: se actualiza cada vez que procesás uno nuevo. No forma parte de la carga completa de los 9 proveedores."
+                       + (f" Carpeta: `resultados/{carpeta_demo}`." if TECNICO else ""))
         k1, k2, k3, k4, k5, k6 = st.columns(6)
         k1.metric("Productos", len(fp))
         k2.metric("Listos para alta", int(c.get("lista_para_alta", 0)))
         k3.metric("Duplicados", int(c.get("duplicado", 0)))
         k4.metric("A revisión", int(c.get("a_revision", 0)))
-        k5.metric("Costo", f"USD {costo:.3f}")
-        k6.metric("Costo por ficha", f"USD {costo / len(fp):.5f}" if fp else "—")
+        k5.metric("Costo", usd(costo, 3))
+        k6.metric("Costo por ficha", usd(costo / len(fp), 5) if fp else "—")
+        if TECNICO:
+            con_f, tot_f = datos_con_fuente(fp)
+            st.markdown(f"<div class='tec'>Datos con su fuente: {con_f} de {tot_f} ({pct(con_f / tot_f, 1) if tot_f else '—'}) · "
+                        f"carpeta <code>resultados/{carpeta_demo if es_demo else 'final'}</code></div>", unsafe_allow_html=True)
+        extr_cat = cargar_extraccion(carpeta_demo if es_demo else "final")
 
         filtro = st.multiselect("Estados a mostrar", list(ETIQUETA), default=list(ETIQUETA), format_func=lambda e: ETIQUETA[e], key=f"filtro_{pid}")
         vista = [x for x in fp if x.get("estado") in filtro]
@@ -704,7 +860,7 @@ with tab_cat:
             dfv = df_fichas(vista)
             if todos:
                 dfv["proveedor"] = dfv["item"].str.split(":").str[0].map(lambda p: NOM.get(p, p))
-            _tabla_con_origen(vista, dfv, f"{pid}_{'-'.join(filtro)}")
+            _tabla_con_origen(vista, dfv, f"{pid}_{'-'.join(filtro)}", extr_cat)
         else:
             st.info("No hay productos con los estados elegidos.")
 
@@ -734,7 +890,7 @@ def _grafico_scorecard(orden, nombres, n, k, media, ic, mu):
     for sp in ("top", "right", "left"):
         ax.spines[sp].set_visible(False)
     ax.spines["bottom"].set_color("#2F4254")
-    ax.set_xlim(0, max(k[i] / n[i] for i in orden) + .06)
+    ax.set_xlim(-.012, max(k[i] / n[i] for i in orden) + .06)
     ax.set_xlabel("Tasa de productos a revisión", color="#B8C4CE")
     ax.scatter([], [], s=70, facecolors="none", edgecolors=CORAL, linewidths=1.8, label="Tasa cruda")
     ax.scatter([], [], s=80, color=VERDE_CLARO, label="Tasa ajustada (shrinkage)")
@@ -769,9 +925,9 @@ with tab_prov:
             peso = n[i] / (n[i] + kappa)
             filas += (f"<tr><td class='rk'>{r}</td><td><div class='logo-mini'>{logo_img(provs[i])}</div></td>"
                       f"<td class='nm'>{html.escape(nom(provs[i]))}</td><td class='c'>{n[i]}</td><td class='c'>{k[i]}</td>"
-                      f"<td class='c'>{k[i] / n[i]:.0%}</td><td class='c big'>{media[i]:.1%}</td>"
-                      f"<td class='c sub'>{ic[i][0]:.0%} a {ic[i][1]:.0%}</td>"
-                      f"<td class='c'>{ppeor[i]:.0%}</td><td class='c'>{peso:.0%}</td></tr>")
+                      f"<td class='c'>{pct(k[i] / n[i])}</td><td class='c big'>{pct(media[i], 1)}</td>"
+                      f"<td class='c sub'>{pct(ic[i][0])} a {pct(ic[i][1])}</td>"
+                      f"<td class='c'>{pct(ppeor[i])}</td><td class='c'>{pct(peso)}</td></tr>")
         st.markdown(
             "<table class='score'><tr><th>#</th><th></th><th>Proveedor</th><th class='c'>Productos</th><th class='c'>A revisión</th>"
             "<th class='c'>Tasa cruda</th><th class='c'>Tasa ajustada</th><th class='c'>Intervalo 95 %</th>"
@@ -786,12 +942,12 @@ with tab_prov:
         pb = max(range(len(provs)), key=lambda i: n[i])                     # muchos productos
         st.markdown("#### ¿Qué es la tasa ajustada?")
         st.info(
-            f"Es una tasa **prudente**: mezcla lo que mostró cada proveedor con lo que pasa en promedio entre los 9 ({mu:.0%} a revisión).\n\n"
-            f"**Un ejemplo.** {nom(provs[pa])} mandó solo {n[pa]} productos y {k[pa]} quedaron a revisión: {k[pa] / n[pa]:.0%}. "
-            f"¿Es un proveedor excelente o tuvo suerte con pocos productos? No se puede saber. Por eso su tasa ajustada es **{media[pa]:.1%}**: "
+            f"Es una tasa **prudente**: mezcla lo que mostró cada proveedor con lo que pasa en promedio entre los 9 ({pct(mu)} a revisión).\n\n"
+            f"**Un ejemplo.** {nom(provs[pa])} mandó solo {n[pa]} productos y {k[pa]} quedaron a revisión: {pct(k[pa] / n[pa])}. "
+            f"¿Es un proveedor excelente o tuvo suerte con pocos productos? No se puede saber. Por eso su tasa ajustada es **{pct(media[pa], 1)}**: "
             f"con tan pocos datos, pesa más el promedio.\n\n"
-            f"{nom(provs[pb])}, en cambio, mandó {n[pb]} productos. Hay más para creerle: su historia pesa {n[pb] / (n[pb] + kappa):.0%} "
-            f"y su tasa se mueve menos ({k[pb] / n[pb]:.0%} real, {media[pb]:.1%} ajustada).\n\n"
+            f"{nom(provs[pb])}, en cambio, mandó {n[pb]} productos. Hay más para creerle: su historia pesa {pct(n[pb] / (n[pb] + kappa))} "
+            f"y su tasa se mueve menos ({pct(k[pb] / n[pb])} real, {pct(media[pb], 1)} ajustada).\n\n"
             f"**Regla simple:** cuantos más productos mandó un proveedor, más pesa lo suyo; cuantos menos, más pesa el promedio. "
             f"Así se evita sacar conclusiones de pocos casos.\n\n"
             f"**Intervalo del 95 %:** el rango donde, con un 95 % de certeza, está la tasa real de ese proveedor. "
@@ -809,18 +965,18 @@ with tab_prov:
                 f"{html.escape(nom(provs[orden[2]]))}\n\n"
                 f"Por cada 100 productos de {html.escape(nom(provs[top]))} se esperan unos **{media[top] * 100:.0f}** a revisión "
                 f"(entre {ic[top][0] * 100:.0f} y {ic[top][1] * 100:.0f}).\n\n"
-                f"**Pero la diferencia es chica.** Con shrinkage, los 9 proveedores quedan entre {min(media):.0%} y {max(media):.0%}, "
-                f"con intervalos que se solapan, y ninguno pasa de {max(ppeor):.0%} de probabilidad de ser el peor. Los porcentajes "
-                f"crudos (de {min(kk / nn for kk, nn in zip(k, n)):.0%} a {max(kk / nn for kk, nn in zip(k, n)):.0%}) exageran el contraste. "
+                f"**Pero la diferencia es chica.** Con shrinkage, los 9 proveedores quedan entre {pct(min(media))} y {pct(max(media))}, "
+                f"con intervalos que se solapan, y ninguno pasa de {pct(max(ppeor))} de probabilidad de ser el peor. Los porcentajes "
+                f"crudos (de {pct(min(kk / nn for kk, nn in zip(k, n)))} a {pct(max(kk / nn for kk, nn in zip(k, n)))}) exageran el contraste. "
                 f"Tomados en conjunto, los proveedores no se distinguen con claridad en la tasa total.\n\n"
-                f"En total, {tot_k} de {tot_n} productos ({tot_k / tot_n:.1%}) quedaron a revisión.")
+                f"En total, {tot_k} de {tot_n} productos ({pct(tot_k / tot_n, 1)}) quedaron a revisión.")
 
         with st.expander("Cómo se calculó"):
             st.markdown(
                 f"Modelo **beta-binomial** con **Bayes empírico**. La tasa real de cada proveedor se supone sacada de una distribución Beta cuya media "
-                f"y dispersión se estiman con los 9 proveedores juntos: media **{mu:.1%}**, concentración **{kappa:.0f}**, equivalente a {kappa:.0f} "
+                f"y dispersión se estiman con los 9 proveedores juntos: media **{pct(mu, 1)}**, concentración **{kappa:.0f}**, equivalente a {kappa:.0f} "
                 f"productos \"virtuales\" con la tasa media.\n\n"
-                f"La tasa ajustada de un proveedor con *n* productos y *k* a revisión es (k + {mu * kappa:.1f}) / (n + {kappa:.0f}): "
+                f"La tasa ajustada de un proveedor con *n* productos y *k* a revisión es (k + {num(mu * kappa, 1)}) / (n + {kappa:.0f}): "
                 f"un compromiso entre lo que mostró y la media. Cuanto menos mandó, más se acerca a la media; por eso «Peso de sus datos» es n / (n + {kappa:.0f}). "
                 f"El intervalo (creíble, al 95 %) y la probabilidad de ser el peor salen de simular 20.000 veces la distribución posterior de cada proveedor. "
                 f"Semilla fija: el resultado no cambia entre corridas.")
