@@ -46,6 +46,24 @@ def validar_gtin(gtin: str) -> dict:
     return {"gtin": gtin, "valido": True, "motivo": None}
  
  
+# Estándar sección 4: el contenido se lleva siempre a ML, G o UN y se redondea al entero.
+_FACTORES_CONTENIDO = {
+    "ML": (1, "ML"), "CC": (1, "ML"), "L": (1000, "ML"), "LT": (1000, "ML"), "LTS": (1000, "ML"),
+    "FL OZ": (29.5735, "ML"), "FLOZ": (29.5735, "ML"),
+    "G": (1, "G"), "GR": (1, "G"), "GRS": (1, "G"), "KG": (1000, "G"), "OZ": (28.3495, "G"),
+    "UN": (1, "UN"), "UNID": (1, "UN"), "UNIDADES": (1, "UN"), "CT": (1, "UN"),
+}
+
+
+def convertir_contenido(cantidad: float, unidad: str) -> dict:
+    """Lleva (cantidad, unidad) a la unidad de la ficha (ML, G o UN) y redondea al entero (mitad hacia arriba)."""
+    clave = " ".join((unidad or "").upper().replace(".", "").split())
+    if clave not in _FACTORES_CONTENIDO:
+        return {"error": f"Unidad desconocida: {unidad!r}. Conocidas: {sorted(_FACTORES_CONTENIDO)}"}
+    factor, destino = _FACTORES_CONTENIDO[clave]
+    return {"contenido": int(cantidad * factor + 0.5), "unidad": destino}
+
+
 def _leer_csv(ruta: Path) -> list[dict]:
     """Lee un CSV detectando codificación y separador. Agrega '_linea' (línea real en el archivo)."""
     ultimo_error = None
@@ -251,6 +269,15 @@ def leer_pdf_con_citas(archivo: str, consulta: str = "") -> dict:
  
  
 @mcp.tool()
+def convertir_contenido_tool(cantidad: float, unidad: str) -> dict:
+    """Convierte un contenido a la unidad de la ficha (ML, G o UN) y lo redondea al entero, según el estándar.
+    Usala siempre que el proveedor informe el contenido en otra unidad (CC, L, LT, KG, GR, GRS, fl oz, oz, ct, UNID).
+    No hagas la cuenta vos. 'cantidad' es el número YA interpretado: «0,5» en un archivo en español es 0.5;
+    «4.8» en un archivo en inglés es 4.8. Devuelve {contenido, unidad}."""
+    return convertir_contenido(cantidad, unidad)
+
+
+@mcp.tool()
 def validar_gtin_tool(gtin: str) -> dict:
     """Valida un código de barras GTIN (largo y dígito verificador GS1).
     Usala siempre antes de dar de alta un producto: un GTIN inválido NO puede quedar lista_para_alta.
@@ -346,6 +373,7 @@ Una diferencia de precio entre listas NO manda a revisión.
 </fds>
 
 <campos>
+- Contenido en otra unidad que ML, G o UN: usá convertir_contenido_tool. No hagas la cuenta de memoria.
 - concentracion es SOLO para medicamentos y suplementos. En cualquier otro producto, el porcentaje o valor que lo distingue
   (alcohol 70 %, alcohol 96 %, FPS 50) va en variante y forma parte de la descripcion; concentracion queda vacía.
 - Un producto a_revision lleva los campos que sí se pudieron determinar, armados igual que si fuera lista_para_alta.

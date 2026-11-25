@@ -146,7 +146,7 @@ PERMISOS = {
     "ingesta": {
         "listar_archivos_proveedores", "leer_lista_proveedor", "leer_excel", "leer_pdf_con_citas",
         "validar_gtin_tool", "buscar_en_catalogo", "buscar_candidatos_en_catalogo", "leer_estandar",
-        "registrar_ficha",
+        "convertir_contenido_tool", "registrar_ficha",
     },
     "extractor": {"listar_archivos_proveedores", "leer_lista_proveedor", "leer_excel", "leer_pdf_con_citas"},
 }
