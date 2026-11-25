@@ -259,4 +259,4 @@ citadas y abstención. Resultado actual: **29 de 29**. Tres cosas para leerlo bi
   origen de cada dato, costo y tokens), Consultas (el asistente), Fichas por proveedor (lo ya procesado, con pedido al proveedor) y Scorecard de calidad (shrinkage bayesiano empírico Beta-Binomial y ranking de riesgo; logos en `app/assets/proveedores/`). El pedido al proveedor se arma por código (`pedido_proveedor.py`, en la raíz)
   desde los motivos de revisión. Costos, Dermalab y la carga completa están en las slides.
   La versión con todas las pestañas quedó en `app/archivo/demo_app_completa.py`. Logo y colores en `app/assets/` y `.streamlit/config.toml`.
-- `demo/slides_demo_day.html`: las 8 slides (tema oscuro). `demo/GUION_DEMO.md`: el minuto a minuto.
+- `demo/slides_demo_day.html`: las 10 slides (tema oscuro). `demo/GUION_DEMO.md`: el minuto a minuto.

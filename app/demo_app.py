@@ -134,10 +134,10 @@ def pintar(df: pd.DataFrame):
     disp = disp.rename(columns={"proveedor": "Proveedor"})
     cols = ["Producto"] + (["Proveedor"] if "Proveedor" in disp.columns else []) + ["Estado", "Descripción", "Motivos", "Duplicado de", "GTIN", "Precio de costo"]
     disp = disp[cols]
-    vacio = lambda v: "" if v is None or v != v else v
-    return (disp.style.apply(fila, axis=1)
-            .format(lambda v: "" if v is None or v != v else f"{v:.2f}", subset=["Precio de costo"])
-            .format(vacio, subset=[c for c in cols if c != "Precio de costo"]))
+    vacio = lambda v: "" if v is None or v != v else str(v)
+    for c in cols:   # todo como texto: así una celda sin dato queda en blanco y no dice "None"
+        disp[c] = disp[c].map(lambda v: f"{v:.2f}" if c == "Precio de costo" and isinstance(v, (int, float)) and v == v else vacio(v))
+    return disp.style.apply(fila, axis=1).set_properties(subset=["Precio de costo"], **{"text-align": "right"})
 
 
 def resumen_tokens_costo(carpeta: str):
