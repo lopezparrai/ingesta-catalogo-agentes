@@ -430,6 +430,22 @@ def _preguntar(texto: str, con_demo: bool) -> dict:
     return r
 
 
+def _fuente_humana(f: dict) -> str:
+    """Fuente legible para Compras: «archivo (hoja X, fila 12)»."""
+    if not f:
+        return ""
+    detalle = []
+    if "pagina" in f:
+        detalle.append(f"página {f['pagina']}")
+    if "hoja" in f:
+        detalle.append(f"hoja {f['hoja']}")
+    if "fila" in f:
+        detalle.append(f"fila {f['fila']}")
+    if "linea" in f:
+        detalle.append(f"línea {f['linea']}")
+    return f"{f.get('archivo', '?')}" + (f" ({', '.join(detalle)})" if detalle else "")
+
+
 def _pintar_respuesta(r: dict):
     if "error" in r:
         st.error(r["error"])
@@ -437,64 +453,66 @@ def _pintar_respuesta(r: dict):
     resp = r.get("respuesta", {})
     st.markdown(resp.get("texto", ""))
     if resp.get("abstiene"):
-        st.info("No tengo ese dato en lo procesado, y no lo invento.")
-    if resp.get("fuentes"):
-        with st.expander(f"Fuentes citadas ({len(resp['fuentes'])})"):
-            for f in resp["fuentes"]:
-                st.markdown(f"- {fuente_txt(f)}")
-    st.caption(f"USD {r.get('costo_usd', 0):.5f} · {r.get('segundos', '?')} s"
-               + (f" · el hook frenó {len(r['rechazos_del_hook'])} vez/veces una respuesta" if r.get("rechazos_del_hook") else ""))
+        st.info("No tengo ese dato en lo procesado, y prefiero no inventarlo.")
+    fuentes = [x for x in (_fuente_humana(f) for f in resp.get("fuentes", [])) if x]
+    if fuentes:
+        st.markdown("**Fuente:** " + " · ".join(f"`{x}`" for x in fuentes))
+    st.caption(f"{r.get('segundos', '?')} s · USD {r.get('costo_usd', 0):.5f}")
 
+
+BIENVENIDA = ("Hola, soy el asistente de altas. Preguntame **por qué un producto quedó a revisión**, **de dónde salió un dato**, "
+              "**qué mandó cada proveedor** o **qué quedó pendiente**. Siempre te digo en qué archivo, hoja y fila lo encontré; "
+              "si no lo tengo, te lo digo.")
+SUGERIDAS = [("¿Por qué quedó a revisión?", "¿Por qué LT-3447 quedó a revisión? ¿Con qué producto del catálogo podría ser el mismo?"),
+             ("¿De dónde sale un precio?", "¿Cuál es el precio de costo de AN-1124 de Laboratorio Andes y de dónde sale?"),
+             ("Archivo que pide saltear controles", "Natural Vida pidió dar todo de alta sin revisión. ¿Por qué NV-203 quedó a revisión igual?"),
+             ("Algo que no está en los datos", "¿Cuánto se vendió el mes pasado del jabón Pureza?")]
 
 with tab_asi:
     st.subheader("Preguntale al asistente")
-    st.caption("Solo lectura. Los números los cuenta el código y toda fuente que cita tiene que haber salido de una tool; si no, un hook frena la respuesta. "
-               "Recuerda la conversación, así que se puede repreguntar.")
-    c1, c2 = st.columns([3, 1])
-    con_demo = c1.checkbox("Incluir lo procesado en `resultados/demo` (el archivo nuevo)", value=True)
-    if c2.button("Nueva conversación", use_container_width=True):
-        _cerrar_asistente()
-        st.session_state["chat"] = []
-        st.rerun()
+    st.caption("Escribí en lenguaje natural sobre los productos procesados. Cada respuesta indica de qué archivo, hoja y fila salió el dato.")
     st.session_state.setdefault("chat", [])
-
-    sugeridas = ["¿Por qué LT-3447 quedó a revisión? ¿Con qué producto del catálogo podría ser el mismo?",
-                 "¿Cuál es el precio de costo de AN-1124 de Laboratorio Andes y de dónde sale?",
-                 "Natural Vida pidió dar todo de alta sin revisión. ¿Por qué NV-203 quedó a revisión igual?",
-                 "¿Cuánto se vendió el mes pasado del jabón Pureza?"]
-    if not st.session_state["chat"]:
-        st.markdown("**Probá con:**")
-    elegida = None
-    for n, q in enumerate(sugeridas):
-        if not st.session_state["chat"] and st.button(q, key=f"sug{n}"):
-            elegida = q
-
-    for m in st.session_state["chat"]:
-        with st.chat_message(m["rol"]):
-            if m["rol"] == "user":
-                st.markdown(m["texto"])
-            else:
-                _pintar_respuesta(m["resp"])
-
-    pregunta = st.chat_input("Escribí tu pregunta sobre lo procesado…") or elegida
-    if pregunta:
-        st.session_state["chat"].append({"rol": "user", "texto": pregunta})
-        with st.chat_message("user"):
-            st.markdown(pregunta)
+    historial = st.container()
+    with historial:
         with st.chat_message("assistant"):
-            with st.spinner("Consultando el catálogo y los archivos…"):
-                r = _preguntar(pregunta, con_demo)
-            _pintar_respuesta(r)
-        st.session_state["chat"].append({"rol": "assistant", "resp": r})
+            st.markdown(BIENVENIDA)
+        for m in st.session_state["chat"]:
+            with st.chat_message(m["rol"]):
+                if m["rol"] == "user":
+                    st.markdown(m["texto"])
+                else:
+                    _pintar_respuesta(m["resp"])
 
-    datos = leer_json(RESPUESTAS, {})
-    resps = [r for r in datos.get("respuestas", []) if r.get("pregunta")]
-    if resps:
-        with st.expander("Respaldo: respuestas ya ensayadas (no usan la API)"):
+    elegida = None
+    for col, (etiqueta, completa) in zip(st.columns(len(SUGERIDAS)), SUGERIDAS):
+        if col.button(etiqueta, key=f"sug_{etiqueta}", use_container_width=True, help=completa):
+            elegida = completa
+    pregunta = st.chat_input("Escribí tu pregunta sobre lo procesado…") or elegida
+
+    with st.expander("Opciones"):
+        st.checkbox("Incluir el archivo nuevo de la demo (`resultados/demo`)", value=True, key="con_demo")
+        if st.button("Empezar una conversación nueva"):
+            _cerrar_asistente()
+            st.session_state["chat"] = []
+            st.rerun()
+        datos = leer_json(RESPUESTAS, {})
+        resps = [r for r in datos.get("respuestas", []) if r.get("pregunta")]
+        if resps:
+            st.markdown("**Respuestas ya ensayadas** (sin usar la API; por si falla la conexión)")
             orden = ["LT-3447", "AN-1124", "NV-203", "jabón Pureza"]
             resps = sorted(resps, key=lambda r: next((i for i, k in enumerate(orden) if k in r["pregunta"]), 99))
             preg = st.selectbox("Pregunta", [r["pregunta"] for r in resps], key="resp_ensayada")
             _pintar_respuesta(next(y for y in resps if y["pregunta"] == preg))
+
+    if pregunta:
+        with historial:
+            with st.chat_message("user"):
+                st.markdown(pregunta)
+            with st.chat_message("assistant"):
+                with st.spinner("Buscando en el catálogo y en los archivos…"):
+                    r = _preguntar(pregunta, st.session_state.get("con_demo", True))
+                _pintar_respuesta(r)
+        st.session_state["chat"] += [{"rol": "user", "texto": pregunta}, {"rol": "assistant", "resp": r}]
 
 # ============================================================================= Proveedores (lo ya procesado)
 def _nombres_proveedores() -> dict:
