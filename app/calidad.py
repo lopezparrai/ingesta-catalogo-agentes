@@ -112,7 +112,7 @@ def analisis(fichas: list[dict], B: int = 10000) -> dict:
     return {
         "provs": provs, "n": n, "k": k, "por_tipo": por_tipo,
         "p_global": p_global, "p_tipos": p_tipos, "p_tipos_holm": holm(p_tipos),
-        "post_media": post.mean(axis=1), "post_ic": np.percentile(post, [5, 95], axis=1).T,
+        "post_media": post.mean(axis=1), "post_ic": np.percentile(post, [2.5, 97.5], axis=1).T,
         "p_peor": (post == post.max(axis=0)).mean(axis=1),
         "mu_prior": mu, "kappa_prior": kap,
     }

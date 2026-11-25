@@ -655,7 +655,7 @@ def _grafico_scorecard(orden, nombres, n, k, media, ic, mu):
     ax.set_xlabel("Tasa de productos a revisión", color="#B8C4CE")
     ax.scatter([], [], s=70, facecolors="none", edgecolors=CORAL, linewidths=1.8, label="Tasa cruda")
     ax.scatter([], [], s=80, color=VERDE_CLARO, label="Tasa ajustada (shrinkage)")
-    ax.plot([], [], color=VERDE_CLARO, lw=6, alpha=.35, label="Intervalo del 90 %")
+    ax.plot([], [], color=VERDE_CLARO, lw=6, alpha=.35, label="Intervalo del 95 %")
     ax.legend(loc="lower right", frameon=False, labelcolor="#F9F9F9", fontsize=9)
     fig.tight_layout()
     return fig
@@ -691,7 +691,7 @@ with tab_prov:
                       f"<td class='c'>{ppeor[i]:.0%}</td><td class='c'>{peso:.0%}</td></tr>")
         st.markdown(
             "<table class='score'><tr><th>#</th><th></th><th>Proveedor</th><th class='c'>Productos</th><th class='c'>A revisión</th>"
-            "<th class='c'>Tasa cruda</th><th class='c'>Tasa ajustada</th><th class='c'>Intervalo 90 %</th>"
+            "<th class='c'>Tasa cruda</th><th class='c'>Tasa ajustada</th><th class='c'>Intervalo 95 %</th>"
             "<th class='c'>Prob. de ser el peor</th><th class='c'>Peso de sus datos</th></tr>" + filas + "</table>",
             unsafe_allow_html=True)
         st.caption("Ordenado por tasa ajustada, de mayor a menor riesgo. «Peso de sus datos»: cuánto de la estimación sale de lo que mandó "
@@ -699,6 +699,20 @@ with tab_prov:
 
         tot_k, tot_n = sum(k), sum(n)
         top = orden[0]
+        pa = min(range(len(provs)), key=lambda i: (n[i], k[i] / n[i]))      # pocos productos
+        pb = max(range(len(provs)), key=lambda i: n[i])                     # muchos productos
+        st.markdown("#### ¿Qué es la tasa ajustada?")
+        st.info(
+            f"Es una tasa **prudente**: mezcla lo que mostró cada proveedor con lo que pasa en promedio entre los 9 ({mu:.0%} a revisión).\n\n"
+            f"**Un ejemplo.** {nom(provs[pa])} mandó solo {n[pa]} productos y {k[pa]} quedaron a revisión: {k[pa] / n[pa]:.0%}. "
+            f"¿Es un proveedor excelente o tuvo suerte con pocos productos? No se puede saber. Por eso su tasa ajustada es **{media[pa]:.1%}**: "
+            f"con tan pocos datos, pesa más el promedio.\n\n"
+            f"{nom(provs[pb])}, en cambio, mandó {n[pb]} productos. Hay más para creerle: su historia pesa {n[pb] / (n[pb] + kappa):.0%} "
+            f"y su tasa se mueve menos ({k[pb] / n[pb]:.0%} real, {media[pb]:.1%} ajustada).\n\n"
+            f"**Regla simple:** cuantos más productos mandó un proveedor, más pesa lo suyo; cuantos menos, más pesa el promedio. "
+            f"Así se evita sacar conclusiones de pocos casos.\n\n"
+            f"**Intervalo del 95 %:** el rango donde, con un 95 % de certeza, está la tasa real de ese proveedor. "
+            f"Cuanto más ancho, menos seguros estamos.")
         st.markdown("#### Cómo leerlo")
         c1, c2 = st.columns([1.2, 1])
         with c1:
@@ -715,7 +729,7 @@ with tab_prov:
                 f"**Pero la diferencia es chica.** Con shrinkage, los 9 proveedores quedan entre {min(media):.0%} y {max(media):.0%}, "
                 f"con intervalos que se solapan, y ninguno pasa de {max(ppeor):.0%} de probabilidad de ser el peor. Los porcentajes "
                 f"crudos (de {min(kk / nn for kk, nn in zip(k, n)):.0%} a {max(kk / nn for kk, nn in zip(k, n)):.0%}) exageran el contraste. "
-                f"Con todo junto, los proveedores no se distinguen en la tasa total (p = {A['p_global']:.2f}).\n\n"
+                f"Tomados en conjunto, los proveedores no se distinguen con claridad en la tasa total.\n\n"
                 f"En total, {tot_k} de {tot_n} productos ({tot_k / tot_n:.1%}) quedaron a revisión.")
 
         with st.expander("Cómo se calculó"):
@@ -725,7 +739,7 @@ with tab_prov:
                 f"productos \"virtuales\" con la tasa media.\n\n"
                 f"La tasa ajustada de un proveedor con *n* productos y *k* a revisión es (k + {mu * kappa:.1f}) / (n + {kappa:.0f}): "
                 f"un compromiso entre lo que mostró y la media. Cuanto menos mandó, más se acerca a la media; por eso «Peso de sus datos» es n / (n + {kappa:.0f}). "
-                f"El intervalo y la probabilidad de ser el peor salen de simular 20.000 veces la distribución posterior de cada proveedor. "
+                f"El intervalo (creíble, al 95 %) y la probabilidad de ser el peor salen de simular 20.000 veces la distribución posterior de cada proveedor. "
                 f"Semilla fija: el resultado no cambia entre corridas.")
 
         st.caption("Ojo: «a revisión» es lo que el sistema detectó, no el error real del proveedor, y los 9 proveedores son pocos para estimar la media. "

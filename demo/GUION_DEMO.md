@@ -63,7 +63,7 @@ Con cualquier otro archivo la app se comporta igual: fichas, cola de revisión y
 - Paralelo 356 s contra secuencial 819 s en tres proveedores; en Rivera la escritura son 316 de los 356 s.
 - Evaluación a mano: ficha 15/15 (Wilson 80 %–100 %), fuente 12/15 (55 %–93 %); los 3 errores son el código del proveedor de Andes atribuido al Excel y no al PDF. Son las fichas con las que se ajustó el sistema.
 - Muestreo: de 208 listas, auditar 49 (error del lote menor al 5 % con 95 % de confianza si no se encuentra ninguno).
-- Proveedores: 25 de 257 a revisión (9,7 %, Wilson 6,7 %–14,0 %). Shrinkage beta-binomial (media 10 %, concentración 80): tasa ajustada de 7,7 % (Cosmética Rivera) a 12,3 % (Dermalab); probabilidad de ser el peor, máximo 25 %. Total por proveedor: p = 0,10.
+- Proveedores: 25 de 257 a revisión (9,7 %, Wilson 6,7 %–14,0 %). Shrinkage beta-binomial (media 10 %, concentración 80): tasa ajustada de 7,7 % (Cosmética Rivera) a 12,3 % (Dermalab); probabilidad de ser el peor, máximo 25 %.
 - Si un estado sale distinto del esperado: no lo corrijas en vivo; mostrá el motivo que dio la ficha.
 
 ## Si algo sale mal
