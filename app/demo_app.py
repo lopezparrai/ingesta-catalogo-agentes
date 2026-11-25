@@ -25,6 +25,8 @@ import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import calidad as CAL
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from pedido_proveedor import mensaje_proveedor
 
 RAIZ = Path(__file__).resolve().parent.parent
 RES = RAIZ / "resultados"
@@ -49,11 +51,11 @@ CSS = f"""
 <style>
   .block-container {{padding-top: 3.6rem; max-width: 1200px;}}
   .cabecera {{display:flex; align-items:center; justify-content:space-between; gap:24px; background:{BLANCO};
-             border-top: 6px solid {VERDE_CLARO}; border-radius: 12px; padding: 14px 26px; margin-bottom: 16px;
+             border-top: 6px solid {VERDE_CLARO}; border-radius: 14px; padding: 22px 34px; margin-bottom: 18px;
              box-shadow: 0 2px 10px rgba(0,0,0,.35);}}
-  .cabecera img {{height: 72px; width:auto;}}
+  .cabecera img {{height: 118px; width:auto;}}
   .cabecera .texto {{text-align:right;}}
-  .cabecera .texto h1 {{margin:0; padding:0; font-size: 25px; line-height:1.2; color:{AZUL};}}
+  .cabecera .texto h1 {{margin:0; padding:0; font-size: 29px; line-height:1.2; color:{AZUL}; white-space:nowrap;}}
   .cabecera .texto p {{margin:4px 0 0 auto; font-size: 14px; color:#5D6D7E; max-width: 520px;}}
   .cabecera .texto b {{color:{CORAL};}}
   div[data-testid="stMetric"] {{background:{SUPERFICIE}; border:1px solid {BORDE}; border-left:5px solid {VERDE_CLARO};
@@ -168,6 +170,16 @@ def logo_img(pid: str) -> str:
 
 
 CSS_LOGOS = """<style>
+div[data-testid="stButtonGroup"]{justify-content:flex-end}
+/* menú de pestañas (funciona con la estructura nueva de Streamlit y con la anterior) */
+[role="tablist"]{gap:10px!important;padding:6px 0 12px!important;border-bottom:1px solid #2F4254}
+[role="tablist"] [role="tab"]{background:#1E2D3B!important;border:1px solid #2F4254!important;border-radius:12px!important;padding:12px 26px!important;height:auto!important;
+  transition:background .15s,border-color .15s;cursor:pointer}
+[role="tablist"] [role="tab"]:hover{border-color:#3FA06F!important;background:#223545!important}
+[role="tablist"] [role="tab"] p{font-size:1.1rem!important;font-weight:600!important;color:#B8C4CE!important;margin:0}
+[role="tablist"] [role="tab"][aria-selected="true"]{background:#2A6B4A!important;border-color:#3FA06F!important}
+[role="tablist"] [role="tab"][aria-selected="true"] p{color:#F9F9F9!important}
+[role="tablist"] .react-aria-SelectionIndicator, div[data-baseweb="tab-highlight"], div[data-baseweb="tab-border"]{display:none!important}
 .logos{display:flex;flex-wrap:wrap;gap:10px;margin:4px 0 14px}
 .logo-chip{background:#F9F9F9;border-radius:12px;padding:8px 14px;display:flex;align-items:center;gap:10px;color:#2C3E50;font-size:.85rem;font-weight:600}
 .logo-chip img{height:38px;width:auto}
@@ -185,6 +197,50 @@ CSS_LOGOS = """<style>
 .paso.on{border-color:#E74C3C;color:#F9F9F9;font-weight:600}
 .paso.ok{background:#1F4D38;border-color:#3FA06F;color:#F9F9F9}
 </style>"""
+
+
+def _nombres_proveedores() -> dict:
+    out = {}
+    try:
+        import csv as _csv
+        with open(RAIZ / "data" / "proveedores" / "proveedores.csv", encoding="utf-8-sig", newline="") as fh:
+            for fila in _csv.DictReader(fh):
+                out[fila["proveedor_id"]] = fila.get("nombre") or fila["proveedor_id"]
+    except Exception:
+        pass
+    return out
+
+
+def _etiqueta_demo(carpeta: str) -> tuple:
+    """(nombre, id de proveedor existente o None) con que se rotuló la última corrida de 'Archivo nuevo'."""
+    d = leer_json(RES / carpeta / "_proveedor.json", {}) if carpeta else {}
+    return d.get("nombre") or "Demo Proveedor", d.get("pid")
+
+
+def _tabla_con_origen(vista: list, dfv: pd.DataFrame, clave: str):
+    """Tabla de productos; al hacer clic en una fila, abajo se ve de dónde salió cada dato de ese producto."""
+    ev = st.dataframe(pintar(dfv), use_container_width=True, hide_index=True, on_select="rerun", selection_mode="single-row", key=f"tabla_{clave}")
+    st.caption("Verde: lista para alta · Gris: duplicado (con su SKU) · Coral: a revisión (con su motivo). "
+               "Marcá la casilla de una fila para ver de dónde salió cada dato.")
+    filas = list(ev.selection.rows) if ev is not None and getattr(ev, "selection", None) else []
+    fila = filas[0] if filas and filas[0] < len(vista) else 0
+    st.markdown("#### Cada dato, con su origen")
+    nombres = [f"{v.get('item_id', '')} · {(v.get('ficha') or {}).get('descripcion') or ''}" for v in vista]
+    # al marcar otra fila de la tabla, el desplegable se reposiciona; si no, queda lo que el usuario eligió
+    i = st.selectbox("Producto (escribí para buscar)", range(len(vista)), index=fila, format_func=lambda k: nombres[k],
+                     key=f"sel_{clave}_{fila}")
+    x = vista[i]
+    est = x.get("estado")
+    borde = {"lista_para_alta": VERDE_CLARO, "duplicado": PIEDRA, "a_revision": CORAL}.get(est, PIEDRA)
+    st.markdown(f"<div class='estado-box' style='background:{COLOR.get(est, '#333')};border-color:{borde}'>"
+                f"<b>{ETIQUETA.get(est, est)}</b>"
+                + (f" · ya existe como <b>{x['duplicado_de']}</b>" if x.get("duplicado_de") else "")
+                + (f" · motivo: <b>{', '.join(MOTIVO_CORTO.get(m, m) for m in (x.get('motivos_revision') or []))}</b>" if x.get("motivos_revision") else "")
+                + "</div>", unsafe_allow_html=True)
+    fi, fu = x.get("ficha") or {}, x.get("fuentes") or {}
+    campos = pd.DataFrame([{"Campo": k, "Valor": "" if v is None else str(v), "De dónde salió": fuente_txt(fu.get(k))}
+                           for k, v in fi.items() if v is not None or k in fu])
+    st.dataframe(campos, use_container_width=True, hide_index=True)
 
 
 # ----------------------------------------------------------------------------- app
@@ -212,21 +268,31 @@ st.markdown(f"""<div class="cabecera">{_img}
             unsafe_allow_html=True)
 
 st.markdown(CSS_LOGOS, unsafe_allow_html=True)
-tab_ing, tab_asi, tab_cat, tab_prov = st.tabs(["Archivo nuevo", "Consultas", "Proveedores", "Calidad por proveedor"])
+with st.sidebar:
+    st.markdown("**Modo de la demo**")
+    _modo = st.segmented_control("Modo", ["En vivo", "Respaldo"], default="En vivo", key="modo_global", label_visibility="collapsed")
+    if _modo == "Respaldo":
+        st.caption("Se muestran corridas y respuestas guardadas; no se llama a la API.")
+RESPALDO = _modo == "Respaldo"
+tab_ing, tab_asi, tab_cat, tab_prov = st.tabs(["Archivo nuevo", "Consultas", "Fichas por proveedor", "Scorecard de calidad"])
 
 # ============================================================================= Archivo nuevo
 with tab_ing:
     st.subheader("Llega un archivo nuevo de un proveedor")
-    modo = st.radio("Modo", ["Correr en vivo contra la API", "Cargar corrida guardada (respaldo)"], horizontal=True)
+    modo = "Cargar corrida guardada (respaldo)" if RESPALDO else "Correr en vivo contra la API"
 
     if modo.startswith("Correr"):
+        NOM_E = _nombres_proveedores()
+        NUEVO = "Proveedor nuevo…"
+        elegido = st.selectbox("¿De qué proveedor es?", [NUEVO] + [f"{n}  ({q})" for q, n in NOM_E.items()], key="prov_elegido",
+                               help="Si es uno que ya conocemos, se rotula con su nombre. Si no, escribí el nombre del proveedor nuevo.")
+        if elegido == NUEVO:
+            nombre_prov = st.text_input("Nombre del proveedor nuevo", placeholder="Ej.: Droguería del Sur S.A.", key="prov_nuevo").strip()
+            pid_prov = None
+        else:
+            pid_prov = elegido.rsplit("(", 1)[1].rstrip(")")
+            nombre_prov = NOM_E[pid_prov]
         subido = st.file_uploader("Archivo del proveedor (CSV, Excel, PDF o texto)", type=["csv", "xlsx", "xls", "pdf", "txt"])
-        if subido is None:
-            st.caption(f"Sin archivo cargado se usa uno de ejemplo (`{CSV_DEMO.name}`, 6 productos).")
-            if CSV_DEMO.exists():
-                with st.expander("Ver el archivo tal como llega"):
-                    st.code(CSV_DEMO.read_text(encoding="utf-8"), language="text")
-        st.caption(f"Llama a la API y reemplaza la salida anterior de `resultados/demo` y de `data/proveedores/{PROV_DEMO}`. Tarda 1 a 2 minutos.")
         carga = st.radio("Tipo de carga", ["Tiempo real", "Carga masiva (Batch)"], horizontal=True,
                          captions=["La respuesta llega en ~1 minuto. Para cuando Compras necesita el alta ahora.",
                                    "La mitad del costo, pero la API la procesa cuando puede: de minutos a horas. Para cargas grandes."])
@@ -234,7 +300,8 @@ with tab_ing:
         if modo_cli == "batch":
             st.warning("En Batch la corrida puede tardar varios minutos o más; no es lo recomendable para una demo en vivo. "
                        "Solo la escritura va por Batch: la extracción del archivo sigue siendo inmediata.")
-        if st.button("Procesar archivo", type="primary"):
+        if st.button("Procesar archivo", type="primary", disabled=(pid_prov is None and not nombre_prov),
+                     help="Escribí el nombre del proveedor nuevo" if (pid_prov is None and not nombre_prov) else None):
             carpeta_prov = RAIZ / "data" / "proveedores" / PROV_DEMO
             shutil.rmtree(carpeta_prov, ignore_errors=True)
             shutil.rmtree(RES / "demo", ignore_errors=True)
@@ -321,6 +388,10 @@ with tab_ing:
                 dibujar()
                 estado.update(label=f"Listo en {time.time() - t0:.0f} s", state="complete", expanded=False)
                 st.session_state["destino"] = "demo"
+                try:
+                    (RES / "demo" / "_proveedor.json").write_text(json.dumps({"nombre": nombre_prov, "pid": pid_prov}, ensure_ascii=False), encoding="utf-8")
+                except Exception:
+                    pass
             else:
                 estado.update(label=f"La corrida terminó con error (código {rc})", state="error")
                 st.error(f"La corrida terminó con error (código {rc}). Usá la corrida guardada.")
@@ -331,6 +402,11 @@ with tab_ing:
         else:
             elegida = st.selectbox("Corrida guardada", guardadas)
             st.info("Se muestra la salida guardada de una corrida anterior, no una nueva.")
+            st.caption(f"Sin archivo cargado se usa uno de ejemplo (`{CSV_DEMO.name}`, 6 productos). "
+                       f"Una corrida nueva reemplaza la salida de `resultados/demo` y de `data/proveedores/{PROV_DEMO}`; tarda 1 a 2 minutos.")
+            if CSV_DEMO.exists():
+                with st.expander("Ver el archivo tal como llega"):
+                    st.code(CSV_DEMO.read_text(encoding="utf-8"), language="text")
             if st.session_state.get("destino") != elegida or "destino" not in st.session_state:
                 st.session_state["destino"] = elegida
 
@@ -342,7 +418,10 @@ with tab_ing:
         inp, out, cache, costo, frenos, lista = resumen_tokens_costo(destino)
         c = pd.Series([x.get("estado") for x in f_d]).value_counts()
 
-        st.subheader("Qué salió")
+        _nom_d, _pid_d = _etiqueta_demo(destino)
+        st.subheader(f"Qué salió · {_nom_d}")
+        if _pid_d:
+            st.caption(f"Archivo rotulado como de {_nom_d}. Se procesa aparte: no modifica lo ya cargado de ese proveedor.")
         k1, k2, k3, k4 = st.columns(4)
         k1.metric("Productos procesados", len(f_d))
         k2.metric("Listos para alta", int(c.get("lista_para_alta", 0)))
@@ -361,28 +440,13 @@ with tab_ing:
 
         st.markdown("#### Fichas")
         dfa = df_fichas(f_d)
-        st.dataframe(pintar(dfa), use_container_width=True, hide_index=True)
-        st.caption("Verde: lista para alta · Gris: duplicado (con su SKU) · Coral: a revisión (con su motivo).")
+        _tabla_con_origen(f_d, dfa, "nuevo")
 
         cola = [x for x in f_d if x.get("estado") == "a_revision"]
         if cola:
             st.markdown("#### Cola de revisión")
             st.dataframe(pintar(df_fichas(cola)), use_container_width=True, hide_index=True)
 
-        st.markdown("#### Cada dato, con su origen")
-        item = st.selectbox("Producto", [x["item_id"] for x in f_d], key="ficha_sel")
-        x = next(y for y in f_d if y.get("item_id") == item)
-        est = x.get("estado")
-        borde = {"lista_para_alta": VERDE_CLARO, "duplicado": PIEDRA, "a_revision": CORAL}.get(est, PIEDRA)
-        st.markdown(f"<div class='estado-box' style='background:{COLOR.get(est, '#333')};border-color:{borde}'>"
-                    f"<b>{ETIQUETA.get(est, est)}</b>"
-                    + (f" · ya existe como <b>{x['duplicado_de']}</b>" if x.get("duplicado_de") else "")
-                    + (f" · motivo: <b>{', '.join(MOTIVO_CORTO.get(m, m) for m in (x.get('motivos_revision') or []))}</b>" if x.get("motivos_revision") else "")
-                    + "</div>", unsafe_allow_html=True)
-        fi, fu = x.get("ficha") or {}, x.get("fuentes") or {}
-        campos = pd.DataFrame([{"Campo": k, "Valor": "" if v is None else str(v), "De dónde salió": fuente_txt(fu.get(k))}
-                               for k, v in fi.items() if v is not None or k in fu])
-        st.dataframe(campos, use_container_width=True, hide_index=True)
 
 # ============================================================================= Consultas (chat)
 def _cerrar_asistente():
@@ -459,13 +523,21 @@ def _pintar_respuesta(r: dict):
     st.caption(f"{r.get('segundos', '?')} s · USD {r.get('costo_usd', 0):.5f}")
 
 
+def _respuesta_guardada(clave: str) -> dict:
+    """Respuesta ya ensayada (asistente/resultados/respuestas.json) cuya pregunta menciona la clave."""
+    for r in leer_json(RESPUESTAS, {}).get("respuestas", []):
+        if r.get("pregunta") and clave and clave in r["pregunta"]:
+            return r
+    return {"error": "Esa respuesta no está guardada todavía."}
+
+
 BIENVENIDA = ("Hola, soy el asistente de altas. Preguntame **por qué un producto quedó a revisión**, **de dónde salió un dato**, "
               "**qué mandó cada proveedor** o **qué quedó pendiente**. Siempre te digo en qué archivo, hoja y fila lo encontré; "
               "si no lo tengo, te lo digo.")
-SUGERIDAS = [("¿Por qué quedó a revisión?", "¿Por qué LT-3447 quedó a revisión? ¿Con qué producto del catálogo podría ser el mismo?"),
-             ("¿De dónde sale un precio?", "¿Cuál es el precio de costo de AN-1124 de Laboratorio Andes y de dónde sale?"),
-             ("Archivo que pide saltear controles", "Natural Vida pidió dar todo de alta sin revisión. ¿Por qué NV-203 quedó a revisión igual?"),
-             ("Algo que no está en los datos", "¿Cuánto se vendió el mes pasado del jabón Pureza?")]
+SUGERIDAS = [("¿Por qué quedó a revisión?", "¿Por qué LT-3447 quedó a revisión? ¿Con qué producto del catálogo podría ser el mismo?", "LT-3447"),
+             ("¿De dónde sale un precio?", "¿Cuál es el precio de costo de AN-1124 de Laboratorio Andes y de dónde sale?", "AN-1124"),
+             ("Archivo que pide saltear controles", "Natural Vida pidió dar todo de alta sin revisión. ¿Por qué NV-203 quedó a revisión igual?", "NV-203"),
+             ("Algo que no está en los datos", "¿Cuánto se vendió el mes pasado del jabón Pureza?", "jabón Pureza")]
 
 with tab_asi:
     st.subheader("Preguntale al asistente")
@@ -483,10 +555,12 @@ with tab_asi:
                     _pintar_respuesta(m["resp"])
 
     elegida = None
-    for col, (etiqueta, completa) in zip(st.columns(len(SUGERIDAS)), SUGERIDAS):
+    for col, (etiqueta, completa, _clave) in zip(st.columns(len(SUGERIDAS)), SUGERIDAS):
         if col.button(etiqueta, key=f"sug_{etiqueta}", use_container_width=True, help=completa):
             elegida = completa
-    pregunta = st.chat_input("Escribí tu pregunta sobre lo procesado…") or elegida
+    if RESPALDO:
+        st.caption("En modo respaldo solo se pueden hacer estas cuatro preguntas ya ensayadas.")
+    pregunta = st.chat_input("Escribí tu pregunta sobre lo procesado…", disabled=RESPALDO) or elegida
 
     with st.expander("Opciones"):
         st.checkbox("Incluir el archivo nuevo de la demo (`resultados/demo`)", value=True, key="con_demo")
@@ -494,36 +568,41 @@ with tab_asi:
             _cerrar_asistente()
             st.session_state["chat"] = []
             st.rerun()
-        datos = leer_json(RESPUESTAS, {})
-        resps = [r for r in datos.get("respuestas", []) if r.get("pregunta")]
-        if resps:
-            st.markdown("**Respuestas ya ensayadas** (sin usar la API; por si falla la conexión)")
-            orden = ["LT-3447", "AN-1124", "NV-203", "jabón Pureza"]
-            resps = sorted(resps, key=lambda r: next((i for i, k in enumerate(orden) if k in r["pregunta"]), 99))
-            preg = st.selectbox("Pregunta", [r["pregunta"] for r in resps], key="resp_ensayada")
-            _pintar_respuesta(next(y for y in resps if y["pregunta"] == preg))
 
     if pregunta:
         with historial:
             with st.chat_message("user"):
                 st.markdown(pregunta)
             with st.chat_message("assistant"):
-                with st.spinner("Buscando en el catálogo y en los archivos…"):
-                    r = _preguntar(pregunta, st.session_state.get("con_demo", True))
+                if RESPALDO:
+                    r = _respuesta_guardada(next((c for _e, q, c in SUGERIDAS if q == pregunta), ""))
+                else:
+                    with st.spinner("Buscando en el catálogo y en los archivos…"):
+                        r = _preguntar(pregunta, st.session_state.get("con_demo", True))
                 _pintar_respuesta(r)
         st.session_state["chat"] += [{"rol": "user", "texto": pregunta}, {"rol": "assistant", "resp": r}]
 
 # ============================================================================= Proveedores (lo ya procesado)
-def _nombres_proveedores() -> dict:
-    out = {}
-    try:
-        import csv as _csv
-        with open(RAIZ / "data" / "proveedores" / "proveedores.csv", encoding="utf-8-sig", newline="") as fh:
-            for fila in _csv.DictReader(fh):
-                out[fila["proveedor_id"]] = fila.get("nombre") or fila["proveedor_id"]
-    except Exception:
-        pass
-    return out
+def _boton_copiar(texto: str):
+    """Botón «Copiar mensaje»: copia el texto al portapapeles (con alternativa para navegadores que bloquean la API)."""
+    import streamlit.components.v1 as components
+    js_texto = json.dumps(texto).replace("</", "<\\/")
+    components.html(f"""
+<button id="b" style="background:#2A6B4A;color:#F9F9F9;border:1px solid #3FA06F;border-radius:10px;padding:10px 22px;
+  font:600 15px 'Source Sans Pro',system-ui,sans-serif;cursor:pointer">Copiar mensaje</button>
+<script>
+const t = {js_texto};
+const b = document.getElementById('b');
+function listo() {{ b.textContent = '¡Copiado!'; b.style.background = '#3FA06F'; setTimeout(() => {{ b.textContent = 'Copiar mensaje'; b.style.background = '#2A6B4A'; }}, 1800); }}
+function alternativa() {{
+  const a = document.createElement('textarea'); a.value = t; document.body.appendChild(a); a.select();
+  try {{ document.execCommand('copy'); listo(); }} catch (e) {{ b.textContent = 'No se pudo copiar'; }}
+  document.body.removeChild(a);
+}}
+b.onclick = () => {{
+  if (navigator.clipboard && window.isSecureContext) {{ navigator.clipboard.writeText(t).then(listo, alternativa); }} else {{ alternativa(); }}
+}};
+</script>""", height=56)
 
 
 def _seccion_pedido(pids: list, fichas: list, NOM: dict, fijo: str | None):
@@ -543,11 +622,11 @@ def _seccion_pedido(pids: list, fichas: list, NOM: dict, fijo: str | None):
     if not archivos:
         carp = next((c for c in (RAIZ / "data" / "proveedores").glob(f"{pv_sel}_*") if c.is_dir()), None)
         archivos = sorted(f.name for f in carp.iterdir() if f.is_file()) if carp else []
-    txt = CAL.mensaje_proveedor(NOM.get(pv_sel, pv_sel), " y ".join(archivos) or "el archivo enviado",
+    txt = mensaje_proveedor(NOM.get(pv_sel, pv_sel), " y ".join(archivos) or "el archivo enviado",
                                 [x for x in fichas if CAL.proveedor_de(x["item_id"]) == pv_sel])
     st.caption("Borrador armado por código a partir de los motivos (no lo redacta el modelo). Revisalo antes de enviarlo.")
     st.code(txt, language="text")
-    st.download_button("Descargar borrador", txt, file_name=f"pedido_{pv_sel}.txt", key=f"dl_{pv_sel}")
+    _boton_copiar(txt)
 
 
 with tab_cat:
@@ -561,9 +640,10 @@ with tab_cat:
         pids = sorted({CAL.proveedor_de(x["item_id"]) for x in todas})
         carpeta_demo = next((c for c in ("demo", "demo_ensayo") if (RES / c / "resumen_corrida.json").exists()), None)
         fichas_demo = cargar_fichas(carpeta_demo) if carpeta_demo else []
+        _PID_ROT = None
         if fichas_demo:
             pids = pids + [PROV_DEMO[:3]]
-            NOM[PROV_DEMO[:3]] = "Demo Proveedor"
+            NOM[PROV_DEMO[:3]], _PID_ROT = _etiqueta_demo(carpeta_demo)
         st.session_state.setdefault("pv_sel_cat", "TODOS")
         todos_activo = st.session_state["pv_sel_cat"] == "TODOS"
         if st.button("Todos los proveedores", key="ver_todos", type="primary" if todos_activo else "secondary"):
@@ -574,7 +654,7 @@ with tab_cat:
             with col:
                 activo = st.session_state["pv_sel_cat"] == pid
                 borde = f"3px solid {VERDE_CLARO}" if activo else "3px solid transparent"
-                st.markdown(f"<div class='logo-card' style='border:{borde}'>{logo_img(pid) or '<b style=color:#2C3E50;font-size:.8rem;text-align:center>Archivo nuevo</b>'}</div>", unsafe_allow_html=True)
+                st.markdown(f"<div class='logo-card' style='border:{borde}'>{logo_img(_PID_ROT if pid == PROV_DEMO[:3] and _PID_ROT else pid) or '<b style=color:#2C3E50;font-size:.8rem;text-align:center>' + html.escape(NOM.get(pid, 'Archivo nuevo')) + '</b>'}</div>", unsafe_allow_html=True)
                 if st.button("Ver", key=f"ver_{pid}", use_container_width=True, type="primary" if activo else "secondary"):
                     st.session_state["pv_sel_cat"] = pid
                     st.rerun()
@@ -604,23 +684,7 @@ with tab_cat:
             dfv = df_fichas(vista)
             if todos:
                 dfv["proveedor"] = dfv["item"].str.split(":").str[0].map(lambda p: NOM.get(p, p))
-            st.dataframe(pintar(dfv), use_container_width=True, hide_index=True)
-            st.caption("Verde: lista para alta · Gris: duplicado (con su SKU) · Coral: a revisión (con su motivo).")
-
-            st.markdown("#### Cada dato, con su origen")
-            item = st.selectbox("Producto", [x["item_id"] for x in vista], key=f"item_{pid}")
-            x = next(y for y in vista if y.get("item_id") == item)
-            est = x.get("estado")
-            borde = {"lista_para_alta": VERDE_CLARO, "duplicado": PIEDRA, "a_revision": CORAL}.get(est, PIEDRA)
-            st.markdown(f"<div class='estado-box' style='background:{COLOR.get(est, '#333')};border-color:{borde}'>"
-                        f"<b>{ETIQUETA.get(est, est)}</b>"
-                        + (f" · ya existe como <b>{x['duplicado_de']}</b>" if x.get("duplicado_de") else "")
-                        + (f" · motivo: <b>{', '.join(MOTIVO_CORTO.get(m, m) for m in (x.get('motivos_revision') or []))}</b>" if x.get("motivos_revision") else "")
-                        + "</div>", unsafe_allow_html=True)
-            fi, fu = x.get("ficha") or {}, x.get("fuentes") or {}
-            campos = pd.DataFrame([{"Campo": k, "Valor": "" if v is None else str(v), "De dónde salió": fuente_txt(fu.get(k))}
-                                   for k, v in fi.items() if v is not None or k in fu])
-            st.dataframe(campos, use_container_width=True, hide_index=True)
+            _tabla_con_origen(vista, dfv, f"{pid}_{'-'.join(filtro)}")
         else:
             st.info("No hay productos con los estados elegidos.")
 

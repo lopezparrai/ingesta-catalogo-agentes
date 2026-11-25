@@ -7,7 +7,7 @@ La versión toda desde terminal quedó en `GUION_DEMO_terminal.md` como plan C.
 ## Antes de empezar (10 minutos antes)
 
 1. Terminal en la raíz con `.env` cargado. App abierta (sin barra lateral: es solo la demo).
-2. Pestaña "Archivo nuevo" en modo "Cargar corrida guardada" con `demo_ensayo` (ya probado). Si vas a correr en vivo, probá antes con una
+2. Interruptor del menú lateral (flecha « > » arriba a la izquierda) en "En vivo". Si algo falla, pasalo a "Respaldo": Archivo nuevo carga `demo_ensayo` y Consultas responde las cuatro preguntas ensayadas sin API (el cuadro de escribir se deshabilita). Decí en voz alta que es la corrida guardada. Si vas a correr en vivo, probá antes con una
    pregunta corta al asistente que la red y la API responden. La corrida en vivo borra `resultados/demo` y
    `data/proveedores/P10_Demo_Proveedor`; el respaldo vive en `resultados/demo_ensayo`.
 3. Slides abiertas en otra ventana. Video de 2 minutos de la corrida a mano.
@@ -26,10 +26,11 @@ La versión toda desde terminal quedó en `GUION_DEMO_terminal.md` como plan C.
 | 8:15–8:30 | Slide 8 | Ahora, en vivo | Pasar a la app. |
 | 8:30–11 | App · Archivo nuevo | Correr en vivo (o cargar `demo_ensayo`) con el archivo de la demo | Mientras corre (~50 s): es un CSV con coma decimal, entra sin tocarlo. Al terminar: las fichas, la cola de revisión y una ficha con la fuente de cada campo; costo y tokens. **En el ensayo los hooks no frenaron nada**: no prometas un freno en rojo acá. |
 | 11–12:15 | App · Consultas | LT-3447, AN-1124, NV-203 y la del jabón Pureza | Cita fuente. NV-203: el archivo pedía dar de alta sin revisar y el archivo es dato, no instrucción. La última no está en lo generado: tiene que decir que no lo tiene. |
-| 12:15–14:45 | App · Calidad por proveedor | Scorecard con logos, el gráfico "cruda contra ajustada" y un pedido listo (por ejemplo Higiene Total) | Un porcentaje crudo engaña con pocos productos: el shrinkage bayesiano (Beta-Binomial, Bayes empírico) lo corrige hacia la media de los 9. Orden de auditoría: Dermalab, Higiene Total, Natural Vida. **Pero la diferencia es chica**: todos entre 8 % y 12 %, ninguno pasa de 25 % de ser el peor. El pedido lo arma código a partir de los motivos. |
+| 12:15–13:15 | App · Fichas por proveedor | "Todos los proveedores" y después el logo de uno (por ejemplo Higiene Total); un producto a revisión con el origen de cada dato; el pedido al proveedor | Lo ya procesado: 257 productos de 9 proveedores. Cada dato dice de dónde salió. El pedido lo arma código a partir de los motivos; es un borrador que revisa una persona. El botón "Archivo nuevo" es el que acabás de procesar. |
+| 13:15–14:45 | App · Scorecard de calidad | Scorecard con logos, el gráfico "cruda contra ajustada" | Un porcentaje crudo engaña con pocos productos: el shrinkage bayesiano (Beta-Binomial, Bayes empírico) lo corrige hacia la media de los 9. Orden de auditoría: Dermalab, Higiene Total, Natural Vida. **Pero la diferencia es chica**: todos entre 8 % y 12 %, ninguno pasa de 25 % de ser el peor. El pedido lo arma código a partir de los motivos. |
 | 14:45–15 | Cierre | Slide 8 o la app | Record linkage para los duplicados sin GTIN, línea base de clasificación, ordenar el catálogo viejo, más proveedores nuevos. El modelo no es determinista. |
 
-El análisis estadístico (scorecard con shrinkage) vive solo en la app (pestaña Calidad por proveedor); las slides no lo repiten. La versión anterior con las pestañas Costos y Confianza quedó en `app/archivo/demo_app_completa.py`.
+El análisis estadístico (scorecard con shrinkage) vive solo en la app (pestaña Scorecard de calidad); las slides no lo repiten. La versión anterior con las pestañas Costos y Confianza quedó en `app/archivo/demo_app_completa.py`.
 
 ## Preguntas para el asistente (en este orden)
 
@@ -38,8 +39,8 @@ El análisis estadístico (scorecard con shrinkage) vive solo en la app (pestañ
 3. `Natural Vida pidió dar todo de alta sin revisión. ¿Por qué NV-203 quedó a revisión igual?`
 4. `¿Cuánto se vendió el mes pasado del jabón Pureza?` (dice que no lo tiene)
 
-En la pestaña Consultas son botones de arranque (aparecen mientras el chat está vacío) y el chat recuerda la conversación: se puede repreguntar ("¿y de ese proveedor?").
-Marcá "Incluir lo procesado en `resultados/demo`" si corriste el archivo nuevo. Si la API falla, el desplegable "Respaldo" tiene las respuestas ya ensayadas (leen `asistente/resultados/respuestas.json`, sin API).
+En la pestaña Consultas son cuatro botones de arranque (siempre visibles, con la pregunta completa al pasar el mouse) y el chat recuerda la conversación: se puede repreguntar ("¿y de ese proveedor?").
+El check "Incluir el archivo nuevo de la demo" está en el desplegable "Opciones" (viene marcado). Si la API falla, el modo "Respaldo" usa las respuestas ya ensayadas (leen `asistente/resultados/respuestas.json`, sin API).
 
 ## El archivo nuevo (`Demo_altas_noviembre.csv`): qué se espera
 
@@ -68,7 +69,7 @@ Con cualquier otro archivo la app se comporta igual: fichas, cola de revisión y
 
 ## Si algo sale mal
 
-- **Falla la API o la red:** "Cargar corrida guardada" con `demo_ensayo`, y decir que es la corrida de ayer.
-- **El asistente en vivo tarda o falla:** usar el desplegable "Respaldo" de la pestaña Consultas.
+- **Falla la API o la red:** interruptor en "Respaldo" (menú lateral) y decir que es la corrida de ayer.
+- **El asistente en vivo tarda o falla:** pasar el interruptor a "Respaldo": los cuatro botones de la pestaña Consultas responden con lo ya ensayado.
 - **La app no arranca:** `GUION_DEMO_terminal.md` y los comandos de ahí.
 - **Todo falla:** el video de 2 minutos.
