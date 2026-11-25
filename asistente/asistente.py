@@ -53,7 +53,7 @@ def _norm(s: str) -> str:
 
 def cargar_fichas(carpeta: Path = FINAL) -> dict[str, dict]:
     fichas = {}
-    for ruta in sorted(carpeta.glob("P0*.json")):
+    for ruta in sorted(carpeta.glob("P[0-9][0-9]_*.json")):   # P01 a P09 y P10, el proveedor de la demo
         if ruta.stem.endswith(SUFIJOS_NO_FICHAS):
             continue
         for f in json.loads(ruta.read_text(encoding="utf-8")):
@@ -156,6 +156,14 @@ class Datos:
         if fichas is None and CON_DEMO and (RAIZ / "resultados" / "demo").is_dir():
             self.fichas.update(cargar_fichas(RAIZ / "resultados" / "demo"))
         self.proveedores = cargar_proveedores()
+        if CON_DEMO and any(i.startswith("P10:") for i in self.fichas):
+            # el proveedor de la demo no está en proveedores.csv: se suma con el nombre que le puso la app
+            try:
+                rotulo = json.loads((RAIZ / "resultados" / "demo" / "_proveedor.json").read_text(encoding="utf-8"))
+            except Exception:
+                rotulo = {}
+            self.proveedores.setdefault("P10", {"proveedor_id": "P10", "nombre": rotulo.get("nombre") or "Demo Proveedor",
+                                                "carpeta": "P10_Demo_Proveedor", "archivos": ""})
 
     # -- buscar_fichas ------------------------------------------------------------------------------
     def buscar_fichas(self, item=None, proveedor=None, estado=None, motivo=None, moneda=None,

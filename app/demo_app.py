@@ -440,7 +440,7 @@ with tab_ing:
 
     if modo.startswith("Correr"):
         NOM_E = _nombres_proveedores()
-        NUEVO = "Proveedor nuevo…"
+        NUEVO = "Proveedor nuevo"
         elegido = st.selectbox("¿De qué proveedor es?", [NUEVO] + [f"{n}  ({q})" for q, n in NOM_E.items()], key="prov_elegido",
                                help="Si es uno que ya conocemos, se rotula con su nombre. Si no, escribí el nombre del proveedor nuevo.")
         if elegido == NUEVO:
@@ -627,9 +627,16 @@ def _leer_respuesta(pr):
     return {"error": "El asistente se cerró sin responder."}
 
 
+def _firma_demo():
+    """Cambia cada vez que se procesa un archivo nuevo: el asistente abierto con datos viejos se reinicia."""
+    f = RES / "demo" / "resumen_corrida.json"
+    return f.stat().st_mtime if f.exists() else None
+
+
 def _preguntar(texto: str, con_demo: bool) -> dict:
     pr = st.session_state.get("asis_proc")
-    if pr is not None and (pr.poll() is not None or st.session_state.get("asis_demo") != con_demo):
+    if pr is not None and (pr.poll() is not None or st.session_state.get("asis_demo") != con_demo
+                           or st.session_state.get("asis_firma") != _firma_demo()):
         _cerrar_asistente()
         pr = None
     if pr is None:
@@ -638,6 +645,7 @@ def _preguntar(texto: str, con_demo: bool) -> dict:
                               encoding="utf-8", errors="replace", bufsize=1,
                               env={**os.environ, "PYTHONUNBUFFERED": "1", "PYTHONIOENCODING": "utf-8"})
         st.session_state["asis_proc"], st.session_state["asis_demo"] = pr, con_demo
+        st.session_state["asis_firma"] = _firma_demo()
         if not _leer_respuesta(pr).get("listo"):
             _cerrar_asistente()
             return {"error": "No pude iniciar el asistente. ¿Está cargada la clave de la API?"}
