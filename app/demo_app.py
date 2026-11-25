@@ -837,13 +837,21 @@ with tab_cat:
         pid = st.session_state["pv_sel_cat"]
         todos = pid == "TODOS"
         es_demo = pid == PROV_DEMO[:3]
-        base = fichas_demo if es_demo else todas
-        fp = todas if todos else [x for x in base if CAL.proveedor_de(x["item_id"]) == pid]
+        todas_mas_demo = todas + fichas_demo          # el archivo nuevo de la demo también cuenta en "Todos"
+        base = fichas_demo if es_demo else todas_mas_demo
+        fp = todas_mas_demo if todos else [x for x in base if CAL.proveedor_de(x["item_id"]) == pid]
         c = pd.Series([x.get("estado") for x in fp]).value_counts()
-        patron = "P*_traza.json" if todos else f"{pid}_*_traza.json"
-        carpeta_costo = (RES / carpeta_demo) if es_demo else (RES / "final")
-        costo = sum((leer_json(f, {}).get("costo_usd", 0) or 0) for f in carpeta_costo.glob(patron) if f.stem.startswith("P") and f.stem[1:3].isdigit())
+
+        def _costo(carpeta, patron):
+            return sum((leer_json(f, {}).get("costo_usd", 0) or 0) for f in carpeta.glob(patron) if f.stem.startswith("P") and f.stem[1:3].isdigit())
+        if todos:
+            costo = _costo(RES / "final", "P*_traza.json") + (_costo(RES / carpeta_demo, "P*_traza.json") if fichas_demo else 0)
+        else:
+            costo = _costo((RES / carpeta_demo) if es_demo else (RES / "final"), f"{pid}_*_traza.json")
         st.markdown(f"### {'Todos los proveedores' if todos else html.escape(NOM.get(pid, pid))}")
+        if todos and fichas_demo:
+            st.caption(f"{len(todas)} productos de la carga completa de los 9 proveedores y {len(fichas_demo)} del archivo nuevo "
+                       f"({html.escape(NOM.get(PROV_DEMO[:3], 'Demo'))}).")
         if es_demo:
             st.caption("Es el archivo que entró en la demo: se actualiza cada vez que procesás uno nuevo. No forma parte de la carga completa de los 9 proveedores."
                        + (f" Carpeta: `resultados/{carpeta_demo}`." if TECNICO else ""))
@@ -859,6 +867,8 @@ with tab_cat:
             st.markdown(f"<div class='tec'>Datos con su fuente: {con_f} de {tot_f} ({pct(con_f / tot_f, 1) if tot_f else '—'}) · "
                         f"carpeta <code>resultados/{carpeta_demo if es_demo else 'final'}</code></div>", unsafe_allow_html=True)
         extr_cat = cargar_extraccion(carpeta_demo if es_demo else "final")
+        if todos and carpeta_demo:
+            extr_cat = {**extr_cat, **cargar_extraccion(carpeta_demo)}
 
         filtro = st.multiselect("Estados a mostrar", list(ETIQUETA), default=list(ETIQUETA), format_func=lambda e: ETIQUETA[e], key=f"filtro_{pid}")
         vista = [x for x in fp if x.get("estado") in filtro]
