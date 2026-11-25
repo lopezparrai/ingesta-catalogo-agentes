@@ -125,11 +125,13 @@ def pintar(df: pd.DataFrame):
     def fila(r):
         c = colores.get(r.name, "")
         return [f"background-color: {c}; color: #F9F9F9" if c else ""] * len(r)
-    disp = disp[["Producto", "Estado", "Descripción", "Motivos", "Duplicado de", "GTIN", "Precio de costo"]]
+    disp = disp.rename(columns={"proveedor": "Proveedor"})
+    cols = ["Producto"] + (["Proveedor"] if "Proveedor" in disp.columns else []) + ["Estado", "Descripción", "Motivos", "Duplicado de", "GTIN", "Precio de costo"]
+    disp = disp[cols]
     vacio = lambda v: "" if v is None or v != v else v
     return (disp.style.apply(fila, axis=1)
             .format(lambda v: "" if v is None or v != v else f"{v:.2f}", subset=["Precio de costo"])
-            .format(vacio, subset=["Producto", "Estado", "Descripción", "Motivos", "Duplicado de", "GTIN"]))
+            .format(vacio, subset=[c for c in cols if c != "Precio de costo"]))
 
 
 def resumen_tokens_costo(carpeta: str):
@@ -479,6 +481,27 @@ def _nombres_proveedores() -> dict:
     return out
 
 
+def _seccion_pedido(pids: list, fichas: list, NOM: dict, fijo: str | None):
+    """Borrador de pedido al proveedor. Con `fijo` usa ese proveedor; si no, deja elegir."""
+    st.markdown("#### Pedido listo para el proveedor")
+    pv_sel = fijo or st.selectbox("Proveedor", pids, format_func=lambda p: NOM.get(p, p), key="pv_pedido")
+    st.markdown(f"<div class='logos'><div class='logo-chip'>{logo_img(pv_sel)}<span>{html.escape(NOM.get(pv_sel, pv_sel))}</span></div></div>", unsafe_allow_html=True)
+    archivos = []
+    try:
+        import csv as _csv
+        with open(RAIZ / "data" / "proveedores" / "proveedores.csv", encoding="utf-8-sig", newline="") as fh:
+            for fila in _csv.DictReader(fh):
+                if fila["proveedor_id"] == pv_sel:
+                    archivos = [a for a in fila.get("archivos", "").split(" | ") if a and "fichas_de_seguridad" not in a]
+    except Exception:
+        pass
+    txt = CAL.mensaje_proveedor(NOM.get(pv_sel, pv_sel), " y ".join(archivos) or "el archivo enviado",
+                                [x for x in fichas if CAL.proveedor_de(x["item_id"]) == pv_sel])
+    st.caption("Borrador armado por código a partir de los motivos (no lo redacta el modelo). Revisalo antes de enviarlo.")
+    st.code(txt, language="text")
+    st.download_button("Descargar borrador", txt, file_name=f"pedido_{pv_sel}.txt", key=f"dl_{pv_sel}")
+
+
 with tab_cat:
     st.subheader("Lo que ya se procesó, proveedor por proveedor")
     st.caption("La carga completa de los 9 proveedores (`resultados/final`): sus fichas, lo que quedó a revisión y de dónde salió cada dato.")
@@ -488,7 +511,11 @@ with tab_cat:
     else:
         NOM = _nombres_proveedores()
         pids = sorted({CAL.proveedor_de(x["item_id"]) for x in todas})
-        st.session_state.setdefault("pv_sel_cat", pids[0])
+        st.session_state.setdefault("pv_sel_cat", "TODOS")
+        todos_activo = st.session_state["pv_sel_cat"] == "TODOS"
+        if st.button("Todos los proveedores", key="ver_todos", type="primary" if todos_activo else "secondary"):
+            st.session_state["pv_sel_cat"] = "TODOS"
+            st.rerun()
         cols = st.columns(len(pids))
         for col, pid in zip(cols, pids):
             with col:
@@ -500,10 +527,12 @@ with tab_cat:
                     st.rerun()
 
         pid = st.session_state["pv_sel_cat"]
-        fp = [x for x in todas if CAL.proveedor_de(x["item_id"]) == pid]
+        todos = pid == "TODOS"
+        fp = todas if todos else [x for x in todas if CAL.proveedor_de(x["item_id"]) == pid]
         c = pd.Series([x.get("estado") for x in fp]).value_counts()
-        costo = sum((leer_json(f, {}).get("costo_usd", 0) or 0) for f in (RES / "final").glob(f"{pid}_*_traza.json"))
-        st.markdown(f"### {html.escape(NOM.get(pid, pid))}")
+        patron = "P*_traza.json" if todos else f"{pid}_*_traza.json"
+        costo = sum((leer_json(f, {}).get("costo_usd", 0) or 0) for f in (RES / "final").glob(patron) if f.stem.startswith("P") and f.stem[1:3].isdigit())
+        st.markdown(f"### {'Todos los proveedores' if todos else html.escape(NOM.get(pid, pid))}")
         k1, k2, k3, k4, k5 = st.columns(5)
         k1.metric("Productos", len(fp))
         k2.metric("Listos para alta", int(c.get("lista_para_alta", 0)))
@@ -514,7 +543,10 @@ with tab_cat:
         filtro = st.multiselect("Estados a mostrar", list(ETIQUETA), default=list(ETIQUETA), format_func=lambda e: ETIQUETA[e], key=f"filtro_{pid}")
         vista = [x for x in fp if x.get("estado") in filtro]
         if vista:
-            st.dataframe(pintar(df_fichas(vista)), use_container_width=True, hide_index=True)
+            dfv = df_fichas(vista)
+            if todos:
+                dfv["proveedor"] = dfv["item"].str.split(":").str[0].map(lambda p: NOM.get(p, p))
+            st.dataframe(pintar(dfv), use_container_width=True, hide_index=True)
             st.caption("Verde: lista para alta · Gris: duplicado (con su SKU) · Coral: a revisión (con su motivo).")
 
             st.markdown("#### Cada dato, con su origen")
@@ -533,6 +565,8 @@ with tab_cat:
             st.dataframe(campos, use_container_width=True, hide_index=True)
         else:
             st.info("No hay productos con los estados elegidos.")
+
+        _seccion_pedido(pids, todas, NOM, None if todos else pid)
 
 # ============================================================================= Scorecard de calidad (Bayes empírico)
 def _grafico_scorecard(orden, nombres, n, k, media, ic, mu):
@@ -634,24 +668,6 @@ with tab_prov:
                 f"un compromiso entre lo que mostró y la media. Cuanto menos mandó, más se acerca a la media; por eso «Peso de sus datos» es n / (n + {kappa:.0f}). "
                 f"El intervalo y la probabilidad de ser el peor salen de simular 20.000 veces la distribución posterior de cada proveedor. "
                 f"Semilla fija: el resultado no cambia entre corridas.")
-
-        st.markdown("#### Pedido listo para cada proveedor")
-        pv_sel = st.selectbox("Proveedor", [provs[i] for i in orden], format_func=nom, key="pv_pedido")
-        st.markdown(f"<div class='logos'><div class='logo-chip'>{logo_img(pv_sel)}<span>{html.escape(nom(pv_sel))}</span></div></div>", unsafe_allow_html=True)
-        archivos = []
-        try:
-            import csv as _csv
-            with open(RAIZ / "data" / "proveedores" / "proveedores.csv", encoding="utf-8-sig", newline="") as fh:
-                for fila in _csv.DictReader(fh):
-                    if fila["proveedor_id"] == pv_sel:
-                        archivos = [a for a in fila.get("archivos", "").split(" | ") if a and "fichas_de_seguridad" not in a]
-        except Exception:
-            pass
-        txt = CAL.mensaje_proveedor(nom(pv_sel), " y ".join(archivos) or "el archivo enviado",
-                                    [x for x in fin if CAL.proveedor_de(x["item_id"]) == pv_sel])
-        st.caption("Borrador armado por código a partir de los motivos (no lo redacta el modelo). Revisalo antes de enviarlo.")
-        st.code(txt, language="text")
-        st.download_button("Descargar borrador", txt, file_name=f"pedido_{pv_sel}.txt")
 
         st.caption("Ojo: «a revisión» es lo que el sistema detectó, no el error real del proveedor, y los 9 proveedores son pocos para estimar la media. "
                    "Un dato malo que pasó sin frenar no figura acá.")
