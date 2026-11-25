@@ -208,8 +208,7 @@ def _logo_b64() -> str:
 _b64 = _logo_b64()
 _img = f'<img src="data:image/png;base64,{_b64}" alt="{CLIENTE}">' if _b64 else f"<b>{CLIENTE}</b>"
 st.markdown(f"""<div class="cabecera">{_img}
-<div class="texto"><h1>Altas de productos, <b>sin copiar a mano</b></h1>
-<p>El archivo del proveedor entra tal como llega y sale como fichas listas, duplicados detectados y una cola de revisión con su motivo.</p></div></div>""",
+<div class="texto"><h1>Altas de productos, <b>sin copiar a mano</b></h1></div></div>""",
             unsafe_allow_html=True)
 
 st.markdown(CSS_LOGOS, unsafe_allow_html=True)
