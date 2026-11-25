@@ -29,9 +29,9 @@ from pathlib import Path
 from mcp import ClientSession
 from mcp.client.stdio import stdio_client
 
-import nucleo as A
+import agente_base as A
 
-SALIDAS_M4 = A.RAIZ / "salidas_m4"
+SALIDAS_ORQUESTADOR = A.RAIZ / "resultados" / "orquestador"   # pruebas del orquestador (no se versiona)
 PROVEEDORES = A.RAIZ / "data" / "proveedores"
 LOTE_ESCRITOR = 10  # productos por corrida del escritor (límite de iteraciones y costo, como en M3)
 
@@ -378,20 +378,20 @@ def procesar(carpeta: str, secuencial: bool, codigos: list[str] | None, workers:
 
 
 def guardar(res: dict, sufijo: str) -> None:
-    SALIDAS_M4.mkdir(exist_ok=True)
+    SALIDAS_ORQUESTADOR.mkdir(parents=True, exist_ok=True)
     nombre = res["carpeta"]
-    (SALIDAS_M4 / f"{nombre}{sufijo}.json").write_text(
+    (SALIDAS_ORQUESTADOR / f"{nombre}{sufijo}.json").write_text(
         json.dumps(list(res["fichas"].values()), indent=2, ensure_ascii=False), encoding="utf-8")
-    (SALIDAS_M4 / f"{nombre}{sufijo}_extraccion.json").write_text(
+    (SALIDAS_ORQUESTADOR / f"{nombre}{sufijo}_extraccion.json").write_text(
         json.dumps(res["extraccion"], indent=2, ensure_ascii=False), encoding="utf-8")
-    (SALIDAS_M4 / f"{nombre}{sufijo}_traza.json").write_text(
+    (SALIDAS_ORQUESTADOR / f"{nombre}{sufijo}_traza.json").write_text(
         json.dumps({k: v for k, v in res.items() if k not in ("fichas", "extraccion")}, indent=2,
                    ensure_ascii=False, default=str), encoding="utf-8")
 
 
 def comparar_con_m3(res: dict) -> None:
     """Contra la salida del agente único (M3), si existe: misma decisión y mismos campos."""
-    ruta = A.RAIZ / "salidas" / f"{res['carpeta']}.json"
+    ruta = A.RAIZ / "resultados" / "agente_unico" / f"{res['carpeta']}.json"
     if not ruta.exists():
         return
     previas = {f["item_id"]: f for f in json.loads(ruta.read_text(encoding="utf-8"))}

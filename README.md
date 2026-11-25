@@ -35,7 +35,7 @@ python esquema.py           # valida contra el esquema todas las fichas ya gener
 Un archivo nuevo de un proveedor entra sin intervención: se deja en su carpeta y se vuelve a correr el comando.
 Lo que no corresponde lo frena el código, no una persona.
 
-**Salidas** (`salidas_m6/`): `<proveedor>.json` (las fichas), `<proveedor>_traza.json` (costo, uso de caché,
+**Salidas** (`resultados/final/`): `<proveedor>.json` (las fichas), `<proveedor>_traza.json` (costo, uso de caché,
 frenos de los hooks), `cola_de_revision.json` (qué productos revisar y por qué) y `resumen_corrida.json`
 (tiempos, rondas y costo de toda la corrida).
 
@@ -70,7 +70,7 @@ servidor y no cada agente. Va cacheado junto con el estándar, el vocabulario y 
 ## Qué garantiza el código y no el prompt
 
 El prompt sube la probabilidad de que el modelo se porte bien; nunca la garantiza. Cuando la regla es "nunca" o
-"siempre", la respuesta está en el código. Hooks del loop (`nucleo.py`), que le devuelven al modelo el motivo
+"siempre", la respuesta está en el código. Hooks del loop (`agente_base.py`), que le devuelven al modelo el motivo
 como error:
 
 | Cuándo | Hook | Qué frena |
@@ -157,7 +157,7 @@ escritor (~−45 %) y los proveedores entre sí. El costo no baja con el paralel
 
 ## Cómo se evalúa
 
-`evaluador.py` compara `salidas/*.json` contra fichas verificadas a mano en `evals/` (Litoral y Andes). Cuenta
+`evaluador.py` compara `resultados/agente_unico/*.json` contra fichas verificadas a mano en `evals/` (Litoral y Andes). Cuenta
 como error un campo que se esperaba vacío y se completó: inventar un dato es peor que dejarlo vacío. Además,
 cada vez que se toca un prompt se vuelven a correr todos los proveedores y se comparan los estados contra la
 corrida anterior (ver abajo por qué).
@@ -199,7 +199,7 @@ lo que no dependía del nombre: el contenido, el EAN y el precio.
 **Por qué importa.** 13 fichas con el nombre de otro producto salieron como `lista_para_alta`, o sea, listas para
 cargar con el EAN y el precio de un producto y el nombre de otro. Las 5 que fueron a revisión lo hicieron por
 otra razón, correcta (4 códigos no están en la lista de precios, así que no hay EAN ni costo, y DL-148 no tenía
-nombre): el error de fondo no lo detectó nadie (la comparación producto por producto está en `diagnostico_dermalab.md`). El cruce del Excel con el PDF por código funcionó bien.
+nombre): el error de fondo no lo detectó nadie (la comparación producto por producto está en `resultados/evidencia/diagnostico_dermalab.md`). El cruce del Excel con el PDF por código funcionó bien.
 
 **Por qué no lo frenó ningún hook.** Los hooks controlan forma y coherencia: esquema, vocabulario, GTIN,
 fuentes, estado contra motivos. La ficha equivocada es perfectamente válida: el nombre "SERUM DERMALAB LIFT X
@@ -220,7 +220,7 @@ extracción de cada proveedor para poder diagnosticar.
 
 Con el arreglo, **los 18 nombres coinciden con el PDF** (14 `lista_para_alta`, 4 `a_revision`; las 4 de revisión
 son productos que no están en la lista de precios, así que no tienen EAN ni costo). La corrida original quedó
-guardada en `salidas_m6/P05_Dermalab_corrida_original.json`. Esta segunda corrida **no cuenta como prueba
+guardada en `resultados/evidencia/P05_Dermalab_corrida_original.json`. Esta segunda corrida **no cuenta como prueba
 limpia**: el sistema ya se había ajustado mirando este proveedor. Lo que queda es que el defecto era de una
 consulta pensada para tablas, y que los hooks de forma no lo habrían detectado nunca.
 
@@ -272,12 +272,13 @@ un prompt (no es un hook) y es el punto más débil que queda.
 | Archivo | Qué hace |
 |---|---|
 | `mi_servidor.py` | Servidor MCP (FastMCP): estándar, archivos de proveedores, catálogo, validación de GTIN y el prompt `criterio_revision`. |
-| `nucleo.py` | Base común: loop del agente, tools, permisos, hooks y costos (también corre el agente único de M1–M3). |
+| `agente_base.py` | Base común: loop del agente, tools, permisos, hooks y costos (también corre el agente único de M1–M3). |
 | `esquema.py` | Esquema pydantic de la ficha y de la salida; valida las salidas ya generadas. |
 | `orquestador.py` | El diseño multi-agente: extractores en paralelo, consolidación en código y escritor (tiempo real, por proveedor). |
 | `ingesta.py` | **Comando principal**: todos los proveedores, por Batch o en tiempo real, con costo y tiempo. Reusa la extracción y la consolidación del orquestador y ejecuta el escritor por rondas. |
 | `evaluador.py`, `evals/` | Evaluación contra fichas verificadas a mano. |
 | `prueba_hooks.py`, `prueba_ingesta.py` | Pruebas sin API de los hooks, del motor de rondas y de los controles de precio y de FDS. |
-| `diagnostico_dermalab.md` | Comparación producto por producto de la corrida original de Dermalab. |
 | `ejercicios/` | Ejercicios sueltos del curso (prompt v2, salida estructurada); el sistema no los usa. |
-| `salidas/`, `salidas_m4/`, `salidas_m6/` | Salidas del agente único, del orquestador y de la corrida final. |
+| `resultados/final/` | La corrida final: por proveedor, la ficha y su traza (costo, caché, frenos de hooks), más la cola de revisión y el resumen. |
+| `resultados/agente_unico/` | La base de M1–M3, contra la que se compara ("vs agente único"). |
+| `resultados/evidencia/` | Dermalab: la corrida original y el diagnóstico producto por producto; y las dos corridas con error. |

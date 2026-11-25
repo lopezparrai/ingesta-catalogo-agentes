@@ -15,3 +15,7 @@ venv/
 # Material del curso (Taligent): se copia a mano en data/, no se versiona
 data/
 *.pdf
+
+# Resultados que se regeneran (diagnóstico y pruebas del orquestador)
+resultados/orquestador/
+resultados/final/*_extraccion.json

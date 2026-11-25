@@ -2,7 +2,7 @@
 import asyncio, copy, json, sys
 from types import SimpleNamespace as NS
 
-import nucleo as A
+import agente_base as A
 import ingesta as L
 
 

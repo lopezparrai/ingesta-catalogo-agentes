@@ -1,6 +1,6 @@
 """Evaluador de fichas.
 
-Compara lo que generó el agente (salidas/*.json) con fichas armadas y verificadas a mano
+Compara lo que generó el agente (resultados/agente_unico/*.json) con fichas armadas y verificadas a mano
 (evals/*_esperado.json). Mide ficha entera y fuente, y deja el acierto por campo como diagnóstico.
 
 Uso:
@@ -16,7 +16,7 @@ Formato de cada caso esperado (el mismo que produce el agente):
 Fuentes: {"archivo", "linea"} (CSV), {"archivo", "hoja", "fila"} (Excel), {"archivo", "pagina"} (PDF).
 
 Ejemplo con Andes:
-    python evaluador.py salidas/P01_Laboratorio_Andes.json evals/andes_esperado.json
+    python evaluador.py resultados/agente_unico/P01_Laboratorio_Andes.json evals/andes_esperado.json
 """
 import json
 import sys
@@ -24,7 +24,7 @@ from collections import Counter
 from pathlib import Path
 
 RAIZ = Path(__file__).parent
-SALIDA_DEFECTO = RAIZ / "salidas" / "litoral_altas_102026.json"
+SALIDA_DEFECTO = RAIZ / "resultados" / "agente_unico" / "litoral_altas_102026.json"
 ESPERADO_DEFECTO = RAIZ / "evals" / "litoral_esperado.json"
 
 
@@ -91,7 +91,7 @@ def main(ruta_salida: Path, ruta_esperado: Path) -> None:
     if not ruta_esperado.exists():
         sys.exit(f"No encuentro {ruta_esperado}. Armá a mano las fichas esperadas (ver el docstring).")
     if not ruta_salida.exists():
-        sys.exit(f"No encuentro {ruta_salida}. Corré antes: python nucleo.py <archivo del proveedor>")
+        sys.exit(f"No encuentro {ruta_salida}. Corré antes: python agente_base.py <archivo del proveedor>")
 
     esperado = {x["item_id"]: x for x in json.loads(ruta_esperado.read_text(encoding="utf-8"))}
     obtenido = {x["item_id"]: x for x in json.loads(ruta_salida.read_text(encoding="utf-8"))}

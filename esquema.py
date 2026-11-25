@@ -2,7 +2,7 @@
 
 Un solo lugar define cómo es un resultado válido (tipos, listas cerradas del vocabulario, categorías de la
 taxonomía, forma de cada fuente). Lo usan:
-  - el hook `hook_esquema` (nucleo.py): frena `registrar_ficha` con el error por campo, que el modelo recibe
+  - el hook `hook_esquema` (agente_base.py): frena `registrar_ficha` con el error por campo, que el modelo recibe
     como error de tool y corrige;
   - `schema_ficha()`: el mismo esquema, como JSON Schema con enums, para la tool `registrar_ficha`;
   - los tests (`prueba_hooks.py`) y la revisión de salidas ya generadas.
@@ -211,8 +211,8 @@ if __name__ == "__main__":
 
     raiz = Path(__file__).parent
     total = malos = 0
-    for ruta in sorted([*raiz.glob("salidas/*.json"), *raiz.glob("salidas_m*/*.json")]):
-        if ruta.name.endswith(("_traza.json", "_extraccion.json")):
+    for ruta in sorted(raiz.glob("resultados/*/*.json")):
+        if ruta.name.endswith(("_traza.json", "_extraccion.json")) or ruta.name in ("resumen_corrida.json", "cola_de_revision.json"):
             continue
         for r in json.loads(ruta.read_text(encoding="utf-8")):
             total += 1

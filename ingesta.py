@@ -17,7 +17,7 @@ Etapas:
   3. Escritor por rondas: `--modo batch` (default) o `--modo tiempo-real` (concurrencia acotada, para
      cuando el deadline es hoy: mismas rondas, pedidos en paralelo con un tope; no es 50 % más barato).
 
-Salidas en salidas_m6/: fichas por proveedor, trazas, `cola_de_revision.json` y `resumen_corrida.json`.
+Salidas en resultados/final/: fichas por proveedor, trazas, `cola_de_revision.json` y `resumen_corrida.json`.
 
 Uso:
   py ingesta.py P09_Natural_Vida                          # un proveedor, por Batch API
@@ -36,10 +36,10 @@ from dataclasses import dataclass, field
 from mcp import ClientSession
 from mcp.client.stdio import stdio_client
 
-import nucleo as A
+import agente_base as A
 import orquestador as O
 
-SALIDAS_M6 = A.RAIZ / "salidas_m6"
+SALIDAS = A.RAIZ / "resultados" / "final"
 APARTADO = "P05_Dermalab"       # el proveedor que se abre una sola vez (semana 5)
 DESCUENTO_BATCH = 0.5           # la Batch API cobra ~50 % menos
 MAX_ITERACIONES = 20            # vueltas por conversación, como en run_agent
@@ -358,7 +358,7 @@ def main() -> None:
     total = round(time.perf_counter() - inicio, 1)
 
     # 4. Salidas: fichas, cola de revisión, qué falló y cuánto costó cada ficha
-    SALIDAS_M6.mkdir(exist_ok=True)
+    SALIDAS.mkdir(parents=True, exist_ok=True)
     cola, resumen_prov = [], []
     print("\n================ RESUMEN ================")
     for c in carpetas:
@@ -371,11 +371,11 @@ def main() -> None:
         costo = costo_extraccion[c] + sum(x.costo_usd for x in cs)
         fallas = [{"lote": x.cid, "motivo": x.nota} for x in cs if x.estado == "fallida"]
         frenos = [f for x in cs for f in x.frenos]
-        (SALIDAS_M6 / f"{c}_extraccion.json").write_text(
+        (SALIDAS / f"{c}_extraccion.json").write_text(
             json.dumps(por_carpeta[c], indent=2, ensure_ascii=False, default=str), encoding="utf-8")
-        (SALIDAS_M6 / f"{c}.json").write_text(
+        (SALIDAS / f"{c}.json").write_text(
             json.dumps(list(fichas.values()), indent=2, ensure_ascii=False), encoding="utf-8")
-        (SALIDAS_M6 / f"{c}_traza.json").write_text(json.dumps({
+        (SALIDAS / f"{c}_traza.json").write_text(json.dumps({
             "modo": a.modo, "fichas": len(fichas), "sin_registrar": faltan, "fallas": fallas,
             "frenos_de_hooks": frenos, "costo_usd": round(costo, 4),
             "costo_por_ficha_usd": round(costo / len(fichas), 5) if fichas else None,
@@ -401,8 +401,8 @@ def main() -> None:
 
     costo_total = round(sum(p["costo_usd"] for p in resumen_prov), 4)
     n_fichas = sum(p["fichas"] for p in resumen_prov)
-    (SALIDAS_M6 / "cola_de_revision.json").write_text(json.dumps(cola, indent=2, ensure_ascii=False), encoding="utf-8")
-    (SALIDAS_M6 / "resumen_corrida.json").write_text(json.dumps({
+    (SALIDAS / "cola_de_revision.json").write_text(json.dumps(cola, indent=2, ensure_ascii=False), encoding="utf-8")
+    (SALIDAS / "resumen_corrida.json").write_text(json.dumps({
         "modo": a.modo, "segundos_total": total, "segundos_extraccion": t_extraccion,
         "segundos_escritura": t_escritura, "rondas": rondas, "fichas": n_fichas, "costo_usd": costo_total,
         "costo_por_ficha_usd": round(costo_total / n_fichas, 5) if n_fichas else None,
@@ -410,7 +410,7 @@ def main() -> None:
     print(f"\nTiempo total: {total} s (extracción {t_extraccion} s, escritura {t_escritura} s en {len(rondas)} ronda(s))")
     print(f"Costo total: USD {costo_total} | fichas: {n_fichas}"
           + (f" | por ficha: USD {costo_total / n_fichas:.5f}" if n_fichas else ""))
-    print(f"Cola de revisión: {len(cola)} producto(s) en salidas_m6/cola_de_revision.json")
+    print(f"Cola de revisión: {len(cola)} producto(s) en resultados/final/cola_de_revision.json")
     print("(El costo no incluye las lecturas de PDF que hace el servidor con su propio llamado a la API.)")
 
 

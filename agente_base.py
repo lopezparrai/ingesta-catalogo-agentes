@@ -533,7 +533,7 @@ async def run_agent(tarea: str, esperados: list[str] | None = None,
 
 
 def procesar_archivo(archivo: str, cantidad: int = 10, desde: int = 0) -> Path:
-    """Procesa 'cantidad' filas de un CSV del proveedor y guarda las fichas en salidas/<archivo>.json"""
+    """Procesa 'cantidad' filas de un CSV del proveedor y guarda las fichas en resultados/agente_unico/<archivo>.json"""
     tarea = (
         f"Procesá el archivo '{archivo}': las {cantidad} filas desde el índice {desde} "
         f"(parámetros desde={desde}, limite={cantidad} de leer_lista_proveedor)."
@@ -572,8 +572,8 @@ def procesar_proveedor(carpeta: str, codigos: list[str] | None = None) -> Path:
 def guardar(nombre: str, mensaje: str, fichas: dict, esperados: list[str], metricas: dict) -> Path:
     print(f"\nAgente: {mensaje}")
 
-    salidas = RAIZ / "salidas"
-    salidas.mkdir(exist_ok=True)
+    salidas = RAIZ / "resultados" / "agente_unico"
+    salidas.mkdir(parents=True, exist_ok=True)
 
     # Métricas y traza de la corrida (para mostrar costo por ficha y qué frenaron los hooks)
     n = len(fichas)
@@ -605,10 +605,10 @@ def guardar(nombre: str, mensaje: str, fichas: dict, esperados: list[str], metri
 
 
 USO = """Uso:
-  python nucleo.py <archivo.csv> [cantidad] [desde]
-      ej. python nucleo.py P03_Distribuidora_Litoral/litoral_altas_102026.csv 12 0
-  python nucleo.py <carpeta del proveedor> [codigo,codigo,...]
-      ej. python nucleo.py P01_Laboratorio_Andes AN-1109,AN-1139"""
+  python agente_base.py <archivo.csv> [cantidad] [desde]
+      ej. python agente_base.py P03_Distribuidora_Litoral/litoral_altas_102026.csv 12 0
+  python agente_base.py <carpeta del proveedor> [codigo,codigo,...]
+      ej. python agente_base.py P01_Laboratorio_Andes AN-1109,AN-1139"""
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:

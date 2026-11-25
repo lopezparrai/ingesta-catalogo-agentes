@@ -1,6 +1,6 @@
 """M5 — Prueba de los hooks y de los permisos, sin llamar a la API (corre en un segundo y no cuesta nada).
 
-Toma una ficha real ya generada (lista_para_alta, de salidas/) y la rompe de a una cosa por vez: cada caso
+Toma una ficha real ya generada (lista_para_alta, de resultados/agente_unico/) y la rompe de a una cosa por vez: cada caso
 tiene que ser frenado por el hook que corresponde, con el motivo que el modelo recibe como error.
 Si un cambio al código o al criterio rompe un hook, esto falla antes de gastar un solo token.
 
@@ -10,9 +10,9 @@ import copy
 import json
 import sys
 
-import nucleo as A
+import agente_base as A
 
-SALIDAS = A.RAIZ / "salidas"
+SALIDAS = A.RAIZ / "resultados" / "agente_unico"
 
 
 def ficha_valida() -> dict:
@@ -23,7 +23,7 @@ def ficha_valida() -> dict:
         for r in json.loads(ruta.read_text(encoding="utf-8")):
             if r["estado"] == "lista_para_alta" and not r["ficha"].get("peligro_deposito"):
                 return r
-    raise SystemExit("No encontré una ficha lista_para_alta en salidas/")
+    raise SystemExit("No encontré una ficha lista_para_alta en resultados/agente_unico/")
 
 
 BASE = ficha_valida()
