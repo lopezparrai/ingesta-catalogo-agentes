@@ -1,0 +1,1335 @@
+[
+  {
+    "item_id": "P08:IN7003",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "CUI-CAP-SHA",
+      "codigo_proveedor": "IN7003",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 142,
+      "descripcion": "SHAMPOO EN SECO PURE CARE ORIGINAL X 142 ML",
+      "gtin": "0229962606567",
+      "marca": "PURE CARE",
+      "moneda": "USD",
+      "numero_onu": "1950",
+      "peligro_deposito": "aerosol_inflamable",
+      "precio_costo": 5.17,
+      "principio_activo": null,
+      "proveedor_id": "P08",
+      "tipo": "SHAMPOO EN SECO",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "ORIGINAL"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "variante": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "peligro_deposito": {
+        "archivo": "FDS_PureCare_in_sec.pdf",
+        "pagina": 1
+      },
+      "numero_onu": {
+        "archivo": "FDS_PureCare_in_sec.pdf",
+        "pagina": 1
+      }
+    }
+  },
+  {
+    "item_id": "P08:IN7006",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-SOL-ADU",
+      "codigo_proveedor": "IN7006",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 237,
+      "descripcion": "PROTECTOR SOLAR SUNGUARD SPORT FPS 50 X 237 ML",
+      "gtin": "0856606869455",
+      "marca": "SUNGUARD",
+      "moneda": "USD",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 7.6,
+      "principio_activo": null,
+      "proveedor_id": "P08",
+      "tipo": "PROTECTOR SOLAR",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "SPORT FPS 50"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "variante": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      }
+    }
+  },
+  {
+    "item_id": "P08:IN7009",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-COR-MAN",
+      "codigo_proveedor": "IN7009",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 227,
+      "descripcion": "CREMA PURE CARE INTENSIVE HANDS X 227 G",
+      "gtin": "0921365957672",
+      "marca": "PURE CARE",
+      "moneda": "USD",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 5.28,
+      "principio_activo": null,
+      "proveedor_id": "P08",
+      "tipo": "CREMA",
+      "unidad": "G",
+      "unidades_por_envase": 1,
+      "variante": "INTENSIVE HANDS"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "variante": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      }
+    }
+  },
+  {
+    "item_id": "P08:IN7012",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "NUT-VIT-VIT",
+      "codigo_proveedor": "IN7012",
+      "concentracion": "2000 UI",
+      "condicion_venta": null,
+      "contenido": 120,
+      "descripcion": "VITALIS VITAMINA D3 2000 UI CAPSULAS X 120 UN",
+      "gtin": "0316401081426",
+      "marca": "VITALIS",
+      "moneda": "USD",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 10.66,
+      "principio_activo": "VITAMINA D3",
+      "proveedor_id": "P08",
+      "tipo": "CAPSULAS",
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "variante": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "principio_activo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "concentracion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      }
+    }
+  },
+  {
+    "item_id": "P08:IN7015",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "CUI-AFE-ESP",
+      "codigo_proveedor": "IN7015",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 198,
+      "descripcion": "GEL DE AFEITAR PURE CARE SENSITIVE X 198 ML",
+      "gtin": "0317169955172",
+      "marca": "PURE CARE",
+      "moneda": "USD",
+      "numero_onu": "1950",
+      "peligro_deposito": "aerosol_inflamable",
+      "precio_costo": 3.89,
+      "principio_activo": null,
+      "proveedor_id": "P08",
+      "tipo": "GEL DE AFEITAR",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "SENSITIVE"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "variante": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "peligro_deposito": {
+        "archivo": "FDS_PureCare_in_afe.pdf",
+        "pagina": 1
+      },
+      "numero_onu": {
+        "archivo": "FDS_PureCare_in_afe.pdf",
+        "pagina": 1
+      }
+    }
+  },
+  {
+    "item_id": "P08:IN7018",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "CUI-BUC-ENJ",
+      "codigo_proveedor": "IN7018",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 500,
+      "descripcion": "ENJUAGUE BUCAL PURE CARE COOL MINT X 500 ML",
+      "gtin": "0013232310571",
+      "marca": "PURE CARE",
+      "moneda": "USD",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 4.41,
+      "principio_activo": null,
+      "proveedor_id": "P08",
+      "tipo": "ENJUAGUE BUCAL",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "COOL MINT"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "variante": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      }
+    }
+  },
+  {
+    "item_id": "P08:IN7021",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "NUT-VIT-MUL",
+      "codigo_proveedor": "IN7021",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 100,
+      "descripcion": "VITALIS COMPRIMIDOS X 100 UN",
+      "gtin": "0366254962564",
+      "marca": "VITALIS",
+      "moneda": "USD",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 9.39,
+      "principio_activo": null,
+      "proveedor_id": "P08",
+      "tipo": "COMPRIMIDOS",
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "variante": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      }
+    }
+  },
+  {
+    "item_id": "P08:IN7024",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-COR-HID",
+      "codigo_proveedor": "IN7024",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 296,
+      "descripcion": "LOCION PURE CARE SHEA BUTTER X 296 ML",
+      "gtin": "0103763096362",
+      "marca": "PURE CARE",
+      "moneda": "USD",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 4.18,
+      "principio_activo": null,
+      "proveedor_id": "P08",
+      "tipo": "LOCION",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "SHEA BUTTER"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "variante": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      }
+    }
+  },
+  {
+    "item_id": "P08:IN7027",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "NUT-VIT-VIT",
+      "codigo_proveedor": "IN7027",
+      "concentracion": "1000 UI",
+      "condicion_venta": null,
+      "contenido": 60,
+      "descripcion": "VITALIS VITAMINA D3 1000 UI CAPSULAS X 60 UN",
+      "gtin": "0013573386723",
+      "marca": "VITALIS",
+      "moneda": "USD",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 6.98,
+      "principio_activo": "VITAMINA D3",
+      "proveedor_id": "P08",
+      "tipo": "CAPSULAS",
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "variante": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "principio_activo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "concentracion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      }
+    }
+  },
+  {
+    "item_id": "P08:IN7030",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "NUT-VIT-VIT",
+      "codigo_proveedor": "IN7030",
+      "concentracion": "2000 UI",
+      "condicion_venta": null,
+      "contenido": 60,
+      "descripcion": "VITALIS VITAMINA D3 2000 UI CAPSULAS X 60 UN",
+      "gtin": "0185187720344",
+      "marca": "VITALIS",
+      "moneda": "USD",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 6.92,
+      "principio_activo": "VITAMINA D3",
+      "proveedor_id": "P08",
+      "tipo": "CAPSULAS",
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "variante": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "principio_activo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "concentracion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      }
+    }
+  },
+  {
+    "item_id": "P08:IN7033",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-COR-HID",
+      "codigo_proveedor": "IN7033",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 500,
+      "descripcion": "LOCION PURE CARE SHEA BUTTER X 500 ML",
+      "gtin": "0363641316245",
+      "marca": "PURE CARE",
+      "moneda": "USD",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 7.13,
+      "principio_activo": null,
+      "proveedor_id": "P08",
+      "tipo": "LOCION",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "SHEA BUTTER"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "variante": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 12
+      }
+    }
+  },
+  {
+    "item_id": "P08:IN7036",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-COR-HID",
+      "codigo_proveedor": "IN7036",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 500,
+      "descripcion": "LOCION PURE CARE DAILY MOISTURE X 500 ML",
+      "gtin": "0640503396233",
+      "marca": "PURE CARE",
+      "moneda": "USD",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 6.08,
+      "principio_activo": null,
+      "proveedor_id": "P08",
+      "tipo": "LOCION",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "DAILY MOISTURE"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "variante": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 13
+      }
+    }
+  },
+  {
+    "item_id": "P08:IN7039",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-COR-HID",
+      "codigo_proveedor": "IN7039",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 296,
+      "descripcion": "LOCION PURE CARE DAILY MOISTURE X 296 ML",
+      "gtin": "0748618345709",
+      "marca": "PURE CARE",
+      "moneda": "USD",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 4.64,
+      "principio_activo": null,
+      "proveedor_id": "P08",
+      "tipo": "LOCION",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "DAILY MOISTURE"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "variante": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 14
+      }
+    }
+  },
+  {
+    "item_id": "P08:IN7042",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "NUT-VIT-VIT",
+      "codigo_proveedor": "IN7042",
+      "concentracion": "1000 UI",
+      "condicion_venta": null,
+      "contenido": 120,
+      "descripcion": "VITALIS VITAMINA D3 1000 UI CAPSULAS X 120 UN",
+      "gtin": "0718168608562",
+      "marca": "VITALIS",
+      "moneda": "USD",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 10.46,
+      "principio_activo": "VITAMINA D3",
+      "proveedor_id": "P08",
+      "tipo": "CAPSULAS",
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "variante": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "marca": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "principio_activo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "concentracion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "contenido": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "unidad": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "unidades_por_envase": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "precio_costo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "moneda": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 15
+      }
+    }
+  }
+]

@@ -13,6 +13,8 @@ from dotenv import load_dotenv
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
+import esquema  # M6: esquema de la salida (tipos, listas cerradas, fuentes)
+
 load_dotenv()
 
 client = anthropic.Anthropic(max_retries=4)
@@ -131,7 +133,7 @@ REGISTRAR_FICHA = {
             "estado": {"type": "string", "enum": sorted(ESTADOS)},
             "duplicado_de": {"type": ["string", "null"], "description": "SKU del catálogo, o null"},
             "motivos_revision": {"type": "array", "items": {"type": "string"}},
-            "ficha": {"type": "object", "description": "Los campos de ficha_de_producto.md"},
+            "ficha": esquema.schema_ficha(),  # M6: tipos y enums del estándar
             "fuentes": {
                 "type": "object",
                 "description": (
@@ -293,7 +295,15 @@ def hook_alta_valida(agente: str, nombre: str, entrada: dict) -> str | None:
     return None
 
 
-HOOKS_ANTES = [hook_permisos, hook_ficha_coherente, hook_alta_valida]
+def hook_esquema(agente: str, nombre: str, entrada: dict) -> str | None:
+    """M6: antes de registrar_ficha, la ficha completa cumple el esquema (tipos, listas cerradas, fuentes).
+    Aplica a todos los estados: un a_revision también lleva valores del vocabulario o null."""
+    if nombre != "registrar_ficha":
+        return None
+    return esquema.validar_resultado(entrada)
+
+
+HOOKS_ANTES = [hook_permisos, hook_ficha_coherente, hook_esquema, hook_alta_valida]
 
 
 def correr_hooks_antes(agente: str, nombre: str, entrada: dict) -> str | None:

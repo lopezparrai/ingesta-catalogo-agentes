@@ -1,0 +1,197 @@
+{
+  "modo": "batch",
+  "segundos_total": 2530.8,
+  "segundos_extraccion": 71.3,
+  "segundos_escritura": 2459.5,
+  "rondas": [
+    {
+      "ronda": 1,
+      "pedidos": 27,
+      "segundos": 443.5,
+      "batch_id": "msgbatch_01TnLiotLEFGs3Kofbydru4M",
+      "ok": 27,
+      "error": 0,
+      "vencidos": 0,
+      "cancelados": 0
+    },
+    {
+      "ronda": 2,
+      "pedidos": 27,
+      "segundos": 382.6,
+      "batch_id": "msgbatch_01HGRuxo8KRSYjEQ1AhcccaD",
+      "ok": 27,
+      "error": 0,
+      "vencidos": 0,
+      "cancelados": 0
+    },
+    {
+      "ronda": 3,
+      "pedidos": 27,
+      "segundos": 321.5,
+      "batch_id": "msgbatch_01Vi6MhpngDyemBqCY3RVCbu",
+      "ok": 27,
+      "error": 0,
+      "vencidos": 0,
+      "cancelados": 0
+    },
+    {
+      "ronda": 4,
+      "pedidos": 24,
+      "segundos": 382.1,
+      "batch_id": "msgbatch_018AwiXVdofMkvmehCGMRJ6Z",
+      "ok": 24,
+      "error": 0,
+      "vencidos": 0,
+      "cancelados": 0
+    },
+    {
+      "ronda": 5,
+      "pedidos": 17,
+      "segundos": 382.2,
+      "batch_id": "msgbatch_01Rd7FqBoUpXzYFTxMLXoeBr",
+      "ok": 17,
+      "error": 0,
+      "vencidos": 0,
+      "cancelados": 0
+    },
+    {
+      "ronda": 6,
+      "pedidos": 4,
+      "segundos": 320.7,
+      "batch_id": "msgbatch_01QvuB9E93XXV3dAKVCLmpyJ",
+      "ok": 4,
+      "error": 0,
+      "vencidos": 0,
+      "cancelados": 0
+    },
+    {
+      "ronda": 7,
+      "pedidos": 1,
+      "segundos": 138.1,
+      "batch_id": "msgbatch_01F325XUzAgfksJG3HSceor1",
+      "ok": 1,
+      "error": 0,
+      "vencidos": 0,
+      "cancelados": 0
+    },
+    {
+      "ronda": 8,
+      "pedidos": 1,
+      "segundos": 86.9,
+      "batch_id": "msgbatch_019THtx5MZzmvmYSTemT2JrX",
+      "ok": 1,
+      "error": 0,
+      "vencidos": 0,
+      "cancelados": 0
+    }
+  ],
+  "fichas": 239,
+  "costo_usd": 0.2662,
+  "costo_por_ficha_usd": 0.00111,
+  "proveedores": [
+    {
+      "carpeta": "P01_Laboratorio_Andes",
+      "fichas": 26,
+      "esperadas": 26,
+      "estados": {
+        "lista_para_alta": 21,
+        "duplicado": 0,
+        "a_revision": 5
+      },
+      "costo_usd": 0.0356,
+      "frenos_de_hooks": 2,
+      "fallas": []
+    },
+    {
+      "carpeta": "P02_Cosmetica_Rivera",
+      "fichas": 50,
+      "esperadas": 50,
+      "estados": {
+        "lista_para_alta": 44,
+        "duplicado": 5,
+        "a_revision": 1
+      },
+      "costo_usd": 0.0522,
+      "frenos_de_hooks": 0,
+      "fallas": []
+    },
+    {
+      "carpeta": "P03_Distribuidora_Litoral",
+      "fichas": 50,
+      "esperadas": 50,
+      "estados": {
+        "lista_para_alta": 40,
+        "duplicado": 7,
+        "a_revision": 3
+      },
+      "costo_usd": 0.0395,
+      "frenos_de_hooks": 0,
+      "fallas": []
+    },
+    {
+      "carpeta": "P04_Higiene_Total",
+      "fichas": 28,
+      "esperadas": 28,
+      "estados": {
+        "lista_para_alta": 18,
+        "duplicado": 5,
+        "a_revision": 5
+      },
+      "costo_usd": 0.0255,
+      "frenos_de_hooks": 0,
+      "fallas": []
+    },
+    {
+      "carpeta": "P06_Bebe_Feliz",
+      "fichas": 32,
+      "esperadas": 32,
+      "estados": {
+        "lista_para_alta": 26,
+        "duplicado": 4,
+        "a_revision": 2
+      },
+      "costo_usd": 0.0316,
+      "frenos_de_hooks": 0,
+      "fallas": []
+    },
+    {
+      "carpeta": "P07_Limpieza_Hogar_Sur",
+      "fichas": 25,
+      "esperadas": 25,
+      "estados": {
+        "lista_para_alta": 20,
+        "duplicado": 3,
+        "a_revision": 2
+      },
+      "costo_usd": 0.0495,
+      "frenos_de_hooks": 1,
+      "fallas": []
+    },
+    {
+      "carpeta": "P08_Importadora_Norte",
+      "fichas": 14,
+      "esperadas": 14,
+      "estados": {
+        "lista_para_alta": 14,
+        "duplicado": 0,
+        "a_revision": 0
+      },
+      "costo_usd": 0.0176,
+      "frenos_de_hooks": 0,
+      "fallas": []
+    },
+    {
+      "carpeta": "P09_Natural_Vida",
+      "fichas": 14,
+      "esperadas": 14,
+      "estados": {
+        "lista_para_alta": 11,
+        "duplicado": 0,
+        "a_revision": 3
+      },
+      "costo_usd": 0.0147,
+      "frenos_de_hooks": 0,
+      "fallas": []
+    }
+  ]
+}

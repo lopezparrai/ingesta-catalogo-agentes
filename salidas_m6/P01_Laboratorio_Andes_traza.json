@@ -1,0 +1,44 @@
+{
+  "modo": "batch",
+  "fichas": 26,
+  "sin_registrar": [],
+  "fallas": [],
+  "frenos_de_hooks": [
+    {
+      "item_id": "P01:AN-1166",
+      "hook": "[hook_alta_valida] No puede quedar lista_para_alta: principio_activo='Bisacodilo' tiene que ir en mayúsculas, sin tildes, sin ®/™ ni comillas. Corregí la ficha o mandá el producto a_revision con el motivo que corresponda."
+    },
+    {
+      "item_id": "P01:AN-1142",
+      "hook": "[hook_alta_valida] No puede quedar lista_para_alta: principio_activo='Paracetamol + Clorfeniramina + Fenilefrina' tiene que ir en mayúsculas, sin tildes, sin ®/™ ni comillas. Corregí la ficha o mandá el producto a_revision con el motivo que corresponda."
+    }
+  ],
+  "costo_usd": 0.0356,
+  "costo_por_ficha_usd": 0.00137,
+  "uso_escritor": {
+    "input": 213893,
+    "output": 52894,
+    "cache_escrito": 14017,
+    "cache_leido": 168204
+  },
+  "lotes": [
+    {
+      "lote": "P01-lote0",
+      "estado": "terminada",
+      "iteraciones": 4,
+      "costo_usd": 0.0121
+    },
+    {
+      "lote": "P01-lote1",
+      "estado": "terminada",
+      "iteraciones": 3,
+      "costo_usd": 0.0085
+    },
+    {
+      "lote": "P01-lote2",
+      "estado": "terminada",
+      "iteraciones": 3,
+      "costo_usd": 0.005
+    }
+  ]
+}

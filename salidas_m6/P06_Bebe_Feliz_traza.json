@@ -1,0 +1,41 @@
+{
+  "modo": "batch",
+  "fichas": 32,
+  "sin_registrar": [],
+  "fallas": [],
+  "frenos_de_hooks": [],
+  "costo_usd": 0.0316,
+  "costo_por_ficha_usd": 0.00099,
+  "uso_escritor": {
+    "input": 216787,
+    "output": 56941,
+    "cache_escrito": 0,
+    "cache_leido": 252306
+  },
+  "lotes": [
+    {
+      "lote": "P06-lote0",
+      "estado": "terminada",
+      "iteraciones": 5,
+      "costo_usd": 0.0092
+    },
+    {
+      "lote": "P06-lote1",
+      "estado": "terminada",
+      "iteraciones": 3,
+      "costo_usd": 0.007
+    },
+    {
+      "lote": "P06-lote2",
+      "estado": "terminada",
+      "iteraciones": 4,
+      "costo_usd": 0.008
+    },
+    {
+      "lote": "P06-lote3",
+      "estado": "terminada",
+      "iteraciones": 2,
+      "costo_usd": 0.0021
+    }
+  ]
+}

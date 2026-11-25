@@ -1,0 +1,29 @@
+{
+  "modo": "batch",
+  "fichas": 14,
+  "sin_registrar": [],
+  "fallas": [],
+  "frenos_de_hooks": [],
+  "costo_usd": 0.0147,
+  "costo_por_ficha_usd": 0.00105,
+  "uso_escritor": {
+    "input": 89668,
+    "output": 23471,
+    "cache_escrito": 0,
+    "cache_leido": 112136
+  },
+  "lotes": [
+    {
+      "lote": "P09-lote0",
+      "estado": "terminada",
+      "iteraciones": 4,
+      "costo_usd": 0.0081
+    },
+    {
+      "lote": "P09-lote1",
+      "estado": "terminada",
+      "iteraciones": 2,
+      "costo_usd": 0.0029
+    }
+  ]
+}

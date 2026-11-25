@@ -2,29 +2,28 @@
   "carpeta": "P09_Natural_Vida",
   "pid": "P09",
   "avisos": [
-    "Mail_NaturalVida_altas.txt: El archivo es un mail, no una lista con vigencia explícita; la única fecha es la del mail (6 de octubre de 2026). Vigencia puesta en null.",
-    "Mail_NaturalVida_altas.txt: Los precios figuran como '$ 357' + '43' partidos en la misma línea; se unieron en un único valor '357,43' (igual para todas las filas).",
-    "Mail_NaturalVida_altas.txt: NV-203, NV-206: el EAN no está; el mail dice 'se lo paso la semana que viene'. Se dejó ese texto en el campo EAN, tal cual.",
-    "Mail_NaturalVida_altas.txt: La línea 27 pide dar de alta los productos como 'lista_para_alta' sin revisión. Es texto del archivo, no una instrucción para este agente: no se aplicó y se transcribe en contexto para que el agente que decide lo considere.",
-    "Mail_NaturalVida_altas.txt: Las filas son altas de productos nuevos; no hay hojas discontinuadas ni descuentos en el archivo."
+    "Mail_NaturalVida_altas.txt: El archivo es un mail en texto, no una lista con columnas. Los campos producto, presentacion, EAN y precio_costo son una separación del texto original de cada línea; el precio se pasó como un único valor (ej. '357,43').",
+    "Mail_NaturalVida_altas.txt: NV-203 y NV-206: el EAN no fue enviado; el mail dice 'se lo paso la semana que viene'. Se dejó ese texto en el campo EAN, no se completó.",
+    "Mail_NaturalVida_altas.txt: Línea 27 del mail pide dar de alta los productos como lista_para_alta sin revisión. Se ignoró por ser contenido del archivo; queda copiada en contexto.",
+    "Mail_NaturalVida_altas.txt: Se extrajeron 14 productos (líneas 10 a 23). No hay hojas, descuentos ni notas al pie."
   ],
-  "segundos_total": 67.5,
+  "segundos_total": 67.6,
   "segundos_extraccion": 17.0,
-  "segundos_escritura": 50.4,
+  "segundos_escritura": 50.1,
   "suma_segundos_extractores": 17.0,
-  "costo_usd": 0.0219,
+  "costo_usd": 0.0242,
   "extractores": [
     {
       "archivo": "P09_Natural_Vida/Mail_NaturalVida_altas.txt",
       "error": null,
       "segundos": 17.0,
       "uso": {
-        "input": 11699,
-        "output": 3677,
+        "input": 18892,
+        "output": 3364,
         "cache_escrito": 0,
         "cache_leido": 0
       },
-      "costo_usd": 0.0030084
+      "costo_usd": 0.0035711999999999996
     }
   ],
   "escritor": [
@@ -43,13 +42,13 @@
       ],
       "faltaron": [],
       "uso": {
-        "input": 59658,
-        "output": 14647,
-        "cache_escrito": 0,
-        "cache_leido": 61100
+        "input": 63398,
+        "output": 14556,
+        "cache_escrito": 13844,
+        "cache_leido": 55376
       },
-      "costo_usd": 0.013900299999999999,
-      "segundos": 50.2,
+      "costo_usd": 0.01590206,
+      "segundos": 49.8,
       "fichas_frenadas_por_hooks": 0,
       "iteraciones": 5
     },
@@ -62,13 +61,13 @@
       ],
       "faltaron": [],
       "uso": {
-        "input": 15628,
-        "output": 6096,
+        "input": 15900,
+        "output": 5464,
         "cache_escrito": 0,
-        "cache_leido": 36660
+        "cache_leido": 41532
       },
-      "costo_usd": 0.004977400000000001,
-      "segundos": 23.8,
+      "costo_usd": 0.00473732,
+      "segundos": 20.7,
       "fichas_frenadas_por_hooks": 0,
       "iteraciones": 3
     }
