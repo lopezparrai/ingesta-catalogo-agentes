@@ -1,9 +1,9 @@
-"""M6 — Prueba offline del motor de rondas de lote.py (sin API, sin MCP): un cliente y una sesión falsos."""
+"""M6 — Prueba offline del motor de rondas de ingesta.py (sin API, sin MCP): un cliente y una sesión falsos."""
 import asyncio, copy, json, sys
 from types import SimpleNamespace as NS
 
-import agente as A
-import lote as L
+import nucleo as A
+import ingesta as L
 
 
 class Bloque:

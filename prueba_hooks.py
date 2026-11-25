@@ -10,7 +10,7 @@ import copy
 import json
 import sys
 
-import agente as A
+import nucleo as A
 
 SALIDAS = A.RAIZ / "salidas"
 

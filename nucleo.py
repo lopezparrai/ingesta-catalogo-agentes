@@ -605,10 +605,10 @@ def guardar(nombre: str, mensaje: str, fichas: dict, esperados: list[str], metri
 
 
 USO = """Uso:
-  python agente.py <archivo.csv> [cantidad] [desde]
-      ej. python agente.py P03_Distribuidora_Litoral/litoral_altas_102026.csv 12 0
-  python agente.py <carpeta del proveedor> [codigo,codigo,...]
-      ej. python agente.py P01_Laboratorio_Andes AN-1109,AN-1139"""
+  python nucleo.py <archivo.csv> [cantidad] [desde]
+      ej. python nucleo.py P03_Distribuidora_Litoral/litoral_altas_102026.csv 12 0
+  python nucleo.py <carpeta del proveedor> [codigo,codigo,...]
+      ej. python nucleo.py P01_Laboratorio_Andes AN-1109,AN-1139"""
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:

@@ -20,10 +20,10 @@ Etapas:
 Salidas en salidas_m6/: fichas por proveedor, trazas, `cola_de_revision.json` y `resumen_corrida.json`.
 
 Uso:
-  py lote.py P09_Natural_Vida                          # un proveedor, por Batch API
-  py lote.py P01_Laboratorio_Andes P08_Importadora_Norte --modo tiempo-real
-  py lote.py --todos                                   # los proveedores de proveedores.csv, menos el apartado
-  py lote.py P05_Dermalab                              # el apartado: una sola vez, con el sistema como está
+  py ingesta.py P09_Natural_Vida                          # un proveedor, por Batch API
+  py ingesta.py P01_Laboratorio_Andes P08_Importadora_Norte --modo tiempo-real
+  py ingesta.py --todos                                   # los proveedores de proveedores.csv, menos el apartado
+  py ingesta.py P05_Dermalab                              # el apartado: una sola vez, con el sistema como está
 """
 import argparse
 import asyncio
@@ -36,7 +36,7 @@ from dataclasses import dataclass, field
 from mcp import ClientSession
 from mcp.client.stdio import stdio_client
 
-import agente as A
+import nucleo as A
 import orquestador as O
 
 SALIDAS_M6 = A.RAIZ / "salidas_m6"

@@ -29,7 +29,7 @@ from pathlib import Path
 from mcp import ClientSession
 from mcp.client.stdio import stdio_client
 
-import agente as A
+import nucleo as A
 
 SALIDAS_M4 = A.RAIZ / "salidas_m4"
 PROVEEDORES = A.RAIZ / "data" / "proveedores"
@@ -292,7 +292,7 @@ def consolidar(pid: str, extracciones: list[dict], codigos: list[str] | None = N
 # ---------------------------------------------------------------------------
 
 def tarea_escritor(pid: str, productos: dict, lote: list[str], contextos: list[dict], fds: list[dict]) -> str:
-    """El pedido que recibe el escritor para un lote de productos (lo usan escribir() y lote.py)."""
+    """El pedido que recibe el escritor para un lote de productos (lo usan escribir() y ingesta.py)."""
     datos = {c: productos[c] for c in lote}
     return (
         f"Proveedor {pid}. Registrá la ficha de estos {len(lote)} productos: "

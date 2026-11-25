@@ -18,17 +18,17 @@ El material del curso (`catalogo/`, `consultas/`, `estandar/`, `proveedores/`) v
 
 ```bash
 # Todos los proveedores con un comando (Batch API, más barato)
-python lote.py --todos
+python ingesta.py --todos
 
 # Lo mismo en tiempo real, cuando el plazo es hoy (concurrencia acotada)
-python lote.py --todos --modo tiempo-real
+python ingesta.py --todos --modo tiempo-real
 
 # Uno o algunos proveedores
-python lote.py P03_Distribuidora_Litoral P09_Natural_Vida --modo tiempo-real
+python ingesta.py P03_Distribuidora_Litoral P09_Natural_Vida --modo tiempo-real
 
 # Pruebas que no llaman a la API (cuestan USD 0)
 python prueba_hooks.py      # hooks y permisos
-python prueba_lote.py       # motor de rondas del Batch y controles, con un cliente falso
+python prueba_ingesta.py       # motor de rondas del Batch y controles, con un cliente falso
 python esquema.py           # valida contra el esquema todas las fichas ya generadas
 ```
 
@@ -70,7 +70,7 @@ servidor y no cada agente. Va cacheado junto con el estándar, el vocabulario y 
 ## Qué garantiza el código y no el prompt
 
 El prompt sube la probabilidad de que el modelo se porte bien; nunca la garantiza. Cuando la regla es "nunca" o
-"siempre", la respuesta está en el código. Hooks del loop (`agente.py`), que le devuelven al modelo el motivo
+"siempre", la respuesta está en el código. Hooks del loop (`nucleo.py`), que le devuelven al modelo el motivo
 como error:
 
 | Cuándo | Hook | Qué frena |
@@ -103,7 +103,7 @@ ser frenado por el hook que corresponde, sin llamar a la API.
 - **Caché.** El estándar, el vocabulario y la taxonomía van en un bloque cacheado. Se verifica con
   `cache_leido` de la traza: por ejemplo, en Litoral el escritor leyó 553.760 tokens de caché contra 13.844
   escritos. Precios por millón de tokens: entrada USD 0,10; caché escrita 0,125; caché leída 0,01; salida 0,50.
-- **Batch API** (`lote.py`). Un agente con tools da varias vueltas, así que el Batch se usa **por rondas**: en cada
+- **Batch API** (`ingesta.py`). Un agente con tools da varias vueltas, así que el Batch se usa **por rondas**: en cada
   ronda se manda un batch con una conversación por lote de productos, el código ejecuta las tools y los hooks, y
   se repite hasta que todas terminan. Los resultados se emparejan por `custom_id` (llegan desordenados) y se
   maneja un batch con resultados mezclados (éxitos, errores, vencidos). Un error transitorio se reintenta; uno de
@@ -185,7 +185,7 @@ corrida anterior (ver abajo por qué).
 ## El proveedor apartado (Dermalab, P05), una sola corrida
 
 Dermalab se apartó desde el principio y no se usó para ajustar nada. Se corrió **una vez**, con el sistema ya
-commiteado (`py lote.py P05_Dermalab --modo tiempo-real`): 18 fichas en 124 s, USD 0,0398 (**USD 0,0022 por
+commiteado (`py lote.py P05_Dermalab --modo tiempo-real`, hoy `ingesta.py`): 18 fichas en 124 s, USD 0,0398 (**USD 0,0022 por
 ficha**), 0 frenos de hooks. El sistema dijo 13 `lista_para_alta`, 5 `a_revision` y ninguna falla. Eso es lo que
 parecía; lo que pasó es otra cosa.
 
@@ -215,7 +215,7 @@ del código, así que cada código recibía el título que venía después.
 
 Se corrigió tres cosas: la consulta del lector de PDF (ahora aclara que puede ser una ficha por producto con el
 nombre arriba del código y que los datos son los del bloque que contiene el código), la misma regla en las
-instrucciones del extractor (incluido un título cortado por un salto de página) y `lote.py`, que ahora guarda la
+instrucciones del extractor (incluido un título cortado por un salto de página) y `lote.py` (hoy `ingesta.py`), que ahora guarda la
 extracción de cada proveedor para poder diagnosticar.
 
 Con el arreglo, **los 18 nombres coinciden con el PDF** (14 `lista_para_alta`, 4 `a_revision`; las 4 de revisión
@@ -242,12 +242,12 @@ Al volver a correr todo después del arreglo aparecieron tres fallas que no ten�
 Ninguna cargó datos mal: todas terminaron en `a_revision`, que es la falla segura. Pero cambian el resultado de
 una corrida a otra. Un prompt más largo no lo arregla; cuando el dato es obligatorio, lo controla el código:
 
-- `hook_no_perder_precio` (`lote.py`): al terminar un lote, si la extracción de un producto trae precio y la ficha
+- `hook_no_perder_precio` (`ingesta.py`): al terminar un lote, si la extracción de un producto trae precio y la ficha
   quedó sin `precio_costo`, no deja cerrar y se lo devuelve al modelo (2 reintentos).
 - `validar_extraccion` (`orquestador.py`): una FDS sin sección 14 se le devuelve al extractor para que la lea de
   nuevo; si el documento dice que no está regulado, ese texto se acepta.
 
-`prueba_lote.py` verifica los dos controles sin llamar a la API. La regla de `unidades_por_envase` sigue siendo
+`prueba_ingesta.py` verifica los dos controles sin llamar a la API. La regla de `unidades_por_envase` sigue siendo
 un prompt (no es un hook) y es el punto más débil que queda.
 
 ## Límites conocidos
@@ -257,6 +257,14 @@ un prompt (no es un hook) y es el punto más débil que queda.
 - Con un GTIN inválido, la corrida por Batch dejó el GTIN en la ficha (con su fuente) y las otras corridas lo dejaron vacío; el estado y el motivo (`a_revision`, `gtin_invalido`) son los mismos.
 - Dermalab (el apartado) salió con los nombres de los productos corridos un bloque; se arregló después y esa segunda corrida no es una prueba limpia (ver arriba).
 - El modelo falla de forma intermitente en pasos que antes andaban; los controles en código reducen el riesgo pero no lo eliminan.
+- **Sobreajuste y generalización.** El código no tiene ramas por proveedor (los nombres de proveedores aparecen solo en
+  ejemplos de uso y en la constante que deja a Dermalab fuera de `--todos`), y las reglas del prompt salen del estándar
+  y de los tipos de archivo. Aun así, **los 8 proveedores que no son el apartado se usaron para ajustar el sistema** (la
+  regla de marca nació de Natural Vida y de Andes, y la de la condición de venta de un código de un proveedor), y las
+  evaluaciones verificadas a mano cubren solo Litoral y Andes. La única señal limpia de generalización es Dermalab, y
+  fue una falla (formato de PDF que no era una tabla). Además, la regla de marca usa como ejemplos nombres de productos
+  reales de Andes ("Febril 500 mg", "Dolorex 400 mg", "Valeriana 300 mg"); conviene reemplazarlos por nombres inventados
+  y volver a correr los proveedores. Un proveedor nuevo con un formato que no se vio puede fallar de forma parecida.
 - Pendiente: asistente de consultas sobre lo generado (`consultas/consultas.json`).
 
 ## Archivos
@@ -264,12 +272,12 @@ un prompt (no es un hook) y es el punto más débil que queda.
 | Archivo | Qué hace |
 |---|---|
 | `mi_servidor.py` | Servidor MCP (FastMCP): estándar, archivos de proveedores, catálogo, validación de GTIN y el prompt `criterio_revision`. |
-| `agente.py` | Loop del agente, tools, permisos y hooks. |
+| `nucleo.py` | Base común: loop del agente, tools, permisos, hooks y costos (también corre el agente único de M1–M3). |
 | `esquema.py` | Esquema pydantic de la ficha y de la salida; valida las salidas ya generadas. |
-| `orquestador.py` | Extractores en paralelo, consolidación en código y escritor (modo tiempo real, por proveedor). |
-| `lote.py` | Comando único: todos los proveedores, por Batch o en tiempo real, con costo y tiempo. |
+| `orquestador.py` | El diseño multi-agente: extractores en paralelo, consolidación en código y escritor (tiempo real, por proveedor). |
+| `ingesta.py` | **Comando principal**: todos los proveedores, por Batch o en tiempo real, con costo y tiempo. Reusa la extracción y la consolidación del orquestador y ejecuta el escritor por rondas. |
 | `evaluador.py`, `evals/` | Evaluación contra fichas verificadas a mano. |
-| `prueba_hooks.py`, `prueba_lote.py` | Pruebas sin API de los hooks, del motor de rondas y de los controles de precio y de FDS. |
+| `prueba_hooks.py`, `prueba_ingesta.py` | Pruebas sin API de los hooks, del motor de rondas y de los controles de precio y de FDS. |
 | `diagnostico_dermalab.md` | Comparación producto por producto de la corrida original de Dermalab. |
 | `ejercicios/` | Ejercicios sueltos del curso (prompt v2, salida estructurada); el sistema no los usa. |
 | `salidas/`, `salidas_m4/`, `salidas_m6/` | Salidas del agente único, del orquestador y de la corrida final. |

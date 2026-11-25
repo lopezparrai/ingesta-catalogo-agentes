@@ -91,7 +91,7 @@ def main(ruta_salida: Path, ruta_esperado: Path) -> None:
     if not ruta_esperado.exists():
         sys.exit(f"No encuentro {ruta_esperado}. Armá a mano las fichas esperadas (ver el docstring).")
     if not ruta_salida.exists():
-        sys.exit(f"No encuentro {ruta_salida}. Corré antes: python agente.py <archivo del proveedor>")
+        sys.exit(f"No encuentro {ruta_salida}. Corré antes: python nucleo.py <archivo del proveedor>")
 
     esperado = {x["item_id"]: x for x in json.loads(ruta_esperado.read_text(encoding="utf-8"))}
     obtenido = {x["item_id"]: x for x in json.loads(ruta_salida.read_text(encoding="utf-8"))}

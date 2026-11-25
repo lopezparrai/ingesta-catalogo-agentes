@@ -2,7 +2,7 @@
 
 Un solo lugar define cómo es un resultado válido (tipos, listas cerradas del vocabulario, categorías de la
 taxonomía, forma de cada fuente). Lo usan:
-  - el hook `hook_esquema` (agente.py): frena `registrar_ficha` con el error por campo, que el modelo recibe
+  - el hook `hook_esquema` (nucleo.py): frena `registrar_ficha` con el error por campo, que el modelo recibe
     como error de tool y corrige;
   - `schema_ficha()`: el mismo esquema, como JSON Schema con enums, para la tool `registrar_ficha`;
   - los tests (`prueba_hooks.py`) y la revisión de salidas ya generadas.
