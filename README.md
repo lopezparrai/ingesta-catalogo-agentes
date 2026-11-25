@@ -5,7 +5,8 @@ Farmacias Ceibo (cadena ficticia) y las convierte en **fichas que cumplen el est
 los productos que ya existen en el catálogo, y **manda a revisión lo que no puede resolver, con el motivo**.
 Cada campo de cada ficha guarda de dónde salió (archivo y página, hoja y fila, o línea).
 
-Todo corre con la API de Anthropic y Claude Haiku 5.5 (`claude-haiku-5-5`).
+El sistema corre con la API de Anthropic y Claude Haiku 5.5 (`claude-haiku-5-5`). La auditoría (ver "Auditoría") usa un
+modelo superior, Claude Sonnet 5.5, y no es parte del pipeline.
 
 ## Cómo se usa
 
@@ -39,6 +40,15 @@ python asistente/prueba_asistente.py  # tools y hook del asistente de consultas
 python asistente/asistente.py       # las 23 consultas y 2 conversaciones de data/consultas/consultas.json
 python asistente/asistente.py -i    # chat interactivo
 python asistente/evaluar_consultas.py   # compara las respuestas con el esperado verificado a mano
+
+# App de la demo (archivo nuevo en vivo, consultas, fichas por proveedor y scorecard)
+streamlit run app/demo_app.py
+
+# Auditoría (ver su sección)
+python auditoria/sorteo_auditoria.py         # sortea la muestra estratificada de 53 (sin API)
+python auditoria/auditor_modelo.py validacion # valida al auditor con errores conocidos (Sonnet 5.5)
+python auditoria/auditor_modelo.py muestra    # audita la muestra
+python auditoria/auditor_modelo.py resumen    # métricas de lo ya auditado (sin API)
 ```
 
 Un archivo nuevo de un proveedor entra sin intervención: se deja en su carpeta y se vuelve a correr el comando.
@@ -82,7 +92,7 @@ ya tiene el caché cargado y la ventaja del paralelo no se exagera.
   mitad o a un tercio) y los proveedores corriendo a la vez (el total es el del más lento, Rivera, y no la suma de
   los tres).
 - **Qué no.** El escritor corre en lotes de a uno, así que es el cuello de botella: en Rivera son 316 s de los 356 s
-  (el 89 %). Acelerarlo más es `--lotes-paralelo`, que no se midió.
+  (el 89 %). Acelerarlo más es `--lotes-paralelo` (opción de `orquestador.py`), que no se midió.
 - **Costo.** El paralelo salió un 11 % más caro, y no lo atribuyo a una causa sin haberla medido; el modelo no es
   determinista y las dos corridas no dieron las mismas fichas en detalle (cambian textos, y en Rivera el GTIN
   inválido de RIV-1203 quedó en la ficha de una y vacío en la otra), aunque **los estados son los mismos** en todos
@@ -91,11 +101,14 @@ ya tiene el caché cargado y la ventaja del paralelo no se exagera.
 
 ### Qué puede hacer cada agente
 
+En las slides: Agente 1 = extractores, Agente 2 = escritor, Agente 3 = asistente de consultas; el orquestador es código.
+
 | Agente | Tools | Ve | No puede |
 |---|---|---|---|
-| Extractor | `leer_lista_proveedor`, `leer_excel`, `leer_pdf_con_citas` (solo de **su** archivo) | Su archivo | Escribir, buscar en el catálogo, registrar fichas, leer otros archivos |
-| Consolidador | (es código) | Salidas de todos los extractores | — |
-| Escritor | `validar_gtin_tool`, `buscar_en_catalogo`, `buscar_candidatos_en_catalogo`, `leer_estandar`, `convertir_contenido_tool`, `registrar_ficha` | Datos extraídos, contexto y fichas de seguridad | Leer archivos del proveedor |
+| Extractor (Agente 1) | `leer_lista_proveedor`, `leer_excel`, `leer_pdf_con_citas` (solo de **su** archivo) | Su archivo | Escribir, buscar en el catálogo, registrar fichas, leer otros archivos |
+| Consolidador (el orquestador de las slides) | (es código) | Salidas de todos los extractores | — |
+| Escritor (Agente 2) | `validar_gtin_tool`, `buscar_en_catalogo`, `buscar_candidatos_en_catalogo`, `leer_estandar`, `convertir_contenido_tool`, `registrar_ficha` | Datos extraídos, contexto y fichas de seguridad | Leer archivos del proveedor |
+| Asistente (Agente 3) | `buscar_fichas`, `leer_fuente`, `buscar_codigo_en_archivos` y las de lectura del servidor MCP (ver "Asistente de consultas") | Fichas generadas y archivos originales | Registrar o cambiar fichas |
 
 El criterio de revisión (cuándo algo va a revisión) vive en el servidor MCP (`mi_servidor.py`), como prompt
 `criterio_revision`. Los agentes lo piden al arrancar, así que cambiar una regla de negocio es editar el
@@ -115,6 +128,9 @@ como error:
 | Antes de `registrar_ficha` | `hook_alta_valida` | Una `lista_para_alta` con GTIN inválido, obligatorios vacíos, valores fuera del vocabulario o de la taxonomía, texto con minúsculas, tildes o ®/™ |
 | Después de cada tool | `hook_despues_traza` | No frena: guarda la traza completa |
 | Al terminar | `hook_al_terminar_fuentes` | Un campo completado sin su fuente: la ficha vuelve al modelo (2 reintentos) y, si sigue sin fuente, el campo se vacía |
+| Al terminar | `hook_no_perder_precio` (`ingesta.py`) | Una ficha sin precio cuando la extracción sí lo traía (pasó: un lote entero lo dejó vacío): vuelve al modelo |
+| Al terminar | motor de rondas (`ingesta.py`) | Terminar sin haber registrado todos los productos del lote |
+| En la extracción | validación de la salida del extractor | Una ficha de seguridad sin sección 14 (salvo «no regulado»), de donde sale el peligro para el depósito |
 
 - **Salida estructurada.** `esquema.py` define la ficha con pydantic (campos cerrados, `extra=forbid`). La tool
   `registrar_ficha` le pasa al modelo el esquema con los enums; el hook lo vuelve a verificar antes de aceptar.
@@ -130,7 +146,8 @@ como error:
 `prueba_hooks.py` toma una ficha real y la rompe de a una cosa (22 casos: GTIN con dígito verificador
 cambiado, moneda fuera del vocabulario, categoría inventada, `fuentes` con un campo de más, extractor que
 intenta registrar, escritor que intenta leer un Excel, campo sin fuente al terminar, etc.). Cada caso tiene que
-ser frenado por el hook que corresponde, sin llamar a la API.
+ser frenado por el hook que corresponde, sin llamar a la API. `prueba_ingesta.py` hace lo mismo con los controles
+del motor de rondas (precio perdido, productos sin registrar, FDS sin sección 14, Batch con resultados desordenados).
 
 ## Costo, caché y Batch
 
@@ -164,7 +181,7 @@ Los dos resúmenes están en `resultados/evidencia/` (tiempo real) y `resultados
 
 ## Resultados
 
-Corrida oficial por Batch, los 9 proveedores con un comando (`py ingesta.py --todos`):
+Corrida oficial por Batch, los 9 proveedores con un comando (`python ingesta.py --todos`):
 
 | Proveedor | Fichas | Lista para alta | Duplicado | A revisión | Costo (USD) |
 |---|---|---|---|---|---|
@@ -183,9 +200,6 @@ Total: 1.493 s (extracción 75 s, escritura 1.418 s, 8 rondas), **USD 0,00105 po
 de revisión. Comparado con el agente único anterior (M1–M3), todos los productos en común tienen **el mismo estado**
 salvo uno de Rivera; lo que cambia entre corridas son campos de texto (descripción, variante, categoría), que varían
 por el modelo y no cambian el estado.
-
-`prueba_ingesta.py` verifica los dos controles sin llamar a la API. La regla de `unidades_por_envase` sigue siendo
-un prompt (no es un hook) y es el punto más débil que queda.
 
 ## Asistente de consultas
 
@@ -242,6 +256,8 @@ en la muestra: USD 0,73. Resultados en `auditoria/resultados_auditor/` y en la p
 ## Límites conocidos
 
 - El modelo no es determinista: la misma lista puede dar descripciones o variantes distintas entre corridas.
+- La regla de `unidades_por_envase` (pack o contenido, como "2 UNID") sigue siendo un prompt, no un hook: es el punto más débil del armado de la ficha.
+- Una ficha puede tener forma válida y un dato equivocado (la marca Frescor cargada como Brisa): los hooks no lo ven. Lo encuentra la auditoría, no el pipeline.
 - El Batch tarda minutos por ronda (25 a 42 minutos los 9 proveedores); hay que tener el proceso corriendo hasta que termine.
 - En tiempo real un lote largo puede cortar por `max_tokens` (pasó con Andes); el Batch no tuvo ese problema en esta corrida y no está resuelto el caso en tiempo real.
 - Con un GTIN inválido, la corrida por Batch dejó el GTIN en la ficha (con su fuente) y las otras corridas lo dejaron vacío; el estado y el motivo (`a_revision`, `gtin_invalido`) son los mismos.
@@ -264,12 +280,15 @@ en la muestra: USD 0,73. Resultados en `auditoria/resultados_auditor/` y en la p
 | `esquema.py` | Esquema pydantic de la ficha y de la salida; valida las salidas ya generadas. |
 | `orquestador.py` | El diseño multi-agente: extractores en paralelo, consolidación en código y escritor (tiempo real, por proveedor). |
 | `ingesta.py` | **Comando principal**: todos los proveedores, por Batch o en tiempo real, con costo y tiempo. Reusa la extracción y la consolidación del orquestador y ejecuta el escritor por rondas. |
+| `app/demo_app.py` | La app de la demo (Streamlit). Logos y colores en `app/assets/` y `.streamlit/config.toml`. |
+| `pedido_proveedor.py` | Arma, por código y sin modelo, el pedido al proveedor a partir de los motivos de revisión. |
+| `calidad.py` | El scorecard de calidad por proveedor (Beta-Binomial con Bayes empírico). |
 | `data/` | El material del curso (catálogo, estándar, consultas y los archivos de los 9 proveedores). Son los datos de entrada. |
 | `evaluador.py`, `evals/` | Evaluación contra fichas verificadas a mano. |
-| `demo/` | El archivo nuevo para la demo en vivo (`Demo_altas_noviembre.csv`, con casos de duplicado, GTIN inválido, posible duplicado y un texto que pide saltear la revisión) y el guion de 15 minutos. |
+| `demo/` (no versionada) | El archivo nuevo para la demo en vivo (`Demo_altas_noviembre.csv`, con casos de duplicado, GTIN inválido, posible duplicado y un texto que pide saltear la revisión) y el guion de 15 minutos. |
 | `asistente/` | Todo el asistente de consultas: `asistente.py` (solo lectura, fuentes verificadas), `prueba_asistente.py` (sin API), `evaluar_consultas.py` y `verificar_esperado.py` (evaluación y verificación a mano), `consultas_esperado.json` y `resultados/respuestas.json` (la salida). |
 | `prueba_hooks.py`, `prueba_ingesta.py` | Pruebas sin API de los hooks, del motor de rondas y de los controles de precio y de FDS. |
-| `ejercicios/` | Ejercicios sueltos del curso (prompt v2, salida estructurada); el sistema no los usa. |
+| `ejercicios/` | Ejercicios de los módulos del curso (M1, M2, prompt v2, salida estructurada); el sistema no los usa. |
 | `resultados/final/` | La corrida final: por proveedor, la ficha y su traza (costo, caché, frenos de hooks), más la cola de revisión y el resumen. |
 | `resultados/agente_unico/` | La base de M1–M3, contra la que se compara ("vs agente único"). |
 | `auditoria/` | Auditoría de los 9 proveedores: sorteo estratificado de 53 y auditor con Sonnet 5.5 (ver "Auditoría"). |
@@ -279,8 +298,19 @@ en la muestra: USD 0,73. Resultados en `auditoria/resultados_auditor/` y en la p
 
 > La carpeta `demo/` está en `.gitignore` por ahora (no se versiona); los archivos siguen en la máquina de quien armó la demo.
 
-- `streamlit run app/demo_app.py` (`pip install -r requirements.txt`): pestaña Archivo nuevo (cargador de archivo o corrida guardada; fichas, cola de revisión,
-  origen de cada dato, costo y tokens), Consultas (el asistente), Fichas por proveedor (lo ya procesado, con pedido al proveedor) y Scorecard de calidad (shrinkage bayesiano empírico Beta-Binomial y ranking de riesgo; logos en `app/assets/proveedores/`). El pedido al proveedor se arma por código (`pedido_proveedor.py`, en la raíz)
-  desde los motivos de revisión. Costos, Dermalab y la carga completa están en las slides.
-  Logo y colores en `app/assets/` y `.streamlit/config.toml`.
-- `demo/slides_demo_day.html`: las 9 slides (tema oscuro). `demo/GUION_DEMO.md`: el minuto a minuto.
+`streamlit run app/demo_app.py`. Cuatro pestañas:
+
+- **Archivo nuevo**: se sube el archivo de un proveedor (o se usa el de ejemplo) y se procesa en vivo con `ingesta.py`;
+  mientras corre, la app muestra la misma salida que la terminal. Al terminar: fichas, cola de revisión, costo y, por
+  producto, "Así llegó" (lo que leyó el extractor) contra "Así quedó" (la ficha), con aviso si el archivo traía una
+  instrucción, y el origen de cada dato.
+- **Consultas**: el asistente, con cuatro preguntas de arranque. Ve también el archivo nuevo, recién después de procesarlo.
+- **Fichas por proveedor**: lo ya procesado (la carga completa más el archivo nuevo de la sesión), con el pedido al
+  proveedor (`pedido_proveedor.py`).
+- **Scorecard de calidad**: shrinkage bayesiano empírico (Beta-Binomial) y ranking de riesgo de los 9 proveedores.
+
+Dos interruptores: **Vista técnica** (arriba a la derecha: agentes, tokens, caché, hooks y tools; apagada es la vista
+de Compras) y **En vivo / Respaldo** (menú lateral: con Respaldo se muestra la corrida y las respuestas ya ensayadas,
+sin API). Costos, Dermalab y la carga completa están en las slides; el análisis estadístico, solo en la app.
+
+- `demo/slides_demo_day.html`: las 9 slides (tema oscuro). `demo/GUION_DEMO.md`: el guion de 15 minutos.
