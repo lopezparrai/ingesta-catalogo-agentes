@@ -1,0 +1,172 @@
+[
+  {
+    "item_id": "P01:AN-1139",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "gtin": "7797752654089",
+      "descripcion": "CARDIOPRES 20 MG COMPRIMIDOS X 30 UN",
+      "marca": "CARDIOPRES",
+      "tipo": "COMPRIMIDOS",
+      "variante": null,
+      "contenido": 30,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "ENALAPRIL",
+      "concentracion": "20 MG",
+      "condicion_venta": "BAJO_RECETA",
+      "categoria": "MED-CRO-CAR",
+      "precio_costo": 175.52,
+      "moneda": "UYU",
+      "proveedor_id": "P01",
+      "codigo_proveedor": "AN-1139"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "marca": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "contenido": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "principio_activo": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "concentracion": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "condicion_venta": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "categoria": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "precio_costo": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 10
+      },
+      "moneda": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 10
+      },
+      "proveedor_id": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      }
+    }
+  },
+  {
+    "item_id": "P01:AN-1136",
+    "estado": "a_revision",
+    "duplicado_de": null,
+    "motivos_revision": [
+      "conflicto_entre_fuentes"
+    ],
+    "ficha": {
+      "gtin": "7790950373011",
+      "descripcion": null,
+      "marca": "FEBRIL",
+      "tipo": "COMPRIMIDOS",
+      "variante": null,
+      "contenido": null,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "PARACETAMOL",
+      "concentracion": "500 MG",
+      "condicion_venta": "VENTA_LIBRE",
+      "categoria": "MED-DOL-ANA",
+      "precio_costo": 200.8,
+      "moneda": "UYU",
+      "proveedor_id": "P01",
+      "codigo_proveedor": "AN-1136"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "marca": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "principio_activo": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "concentracion": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "condicion_venta": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "categoria": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "precio_costo": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 5
+      },
+      "moneda": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 5
+      },
+      "proveedor_id": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      }
+    }
+  }
+]

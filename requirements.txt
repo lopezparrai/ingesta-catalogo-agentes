@@ -1,0 +1,7 @@
+anthropic
+fastmcp
+mcp
+pydantic
+python-dotenv
+pyyaml
+openpyxl

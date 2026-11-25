@@ -1,0 +1,17 @@
+# Secretos
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editor
+.vscode/
+
+# Material del curso (Taligent): se copia a mano en data/, no se versiona
+data/
+*.pdf
