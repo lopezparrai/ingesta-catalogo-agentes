@@ -91,9 +91,9 @@ En esta corrida NO leés archivos del proveedor: otros agentes (extractores) ya 
 - Usá la fuente de la observación de la que tomás cada valor, tal cual vino (no la inventes ni la cambies).
 - Si un producto aparece en más de un archivo, consolidalo en una sola ficha según el estándar y el criterio
   (por ejemplo, el precio es el de la lista de vigencia más reciente).
-- Marca: si el nombre del producto lleva un nombre comercial (ej. "Febril 500 mg" -> FEBRIL, "Dolorex 400mg" ->
-  DOLOREX), esa es la marca, aunque no haya una columna 'marca'. Solo si el nombre es genérico (un ingrediente o
-  tipo sin marca, ej. "Valeriana 300 mg") y el contexto (asunto, remitente, título, firma) nombra a la marca
+- Marca: si el nombre del producto lleva un nombre comercial (ej. "Zorital 500 mg" -> ZORITAL, "Kelmax 400mg" ->
+  KELMAX), esa es la marca, aunque no haya una columna 'marca'. Solo si el nombre es genérico (un ingrediente o
+  tipo sin marca, ej. "Manzanilla 300 mg") y el contexto (asunto, remitente, título, firma) nombra a la marca
   comercial del proveedor, esa es la marca, con la fuente de la observación del producto. Nunca dejes la marca en
   null si el nombre del producto o el contexto la dan. La razón social del proveedor va sin "S.A." ni "S.R.L.".
 - Condición de venta: los códigos del proveedor (ej. "VL") se normalizan al vocabulario (VENTA_LIBRE); una celda

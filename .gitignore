@@ -22,3 +22,6 @@ resultados/final/*_extraccion.json
 resultados/demo/
 resultados/demo_ensayo/
 data/proveedores/P10_Demo_Proveedor/
+
+# Carpeta demo completa (por ahora fuera del repo)
+demo/

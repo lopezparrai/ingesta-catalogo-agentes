@@ -230,9 +230,8 @@ citadas y abstención. Resultado actual: **29 de 29**. Tres cosas para leerlo bi
   y de los tipos de archivo. Aun así, **los 8 proveedores que no son el apartado se usaron para ajustar el sistema** (la
   regla de marca nació de Natural Vida y de Andes, y la de la condición de venta de un código de un proveedor), y las
   evaluaciones verificadas a mano cubren solo Litoral y Andes. La única señal limpia de generalización es Dermalab, y
-  fue una falla (formato de PDF que no era una tabla). Además, la regla de marca usa como ejemplos nombres de productos
-  reales de Andes ("Febril 500 mg", "Dolorex 400 mg", "Valeriana 300 mg"); conviene reemplazarlos por nombres inventados
-  y volver a correr los proveedores. Un proveedor nuevo con un formato que no se vio puede fallar de forma parecida.
+  fue una falla (formato de PDF que no era una tabla).
+  Un proveedor nuevo con un formato que no se vio puede fallar de forma parecida.
 
 ## Archivos
 
@@ -254,6 +253,8 @@ citadas y abstención. Resultado actual: **29 de 29**. Tres cosas para leerlo bi
 | `resultados/evidencia/` | Dermalab: la corrida original y el diagnóstico producto por producto; y las dos corridas con error. |
 
 ## Demo Day: app y slides
+
+> La carpeta `demo/` está en `.gitignore` por ahora (no se versiona); los archivos siguen en la máquina de quien armó la demo.
 
 - `streamlit run app/demo_app.py` (`pip install -r requirements.txt`): pestaña Archivo nuevo (cargador de archivo o corrida guardada; fichas, cola de revisión,
   origen de cada dato, costo y tokens), Consultas (el asistente), Fichas por proveedor (lo ya procesado, con pedido al proveedor) y Scorecard de calidad (shrinkage bayesiano empírico Beta-Binomial y ranking de riesgo; logos en `app/assets/proveedores/`). El pedido al proveedor se arma por código (`pedido_proveedor.py`, en la raíz)
