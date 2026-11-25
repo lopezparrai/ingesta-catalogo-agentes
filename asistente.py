@@ -466,6 +466,7 @@ class Sesion:
         inicio = time.perf_counter()
         mensajes = list(hilo) + [{"role": "user", "content": pregunta}]
         rechazos = 0
+        motivos_rechazo: list[str] = []
         resultado = None
         for it in range(MAX_ITERACIONES):
             resp = await asyncio.to_thread(
@@ -488,6 +489,7 @@ class Sesion:
                     motivo, r = hook_respuesta(b.input, vistas)
                     if motivo and rechazos < 3:
                         rechazos += 1
+                        motivos_rechazo.append(motivo)
                         resultados.append({"type": "tool_result", "tool_use_id": b.id, "is_error": True,
                                            "content": f"Bloqueado por hook: {motivo}"})
                         print(f"  [{etiqueta}] hook FRENÓ la respuesta: {motivo[:120]}")
@@ -508,7 +510,9 @@ class Sesion:
                 break
         if resultado is None:
             resultado = {"texto": "No llegué a una respuesta en el límite de iteraciones.", "abstiene": True}
+        resultado = {"consulta": pregunta, **resultado}  # forma de Respuesta de la guía: lo pone el código, no el modelo
         return {"pregunta": pregunta, "respuesta": resultado, "iteraciones": it + 1, "tools": usadas,
+                "rechazos_del_hook": motivos_rechazo,
                 "costo_usd": round(A.costo_usd(uso), 6), "segundos": round(time.perf_counter() - inicio, 1),
                 "uso": uso}
 

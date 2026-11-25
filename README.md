@@ -61,6 +61,31 @@ Es un **workflow** (los pasos los fija el código, no el modelo) con tres etapas
 Los proveedores también corren en paralelo entre sí. **Ningún agente escribe a disco**: el guardado lo hace el
 hilo principal, una sola vez, así que no hay condiciones de carrera.
 
+### Tiempo: paralelo contra secuencial
+
+Medido con `orquestador.py` sobre tres proveedores con varios archivos (Rivera, Limpieza Hogar Sur e Importadora
+Norte), en tiempo real y con los mismos prompts. El paralelo corre primero, así que el secuencial, que va después,
+ya tiene el caché cargado y la ventaja del paralelo no se exagera.
+
+| | Paralelo | Secuencial |
+|---|---|---|
+| Tiempo total (3 proveedores) | **356 s** | **819 s** (2,3 veces más) |
+| Extracción de Rivera | 39,5 s | 63,7 s |
+| Extracción de Limpieza Hogar Sur | 46,9 s | 142,8 s |
+| Extracción de Importadora Norte | 19,9 s | 40,2 s |
+| Costo | USD 0,193 | USD 0,174 |
+
+- **Qué se ganó.** Dos cosas distintas: los extractores de un mismo proveedor en paralelo (la extracción baja a la
+  mitad o a un tercio) y los proveedores corriendo a la vez (el total es el del más lento, Rivera, y no la suma de
+  los tres).
+- **Qué no.** El escritor corre en lotes de a uno, así que es el cuello de botella: en Rivera son 316 s de los 356 s
+  (el 89 %). Acelerarlo más es `--lotes-paralelo`, que no se midió.
+- **Costo.** El paralelo salió un 11 % más caro, y no lo atribuyo a una causa sin haberla medido; el modelo no es
+  determinista y las dos corridas no dieron las mismas fichas en detalle (cambian textos, y en Rivera el GTIN
+  inválido de RIV-1203 quedó en la ficha de una y vacío en la otra), aunque **los estados son los mismos** en todos
+  los productos comparados con el agente único.
+- **Alcance.** Es una sola medición por modo; los tiempos de la API varían entre corridas.
+
 ### Qué puede hacer cada agente
 
 | Agente | Tools | Ve | No puede |
