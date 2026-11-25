@@ -17,3 +17,8 @@ resultados/final/*_extraccion.json
 
 # PDF sueltos de la raíz (material del curso); los de data/ sí se versionan
 /*.pdf
+
+# Demo en vivo (se regenera)
+resultados/demo/
+resultados/demo_ensayo/
+data/proveedores/P10_Demo_Proveedor/

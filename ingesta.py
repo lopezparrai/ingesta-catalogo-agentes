@@ -307,8 +307,12 @@ def main() -> None:
     ap.add_argument("--concurrencia", type=int, default=8, help="pedidos en vuelo en modo tiempo-real")
     ap.add_argument("--workers", type=int, default=8, help="extractores simultáneos")
     ap.add_argument("--codigos", default="", help="solo estos códigos, separados por coma")
+    ap.add_argument("--salida", default="final", help="subcarpeta de resultados/ donde se guardan las salidas "
+                    "(la demo usa 'demo' para no pisar la corrida final)")
     ap.add_argument("--espera-max", type=int, default=120, help="minutos máximos de espera por ronda de batch")
     a = ap.parse_args()
+    global SALIDAS
+    SALIDAS = A.RAIZ / "resultados" / a.salida
     carpetas = carpetas_todos() if a.todos else a.carpetas
     if not carpetas:
         ap.error("indicá carpetas o --todos")
@@ -410,7 +414,7 @@ def main() -> None:
     print(f"\nTiempo total: {total} s (extracción {t_extraccion} s, escritura {t_escritura} s en {len(rondas)} ronda(s))")
     print(f"Costo total: USD {costo_total} | fichas: {n_fichas}"
           + (f" | por ficha: USD {costo_total / n_fichas:.5f}" if n_fichas else ""))
-    print(f"Cola de revisión: {len(cola)} producto(s) en resultados/final/cola_de_revision.json")
+    print(f"Cola de revisión: {len(cola)} producto(s) en resultados/{a.salida}/cola_de_revision.json")
     print("(El costo no incluye las lecturas de PDF que hace el servidor con su propio llamado a la API.)")
 
 

@@ -3,6 +3,7 @@ import copy
 import csv
 import json
 import os
+import re
 import sys
 import time
 from pathlib import Path
@@ -550,6 +551,10 @@ def proveedor_id_de(carpeta: str) -> str:
         for fila in csv.DictReader(f):
             if fila["carpeta"].strip() == carpeta:
                 return fila["proveedor_id"].strip()
+    m = re.match(r"^(P\d+)_", carpeta)  # proveedor nuevo que todavía no está en proveedores.csv (p. ej. la demo)
+    if m:
+        print(f"  [aviso] {carpeta!r} no está en proveedores.csv: uso el id {m.group(1)} del nombre de la carpeta")
+        return m.group(1)
     raise SystemExit(f"La carpeta {carpeta!r} no está en proveedores.csv")
 
 

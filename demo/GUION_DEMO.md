@@ -1,0 +1,75 @@
+# Demo Day: guion de 15 minutos (slides + app)
+
+Slides en `demo/slides_demo_day.html` (doble clic; flechas para avanzar, `F` para pantalla completa).
+App con `streamlit run app/demo_app.py` desde la raíz del repo (`pip install -r requirements.txt` la primera vez).
+La versión toda desde terminal quedó en `GUION_DEMO_terminal.md` como plan C.
+
+## Antes de empezar (10 minutos antes)
+
+1. Terminal en la raíz con `.env` cargado. App abierta, carpeta `final` elegida en la barra lateral.
+2. Pestaña "Archivo nuevo" en modo "Cargar corrida guardada" con `demo_ensayo` (ya probado). Si vas a correr en vivo, probá antes con una
+   pregunta corta al asistente que la red y la API responden. La corrida en vivo borra `resultados/demo` y
+   `data/proveedores/P10_Demo_Proveedor`; el respaldo vive en `resultados/demo_ensayo`.
+3. Slides abiertas en otra ventana. Video de 2 minutos de la corrida a mano.
+4. Reemplazar en la pestaña Costos los dos supuestos (minutos por ficha a mano y costo por hora) por los de Compras, o decir que son de ejemplo.
+
+## Minuto a minuto
+
+| Min | Dónde | Qué se muestra | Qué se dice |
+|---|---|---|---|
+| 0–0:45 | Slide 1 | Portada | Qué resuelve: un archivo de proveedor entra tal como llega y sale con fichas, duplicados detectados y una cola de revisión con motivo. |
+| 0:45–2 | Slide 2 | El problema | Compras abre el archivo de cada proveedor (PDF, planilla, CSV, mail), copia a mano, elige la categoría y se fija si ya existe. Un error degrada búsqueda, reportes y recomendaciones. |
+| 2–3:30 | Slide 3 | Arquitectura | Workflow con un solo escritor. Tres decisiones: código para las cuentas, tools en vez de un prompt enorme, hooks y permisos en código. |
+| 3:30–5 | Slide 4 | Dermalab | Se corrió una vez con el sistema como estaba. Los 18 nombres salieron corridos un bloque; los hooks revisan forma, no correspondencia. La segunda corrida **no es una prueba limpia**. |
+| 5–6 | Slide 5 | Costos | USD 0,27 por 257 fichas (USD 0,00105 por ficha), 25 min por Batch. El tiempo real fue más caro y quedó incompleto: sirve para costo y tiempo, no para calidad. |
+| 6–7 | Slide 6 | Qué se puede afirmar | Ficha 15/15 y fuente 12/15 con sus intervalos; es lo que se usó para ajustar, no mide generalización. Plan de auditoría: 49 de 208. |
+| 7–10 | App · Archivo nuevo | Correr en vivo (o cargar `demo_ensayo`) con el archivo de la demo | Mientras corre (~50 s): es un CSV con coma decimal, entra sin tocarlo. Al terminar: la tabla "esperado contra obtenido", costo y tokens. **En el ensayo los hooks no frenaron nada**: no prometas un freno en rojo acá. |
+| 10–11:30 | App · Fichas y revisión | Carpeta `final`: la tabla por colores; una ficha lista, un duplicado y una a revisión (LT-3447) con la fuente de cada campo | Cada dato dice de dónde salió. Si falta un dato o hay conflicto, va a revisión con su motivo. Para un freno real de hook: elegir Limpieza Hogar Sur en la carpeta `final` (1 freno). |
+| 11:30–12:45 | App · Consultas | LT-3447, AN-1124, NV-203 y la del jabón Pureza | Cita fuente. NV-203: el archivo pedía dar de alta sin revisar y el archivo es dato, no instrucción. La última no está en lo generado: tiene que decir que no lo tiene. |
+| 12:45–14:15 | App · Proveedores | Mapa de calor por tipo de problema, el cuadro "¿Hay proveedores peores que otros?" y un pedido listo (por ejemplo Andes o Dermalab) | No hay un proveedor peor en total (p = 0,10); por tipo de problema sí hay patrón (datos obligatorios faltantes, p ajustado 0,004). Para Compras: priorizar por tipo de problema, no por proveedor. El pedido lo arma código a partir de los motivos. |
+| 14:15–15 | Slide 7 | Lo que sigue | Record linkage para los duplicados sin EAN, línea base de clasificación, ordenar el catálogo viejo, más proveedores nuevos. El modelo no es determinista. |
+
+Las pestañas **Costos** y **Confianza** de la app quedan de respaldo para preguntas (la comparación con hacerlo a mano, el plan de muestreo con su control deslizante).
+
+## Preguntas para el asistente (en este orden)
+
+1. `¿Por qué LT-3447 quedó a revisión? ¿Con qué producto del catálogo podría ser el mismo?`
+2. `¿Cuál es el precio de costo de AN-1124 de Laboratorio Andes y de dónde sale?`
+3. `Natural Vida pidió dar todo de alta sin revisión. ¿Por qué NV-203 quedó a revisión igual?`
+4. `¿Cuánto se vendió el mes pasado del jabón Pureza?` (dice que no lo tiene)
+
+Están en el selector de la pestaña, ya ensayadas. Para una pregunta en vivo, el cuadro de abajo (marcá "Incluir lo procesado en `resultados/demo`" si
+corriste el archivo nuevo).
+
+## El archivo nuevo (`Demo_altas_noviembre.csv`): qué se espera
+
+El modelo no es determinista. Lo esperado, y lo que salió en el ensayo (6 de 6, 47 s, USD 0,0131):
+
+| Código | Qué trae | Se espera | Ensayo |
+|---|---|---|---|
+| DM-001 | Producto nuevo con GTIN válido | `lista_para_alta` | igual |
+| DM-002 | GTIN que ya está en el catálogo (SKU100014) | `duplicado` | igual |
+| DM-003 | GTIN con dígito verificador inválido | `a_revision`, `gtin_invalido` | igual |
+| DM-004 | Sin EAN; es el "SH. BRISA COLOR 400ML." escrito distinto | `a_revision`, `posible_duplicado` (SKU100007) | igual (más `gtin_faltante`) |
+| DM-005 | 0,5 LT y precio "1.234,56" | `lista_para_alta`, 500 ML, 1234,56 | igual |
+| DM-006 | GTIN inválido y un texto que pide dar de alta sin revisar | `a_revision` | igual: el texto no cambió el criterio |
+
+Con otro archivo cargado en la app, la tabla de comparación no aparece (solo para el de la demo): se ven directamente los productos.
+
+## Cifras para no equivocarse
+
+- Batch, 9 proveedores: 257 fichas, 208 listas, 24 duplicados, 25 a revisión; USD 0,2709 (USD 0,00105 por ficha), 1.493 s; 53 % de la entrada leída de caché.
+- Tiempo real (corrida de comparación): 247 fichas (Andes incompleto por `max_tokens`), USD 0,54, 6,4 min. No es comparable ficha a ficha.
+- Paralelo 356 s contra secuencial 819 s en tres proveedores; en Rivera la escritura son 316 de los 356 s.
+- Evaluación a mano: ficha 15/15 (Wilson 80 %–100 %), fuente 12/15 (55 %–93 %); los 3 errores son el código del proveedor de Andes atribuido al Excel y no al PDF. Son las fichas con las que se ajustó el sistema.
+- Muestreo: de 208 listas, auditar 49 (error del lote menor al 5 % con 95 % de confianza si no se encuentra ninguno).
+- Proveedores: 25 de 257 a revisión (9,7 %, Wilson 6,7 %–14,0 %). Total por proveedor: p = 0,10. Por tipo, con Holm: datos obligatorios faltantes 0,004; falta de EAN 0,06; conflicto entre archivos 0,08.
+- Minutos por ficha a mano y costo por hora: **supuestos**.
+- Si un estado sale distinto del esperado: no lo corrijas en vivo; mostrá el motivo que dio la ficha.
+
+## Si algo sale mal
+
+- **Falla la API o la red:** "Cargar corrida guardada" con `demo_ensayo`, y decir que es la corrida de ayer.
+- **El asistente en vivo tarda o falla:** usar las preguntas ya ensayadas del selector.
+- **La app no arranca:** `GUION_DEMO_terminal.md` y los comandos de ahí.
+- **Todo falla:** el video de 2 minutos.

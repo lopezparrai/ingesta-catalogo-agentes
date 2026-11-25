@@ -10,6 +10,7 @@ Uso (desde la raíz del repo):
   py asistente/asistente.py            # las 23 consultas + 2 conversaciones de data/consultas/consultas.json
   py asistente/asistente.py --solo Q07 V01  # algunas
   py asistente/asistente.py -i         # modo interactivo
+  py asistente/asistente.py -i --con-demo   # idem, incluyendo lo procesado en resultados/demo
   py asistente/asistente.py "¿Cuántos quedaron pendientes de FDS?"   # una pregunta libre
 """
 import asyncio
@@ -38,6 +39,7 @@ SALIDA = Path(__file__).resolve().parent / "resultados"
 MAX_ITERACIONES = 12
 TOOLS_MCP_PERMITIDAS = {"leer_estandar", "buscar_en_catalogo", "buscar_candidatos_en_catalogo", "validar_gtin_tool"}
 SUFIJOS_NO_FICHAS = ("_traza", "_extraccion")
+CON_DEMO = False  # --con-demo: suma las fichas de resultados/demo (un archivo nuevo procesado en la demo)
 
 
 # ---------------------------------------------------------------------------------------------------
@@ -150,6 +152,8 @@ def _encabezado(filas: list[list]) -> tuple[int, list]:
 class Datos:
     def __init__(self, fichas: dict | None = None):
         self.fichas = fichas if fichas is not None else cargar_fichas()
+        if fichas is None and CON_DEMO and (RAIZ / "resultados" / "demo").is_dir():
+            self.fichas.update(cargar_fichas(RAIZ / "resultados" / "demo"))
         self.proveedores = cargar_proveedores()
 
     # -- buscar_fichas ------------------------------------------------------------------------------
@@ -630,6 +634,9 @@ async def interactivo() -> None:
 
 if __name__ == "__main__":
     args = sys.argv[1:]
+    if "--con-demo" in args:
+        CON_DEMO = True
+        args.remove("--con-demo")
     if args and args[0] == "-i":
         asyncio.run(interactivo())
     elif args and args[0] == "--solo":

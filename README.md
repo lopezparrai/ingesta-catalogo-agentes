@@ -23,6 +23,9 @@ python ingesta.py --todos
 # Lo mismo en tiempo real, cuando el plazo es hoy (concurrencia acotada)
 python ingesta.py --todos --modo tiempo-real
 
+# Un archivo nuevo, sin pisar la corrida final (la demo): las salidas van a resultados/demo/
+python ingesta.py P10_Demo_Proveedor --modo tiempo-real --salida demo
+
 # Uno o algunos proveedores
 python ingesta.py P03_Distribuidora_Litoral P09_Natural_Vida --modo tiempo-real
 
@@ -242,9 +245,18 @@ citadas y abstención. Resultado actual: **29 de 29**. Tres cosas para leerlo bi
 | `ingesta.py` | **Comando principal**: todos los proveedores, por Batch o en tiempo real, con costo y tiempo. Reusa la extracción y la consolidación del orquestador y ejecuta el escritor por rondas. |
 | `data/` | El material del curso (catálogo, estándar, consultas y los archivos de los 9 proveedores). Son los datos de entrada. |
 | `evaluador.py`, `evals/` | Evaluación contra fichas verificadas a mano. |
+| `demo/` | El archivo nuevo para la demo en vivo (`Demo_altas_noviembre.csv`, con casos de duplicado, GTIN inválido, posible duplicado y un texto que pide saltear la revisión) y el guion de 15 minutos. |
 | `asistente/` | Todo el asistente de consultas: `asistente.py` (solo lectura, fuentes verificadas), `prueba_asistente.py` (sin API), `evaluar_consultas.py` y `verificar_esperado.py` (evaluación y verificación a mano), `consultas_esperado.json` y `resultados/respuestas.json` (la salida). |
 | `prueba_hooks.py`, `prueba_ingesta.py` | Pruebas sin API de los hooks, del motor de rondas y de los controles de precio y de FDS. |
 | `ejercicios/` | Ejercicios sueltos del curso (prompt v2, salida estructurada); el sistema no los usa. |
 | `resultados/final/` | La corrida final: por proveedor, la ficha y su traza (costo, caché, frenos de hooks), más la cola de revisión y el resumen. |
 | `resultados/agente_unico/` | La base de M1–M3, contra la que se compara ("vs agente único"). |
 | `resultados/evidencia/` | Dermalab: la corrida original y el diagnóstico producto por producto; y las dos corridas con error. |
+
+## Demo Day: app y slides
+
+- `streamlit run app/demo_app.py` (`pip install -r requirements.txt`): pestañas Archivo nuevo (con cargador de archivo y corrida guardada), Fichas y revisión,
+  Consultas, Costos, Proveedores (calidad de datos por proveedor: intervalos de Wilson, tests de permutación con corrección de Holm, estimación
+  con contracción y pedido al proveedor armado por código) y Confianza. Todo lee de `resultados/` y `asistente/resultados/`; el logo y los colores están en
+  `app/assets/` y `.streamlit/config.toml`.
+- `demo/slides_demo_day.html`: las 7 slides. `demo/GUION_DEMO.md`: el minuto a minuto.

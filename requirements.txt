@@ -6,3 +6,7 @@ python-dotenv
 pyyaml
 openpyxl
 pypdf
+streamlit
+pandas
+jinja2
+matplotlib
