@@ -1,0 +1,457 @@
+{
+ "_leeme": "Esperado calculado desde resultados/final y los archivos originales, NO desde las respuestas del modelo. Verificar a mano y poner verificado_a_mano=true. Las hipotéticas (Q19-Q21) son criterio del estándar y conviene revisarlas con más cuidado.",
+ "consultas": {
+  "Q01": {
+   "tipo": "dato",
+   "valor": 320.8,
+   "items": [
+    "P01:AN-1124"
+   ],
+   "fuentes": [
+    {
+     "archivo": "Actualizacion_precios_Andes.xlsx",
+     "hoja": "Actualización",
+     "fila": 12
+    }
+   ],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q02": {
+   "tipo": "dato",
+   "valor": "7790670659075",
+   "items": [
+    "P05:DL-109"
+   ],
+   "fuentes": [
+    {
+     "archivo": "Dermalab_lista_precios.xlsx",
+     "hoja": "Lista",
+     "fila": 2
+    }
+   ],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q03": {
+   "tipo": "dato",
+   "valor": 142,
+   "items": [
+    "P08:IN7003"
+   ],
+   "fuentes": [
+    {
+     "archivo": "NorteImports_new_items_Q4.xlsx",
+     "hoja": "New items",
+     "fila": 2
+    }
+   ],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q04": {
+   "tipo": "dato",
+   "valor": 250,
+   "items": [
+    "P03:LT-3345"
+   ],
+   "fuentes": [
+    {
+     "archivo": "litoral_altas_102026.csv",
+     "linea": 16
+    }
+   ],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q05": {
+   "tipo": "dato",
+   "valor": "corrosivo",
+   "items": [
+    "P07:LHS-206"
+   ],
+   "fuentes": [
+    {
+     "archivo": "FDS_Clarita_lavandina.pdf",
+     "pagina": 1
+    }
+   ],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q06": {
+   "tipo": "dato",
+   "valor": 262.87,
+   "items": [
+    "P09:NV-212"
+   ],
+   "fuentes": [
+    {
+     "archivo": "Mail_NaturalVida_altas.txt",
+     "linea": 13
+    }
+   ],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q07": {
+   "tipo": "motivo",
+   "valor": "SKU100889",
+   "items": [
+    "P03:LT-3447"
+   ],
+   "fuentes": [
+    {
+     "archivo": "litoral_altas_102026.csv",
+     "linea": 46
+    }
+   ],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q08": {
+   "tipo": "motivo",
+   "valor": "conflicto_entre_fuentes",
+   "items": [
+    "P01:AN-1133"
+   ],
+   "fuentes": [
+    {
+     "archivo": "Lista_de_precios_octubre_2026.pdf",
+     "pagina": 1
+    },
+    {
+     "archivo": "Actualizacion_precios_Andes.xlsx",
+     "hoja": "Actualización",
+     "fila": 6
+    }
+   ],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q09": {
+   "tipo": "motivo",
+   "valor": "gtin_invalido",
+   "items": [
+    "P02:RIV-1203"
+   ],
+   "fuentes": [
+    {
+     "archivo": "ALTAS RIVERA OCT.xlsx",
+     "hoja": "Altas",
+     "fila": 7
+    }
+   ],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q10": {
+   "tipo": "motivo",
+   "valor": "SKU100714",
+   "items": [
+    "P02:RIV-1206"
+   ],
+   "fuentes": [
+    {
+     "archivo": "ALTAS RIVERA OCT.xlsx",
+     "hoja": "Altas",
+     "fila": 8
+    }
+   ],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q11": {
+   "tipo": "sin_ficha",
+   "valor": "discontinuado",
+   "items": [],
+   "fuentes": [
+    {
+     "archivo": "HigieneTotal_novedades.xlsx",
+     "hoja": "Discontinuados",
+     "fila": 2
+    }
+   ],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q12": {
+   "tipo": "motivo",
+   "valor": "gtin_faltante",
+   "items": [
+    "P09:NV-203"
+   ],
+   "fuentes": [
+    {
+     "archivo": "Mail_NaturalVida_altas.txt",
+     "linea": 10
+    }
+   ],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q13": {
+   "tipo": "motivo",
+   "valor": "dato_obligatorio_faltante",
+   "items": [
+    "P01:AN-1103"
+   ],
+   "fuentes": [
+    {
+     "archivo": "Lista_de_precios_octubre_2026.pdf",
+     "pagina": 1
+    }
+   ],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q14": {
+   "tipo": "lista",
+   "valor": 4,
+   "items": [
+    "P07:LHS-206",
+    "P07:LHS-218",
+    "P07:LHS-263",
+    "P07:LHS-269"
+   ],
+   "fuentes": [],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q15": {
+   "tipo": "lista",
+   "valor": 7,
+   "items": [
+    "P02:RIV-1212",
+    "P04:HT40003",
+    "P04:HT40021",
+    "P04:HT40066",
+    "P07:LHS-221",
+    "P07:LHS-248",
+    "P07:LHS-266"
+   ],
+   "fuentes": [],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q16": {
+   "tipo": "lista",
+   "valor": 4,
+   "items": [
+    "P05:DL-103",
+    "P05:DL-106",
+    "P05:DL-151",
+    "P05:DL-154"
+   ],
+   "fuentes": [],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q17": {
+   "tipo": "lista",
+   "valor": 3,
+   "items": [
+    "P06:BF-509",
+    "P06:BF-521",
+    "P06:BF-548"
+   ],
+   "fuentes": [],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q18": {
+   "tipo": "conteo",
+   "valor": 208,
+   "items": [],
+   "fuentes": [],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q19": {
+   "tipo": "hipotetica",
+   "valor": "a_revision",
+   "items": [
+    "P05:DL-103"
+   ],
+   "fuentes": [],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": "Escenario: sigue a revisión porque falta precio y moneda. Verificar contra el estándar."
+  },
+  "Q20": {
+   "tipo": "hipotetica",
+   "valor": "lista_para_alta",
+   "items": [
+    "P09:NV-203"
+   ],
+   "fuentes": [],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": "Escenario: único motivo es gtin_faltante. Verificar."
+  },
+  "Q21": {
+   "tipo": "hipotetica",
+   "valor": "duplicado",
+   "items": [
+    "P03:LT-3450"
+   ],
+   "fuentes": [],
+   "abstiene": false,
+   "verificado_a_mano": true,
+   "nota": "Escenario: el GTIN coincide con SKU102632. Verificar."
+  },
+  "Q22": {
+   "tipo": "abstencion",
+   "valor": null,
+   "items": null,
+   "fuentes": [],
+   "abstiene": true,
+   "verificado_a_mano": true,
+   "nota": null
+  },
+  "Q23": {
+   "tipo": "abstencion",
+   "valor": null,
+   "items": null,
+   "fuentes": [],
+   "abstiene": true,
+   "verificado_a_mano": true,
+   "nota": null
+  }
+ },
+ "conversaciones": {
+  "V01": [
+   {
+    "tipo": "lista",
+    "valor": 14,
+    "items": [
+     "P08:IN7003",
+     "P08:IN7006",
+     "P08:IN7009",
+     "P08:IN7012",
+     "P08:IN7015",
+     "P08:IN7018",
+     "P08:IN7021",
+     "P08:IN7024",
+     "P08:IN7027",
+     "P08:IN7030",
+     "P08:IN7033",
+     "P08:IN7036",
+     "P08:IN7039",
+     "P08:IN7042"
+    ],
+    "fuentes": [],
+    "abstiene": false,
+    "verificado_a_mano": true,
+    "nota": null
+   },
+   {
+    "tipo": "dato",
+    "valor": 10.66,
+    "items": [
+     "P08:IN7012"
+    ],
+    "fuentes": [
+     {
+      "archivo": "NorteImports_new_items_Q4.xlsx",
+      "hoja": "New items",
+      "fila": 5
+     }
+    ],
+    "abstiene": false,
+    "verificado_a_mano": true,
+    "nota": null
+   },
+   {
+    "tipo": "dato",
+    "valor": 10.66,
+    "items": [
+     "P08:IN7012"
+    ],
+    "fuentes": [
+     {
+      "archivo": "NorteImports_new_items_Q4.xlsx",
+      "hoja": "New items",
+      "fila": 5
+     }
+    ],
+    "abstiene": false,
+    "verificado_a_mano": true,
+    "nota": null
+   }
+  ],
+  "V02": [
+   {
+    "tipo": "lista",
+    "valor": 4,
+    "items": [
+     "P01:AN-1103",
+     "P01:AN-1106",
+     "P01:AN-1133",
+     "P01:AN-1136"
+    ],
+    "fuentes": [],
+    "abstiene": false,
+    "verificado_a_mano": true,
+    "nota": null
+   },
+   {
+    "tipo": "lista",
+    "valor": 2,
+    "items": [
+     "P01:AN-1133",
+     "P01:AN-1136"
+    ],
+    "fuentes": [],
+    "abstiene": false,
+    "verificado_a_mano": true,
+    "nota": null
+   },
+   {
+    "tipo": "dato",
+    "valor": null,
+    "items": [
+     "P01:AN-1133",
+     "P01:AN-1136"
+    ],
+    "fuentes": [
+     {
+      "archivo": "Lista_de_precios_octubre_2026.pdf",
+      "pagina": 1
+     },
+     {
+      "archivo": "Actualizacion_precios_Andes.xlsx",
+      "hoja": "Actualización",
+      "fila": 5
+     },
+     {
+      "archivo": "Actualizacion_precios_Andes.xlsx",
+      "hoja": "Actualización",
+      "fila": 6
+     }
+    ],
+    "abstiene": false,
+    "verificado_a_mano": true,
+    "nota": null
+   }
+  ]
+ }
+}

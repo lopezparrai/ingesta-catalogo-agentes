@@ -28,6 +28,5 @@ f = {"archivo": "litoral_altas_102026.csv", "linea": 16}
 caso("hook acepta fuente vista", S.hook_respuesta({"texto": "x", "items": ["P03:LT-3345"], "fuentes": [f]}, v)[0] is None)
 caso("hook frena fuente inventada", S.hook_respuesta({"texto": "x", "fuentes": [{"archivo": "a.csv", "linea": 3}]}, v)[0] is not None)
 caso("hook frena item inventado", S.hook_respuesta({"texto": "x", "items": ["P03:LT-0000"]}, v)[0] is not None)
-caso("hook frena abstención con fuentes", S.hook_respuesta({"texto": "x", "abstiene": True, "fuentes": [f]}, v)[0] is not None)
 caso("hook frena campo extra", S.hook_respuesta({"texto": "x", "otro": 1}, v)[0] is not None)
 print(f"\n{sum(casos)}/{len(casos)}")

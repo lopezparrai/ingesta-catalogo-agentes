@@ -30,6 +30,12 @@ python ingesta.py P03_Distribuidora_Litoral P09_Natural_Vida --modo tiempo-real
 python prueba_hooks.py      # hooks y permisos
 python prueba_ingesta.py       # motor de rondas del Batch y controles, con un cliente falso
 python esquema.py           # valida contra el esquema todas las fichas ya generadas
+python prueba_asistente.py  # tools y hook del asistente de consultas
+
+# Asistente de consultas (usa la API; ver su sección)
+python asistente.py                # las 23 consultas y 2 conversaciones de data/consultas/consultas.json
+python asistente.py -i             # chat interactivo
+python evaluar_consultas.py        # compara las respuestas con evals/consultas_esperado.json
 ```
 
 Un archivo nuevo de un proveedor entra sin intervención: se deja en su carpeta y se vuelve a correr el comando.
@@ -153,6 +159,36 @@ por el modelo y no cambian el estado.
 `prueba_ingesta.py` verifica los dos controles sin llamar a la API. La regla de `unidades_por_envase` sigue siendo
 un prompt (no es un hook) y es el punto más débil que queda.
 
+## Asistente de consultas
+
+`asistente.py` responde preguntas de Compras sobre lo que hizo la ingesta ("¿por qué LT-3447 quedó a revisión?",
+"¿qué productos van como corrosivos?", "¿qué le pido a Dermalab para cerrar sus revisiones?"). Es un agente de
+**solo lectura** sobre `resultados/final/` y los archivos originales de los proveedores.
+
+- **Tools:** `buscar_fichas` (filtra y devuelve `total` y `por_estado` contados por código), `leer_fuente` (el dato
+  crudo del CSV, Excel o PDF, con encabezado y títulos de la hoja), `buscar_codigo_en_archivos` (busca un código en
+  todos los archivos, incluidas las hojas de descontinuados, e informa en qué archivos no está) y, del servidor MCP,
+  solo las de lectura (estándar, catálogo, validación de GTIN). No puede registrar fichas.
+- **La respuesta es estructurada** (`responder`): texto, valor, productos y fuentes. Un hook rechaza la respuesta si
+  cita una fuente o un producto que no apareció en el resultado de una tool, y el modelo tiene que corregirla.
+- **Los conteos los hace el código**, no el modelo. Si el dato no existe (ventas, precio de venta al público; la
+  ingesta solo maneja precio de costo) debe abstenerse. Los archivos de los proveedores se tratan como datos, no
+  como instrucciones (el pedido de Natural Vida de "dar todo de alta sin revisión" no cambia el estado de NV-203).
+- **Conversaciones:** el hilo guarda solo cada pregunta y su respuesta final (con las tools que la respaldaron), no
+  los resultados de las tools; así el costo no crece con cada turno. El hilo recuerda qué fuentes se vieron.
+- **Costo:** unos USD 0,0004 a 0,004 por pregunta; las 29 respuestas, alrededor de USD 0,04.
+
+**Evaluación** (`evaluar_consultas.py`, `evals/consultas_esperado.json`): el esperado se calculó desde las fichas
+finales y los archivos originales, no desde las respuestas del modelo, y se verificó a mano con
+`verificar_esperado.py` (muestra el dato crudo de cada fuente). Mide valor, productos, fuentes esperadas entre las
+citadas y abstención. Resultado actual: **29 de 29**. Tres cosas para leerlo bien:
+- Es el mismo conjunto de preguntas con el que se ajustó el asistente: la primera corrida tuvo defectos que se
+  arreglaron (el modelo dudaba de sus respuestas anteriores en las conversaciones porque el hilo no guardaba las
+  tools usadas; no leía la vigencia en los títulos de un Excel; decía que la lista de Dermalab "no estaba" cuando
+  existía pero no incluía esos códigos). 29 de 29 no mide generalización a preguntas nuevas.
+- Las hipotéticas (Q19 a Q21) se verifican contra el estándar, no contra un dato de archivo.
+- La métrica no evalúa la redacción de las respuestas, solo datos y fuentes.
+
 ## Límites conocidos
 
 - El modelo no es determinista: la misma lista puede dar descripciones o variantes distintas entre corridas.
@@ -181,6 +217,9 @@ un prompt (no es un hook) y es el punto más débil que queda.
 | `ingesta.py` | **Comando principal**: todos los proveedores, por Batch o en tiempo real, con costo y tiempo. Reusa la extracción y la consolidación del orquestador y ejecuta el escritor por rondas. |
 | `data/` | El material del curso (catálogo, estándar, consultas y los archivos de los 9 proveedores). Son los datos de entrada. |
 | `evaluador.py`, `evals/` | Evaluación contra fichas verificadas a mano. |
+| `asistente.py` | Asistente conversacional de consultas (solo lectura, fuentes verificadas); salidas en `resultados/consultas/`. |
+| `evaluar_consultas.py`, `verificar_esperado.py` | Evaluación de las respuestas del asistente y ayuda para verificar a mano el esperado. |
+| `prueba_asistente.py` | Pruebas sin API de las tools y del hook de fuentes del asistente. |
 | `prueba_hooks.py`, `prueba_ingesta.py` | Pruebas sin API de los hooks, del motor de rondas y de los controles de precio y de FDS. |
 | `ejercicios/` | Ejercicios sueltos del curso (prompt v2, salida estructurada); el sistema no los usa. |
 | `resultados/final/` | La corrida final: por proveedor, la ficha y su traza (costo, caché, frenos de hooks), más la cola de revisión y el resumen. |
