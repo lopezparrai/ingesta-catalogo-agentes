@@ -12,9 +12,11 @@ import html
 import json
 import os
 import shutil
+import queue
 import re
 import subprocess
 import sys
+import threading
 import time
 from pathlib import Path
 
@@ -226,6 +228,13 @@ with tab_ing:
                 with st.expander("Ver el archivo tal como llega"):
                     st.code(CSV_DEMO.read_text(encoding="utf-8"), language="text")
         st.caption(f"Llama a la API y reemplaza la salida anterior de `resultados/demo` y de `data/proveedores/{PROV_DEMO}`. Tarda 1 a 2 minutos.")
+        carga = st.radio("Tipo de carga", ["Tiempo real", "Carga masiva (Batch)"], horizontal=True,
+                         captions=["La respuesta llega en ~1 minuto. Para cuando Compras necesita el alta ahora.",
+                                   "La mitad del costo, pero la API la procesa cuando puede: de minutos a horas. Para cargas grandes."])
+        modo_cli = "batch" if carga.startswith("Carga masiva") else "tiempo-real"
+        if modo_cli == "batch":
+            st.warning("En Batch la corrida puede tardar varios minutos o más; no es lo recomendable para una demo en vivo. "
+                       "Solo la escritura va por Batch: la extracción del archivo sigue siendo inmediata.")
         if st.button("Procesar archivo", type="primary"):
             carpeta_prov = RAIZ / "data" / "proveedores" / PROV_DEMO
             shutil.rmtree(carpeta_prov, ignore_errors=True)
@@ -236,7 +245,7 @@ with tab_ing:
             else:
                 (carpeta_prov / Path(subido.name).name).write_bytes(subido.getvalue())
             st.session_state.pop("destino", None)
-            cmd = [sys.executable, "ingesta.py", PROV_DEMO, "--modo", "tiempo-real", "--salida", "demo"]
+            cmd = [sys.executable, "ingesta.py", PROV_DEMO, "--modo", modo_cli, "--salida", "demo"]
             env = {**os.environ, "PYTHONUNBUFFERED": "1", "PYTHONIOENCODING": "utf-8"}
             proc = subprocess.Popen(cmd, cwd=RAIZ, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                                     text=True, encoding="utf-8", errors="replace", env=env)
@@ -246,7 +255,7 @@ with tab_ing:
                 pasos_ph, detalle_ph = st.empty(), st.empty()
             with st.expander("Ver el log técnico"):
                 log_ph = st.empty()
-            fase, rondas, avisos, lineas = 0, 0, [], []
+            fase, rondas, avisos, lineas, estado_batch = 0, 0, [], [], ""
             PASOS = ["Leer el archivo", "Extraer los datos", "Armar las fichas", "Listo"]
 
             def dibujar():
@@ -262,6 +271,8 @@ with tab_ing:
                 txt = f"Tiempo: {time.time() - t0:.0f} s"
                 if rondas:
                     txt += f" · ronda de escritura {rondas}"
+                if estado_batch:
+                    txt += f" · {estado_batch}"
                 detalle_ph.caption(txt)
                 estado.update(label=f"{PASOS[min(fase, 3)]}… ({time.time() - t0:.0f} s)")
 
@@ -270,9 +281,24 @@ with tab_ing:
                     or bool(re.search(r"[▀-▟]", l)) or any(k in l for k in ("FastMCP", "gofastmcp", "Deploy free", "Update available",
                                                                            "pip install --upgrade", "Starting MCP server", "Server:"))
 
+            cola_lineas: "queue.Queue" = queue.Queue()
+
+            def _leer():
+                for ln in proc.stdout:
+                    cola_lineas.put(ln)
+                cola_lineas.put(None)
+            threading.Thread(target=_leer, daemon=True).start()
+
             fase = 1
             dibujar()
-            for linea in proc.stdout:
+            while True:
+                try:
+                    linea = cola_lineas.get(timeout=1.0)
+                except queue.Empty:
+                    dibujar()   # sin líneas nuevas (p. ej. esperando al Batch): solo avanza el reloj
+                    continue
+                if linea is None:
+                    break
                 linea = linea.rstrip()
                 if not linea or ruido(linea):
                     continue
@@ -281,6 +307,8 @@ with tab_ing:
                     fase, rondas = 2, int(m.group(1))
                 elif "RESUMEN" in linea:
                     fase = 3
+                if "[batch" in linea:
+                    estado_batch = linea.strip()[:160]
                 if "hook FRENÓ" in linea or "FALLÓ" in linea:
                     avisos.append(linea)
                     with estado:
