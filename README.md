@@ -110,142 +110,45 @@ ser frenado por el hook que corresponde, sin llamar a la API.
   petición inválida, no. Hay tope de rondas y de iteraciones por conversación.
 - **Tiempo real con concurrencia acotada** (`--modo tiempo-real`): el mismo motor sin el descuento.
 
-Comparación con los 8 proveedores (239 fichas), mismos estados en los dos modos:
+Última corrida de los **9 proveedores** (257 fichas) en los dos modos, con el mismo código y los mismos prompts:
 
-| Modo | Tiempo | Costo | Por ficha |
-|---|---|---|---|
-| Tiempo real | 318 s (~5 min) | USD 0,4376 | USD 0,00183 |
-| Batch | 2.531 s (~42 min) | USD 0,2662 | USD 0,00111 |
+| Modo | Tiempo | Costo | Por ficha | Fichas | A revisión |
+|---|---|---|---|---|---|
+| Batch (oficial) | 1.493 s (~25 min, 8 rondas) | USD 0,2709 | USD 0,00105 | 257 de 257 | 25 |
+| Tiempo real | 383 s (~6 min, 8 rondas) | USD 0,5394 | USD 0,00218 | 247 de 257 | 66 |
 
-El Batch sale un 39 % más barato (no 50 %, porque la extracción corre en tiempo real) y tarda unos 5 minutos por
-ronda, en 8 rondas. Sirve cuando el plazo es largo; con apuro, tiempo real. En un solo proveedor (Natural Vida,
-14 productos) la relación es la misma: 71 s y USD 0,0232 en tiempo real contra 1.394 s y USD 0,0148 en Batch.
+**Los dos modos no dieron lo mismo en esta corrida, y el Batch es el que sirve de resultado.** En tiempo real, Andes
+quedó incompleto (16 de 26: un lote cortó por `max_tokens` y no se registraron 10 productos), y varios proveedores
+tuvieron más productos a revisión (Litoral 29 contra 3, Bebé Feliz 11 contra 2, Rivera 10 contra 2) con más frenos de
+los hooks (9 en Litoral). Por eso su costo por ficha (USD 0,00218) no es comparable con el del Batch: incluye los
+reintentos. No verifiqué la causa; lo que sí muestra es que el modelo falla de forma intermitente y que la corrida
+por tiempo real no es tan estable como la del Batch. En una corrida anterior de 8 proveedores (239 fichas) los dos
+modos habían dado los mismos estados (tiempo real 318 s y USD 0,4376; Batch 2.531 s y USD 0,2662), así que la
+diferencia no es sistemática, pero tampoco se puede dar por descartada. El Batch descuenta 50 % en la escritura y la
+extracción sigue en tiempo real; el costo por ficha del Batch quedó entre USD 0,0011 y 0,0010 en las dos corridas.
+Los dos resúmenes están en `resultados/evidencia/` (tiempo real) y `resultados/final/resumen_corrida.json` (Batch).
 
 ## Resultados
 
-Corrida de los 8 proveedores con un comando, en tiempo real (el apartado queda afuera). La corrida por Batch
-dio los mismos estados en todos los proveedores:
+Corrida oficial por Batch, los 9 proveedores con un comando (`py ingesta.py --todos`):
 
 | Proveedor | Fichas | Lista para alta | Duplicado | A revisión | Costo (USD) |
 |---|---|---|---|---|---|
-| P01 Laboratorio Andes | 26 | 21 | 0 | 5 | 0,0552 |
-| P02 Cosmética Rivera | 50 | 44 | 5 | 1 | 0,0947 |
-| P03 Distribuidora Litoral | 50 | 40 | 7 | 3 | 0,0774 |
-| P04 Higiene Total | 28 | 18 | 5 | 5 | 0,0466 |
-| P06 Bebé Feliz | 32 | 26 | 4 | 2 | 0,0546 |
-| P07 Limpieza Hogar Sur | 25 | 20 | 3 | 2 | 0,0564 |
-| P08 Importadora Norte | 14 | 14 | 0 | 0 | 0,0297 |
-| P09 Natural Vida | 14 | 11 | 0 | 3 | 0,0230 |
-| **Total** | **239** | | | | **0,4376** |
+| P01 Laboratorio Andes | 26 | 22 | 0 | 4 | 0,0317 |
+| P02 Cosmética Rivera | 50 | 43 | 5 | 2 | 0,0502 |
+| P03 Distribuidora Litoral | 50 | 40 | 7 | 3 | 0,0419 |
+| P04 Higiene Total | 28 | 18 | 5 | 5 | 0,0260 |
+| P05 Dermalab | 18 | 14 | 0 | 4 | 0,0221 |
+| P06 Bebé Feliz | 32 | 26 | 4 | 2 | 0,0294 |
+| P07 Limpieza Hogar Sur | 25 | 20 | 3 | 2 | 0,0379 |
+| P08 Importadora Norte | 14 | 14 | 0 | 0 | 0,0186 |
+| P09 Natural Vida | 14 | 11 | 0 | 3 | 0,0131 |
+| **Total** | **257** | **208** | **24** | **25** | **0,2709** |
 
-Total: 318 s (extracción 66 s, escritura 252 s, 7 rondas), **USD 0,00183 por ficha**, 21 productos en la cola de
-revisión. En todos los proveedores, cada producto comparable tiene **el mismo estado** que con el agente único
-anterior (M1–M3). Lo que cambia entre corridas son campos de texto (descripción, variante, categoría), que
-varían por el modelo y no cambian el estado.
-
-### Tiempos de la orquestación (Andes: 2 archivos, 26 productos)
-
-| Modo | Total | Costo |
-|---|---|---|
-| Secuencial | 282,6 s | USD 0,072 |
-| Extractores en paralelo | 249,0 s | USD 0,062 |
-| Extractores y lotes en paralelo | 152,1 s | USD 0,088 |
-
-Una sola corrida por modo, y la variación entre corridas es grande: se leen como órdenes de magnitud.
-Paralelizar los extractores casi no ayuda con pocos archivos; lo que ahorra tiempo es paralelizar los lotes del
-escritor (~−45 %) y los proveedores entre sí. El costo no baja con el paralelismo.
-
-## Cómo se evalúa
-
-`evaluador.py` compara `resultados/agente_unico/*.json` contra fichas verificadas a mano en `evals/` (Litoral y Andes). Cuenta
-como error un campo que se esperaba vacío y se completó: inventar un dato es peor que dejarlo vacío. Además,
-cada vez que se toca un prompt se vuelven a correr todos los proveedores y se comparan los estados contra la
-corrida anterior (ver abajo por qué).
-
-## Decisiones de diseño y lo que enseñaron los fallos
-
-- **Workflow y no agente libre.** Los pasos se pueden enumerar de antemano (extraer, consolidar, escribir), el
-  costo y la latencia son acotados y se puede evaluar cada etapa por separado.
-- **Dividir cuesta información.** Al separar extractor y escritor, Natural Vida y Norte empeoraron: el extractor
-  partió "$ 357,43" en dos campos y descartó la marca (que estaba en el asunto y la firma del mail), y el
-  escritor no ve el archivo. Se corrigió con un contrato más rico: valores enteros y un campo `contexto` con todo
-  lo que no es una fila.
-- **Una regla arreglada puede romper otra.** La regla de marca para el mail rompió Andes (la marca está dentro
-  del nombre, "Febril 500 mg"); se reescribió distinguiendo nombre comercial de nombre genérico. Moraleja:
-  después de tocar un prompt se corren **todos** los casos.
-- **Un campo con valor por defecto también necesita fuente.** En Litoral, 14 productos pasaron de
-  `lista_para_alta` a `a_revision`: el estándar dice que `unidades_por_envase` es 1 salvo en los packs, pero el
-  CSV no trae esa columna, el escritor lo completaba sin fuente y `hook_al_terminar_fuentes` lo vaciaba. Se
-  agregó una regla explícita (valor por defecto, y como fuente la de la misma fila). El hook hizo su trabajo: no
-  dejó pasar un dato sin origen. Con la regla, los 50 productos de Litoral coinciden en estado con M1–M3 y el
-  costo bajó de USD 0,144 a 0,077, porque ya no hay reintentos.
-- **Hooks de esquema en el loop.** En una corrida real, `hook_esquema` frenó una fuente con un campo inventado
-  (`linea` de más) y el modelo la corrigió en el siguiente intento.
-
-## El proveedor apartado (Dermalab, P05), una sola corrida
-
-Dermalab se apartó desde el principio y no se usó para ajustar nada. Se corrió **una vez**, con el sistema ya
-commiteado (`py lote.py P05_Dermalab --modo tiempo-real`, hoy `ingesta.py`): 18 fichas en 124 s, USD 0,0398 (**USD 0,0022 por
-ficha**), 0 frenos de hooks. El sistema dijo 13 `lista_para_alta`, 5 `a_revision` y ninguna falla. Eso es lo que
-parecía; lo que pasó es otra cosa.
-
-**Qué falló.** Dermalab manda una lista de precios (Excel: código, EAN y costo) y un PDF de lanzamientos
-(nombre, tipo, contenido y código). En el PDF cada producto es un bloque: **el nombre va arriba y el código
-abajo**. El sistema le asignó a cada código el nombre del bloque **siguiente**. Chequeado contra el PDF, los 18
-productos quedaron con un nombre equivocado; el último (DL-148) quedó sin nombre porque no tenía bloque
-siguiente. Con el nombre equivocado, también quedaron mal la categoría y la variante. Lo que sí quedó bien es
-lo que no dependía del nombre: el contenido, el EAN y el precio.
-
-**Por qué importa.** 13 fichas con el nombre de otro producto salieron como `lista_para_alta`, o sea, listas para
-cargar con el EAN y el precio de un producto y el nombre de otro. Las 5 que fueron a revisión lo hicieron por
-otra razón, correcta (4 códigos no están en la lista de precios, así que no hay EAN ni costo, y DL-148 no tenía
-nombre): el error de fondo no lo detectó nadie (la comparación producto por producto está en `resultados/evidencia/diagnostico_dermalab.md`). El cruce del Excel con el PDF por código funcionó bien.
-
-**Por qué no lo frenó ningún hook.** Los hooks controlan forma y coherencia: esquema, vocabulario, GTIN,
-fuentes, estado contra motivos. La ficha equivocada es perfectamente válida: el nombre "SERUM DERMALAB LIFT X
-400 ML" cumple todas las reglas, y la fuente que cita existe. No hay ninguna regla que mire si el nombre y el
-código **son del mismo bloque**. Además, con una sola fuente por campo, la cita del nombre apunta a una página
-que sí contiene ese texto, así que tampoco se detecta por ahí.
-
-**La causa.** La consulta con la que el lector de PDF (`leer_pdf_con_citas`) transcribe un documento decía
-"son filas de una tabla" y "empezando por su código". Eso vale para una tabla, pero en este PDF el nombre va arriba
-del código, así que cada código recibía el título que venía después.
-
-### Después del hallazgo (el arreglo no es una prueba limpia)
-
-Se corrigió tres cosas: la consulta del lector de PDF (ahora aclara que puede ser una ficha por producto con el
-nombre arriba del código y que los datos son los del bloque que contiene el código), la misma regla en las
-instrucciones del extractor (incluido un título cortado por un salto de página) y `lote.py` (hoy `ingesta.py`), que ahora guarda la
-extracción de cada proveedor para poder diagnosticar.
-
-Con el arreglo, **los 18 nombres coinciden con el PDF** (14 `lista_para_alta`, 4 `a_revision`; las 4 de revisión
-son productos que no están en la lista de precios, así que no tienen EAN ni costo). La corrida original quedó
-guardada en `resultados/evidencia/P05_Dermalab_corrida_original.json`. Esta segunda corrida **no cuenta como prueba
-limpia**: el sistema ya se había ajustado mirando este proveedor. Lo que queda es que el defecto era de una
-consulta pensada para tablas, y que los hooks de forma no lo habrían detectado nunca.
-
-Lo que haría además (no aplicado): que el extractor devuelva el texto exacto del bloque de cada fila y un hook
-compruebe que nombre y código están en el mismo bloque, y un control de coherencia entre el tipo que dice el bloque
-("Crema", "Gel", "Sérum") y la categoría.
-
-## Fallas intermitentes y controles en código
-
-Al volver a correr todo después del arreglo aparecieron tres fallas que no tenían que ver con Dermalab y que
-**con los mismos datos y el mismo código unas veces ocurren y otras no**:
-
-| Falla | Dónde | Efecto |
-|---|---|---|
-| El escritor dejó `unidades_por_envase` sin fuente y el sistema lo vació | Litoral | 14 productos a revisión (se corrigió con una regla en el prompt) |
-| El escritor dejó `precio_costo` vacío en un lote entero aunque la extracción lo traía | Rivera y Litoral | 10 y 14 productos a revisión |
-| La extracción de una ficha de seguridad salió sin la sección 14 (transporte) | Limpieza Hogar Sur | 6 productos a revisión |
-
-Ninguna cargó datos mal: todas terminaron en `a_revision`, que es la falla segura. Pero cambian el resultado de
-una corrida a otra. Un prompt más largo no lo arregla; cuando el dato es obligatorio, lo controla el código:
-
-- `hook_no_perder_precio` (`ingesta.py`): al terminar un lote, si la extracción de un producto trae precio y la ficha
-  quedó sin `precio_costo`, no deja cerrar y se lo devuelve al modelo (2 reintentos).
-- `validar_extraccion` (`orquestador.py`): una FDS sin sección 14 se le devuelve al extractor para que la lea de
-  nuevo; si el documento dice que no está regulado, ese texto se acepta.
+Total: 1.493 s (extracción 75 s, escritura 1.418 s, 8 rondas), **USD 0,00105 por ficha**, 25 productos en la cola
+de revisión. Comparado con el agente único anterior (M1–M3), todos los productos en común tienen **el mismo estado**
+salvo uno de Rivera; lo que cambia entre corridas son campos de texto (descripción, variante, categoría), que varían
+por el modelo y no cambian el estado.
 
 `prueba_ingesta.py` verifica los dos controles sin llamar a la API. La regla de `unidades_por_envase` sigue siendo
 un prompt (no es un hook) y es el punto más débil que queda.
@@ -253,19 +156,19 @@ un prompt (no es un hook) y es el punto más débil que queda.
 ## Límites conocidos
 
 - El modelo no es determinista: la misma lista puede dar descripciones o variantes distintas entre corridas.
-- El Batch tarda minutos por ronda (42 minutos los 8 proveedores); hay que tener el proceso corriendo hasta que termine.
+- El Batch tarda minutos por ronda (25 a 42 minutos los 9 proveedores); hay que tener el proceso corriendo hasta que termine.
+- En tiempo real un lote largo puede cortar por `max_tokens` (pasó con Andes); el Batch no tuvo ese problema en esta corrida y no está resuelto el caso en tiempo real.
 - Con un GTIN inválido, la corrida por Batch dejó el GTIN en la ficha (con su fuente) y las otras corridas lo dejaron vacío; el estado y el motivo (`a_revision`, `gtin_invalido`) son los mismos.
 - Dermalab (el apartado) salió con los nombres de los productos corridos un bloque; se arregló después y esa segunda corrida no es una prueba limpia (ver arriba).
 - El modelo falla de forma intermitente en pasos que antes andaban; los controles en código reducen el riesgo pero no lo eliminan.
 - **Sobreajuste y generalización.** El código no tiene ramas por proveedor (los nombres de proveedores aparecen solo en
-  ejemplos de uso y en la constante que deja a Dermalab fuera de `--todos`), y las reglas del prompt salen del estándar
+  ejemplos de uso), y las reglas del prompt salen del estándar
   y de los tipos de archivo. Aun así, **los 8 proveedores que no son el apartado se usaron para ajustar el sistema** (la
   regla de marca nació de Natural Vida y de Andes, y la de la condición de venta de un código de un proveedor), y las
   evaluaciones verificadas a mano cubren solo Litoral y Andes. La única señal limpia de generalización es Dermalab, y
   fue una falla (formato de PDF que no era una tabla). Además, la regla de marca usa como ejemplos nombres de productos
   reales de Andes ("Febril 500 mg", "Dolorex 400 mg", "Valeriana 300 mg"); conviene reemplazarlos por nombres inventados
   y volver a correr los proveedores. Un proveedor nuevo con un formato que no se vio puede fallar de forma parecida.
-- Pendiente: asistente de consultas sobre lo generado (`consultas/consultas.json`).
 
 ## Archivos
 

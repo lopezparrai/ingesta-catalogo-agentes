@@ -1,47 +1,47 @@
 {
-  "modo": "tiempo-real",
+  "modo": "batch",
   "fichas": 50,
   "sin_registrar": [],
   "fallas": [],
   "frenos_de_hooks": [],
-  "costo_usd": 0.0767,
-  "costo_por_ficha_usd": 0.00153,
+  "costo_usd": 0.0419,
+  "costo_por_ficha_usd": 0.00084,
   "uso_escritor": {
-    "input": 270586,
-    "output": 77485,
+    "input": 277703,
+    "output": 72786,
     "cache_escrito": 0,
-    "cache_leido": 322391
+    "cache_leido": 406493
   },
   "lotes": [
     {
       "lote": "P03-lote0",
       "estado": "terminada",
-      "iteraciones": 3,
-      "costo_usd": 0.0123
+      "iteraciones": 7,
+      "costo_usd": 0.0085
     },
     {
       "lote": "P03-lote1",
       "estado": "terminada",
-      "iteraciones": 3,
-      "costo_usd": 0.0141
+      "iteraciones": 5,
+      "costo_usd": 0.0069
     },
     {
       "lote": "P03-lote2",
       "estado": "terminada",
-      "iteraciones": 3,
-      "costo_usd": 0.0131
+      "iteraciones": 4,
+      "costo_usd": 0.0056
     },
     {
       "lote": "P03-lote3",
       "estado": "terminada",
-      "iteraciones": 5,
-      "costo_usd": 0.0145
+      "iteraciones": 4,
+      "costo_usd": 0.0061
     },
     {
       "lote": "P03-lote4",
       "estado": "terminada",
       "iteraciones": 4,
-      "costo_usd": 0.015
+      "costo_usd": 0.0069
     }
   ]
 }

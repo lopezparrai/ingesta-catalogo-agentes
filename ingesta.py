@@ -22,7 +22,7 @@ Salidas en resultados/final/: fichas por proveedor, trazas, `cola_de_revision.js
 Uso:
   py ingesta.py P09_Natural_Vida                          # un proveedor, por Batch API
   py ingesta.py P01_Laboratorio_Andes P08_Importadora_Norte --modo tiempo-real
-  py ingesta.py --todos                                   # los proveedores de proveedores.csv, menos el apartado
+  py ingesta.py --todos                                   # los 9 proveedores de proveedores.csv
   py ingesta.py P05_Dermalab                              # el apartado: una sola vez, con el sistema como está
 """
 import argparse
@@ -40,7 +40,7 @@ import agente_base as A
 import orquestador as O
 
 SALIDAS = A.RAIZ / "resultados" / "final"
-APARTADO = "P05_Dermalab"       # el proveedor que se abre una sola vez (semana 5)
+APARTADO = "P05_Dermalab"       # el proveedor que se abrió una sola vez (semana 5): ya no se excluye de --todos
 DESCUENTO_BATCH = 0.5           # la Batch API cobra ~50 % menos
 MAX_ITERACIONES = 20            # vueltas por conversación, como en run_agent
 MAX_ERRORES_API = 2             # reintentos de un pedido que falló por un error transitorio
@@ -296,13 +296,13 @@ async def escribir_por_rondas(convs: list[Conv], modo: str, concurrencia: int, e
 
 def carpetas_todos() -> list[str]:
     with open(A.RAIZ / "data" / "proveedores" / "proveedores.csv", encoding="utf-8-sig", newline="") as f:
-        return [fila["carpeta"].strip() for fila in csv.DictReader(f) if fila["carpeta"].strip() != APARTADO]
+        return [fila["carpeta"].strip() for fila in csv.DictReader(f) if fila["carpeta"].strip()]
 
 
 def main() -> None:
     ap = argparse.ArgumentParser(description="Corrida completa por Batch API (M6)")
     ap.add_argument("carpetas", nargs="*", help="carpetas de proveedor, ej. P09_Natural_Vida")
-    ap.add_argument("--todos", action="store_true", help=f"todos los de proveedores.csv, menos {APARTADO}")
+    ap.add_argument("--todos", action="store_true", help="los 9 proveedores de proveedores.csv")
     ap.add_argument("--modo", choices=["batch", "tiempo-real"], default="batch")
     ap.add_argument("--concurrencia", type=int, default=8, help="pedidos en vuelo en modo tiempo-real")
     ap.add_argument("--workers", type=int, default=8, help="extractores simultáneos")

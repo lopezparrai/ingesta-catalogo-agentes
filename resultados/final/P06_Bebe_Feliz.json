@@ -30,6 +30,16 @@
         "hoja": "Altas",
         "fila": 3
       },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -65,11 +75,6 @@
         "hoja": "Altas",
         "fila": 3
       },
-      "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 3
-      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -81,11 +86,6 @@
         "fila": 3
       },
       "proveedor_id": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 3
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 3
@@ -123,6 +123,16 @@
         "hoja": "Altas",
         "fila": 4
       },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -158,11 +168,6 @@
         "hoja": "Altas",
         "fila": 4
       },
-      "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 4
-      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -174,11 +179,6 @@
         "fila": 4
       },
       "proveedor_id": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 4
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 4
@@ -216,6 +216,16 @@
         "hoja": "Altas",
         "fila": 5
       },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -251,11 +261,6 @@
         "hoja": "Altas",
         "fila": 5
       },
-      "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 5
-      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -267,11 +272,6 @@
         "fila": 5
       },
       "proveedor_id": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 5
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 5
@@ -309,6 +309,16 @@
         "hoja": "Altas",
         "fila": 6
       },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -344,11 +354,6 @@
         "hoja": "Altas",
         "fila": 6
       },
-      "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 6
-      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -360,11 +365,6 @@
         "fila": 6
       },
       "proveedor_id": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 6
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 6
@@ -402,6 +402,16 @@
         "hoja": "Altas",
         "fila": 7
       },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -437,11 +447,6 @@
         "hoja": "Altas",
         "fila": 7
       },
-      "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 7
-      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -453,11 +458,6 @@
         "fila": 7
       },
       "proveedor_id": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 7
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 7
@@ -495,6 +495,16 @@
         "hoja": "Altas",
         "fila": 8
       },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -530,11 +540,6 @@
         "hoja": "Altas",
         "fila": 8
       },
-      "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 8
-      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -546,11 +551,6 @@
         "fila": 8
       },
       "proveedor_id": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 8
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 8
@@ -588,6 +588,16 @@
         "hoja": "Altas",
         "fila": 9
       },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -623,11 +633,6 @@
         "hoja": "Altas",
         "fila": 9
       },
-      "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 9
-      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -639,11 +644,6 @@
         "fila": 9
       },
       "proveedor_id": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 9
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 9
@@ -681,6 +681,16 @@
         "hoja": "Altas",
         "fila": 10
       },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -716,11 +726,6 @@
         "hoja": "Altas",
         "fila": 10
       },
-      "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 10
-      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -732,11 +737,6 @@
         "fila": 10
       },
       "proveedor_id": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 10
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 10
@@ -772,6 +772,16 @@
       "variante": "SIN PERFUME"
     },
     "fuentes": {
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -807,11 +817,6 @@
         "hoja": "Altas",
         "fila": 11
       },
-      "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -823,11 +828,6 @@
         "fila": 11
       },
       "proveedor_id": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 11
@@ -865,6 +865,16 @@
         "hoja": "Altas",
         "fila": 12
       },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -900,11 +910,6 @@
         "hoja": "Altas",
         "fila": 12
       },
-      "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 12
-      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -919,11 +924,6 @@
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 12
-      },
-      "descripcion": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 12
       }
     }
   },
@@ -933,22 +933,24 @@
     "duplicado_de": "SKU103304",
     "motivos_revision": [],
     "ficha": {
-      "gtin": "7790113299042",
-      "descripcion": "TOALLITAS HUMEDAS PEQUEÑOS PASOS ALOE X 80 UN",
-      "marca": "PEQUEÑOS PASOS",
-      "tipo": "TOALLITAS HUMEDAS",
-      "variante": "ALOE",
-      "contenido": 80,
-      "unidad": "UN",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
+      "categoria": "BEB-PAN-TOA",
+      "codigo_proveedor": "BF-530",
       "concentracion": null,
       "condicion_venta": null,
-      "categoria": "BEB-PAN-TOA",
-      "precio_costo": 92.34,
+      "contenido": 80,
+      "descripcion": "TOALLITAS HUMEDAS PEQUEÑOS PASOS ALOE X 80 UN",
+      "gtin": "7790113299042",
+      "marca": "PEQUEÑOS PASOS",
       "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 92.34,
+      "principio_activo": null,
       "proveedor_id": "P06",
-      "codigo_proveedor": "BF-530"
+      "tipo": "TOALLITAS HUMEDAS",
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "variante": "ALOE"
     },
     "fuentes": {
       "gtin": {
@@ -1024,22 +1026,24 @@
     "duplicado_de": "SKU102562",
     "motivos_revision": [],
     "ficha": {
-      "gtin": "7793806669115",
-      "descripcion": "LECHE INFANTIL CRECER ETAPA 3 400 G",
-      "marca": "CRECER",
-      "tipo": "LECHE INFANTIL",
-      "variante": "ETAPA 3",
-      "contenido": 400,
-      "unidad": "G",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
+      "categoria": "BEB-ALI-LEC",
+      "codigo_proveedor": "BF-533",
       "concentracion": null,
       "condicion_venta": null,
-      "categoria": "BEB-ALI-LEC",
-      "precio_costo": 626.29,
+      "contenido": 400,
+      "descripcion": "LECHE INFANTIL CRECER ETAPA 3 X 400 G",
+      "gtin": "7793806669115",
+      "marca": "CRECER",
       "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 626.29,
+      "principio_activo": null,
       "proveedor_id": "P06",
-      "codigo_proveedor": "BF-533"
+      "tipo": "LECHE INFANTIL",
+      "unidad": "G",
+      "unidades_por_envase": 1,
+      "variante": "ETAPA 3"
     },
     "fuentes": {
       "gtin": {
@@ -1115,22 +1119,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "gtin": "7798512624519",
-      "descripcion": "PAÑALES PEQUEÑOS PASOS P X 48 UN",
-      "marca": "PEQUEÑOS PASOS",
-      "tipo": "PAÑALES",
-      "variante": "P",
-      "contenido": 48,
-      "unidad": "UN",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
+      "categoria": "BEB-PAN-INF",
+      "codigo_proveedor": "BF-536",
       "concentracion": null,
       "condicion_venta": null,
-      "categoria": "BEB-PAN-INF",
-      "precio_costo": 490.45,
+      "contenido": 48,
+      "descripcion": "PAÑALES PEQUEÑOS PASOS P X 48 UN",
+      "gtin": "7798512624519",
+      "marca": "PEQUEÑOS PASOS",
       "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 490.45,
+      "principio_activo": null,
       "proveedor_id": "P06",
-      "codigo_proveedor": "BF-536"
+      "tipo": "PAÑALES",
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "variante": "P"
     },
     "fuentes": {
       "gtin": {
@@ -1206,22 +1212,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "gtin": "7791115123588",
-      "descripcion": "TOALLITAS HUMEDAS PEQUEÑOS PASOS ALOE X 100 UN",
-      "marca": "PEQUEÑOS PASOS",
-      "tipo": "TOALLITAS HUMEDAS",
-      "variante": "ALOE",
-      "contenido": 100,
-      "unidad": "UN",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
+      "categoria": "BEB-PAN-TOA",
+      "codigo_proveedor": "BF-539",
       "concentracion": null,
       "condicion_venta": null,
-      "categoria": "BEB-PAN-TOA",
-      "precio_costo": 107.3,
+      "contenido": 100,
+      "descripcion": "TOALLITAS HUMEDAS PEQUEÑOS PASOS ALOE X 100 UN",
+      "gtin": "7791115123588",
+      "marca": "PEQUEÑOS PASOS",
       "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 107.3,
+      "principio_activo": null,
       "proveedor_id": "P06",
-      "codigo_proveedor": "BF-539"
+      "tipo": "TOALLITAS HUMEDAS",
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "variante": "ALOE"
     },
     "fuentes": {
       "gtin": {
@@ -1297,22 +1305,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "gtin": "7793633072348",
-      "descripcion": "TOALLITAS HUMEDAS PEQUEÑOS PASOS RECIEN NACIDO X 100 UN",
-      "marca": "PEQUEÑOS PASOS",
-      "tipo": "TOALLITAS HUMEDAS",
-      "variante": "RECIEN NACIDO",
-      "contenido": 100,
-      "unidad": "UN",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
+      "categoria": "BEB-PAN-TOA",
+      "codigo_proveedor": "BF-542",
       "concentracion": null,
       "condicion_venta": null,
-      "categoria": "BEB-PAN-TOA",
-      "precio_costo": 120.75,
+      "contenido": 100,
+      "descripcion": "TOALLITAS HUMEDAS PEQUEÑOS PASOS RECIEN NACIDO X 100 UN",
+      "gtin": "7793633072348",
+      "marca": "PEQUEÑOS PASOS",
       "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 120.75,
+      "principio_activo": null,
       "proveedor_id": "P06",
-      "codigo_proveedor": "BF-542"
+      "tipo": "TOALLITAS HUMEDAS",
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "variante": "RECIEN NACIDO"
     },
     "fuentes": {
       "gtin": {
@@ -1388,22 +1398,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "gtin": "7799705856731",
-      "descripcion": "PAÑALES PEQUEÑOS PASOS XG X 48 UN",
-      "marca": "PEQUEÑOS PASOS",
-      "tipo": "PAÑALES",
-      "variante": "XG",
-      "contenido": 48,
-      "unidad": "UN",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
+      "categoria": "BEB-PAN-INF",
+      "codigo_proveedor": "BF-545",
       "concentracion": null,
       "condicion_venta": null,
-      "categoria": "BEB-PAN-INF",
-      "precio_costo": 490.74,
+      "contenido": 48,
+      "descripcion": "PAÑALES PEQUEÑOS PASOS XG X 48 UN",
+      "gtin": "7799705856731",
+      "marca": "PEQUEÑOS PASOS",
       "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 490.74,
+      "principio_activo": null,
       "proveedor_id": "P06",
-      "codigo_proveedor": "BF-545"
+      "tipo": "PAÑALES",
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "variante": "XG"
     },
     "fuentes": {
       "gtin": {
@@ -1479,22 +1491,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "gtin": "7797400605036",
-      "descripcion": "PAÑALES PEQUEÑOS PASOS G X 36 UN PACK 2",
-      "marca": "PEQUEÑOS PASOS",
-      "tipo": "PAÑALES",
-      "variante": "G",
-      "contenido": 36,
-      "unidad": "UN",
-      "unidades_por_envase": 2,
-      "principio_activo": null,
+      "categoria": "BEB-PAN-INF",
+      "codigo_proveedor": "BF-548",
       "concentracion": null,
       "condicion_venta": null,
-      "categoria": "BEB-PAN-INF",
-      "precio_costo": 802.64,
+      "contenido": 36,
+      "descripcion": "PAÑALES PEQUEÑOS PASOS G X 36 UN PACK 2",
+      "gtin": "7797400605036",
+      "marca": "PEQUEÑOS PASOS",
       "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 802.64,
+      "principio_activo": null,
       "proveedor_id": "P06",
-      "codigo_proveedor": "BF-548"
+      "tipo": "PAÑALES",
+      "unidad": "UN",
+      "unidades_por_envase": 2,
+      "variante": "G"
     },
     "fuentes": {
       "gtin": {
@@ -1570,22 +1584,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "gtin": "7799065860171",
-      "descripcion": "PAÑALES PEQUEÑOS PASOS P X 60 UN",
-      "marca": "PEQUEÑOS PASOS",
-      "tipo": "PAÑALES",
-      "variante": "P",
-      "contenido": 60,
-      "unidad": "UN",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
+      "categoria": "BEB-PAN-INF",
+      "codigo_proveedor": "BF-551",
       "concentracion": null,
       "condicion_venta": null,
-      "categoria": "BEB-PAN-INF",
-      "precio_costo": 572.95,
+      "contenido": 60,
+      "descripcion": "PAÑALES PEQUEÑOS PASOS P X 60 UN",
+      "gtin": "7799065860171",
+      "marca": "PEQUEÑOS PASOS",
       "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 572.95,
+      "principio_activo": null,
       "proveedor_id": "P06",
-      "codigo_proveedor": "BF-551"
+      "tipo": "PAÑALES",
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "variante": "P"
     },
     "fuentes": {
       "gtin": {
@@ -1661,22 +1677,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "gtin": "7793445721922",
-      "descripcion": "PAÑALES PEQUEÑOS PASOS G X 48 UN",
-      "marca": "PEQUEÑOS PASOS",
-      "tipo": "PAÑALES",
-      "variante": "G",
-      "contenido": 48,
-      "unidad": "UN",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
+      "categoria": "BEB-PAN-INF",
+      "codigo_proveedor": "BF-554",
       "concentracion": null,
       "condicion_venta": null,
-      "categoria": "BEB-PAN-INF",
-      "precio_costo": 493.39,
+      "contenido": 48,
+      "descripcion": "PAÑALES PEQUEÑOS PASOS G X 48 UN",
+      "gtin": "7793445721922",
+      "marca": "PEQUEÑOS PASOS",
       "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 493.39,
+      "principio_activo": null,
       "proveedor_id": "P06",
-      "codigo_proveedor": "BF-554"
+      "tipo": "PAÑALES",
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "variante": "G"
     },
     "fuentes": {
       "gtin": {
@@ -1752,22 +1770,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "gtin": "7792454135881",
-      "descripcion": "PAÑALES PEQUEÑOS PASOS P X 36 UN",
-      "marca": "PEQUEÑOS PASOS",
-      "tipo": "PAÑALES",
-      "variante": "P",
-      "contenido": 36,
-      "unidad": "UN",
-      "unidades_por_envase": 1,
-      "principio_activo": null,
+      "categoria": "BEB-PAN-INF",
+      "codigo_proveedor": "BF-557",
       "concentracion": null,
       "condicion_venta": null,
-      "categoria": "BEB-PAN-INF",
-      "precio_costo": 461.65,
+      "contenido": 36,
+      "descripcion": "PAÑALES PEQUEÑOS PASOS P X 36 UN",
+      "gtin": "7792454135881",
+      "marca": "PEQUEÑOS PASOS",
       "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 461.65,
+      "principio_activo": null,
       "proveedor_id": "P06",
-      "codigo_proveedor": "BF-557"
+      "tipo": "PAÑALES",
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "variante": "P"
     },
     "fuentes": {
       "gtin": {
@@ -1918,12 +1938,12 @@
         "hoja": "Altas",
         "fila": 23
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 23
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 23
@@ -2011,12 +2031,12 @@
         "hoja": "Altas",
         "fila": 24
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 24
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 24
@@ -2104,12 +2124,12 @@
         "hoja": "Altas",
         "fila": 25
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 25
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 25
@@ -2197,12 +2217,12 @@
         "hoja": "Altas",
         "fila": 26
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 26
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 26
@@ -2290,12 +2310,12 @@
         "hoja": "Altas",
         "fila": 27
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 27
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 27
@@ -2381,12 +2401,12 @@
         "hoja": "Altas",
         "fila": 28
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 28
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 28
@@ -2474,12 +2494,12 @@
         "hoja": "Altas",
         "fila": 29
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 29
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 29
@@ -2567,12 +2587,12 @@
         "hoja": "Altas",
         "fila": 30
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 30
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 30
@@ -2660,12 +2680,12 @@
         "hoja": "Altas",
         "fila": 31
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 31
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 31
@@ -2753,12 +2773,12 @@
         "hoja": "Altas",
         "fila": 32
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 32
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 32
@@ -2781,13 +2801,13 @@
       "marca": "CRECER",
       "moneda": "UYU",
       "numero_onu": null,
+      "unidad": "G",
+      "unidades_por_envase": 1,
       "peligro_deposito": null,
       "precio_costo": 647.77,
       "principio_activo": null,
       "proveedor_id": "P06",
       "tipo": "LECHE INFANTIL",
-      "unidad": "G",
-      "unidades_por_envase": 1,
       "variante": "ETAPA 2"
     },
     "fuentes": {
@@ -2836,17 +2856,17 @@
         "hoja": "Altas",
         "fila": 33
       },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 33
       },
       "moneda": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 33
-      },
-      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 33
@@ -2874,13 +2894,13 @@
       "marca": "PEQUEÑOS PASOS",
       "moneda": "UYU",
       "numero_onu": null,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
       "peligro_deposito": null,
       "precio_costo": 544.37,
       "principio_activo": null,
       "proveedor_id": "P06",
       "tipo": "PAÑALES",
-      "unidad": "UN",
-      "unidades_por_envase": 1,
       "variante": "M"
     },
     "fuentes": {
@@ -2929,17 +2949,17 @@
         "hoja": "Altas",
         "fila": 34
       },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 34
+      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 34
       },
       "moneda": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 34
-      },
-      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 34

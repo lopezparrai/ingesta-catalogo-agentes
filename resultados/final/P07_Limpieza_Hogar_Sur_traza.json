@@ -1,14 +1,19 @@
 {
-  "modo": "tiempo-real",
+  "modo": "batch",
   "fichas": 25,
   "sin_registrar": [],
   "fallas": [],
-  "frenos_de_hooks": [],
-  "costo_usd": 0.0573,
-  "costo_por_ficha_usd": 0.00229,
+  "frenos_de_hooks": [
+    {
+      "item_id": null,
+      "hook": "[hook_no_perder_precio] sin precio_costo aunque la extracción lo trae: P07:LHS-272, P07:LHS-260, P07:LHS-263, P07:LHS-266, P07:LHS-269"
+    }
+  ],
+  "costo_usd": 0.0379,
+  "costo_por_ficha_usd": 0.00151,
   "uso_escritor": {
-    "input": 199521,
-    "output": 47420,
+    "input": 205302,
+    "output": 56737,
     "cache_escrito": 0,
     "cache_leido": 196238
   },
@@ -16,20 +21,20 @@
     {
       "lote": "P07-lote0",
       "estado": "terminada",
-      "iteraciones": 4,
-      "costo_usd": 0.017
+      "iteraciones": 3,
+      "costo_usd": 0.0081
     },
     {
       "lote": "P07-lote1",
       "estado": "terminada",
-      "iteraciones": 4,
-      "costo_usd": 0.0194
+      "iteraciones": 3,
+      "costo_usd": 0.0083
     },
     {
       "lote": "P07-lote2",
       "estado": "terminada",
-      "iteraciones": 3,
-      "costo_usd": 0.0092
+      "iteraciones": 4,
+      "costo_usd": 0.009
     }
   ]
 }

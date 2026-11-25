@@ -35,16 +35,6 @@
         "hoja": "New items",
         "fila": 2
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 2
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 2
-      },
       "marca": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -75,6 +65,11 @@
         "hoja": "New items",
         "fila": 2
       },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -86,6 +81,11 @@
         "fila": 2
       },
       "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 2
@@ -136,16 +136,6 @@
         "hoja": "New items",
         "fila": 3
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 3
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 3
-      },
       "marca": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -176,6 +166,11 @@
         "hoja": "New items",
         "fila": 3
       },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -187,6 +182,11 @@
         "fila": 3
       },
       "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 3
@@ -204,7 +204,7 @@
       "concentracion": null,
       "condicion_venta": null,
       "contenido": 227,
-      "descripcion": "CREMA PURE CARE MANOS INTENSIVA X 227 G",
+      "descripcion": "CREMA PURE CARE INTENSIVA MANOS X 227 G",
       "gtin": "0921365957672",
       "marca": "PURE CARE",
       "moneda": "USD",
@@ -216,7 +216,7 @@
       "tipo": "CREMA",
       "unidad": "G",
       "unidades_por_envase": 1,
-      "variante": "MANOS INTENSIVA"
+      "variante": "INTENSIVA MANOS"
     },
     "fuentes": {
       "gtin": {
@@ -225,16 +225,6 @@
         "fila": 4
       },
       "descripcion": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 4
-      },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 4
-      },
-      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 4
@@ -269,6 +259,11 @@
         "hoja": "New items",
         "fila": 4
       },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -280,6 +275,11 @@
         "fila": 4
       },
       "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 4
@@ -322,16 +322,6 @@
         "hoja": "New items",
         "fila": 5
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
       "marca": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -367,6 +357,11 @@
         "hoja": "New items",
         "fila": 5
       },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -378,6 +373,11 @@
         "fila": 5
       },
       "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 5
@@ -420,16 +420,6 @@
         "hoja": "New items",
         "fila": 6
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 6
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 6
-      },
       "marca": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -460,6 +450,11 @@
         "hoja": "New items",
         "fila": 6
       },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -471,6 +466,11 @@
         "fila": 6
       },
       "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 6
@@ -521,16 +521,6 @@
         "hoja": "New items",
         "fila": 7
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 7
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 7
-      },
       "marca": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -561,6 +551,11 @@
         "hoja": "New items",
         "fila": 7
       },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -572,6 +567,11 @@
         "fila": 7
       },
       "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 7
@@ -589,7 +589,7 @@
       "concentracion": null,
       "condicion_venta": null,
       "contenido": 100,
-      "descripcion": "VITALIS MULTIVITAMINICO COMPRIMIDOS X 100 UN",
+      "descripcion": "VITALIS COMPRIMIDOS X 100 UN",
       "gtin": "0366254962564",
       "marca": "VITALIS",
       "moneda": "USD",
@@ -601,7 +601,7 @@
       "tipo": "COMPRIMIDOS",
       "unidad": "UN",
       "unidades_por_envase": 1,
-      "variante": "MULTIVITAMINICO"
+      "variante": null
     },
     "fuentes": {
       "gtin": {
@@ -614,27 +614,12 @@
         "hoja": "New items",
         "fila": 8
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 8
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 8
-      },
       "marca": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 8
       },
       "tipo": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 8
-      },
-      "variante": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 8
@@ -654,6 +639,11 @@
         "hoja": "New items",
         "fila": 8
       },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -665,6 +655,11 @@
         "fila": 8
       },
       "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 8
@@ -707,16 +702,6 @@
         "hoja": "New items",
         "fila": 9
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 9
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 9
-      },
       "marca": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -747,6 +732,11 @@
         "hoja": "New items",
         "fila": 9
       },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -758,6 +748,11 @@
         "fila": 9
       },
       "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 9
@@ -800,16 +795,6 @@
         "hoja": "New items",
         "fila": 10
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 10
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 10
-      },
       "marca": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -845,6 +830,11 @@
         "hoja": "New items",
         "fila": 10
       },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -856,6 +846,11 @@
         "fila": 10
       },
       "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 10
@@ -898,16 +893,6 @@
         "hoja": "New items",
         "fila": 11
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 11
-      },
-      "codigo_proveedor": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 11
-      },
       "marca": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -943,6 +928,11 @@
         "hoja": "New items",
         "fila": 11
       },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -954,6 +944,11 @@
         "fila": 11
       },
       "proveedor_id": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 11
@@ -1041,12 +1036,12 @@
         "hoja": "New items",
         "fila": 12
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 12
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 12
@@ -1134,12 +1129,12 @@
         "hoja": "New items",
         "fila": 13
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 13
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 13
@@ -1227,12 +1222,12 @@
         "hoja": "New items",
         "fila": 14
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 14
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 14
@@ -1325,12 +1320,12 @@
         "hoja": "New items",
         "fila": 15
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 15
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 15
