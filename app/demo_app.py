@@ -754,7 +754,8 @@ with tab_asi:
                     r = _respuesta_guardada(next((c for _e, q, c in SUGERIDAS if q == pregunta), ""))
                 else:
                     with st.spinner("Buscando en el catálogo y en los archivos…"):
-                        r = _preguntar(pregunta, st.session_state.get("con_demo", True))
+                        # el asistente suma el archivo nuevo solo si ya se procesó en esta sesión
+                        r = _preguntar(pregunta, st.session_state.get("con_demo", True) and st.session_state.get("destino") == "demo")
                 _pintar_respuesta(r)
         st.session_state["chat"] += [{"rol": "user", "texto": pregunta}, {"rol": "assistant", "resp": r}]
 
@@ -813,7 +814,10 @@ with tab_cat:
     else:
         NOM = _nombres_proveedores()
         pids = sorted({CAL.proveedor_de(x["item_id"]) for x in todas})
-        carpeta_demo = next((c for c in ("demo", "demo_ensayo") if (RES / c / "resumen_corrida.json").exists()), None)
+        # el archivo nuevo aparece solo cuando se procesó en esta sesión (o, en Respaldo, cuando se muestra el ensayo guardado)
+        carpeta_demo = st.session_state.get("destino")
+        if not (carpeta_demo and (RES / carpeta_demo / "resumen_corrida.json").exists()):
+            carpeta_demo = None
         fichas_demo = cargar_fichas(carpeta_demo) if carpeta_demo else []
         _PID_ROT = None
         if fichas_demo:
