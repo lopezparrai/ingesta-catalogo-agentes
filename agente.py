@@ -167,7 +167,11 @@ MOTIVOS = set(VOCAB["motivos_revision"])
 with open(ESTANDAR / "taxonomia.csv", encoding="utf-8-sig", newline="") as _f:
     CATEGORIAS = {fila["codigo"].strip() for fila in csv.DictReader(_f) if fila.get("codigo")}
 
-TIPOS_CON_FDS = set(VOCAB["tipos"]["hogar"]) | {"DESODORANTE AEROSOL"}
+# Estándar sección 9: aerosoles, alcoholes, lavandinas, limpiadores, insecticidas y repelentes llegan con FDS.
+# Además de la familia "hogar", los tipos que son aerosoles (laca, shampoo en seco, espuma/gel de afeitar).
+TIPOS_CON_FDS = set(VOCAB["tipos"]["hogar"]) | {
+    "DESODORANTE AEROSOL", "LACA", "SHAMPOO EN SECO", "ESPUMA DE AFEITAR", "GEL DE AFEITAR",
+}
 
 CAMPOS_SIN_FUENTE = {"descripcion", "categoria", "proveedor_id"}
 

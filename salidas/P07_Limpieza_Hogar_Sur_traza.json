@@ -1,0 +1,311 @@
+{
+  "uso": {
+    "input": 123230,
+    "output": 6047,
+    "cache_escrito": 12012,
+    "cache_leido": 48048
+  },
+  "costo_usd": 0.01732848,
+  "segundos": 79.7,
+  "fichas_frenadas_por_hooks": 0,
+  "traza": [
+    {
+      "tool": "listar_archivos_proveedores",
+      "input": {},
+      "es_error": false,
+      "resultado": "{\"archivos\":[\"P01_Laboratorio_Andes/Actualizacion_precios_Andes.xlsx\",\"P01_Laboratorio_Andes/Lista_de_precios_octubre_2026.pdf\",\"P02_Cosmetica_Rivera/ALTAS RIVERA OCT.xlsx\",\"P02_Cosmetica_Rivera/fichas_de_seguridad/FDS_Brisa_Frescor_desaer.pdf\",\"P02_Cosmetica_Rivera/fichas_de_seguridad/FDS_Brisa_laca.pdf\",\"P03_Distribuidora_Litoral/litoral_altas_102026.csv\",\"P04_Higiene_Total/HigieneTotal_novedades.xlsx\",\"P05_Dermalab/Dermalab_lanzamientos_2026.pdf\",\"P05_Dermalab/Dermalab_lista_precios.xlsx\",\"P0"
+    },
+    {
+      "tool": "leer_pdf_con_citas",
+      "input": {
+        "archivo": "P07_Limpieza_Hogar_Sur/LHS_catalogo_nuevos_productos.pdf"
+      },
+      "es_error": false,
+      "resultado": "{\"archivo\":\"LHS_catalogo_nuevos_productos.pdf\",\"fragmentos\":[{\"texto\":\"La lista corresponde a la temporada primavera-verano 2026, pero el documento no indica la moneda más allá del símbolo \\\"$\\\" ni dice si los precios incluyen IVA.\",\"citas\":[]},{\"texto\":\"Nuevos productos · Temporada primavera-verano 2026\",\"citas\":[{\"pagina\":1,\"texto_citado\":\"Limpieza Hogar Sur S.A.\\r\\nNuevos productos · Temporada primavera-verano 2026\\r\\nCód.\"}]},{\"texto\":\"El documento tiene columnas de código, descripción, cont"
+    },
+    {
+      "tool": "leer_pdf_con_citas",
+      "input": {
+        "archivo": "P07_Limpieza_Hogar_Sur/fichas_de_seguridad/FDS_Clarita_alcgel.pdf"
+      },
+      "es_error": false,
+      "resultado": "{\"archivo\":\"FDS_Clarita_alcgel.pdf\",\"fragmentos\":[{\"texto\":\"El documento no contiene una lista de precios, así que no puedo indicar su vigencia, moneda ni si incluyen IVA, ni transcribir filas de producto con precios, códigos de barras o condiciones de venta.\\n\\nLo que sí contiene es una ficha de datos de seguridad (FDS) del producto \\\"Alcohol En Gel Clarita\\\". En la Sección 1,\",\"citas\":[]},{\"texto\":\"Códigos comerciales: LHS-212, LHS-227, LHS-239, LHS-257\",\"citas\":[{\"pagina\":1,\"texto_citado\":\"Id"
+    },
+    {
+      "tool": "leer_pdf_con_citas",
+      "input": {
+        "archivo": "P07_Limpieza_Hogar_Sur/fichas_de_seguridad/FDS_Clarita_alcohol.pdf"
+      },
+      "es_error": false,
+      "resultado": "{\"archivo\":\"FDS_Clarita_alcohol.pdf\",\"fragmentos\":[{\"texto\":\"El documento no contiene una lista de precios, así que no puedo indicar su vigencia, su moneda ni si los precios incluyen IVA.\\n\\nTampoco hay filas de tabla de productos con código de barras, presentación, condición de venta ni precio. El documento es una ficha de datos de seguridad del producto \\\"Alcohol Clarita\\\". Sí incluye los códigos comerciales en la sección 1:\",\"citas\":[]},{\"texto\":\"Códigos comerciales: LHS-209, LHS-230, LHS-275"
+    },
+    {
+      "tool": "leer_pdf_con_citas",
+      "input": {
+        "archivo": "P07_Limpieza_Hogar_Sur/fichas_de_seguridad/FDS_Clarita_lavandina.pdf"
+      },
+      "es_error": false,
+      "resultado": "{\"archivo\":\"FDS_Clarita_lavandina.pdf\",\"fragmentos\":[{\"texto\":\"El documento no contiene una lista de precios, así que no puedo informar su vigencia, moneda ni si los precios incluyen IVA.\\n\\nTampoco hay filas de productos con código, nombre, principio activo, presentación, condición de venta, código de barras ni precio. El archivo es una ficha de datos de seguridad (FDS) de la Lavandina Clarita, y no incluye una tabla de productos.\\n\\nSi me compartís la lista de precios, puedo transcribir cada f"
+    },
+    {
+      "tool": "leer_pdf_con_citas",
+      "input": {
+        "archivo": "P07_Limpieza_Hogar_Sur/fichas_de_seguridad/FDS_Clarita_multiuso.pdf"
+      },
+      "es_error": false,
+      "resultado": "{\"archivo\":\"FDS_Clarita_multiuso.pdf\",\"fragmentos\":[{\"texto\":\"El documento no contiene una lista de precios, así que no puedo indicar su vigencia, su moneda ni si los precios incluyen IVA. Es una ficha de datos de seguridad del producto Limpiador Clarita, con fecha de revisión\",\"citas\":[]},{\"texto\":\"08/2026\",\"citas\":[{\"pagina\":1,\"texto_citado\":\"Ficha de datos de seguridad\\r\\nSegún SGA · Fecha de revisión: 08/2026\\r\\nSección 1.\"}]},{\"texto\":\".\\n\\nTampoco hay una tabla de filas de productos con mo"
+    },
+    {
+      "tool": "leer_pdf_con_citas",
+      "input": {
+        "archivo": "P07_Limpieza_Hogar_Sur/fichas_de_seguridad/FDS_Fulmin_insect.pdf"
+      },
+      "es_error": false,
+      "resultado": "{\"archivo\":\"FDS_Fulmin_insect.pdf\",\"fragmentos\":[{\"texto\":\"El documento que compartiste es una **ficha de datos de seguridad (FDS)** del Insecticida Fulmin, no una lista de precios. No contiene ninguna información sobre vigencia, moneda, IVA ni filas de productos con código de barras o precio, así que no puedo hacer la transcripción solicitada.\\n\\nSi necesitas una lista de precios, tendrás que compartir el archivo correcto. Si tu consulta es sobre la ficha de seguridad, puedo ayudarte con su con"
+    },
+    {
+      "tool": "leer_pdf_con_citas",
+      "input": {
+        "archivo": "P07_Limpieza_Hogar_Sur/fichas_de_seguridad/FDS_Fulmin_repaer.pdf"
+      },
+      "es_error": false,
+      "resultado": "{\"archivo\":\"FDS_Fulmin_repaer.pdf\",\"fragmentos\":[{\"texto\":\"El documento no contiene una lista de precios ni una tabla de productos, así que no puedo darle la vigencia, la moneda, la información sobre IVA ni las filas que pide.\\n\\nLo que sí contiene es una ficha de datos de seguridad (FDS) del producto \\\"Repelente Fulmin\\\", código comercial LHS-233, con fecha de revisión 08/2026. Sus secciones cubren identificación, peligros, primeros auxilios, manipulación, transporte y otros temas de seguridad,"
+    },
+    {
+      "tool": "leer_pdf_con_citas",
+      "input": {
+        "archivo": "P07_Limpieza_Hogar_Sur/fichas_de_seguridad/FDS_Fulmin_repcre.pdf"
+      },
+      "es_error": false,
+      "resultado": "{\"archivo\":\"FDS_Fulmin_repcre.pdf\",\"fragmentos\":[{\"texto\":\"El documento que compartiste no es una lista de precios. Es una ficha de datos de seguridad (FDS) del producto \\\"Repelente Fulmin\\\", así que no contiene vigencia, moneda, información sobre IVA ni filas de tabla con códigos, nombres, principios activos, presentaciones, condiciones de venta, códigos de barras o precios.\\n\\nSi me enviás la lista de precios, puedo transcribir la vigencia, la moneda, la aclaración sobre IVA y cada fila tal co"
+    },
+    {
+      "tool": "leer_estandar",
+      "input": {
+        "documento": "ficha"
+      },
+      "es_error": false,
+      "resultado": "{\"documento\":\"ficha\",\"texto\":\"# Estándar de ficha de producto\\n\\nFarmacias Ceibo · Gerencia de Compras y Catálogo\\n\\nToda alta de producto se carga con esta ficha. Los valores de las listas cerradas están en `vocabulario.yaml` y las categorías, en `taxonomia.csv`.\\n\\n## 1. Campos\\n\\n| Campo | Obligatorio | Qué va |\\n|---|---|---|\\n| `gtin` | Sí | Código de barras de 13 dígitos (GTIN-13), con dígito verificador válido |\\n| `descripcion` | Sí | Se arma con los demás campos (sección 3) |\\n| `marca`"
+    },
+    {
+      "tool": "validar_gtin_tool",
+      "input": {
+        "gtin": "7794288526675"
+      },
+      "es_error": false,
+      "resultado": "{\"gtin\":\"7794288526675\",\"valido\":true,\"motivo\":null}"
+    },
+    {
+      "tool": "buscar_en_catalogo",
+      "input": {
+        "gtin": "7794288526675"
+      },
+      "es_error": false,
+      "resultado": "{\"encontrado\":false,\"gtin\":\"7794288526675\"}"
+    },
+    {
+      "tool": "buscar_candidatos_en_catalogo",
+      "input": {
+        "marca": "CLARITA",
+        "tipo": "ALCOHOL"
+      },
+      "es_error": false,
+      "resultado": "{\"marca\":\"CLARITA\",\"tipo\":\"ALCOHOL\",\"candidatos\":[{\"sku\":\"SKU101386\",\"descripcion\":\"ALCOHOL CLARITA 96 % 500CC\",\"variante\":\"\",\"contenido\":\"500\",\"unidad\":\"CC\",\"unidades_por_envase\":\"1\"},{\"sku\":\"SKU101505\",\"descripcion\":\"ALCOHOL CLARITA 70 % 500ML.\",\"variante\":\"\",\"contenido\":\"500\",\"unidad\":\"ML.\",\"unidades_por_envase\":\"1\"}]}"
+    },
+    {
+      "tool": "leer_pdf_con_citas",
+      "input": {
+        "archivo": "P07_Limpieza_Hogar_Sur/fichas_de_seguridad/FDS_Clarita_alcohol.pdf",
+        "consulta": "Transcribí la sección 14 (transporte): clase de peligro, número ONU y si está no regulado, y los códigos comerciales de la sección 1 con sus páginas."
+      },
+      "es_error": false,
+      "resultado": "{\"archivo\":\"FDS_Clarita_alcohol.pdf\",\"fragmentos\":[{\"texto\":\"**Sección 14 (transporte):**\",\"citas\":[]},{\"texto\":\"Número ONU: 1170\\nDesignación oficial de transporte: ETANOL EN SOLUCIÓN\\nClase de peligro para el transporte: 3\\nGrupo de embalaje: II\",\"citas\":[{\"pagina\":1,\"texto_citado\":\"Información relativa al transporte\\r\\nNúmero ONU: 1170\\r\\nDesignación oficial de transporte: ETANOL EN SOLUCIÓN\\r\\nClase de peligro para el transporte: 3\\r\\nGrupo de embalaje: II\\r\\nSección 15.\"}]},{\"texto\":\"El doc"
+    },
+    {
+      "tool": "registrar_ficha",
+      "input": {
+        "item_id": "P07:LHS-209",
+        "estado": "lista_para_alta",
+        "duplicado_de": null,
+        "motivos_revision": [],
+        "ficha": {
+          "gtin": "7794288526675",
+          "descripcion": "ALCOHOL CLARITA 70 % X 250 ML",
+          "marca": "CLARITA",
+          "tipo": "ALCOHOL",
+          "variante": "70 %",
+          "contenido": 250,
+          "unidad": "ML",
+          "unidades_por_envase": 1,
+          "principio_activo": null,
+          "concentracion": null,
+          "condicion_venta": null,
+          "categoria": "HOG-LIM-ALC",
+          "precio_costo": 64.64,
+          "moneda": "UYU",
+          "proveedor_id": "P07",
+          "codigo_proveedor": "LHS-209",
+          "peligro_deposito": "liquido_inflamable",
+          "numero_onu": "1170"
+        },
+        "fuentes": {
+          "gtin": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "descripcion": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "marca": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "tipo": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "variante": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "contenido": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "unidad": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "unidades_por_envase": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "categoria": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "precio_costo": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "moneda": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "proveedor_id": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "codigo_proveedor": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "peligro_deposito": {
+            "archivo": "FDS_Clarita_alcohol.pdf",
+            "pagina": 1
+          },
+          "numero_onu": {
+            "archivo": "FDS_Clarita_alcohol.pdf",
+            "pagina": 1
+          }
+        }
+      },
+      "es_error": false,
+      "resultado": "Registrada P07:LHS-209 (1 en total)"
+    },
+    {
+      "tool": "registrar_ficha",
+      "input": {
+        "item_id": "P07:LHS-275",
+        "estado": "a_revision",
+        "duplicado_de": "SKU101386",
+        "motivos_revision": [
+          "gtin_faltante",
+          "posible_duplicado"
+        ],
+        "ficha": {
+          "gtin": null,
+          "descripcion": "ALCOHOL CLARITA 96 % X 500 ML",
+          "marca": "CLARITA",
+          "tipo": "ALCOHOL",
+          "variante": "96 %",
+          "contenido": 500,
+          "unidad": "ML",
+          "unidades_por_envase": 1,
+          "principio_activo": null,
+          "concentracion": null,
+          "condicion_venta": null,
+          "categoria": "HOG-LIM-ALC",
+          "precio_costo": 117.34,
+          "moneda": "UYU",
+          "proveedor_id": "P07",
+          "codigo_proveedor": "LHS-275",
+          "peligro_deposito": "liquido_inflamable",
+          "numero_onu": "1170"
+        },
+        "fuentes": {
+          "descripcion": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "marca": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "tipo": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "variante": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "contenido": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "unidad": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "unidades_por_envase": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "categoria": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "precio_costo": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "moneda": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "proveedor_id": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "codigo_proveedor": {
+            "archivo": "LHS_catalogo_nuevos_productos.pdf",
+            "pagina": 1
+          },
+          "peligro_deposito": {
+            "archivo": "FDS_Clarita_alcohol.pdf",
+            "pagina": 1
+          },
+          "numero_onu": {
+            "archivo": "FDS_Clarita_alcohol.pdf",
+            "pagina": 1
+          }
+        }
+      },
+      "es_error": false,
+      "resultado": "Registrada P07:LHS-275 (2 en total)"
+    }
+  ],
+  "iteraciones": 5
+}

@@ -324,6 +324,9 @@ Cada producto termina en exactamente un estado: lista_para_alta, duplicado o a_r
   el principio activo, no lo deduzcas de otro producto, de la marca ni del catálogo.
 - Dos archivos dan valores distintos para un campo que no es el precio (por ejemplo, la presentación o el
   contenido): conflicto_entre_fuentes, y ese campo queda vacío (null).
+  Se comparan los valores YA NORMALIZADOS de la ficha (tipo, variante, contenido, unidad, concentración...), no el
+  texto original. Si dos archivos lo escriben distinto pero normalizan al mismo valor, o la diferencia es un
+  calificativo que no es parte de ningún campo de la ficha ni del vocabulario, NO es un conflicto.
 - El producto no se puede resolver con el estándar: va a revisión con el motivo que corresponda.
 - motivos_revision usa solo los códigos del vocabulario: gtin_faltante, gtin_invalido,
   dato_obligatorio_faltante, conflicto_entre_fuentes, posible_duplicado.
@@ -333,6 +336,20 @@ Cada producto termina en exactamente un estado: lista_para_alta, duplicado o a_r
 Precio: si hay más de una lista, rige la de vigencia más reciente y la fuente del precio es esa lista.
 Una diferencia de precio entre listas NO manda a revisión.
 </excepcion_precio>
+
+<fds>
+- peligro_deposito y numero_onu salen de la sección 14 de la FDS de ese producto. Una FDS aplica a un producto SOLO si
+  el código del producto figura en «Códigos comerciales» de la sección 1 de esa FDS. Parecerse en el nombre no alcanza.
+- Producto de una familia con FDS (aerosoles, alcoholes, lavandinas, limpiadores, insecticidas, repelentes) cuyo código
+  no figura en ninguna FDS: peligro_deposito = pendiente_fds, sin numero_onu y sin fuente para esos campos.
+- Sección 14 «No regulado»: peligro_deposito = no_peligroso, sin numero_onu. Los demás productos no llevan estos campos.
+</fds>
+
+<campos>
+- concentracion es SOLO para medicamentos y suplementos. En cualquier otro producto, el porcentaje o valor que lo distingue
+  (alcohol 70 %, alcohol 96 %, FPS 50) va en variante y forma parte de la descripcion; concentracion queda vacía.
+- Un producto a_revision lleva los campos que sí se pudieron determinar, armados igual que si fuera lista_para_alta.
+</campos>
 
 <lista_para_alta>
 Ninguna de las anteriores: GTIN válido, no está en el catálogo, todos los obligatorios presentes y sin conflictos.
