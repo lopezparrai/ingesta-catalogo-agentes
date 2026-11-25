@@ -476,13 +476,7 @@ with tab_ing:
             estado = st.status("Procesando el archivo…", expanded=True)
             with estado:
                 pasos_ph, detalle_ph = st.empty(), st.empty()
-            class _SinLog:   # vista cliente: el log no se muestra
-                def code(self, *a, **k):
-                    pass
-            log_ph = _SinLog()
-            if TECNICO:
-                with st.expander("Log técnico de la corrida", expanded=True):
-                    log_ph = st.empty()
+                log_ph = st.empty()   # la misma salida que en la terminal, línea a línea
             fase, rondas, avisos, lineas, estado_batch = 0, 0, [], [], ""
             PASOS = ["Leer el archivo", "Extraer los datos", "Armar las fichas", "Listo"]
 
@@ -543,13 +537,13 @@ with tab_ing:
                     with estado:
                         st.warning(linea[:300])
                 lineas.append(linea)
-                log_ph.code("\n".join(lineas[-40:]), language="text")
+                log_ph.code("\n".join(lineas), language="text")
                 dibujar()
             rc = proc.wait()
             if rc == 0:
                 fase = 3
                 dibujar()
-                estado.update(label=f"Listo en {time.time() - t0:.0f} s", state="complete", expanded=False)
+                estado.update(label=f"Listo en {time.time() - t0:.0f} s", state="complete", expanded=True)   # la salida queda a la vista
                 st.session_state["destino"] = "demo"
                 try:
                     (RES / "demo" / "_proveedor.json").write_text(json.dumps({"nombre": nombre_prov, "pid": pid_prov}, ensure_ascii=False), encoding="utf-8")
