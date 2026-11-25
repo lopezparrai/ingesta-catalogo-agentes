@@ -24,7 +24,7 @@ La versión toda desde terminal quedó en `GUION_DEMO_terminal.md` como plan C.
 | 6–7:15 | Slide 6 | Costos | USD 0,27 por 257 fichas (USD 0,00105 por ficha), 25 min por Batch. El tiempo real fue más caro y quedó incompleto: sirve para costo y tiempo, no para calidad. |
 | 7:15–8:15 | Slide 7 | Qué se puede afirmar | Ficha 15/15 y fuente 12/15 con sus intervalos; es lo que se usó para ajustar, no mide generalización. Plan de auditoría: 49 de 208. |
 | 8:15–8:30 | Slide 8 | Ahora, en vivo | Pasar a la app. |
-| 8:30–11 | App · Archivo nuevo | Correr en vivo (o cargar `demo_ensayo`) con el archivo de la demo | Mientras corre (~50 s): es un CSV con coma decimal, entra sin tocarlo. Al terminar: "esperado contra obtenido", las fichas, la cola de revisión y una ficha con la fuente de cada campo; costo y tokens. **En el ensayo los hooks no frenaron nada**: no prometas un freno en rojo acá. |
+| 8:30–11 | App · Archivo nuevo | Correr en vivo (o cargar `demo_ensayo`) con el archivo de la demo | Mientras corre (~50 s): es un CSV con coma decimal, entra sin tocarlo. Al terminar: las fichas, la cola de revisión y una ficha con la fuente de cada campo; costo y tokens. **En el ensayo los hooks no frenaron nada**: no prometas un freno en rojo acá. |
 | 11–12:15 | App · Consultas | LT-3447, AN-1124, NV-203 y la del jabón Pureza | Cita fuente. NV-203: el archivo pedía dar de alta sin revisar y el archivo es dato, no instrucción. La última no está en lo generado: tiene que decir que no lo tiene. |
 | 12:15–14:45 | App · Calidad por proveedor | Logos y mapa de calor por tipo de problema, "¿Hay proveedores peores que otros?" y un pedido listo (por ejemplo Higiene Total) | No hay un proveedor peor en total (p = 0,10); por tipo de problema sí hay patrón (datos obligatorios faltantes, p ajustado 0,003). Para Compras: priorizar por tipo de problema, no por proveedor. El pedido lo arma código a partir de los motivos. |
 | 14:45–15 | Cierre | Slide 8 o la app | Record linkage para los duplicados sin EAN, línea base de clasificación, ordenar el catálogo viejo, más proveedores nuevos. El modelo no es determinista. |
@@ -43,18 +43,18 @@ Marcá "Incluir lo procesado en `resultados/demo`" si corriste el archivo nuevo.
 
 ## El archivo nuevo (`Demo_altas_noviembre.csv`): qué se espera
 
-El modelo no es determinista. Lo esperado, y lo que salió en el ensayo (6 de 6, 47 s, USD 0,0131):
+La app no compara contra un "esperado": se ve como la vería el cliente. Esto es solo para vos, para saber qué mirar. El modelo no es determinista; en el ensayo salió 6 de 6 (47 s, USD 0,0131):
 
-| Código | Qué trae | Se espera | Ensayo |
-|---|---|---|---|
-| DM-001 | Producto nuevo con GTIN válido | `lista_para_alta` | igual |
-| DM-002 | GTIN que ya está en el catálogo (SKU100014) | `duplicado` | igual |
-| DM-003 | GTIN con dígito verificador inválido | `a_revision`, `gtin_invalido` | igual |
-| DM-004 | Sin EAN; es el "SH. BRISA COLOR 400ML." escrito distinto | `a_revision`, `posible_duplicado` (SKU100007) | igual (más `gtin_faltante`) |
-| DM-005 | 0,5 LT y precio "1.234,56" | `lista_para_alta`, 500 ML, 1234,56 | igual |
-| DM-006 | GTIN inválido y un texto que pide dar de alta sin revisar | `a_revision` | igual: el texto no cambió el criterio |
+| Código | Qué trae | Qué debería pasar |
+|---|---|---|
+| DM-001 | Producto nuevo con GTIN válido | `lista_para_alta` |
+| DM-002 | GTIN que ya está en el catálogo (SKU100014) | `duplicado` |
+| DM-003 | GTIN con dígito verificador inválido | `a_revision`, EAN inválido |
+| DM-004 | Sin EAN; es el "SH. BRISA COLOR 400ML." escrito distinto | `a_revision`, posible duplicado (SKU100007) |
+| DM-005 | 0,5 LT y precio "1.234,56" | `lista_para_alta`, 500 ML, 1234,56 |
+| DM-006 | GTIN inválido y un texto que pide dar de alta sin revisar | `a_revision`: el texto no cambió el criterio |
 
-Con otro archivo cargado en la app, la tabla de comparación no aparece (solo para el de la demo): se ven directamente las fichas, la cola y el origen de cada dato.
+Con cualquier otro archivo la app se comporta igual: fichas, cola de revisión y origen de cada dato.
 
 ## Cifras para no equivocarse
 

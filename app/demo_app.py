@@ -33,16 +33,6 @@ ETIQUETA = {"lista_para_alta": "Lista para alta", "duplicado": "Duplicado", "a_r
 MOTIVO_CORTO = {"gtin_faltante": "Falta EAN", "gtin_invalido": "EAN inválido", "dato_obligatorio_faltante": "Faltan datos",
                 "conflicto_entre_fuentes": "Archivos en conflicto", "posible_duplicado": "Posible duplicado"}
 
-# Lo que dice el guion (demo/GUION_DEMO.md). El modelo no es determinista: es lo esperado, no una promesa.
-ESPERADO_DEMO = {
-    "DM-001": ("lista_para_alta", None, "Producto nuevo, GTIN válido"),
-    "DM-002": ("duplicado", None, "GTIN que ya está en el catálogo (SKU100014)"),
-    "DM-003": ("a_revision", "gtin_invalido", "GTIN con dígito verificador inválido"),
-    "DM-004": ("a_revision", "posible_duplicado", "Sin EAN; es el SH. BRISA COLOR 400ML. escrito distinto"),
-    "DM-005": ("lista_para_alta", None, "0,5 LT y precio '1.234,56'"),
-    "DM-006": ("a_revision", "gtin", "GTIN inválido + texto que pide dar de alta sin revisar"),
-}
-
 CLIENTE = "Farmacias Ceibo"
 # Paleta de Ceibo: verde #2A6B4A, coral #E74C3C, azul profundo #2C3E50, blanco natural #F9F9F9, gris piedra #95A5A6.
 # En modo oscuro: el fondo sale del azul profundo, el texto es el blanco natural y el verde se aclara para que se lea.
@@ -210,8 +200,7 @@ with tab_ing:
     if modo.startswith("Correr"):
         subido = st.file_uploader("Archivo del proveedor (CSV, Excel, PDF o texto)", type=["csv", "xlsx", "xls", "pdf", "txt"])
         if subido is None:
-            st.caption(f"Sin archivo cargado se usa el de la demo (`{CSV_DEMO.name}`, 6 productos: un nuevo, un duplicado, "
-                       "dos GTIN inválidos, un posible duplicado sin EAN y un caso de formatos).")
+            st.caption(f"Sin archivo cargado se usa uno de ejemplo (`{CSV_DEMO.name}`, 6 productos).")
             if CSV_DEMO.exists():
                 with st.expander("Ver el archivo tal como llega"):
                     st.code(CSV_DEMO.read_text(encoding="utf-8"), language="text")
@@ -225,7 +214,6 @@ with tab_ing:
                 shutil.copy(CSV_DEMO, carpeta_prov / CSV_DEMO.name)
             else:
                 (carpeta_prov / Path(subido.name).name).write_bytes(subido.getvalue())
-            st.session_state["corrida_es_demo"] = subido is None
             st.session_state.pop("destino", None)
             cmd = [sys.executable, "ingesta.py", PROV_DEMO, "--modo", "tiempo-real", "--salida", "demo"]
             st.code(" ".join(cmd), language="text")
@@ -258,7 +246,6 @@ with tab_ing:
             st.info("Se muestra la salida guardada de una corrida anterior, no una nueva.")
             if st.session_state.get("destino") != elegida or "destino" not in st.session_state:
                 st.session_state["destino"] = elegida
-                st.session_state["corrida_es_demo"] = True
 
     destino = st.session_state.get("destino")
     if destino and (RES / destino / "resumen_corrida.json").exists():
@@ -284,22 +271,6 @@ with tab_ing:
             st.markdown("**Cuando un hook frenó algo (y por qué):**")
             for fr in lista:
                 st.markdown(f":red[{html.escape(json.dumps(fr, ensure_ascii=False)[:300])}]")
-
-        if st.session_state.get("corrida_es_demo", True):
-            st.markdown("#### Qué se esperaba de cada producto y qué salió")
-            st.caption("El modelo no es determinista: lo esperado no es una promesa.")
-            filas = []
-            for cod, (est, motivo, nota) in ESPERADO_DEMO.items():
-                x = next((y for y in f_d if str(y.get("item_id", "")).endswith(cod)), None)
-                if x is None:
-                    filas.append({"Código": cod, "Esperado": ETIQUETA[est], "Obtenido": "—", "Motivos": "", "¿Coincide?": "no está", "Caso": nota})
-                    continue
-                mot = ", ".join(MOTIVO_CORTO.get(m, m) for m in (x.get("motivos_revision") or []))
-                coincide = x.get("estado") == est and (motivo is None or motivo in ", ".join(x.get("motivos_revision") or []))
-                filas.append({"Código": cod, "Esperado": ETIQUETA[est], "Obtenido": ETIQUETA.get(x.get("estado"), x.get("estado")),
-                              "Motivos": mot or (f"ya existe como {x['duplicado_de']}" if x.get("duplicado_de") else ""),
-                              "¿Coincide?": "sí" if coincide else "NO", "Caso": nota})
-            st.dataframe(pd.DataFrame(filas), use_container_width=True, hide_index=True)
 
         st.markdown("#### Fichas")
         dfa = df_fichas(f_d)
