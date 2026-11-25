@@ -23,8 +23,9 @@ resultados/demo/
 resultados/demo_ensayo/
 data/proveedores/P10_Demo_Proveedor/
 
-# Carpeta demo completa (por ahora fuera del repo)
-demo/
+# Carpeta demo: fuera del repo, salvo el archivo de ejemplo que usa la app
+demo/*
+!demo/Demo_altas_noviembre.csv
 
 # Capturas que guarda la app de Claude
 Claude outputs/

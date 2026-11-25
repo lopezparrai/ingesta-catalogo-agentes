@@ -285,7 +285,7 @@ en la muestra: USD 0,73. Resultados en `auditoria/resultados_auditor/` y en la p
 | `calidad.py` | El scorecard de calidad por proveedor (Beta-Binomial con Bayes empírico). |
 | `data/` | El material del curso (catálogo, estándar, consultas y los archivos de los 9 proveedores). Son los datos de entrada. |
 | `evaluador.py`, `evals/` | Evaluación contra fichas verificadas a mano. |
-| `demo/` (no versionada) | El archivo nuevo para la demo en vivo (`Demo_altas_noviembre.csv`, con casos de duplicado, GTIN inválido, posible duplicado y un texto que pide saltear la revisión) y el guion de 15 minutos. |
+| `demo/` | Solo se versiona el archivo de ejemplo de la demo en vivo (`Demo_altas_noviembre.csv`, con casos de duplicado, GTIN inválido, posible duplicado y un texto que pide saltear la revisión). Las slides y el guion no se versionan. |
 | `asistente/` | Todo el asistente de consultas: `asistente.py` (solo lectura, fuentes verificadas), `prueba_asistente.py` (sin API), `evaluar_consultas.py` y `verificar_esperado.py` (evaluación y verificación a mano), `consultas_esperado.json` y `resultados/respuestas.json` (la salida). |
 | `prueba_hooks.py`, `prueba_ingesta.py` | Pruebas sin API de los hooks, del motor de rondas y de los controles de precio y de FDS. |
 | `ejercicios/` | Ejercicios de los módulos del curso (M1, M2, prompt v2, salida estructurada); el sistema no los usa. |
@@ -296,7 +296,7 @@ en la muestra: USD 0,73. Resultados en `auditoria/resultados_auditor/` y en la p
 
 ## Demo Day: app y slides
 
-> La carpeta `demo/` está en `.gitignore` por ahora (no se versiona); los archivos siguen en la máquina de quien armó la demo.
+> De la carpeta `demo/` solo se versiona `Demo_altas_noviembre.csv`, el archivo que usa la app si no se sube otro; las slides y el guion quedan en la máquina de quien armó la demo.
 
 `streamlit run app/demo_app.py`. Cuatro pestañas:
 
