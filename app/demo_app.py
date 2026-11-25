@@ -631,7 +631,6 @@ def _seccion_pedido(pids: list, fichas: list, NOM: dict, fijo: str | None):
 
 with tab_cat:
     st.subheader("Lo que ya se procesó, proveedor por proveedor")
-    st.caption("La carga completa de los 9 proveedores (`resultados/final`): sus fichas, lo que quedó a revisión y de dónde salió cada dato.")
     todas = cargar_fichas("final") if (RES / "final").exists() else []
     if not todas:
         st.warning("No encuentro la corrida completa en resultados/final.")
@@ -671,12 +670,13 @@ with tab_cat:
         st.markdown(f"### {'Todos los proveedores' if todos else html.escape(NOM.get(pid, pid))}")
         if es_demo:
             st.caption(f"Es el archivo que entró en la demo (`resultados/{carpeta_demo}`): se actualiza cada vez que procesás uno nuevo. No forma parte de la carga completa de los 9 proveedores.")
-        k1, k2, k3, k4, k5 = st.columns(5)
+        k1, k2, k3, k4, k5, k6 = st.columns(6)
         k1.metric("Productos", len(fp))
         k2.metric("Listos para alta", int(c.get("lista_para_alta", 0)))
         k3.metric("Duplicados", int(c.get("duplicado", 0)))
         k4.metric("A revisión", int(c.get("a_revision", 0)))
         k5.metric("Costo", f"USD {costo:.4f}")
+        k6.metric("Costo por ficha", f"USD {costo / len(fp):.5f}" if fp else "—")
 
         filtro = st.multiselect("Estados a mostrar", list(ETIQUETA), default=list(ETIQUETA), format_func=lambda e: ETIQUETA[e], key=f"filtro_{pid}")
         vista = [x for x in fp if x.get("estado") in filtro]
