@@ -1,8 +1,7 @@
 """Demo Day: un archivo nuevo de proveedor entra en vivo y sale como fichas, cola de revisión y respuestas.
 
 Esta app es la demostración en vivo más el análisis estadístico por proveedor. La carga completa, los costos y Dermalab están en las slides
-(demo/slides_demo_day.html). La versión anterior, con todas las pestañas, quedó en
-app/archivo/demo_app_completa.py.
+(demo/slides_demo_day.html).
 
 Uso (desde la raíz del repo):
     pip install -r requirements.txt
@@ -219,6 +218,26 @@ def _etiqueta_demo(carpeta: str) -> tuple:
     return d.get("nombre") or "Demo Proveedor", d.get("pid")
 
 
+# Orden y nombres con que se muestra la ficha (identidad del producto, luego lo comercial, luego seguridad)
+ORDEN_FICHA = [
+    ("descripcion", "Descripción"), ("marca", "Marca"), ("tipo", "Tipo"), ("variante", "Variante"),
+    ("contenido", "Contenido"), ("unidad", "Unidad"), ("unidades_por_envase", "Unidades por envase"),
+    ("concentracion", "Concentración"), ("principio_activo", "Principio activo"),
+    ("gtin", "GTIN"), ("codigo_proveedor", "Código del proveedor"), ("proveedor_id", "Proveedor"),
+    ("categoria", "Categoría"), ("condicion_venta", "Condición de venta"),
+    ("precio_costo", "Precio de costo"), ("moneda", "Moneda"),
+    ("numero_onu", "N.º ONU"), ("peligro_deposito", "Peligro en depósito"),
+]
+
+
+def _filas_ficha(fi: dict, fu: dict) -> list:
+    """Campos de la ficha en un orden legible; los que no están en la lista van al final."""
+    conocidos = {k for k, _ in ORDEN_FICHA}
+    claves = [(k, n) for k, n in ORDEN_FICHA] + [(k, k) for k in fi if k not in conocidos]
+    return [{"Campo": n, "Valor": "" if fi.get(k) is None else str(fi.get(k)), "De dónde salió": fuente_txt(fu.get(k))}
+            for k, n in claves if k in fi and (fi.get(k) is not None or k in fu)]
+
+
 def _tabla_con_origen(vista: list, dfv: pd.DataFrame, clave: str):
     """Tabla de productos; al hacer clic en una fila, abajo se ve de dónde salió cada dato de ese producto."""
     ev = st.dataframe(pintar(dfv), use_container_width=True, hide_index=True, on_select="rerun", selection_mode="single-row", key=f"tabla_{clave}")
@@ -240,8 +259,7 @@ def _tabla_con_origen(vista: list, dfv: pd.DataFrame, clave: str):
                 + (f" · motivo: <b>{', '.join(MOTIVO_CORTO.get(m, m) for m in (x.get('motivos_revision') or []))}</b>" if x.get("motivos_revision") else "")
                 + "</div>", unsafe_allow_html=True)
     fi, fu = x.get("ficha") or {}, x.get("fuentes") or {}
-    campos = pd.DataFrame([{"Campo": k, "Valor": "" if v is None else str(v), "De dónde salió": fuente_txt(fu.get(k))}
-                           for k, v in fi.items() if v is not None or k in fu])
+    campos = pd.DataFrame(_filas_ficha(fi, fu), columns=["Campo", "Valor", "De dónde salió"])
     st.dataframe(campos, use_container_width=True, hide_index=True)
 
 
