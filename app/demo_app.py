@@ -62,7 +62,8 @@ CSS = f"""
          border-radius: 10px; padding: 10px 16px;}}
   div[data-testid="stMetricLabel"] p {{font-size: 13px; color:{TEXTO2}; white-space: normal;}}
   div[data-testid="stMetricLabel"] {{overflow: visible;}}
-  div[data-testid="stMetricValue"] {{color:{BLANCO}; font-size: 1.75rem;}}
+  div[data-testid="stMetricValue"] {{color:{BLANCO}; font-size: 1.5rem; overflow: visible;}}
+  div[data-testid="stMetricValue"] > div {{overflow: visible; text-overflow: clip; white-space: nowrap;}}
   button[data-baseweb="tab"] {{font-size: 16px; font-weight: 600;}}
   h2, h3 {{color:{BLANCO};}}
   .estado-box {{padding: 10px 14px; border-radius: 10px; margin: 6px 0 10px 0; color:{BLANCO}; border-left: 6px solid;}}
@@ -122,6 +123,7 @@ def pintar(df: pd.DataFrame):
     colores = dict(zip(df.index, df["estado"].map(COLOR)))
     disp = df.copy()
     disp["estado"] = df["estado"].map(ETIQUETA)
+    disp["item"] = df["item"].astype(str).str.split(":", n=1).str[-1]   # sin el prefijo P04: (el proveedor ya está elegido o en su columna)
     disp["motivos"] = df["motivos"].map(lambda m: ", ".join(MOTIVO_CORTO.get(x.strip(), x.strip()) for x in m.split(",") if x.strip()))
     disp = disp.rename(columns={"item": "Producto", "estado": "Estado", "descripción": "Descripción", "gtin": "GTIN",
                                 "precio": "Precio de costo", "motivos": "Motivos", "duplicado de": "Duplicado de"})
@@ -225,7 +227,7 @@ def _tabla_con_origen(vista: list, dfv: pd.DataFrame, clave: str):
     filas = list(ev.selection.rows) if ev is not None and getattr(ev, "selection", None) else []
     fila = filas[0] if filas and filas[0] < len(vista) else 0
     st.markdown("#### Cada dato, con su origen")
-    nombres = [f"{v.get('item_id', '')} · {(v.get('ficha') or {}).get('descripcion') or ''}" for v in vista]
+    nombres = [f"{str(v.get('item_id', '')).split(':', 1)[-1]} · {(v.get('ficha') or {}).get('descripcion') or ''}" for v in vista]
     # al marcar otra fila de la tabla, el desplegable se reposiciona; si no, queda lo que el usuario eligió
     i = st.selectbox("Producto (escribí para buscar)", range(len(vista)), index=fila, format_func=lambda k: nombres[k],
                      key=f"sel_{clave}_{fila}")
@@ -675,7 +677,7 @@ with tab_cat:
         k2.metric("Listos para alta", int(c.get("lista_para_alta", 0)))
         k3.metric("Duplicados", int(c.get("duplicado", 0)))
         k4.metric("A revisión", int(c.get("a_revision", 0)))
-        k5.metric("Costo", f"USD {costo:.4f}")
+        k5.metric("Costo", f"USD {costo:.3f}")
         k6.metric("Costo por ficha", f"USD {costo / len(fp):.5f}" if fp else "—")
 
         filtro = st.multiselect("Estados a mostrar", list(ETIQUETA), default=list(ETIQUETA), format_func=lambda e: ETIQUETA[e], key=f"filtro_{pid}")
