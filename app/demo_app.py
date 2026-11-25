@@ -22,9 +22,8 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-import calidad as CAL
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+import calidad as CAL
 from pedido_proveedor import mensaje_proveedor
 
 RAIZ = Path(__file__).resolve().parent.parent
