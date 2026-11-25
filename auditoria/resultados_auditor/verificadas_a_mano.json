@@ -1,0 +1,257 @@
+{
+ "P03:LT-3366": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Todos los campos coinciden con la línea 23 del CSV: 200 UN, precio 71,09 en UYU y el GTIN 7792055312834. El dígito verificador del GTIN es válido (suma 96, dígito 4). El GTIN no está en el catálogo, y NUBE 200 UN es distinto de SKU102632 (NUBE 100 UN). La descripción, la categoría CUI-HIG-ALG y el estado lista_para_alta son correctos. Los hisopos no requieren FDS.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P03:LT-3366",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 1787,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 688
+  },
+  "costo_usd": 0.01123,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P03:LT-3312": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "El GTIN 7799626810102 tiene dígito verificador válido y ya está en el catálogo como SKU104011, así que \"duplicado\" es correcto. Los demás campos coinciden con la línea 5 del CSV: 0,5 LT son 500 ML, el precio es 115,87 UYU, la categoría es CUI-HIG-JAB y la descripción respeta el formato del estándar.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P03:LT-3312",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 1984,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 659
+  },
+  "costo_usd": 0.01134,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P03:LT-3303": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha es correcta. El GTIN 7793469616846 tiene dígito verificador válido y no está en el catálogo. SONRISA BLANQUEADORA de 90 G no existe en el catálogo: el existente es de 180 G, otro producto. Contenido, unidad (GR pasa a G), descripción, categoría y precio (68,91 UYU) coinciden con la línea 2 del CSV.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P03:LT-3303",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 1972,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 643
+  },
+  "costo_usd": 0.01115,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P03:LT-3336": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha es correcta. El GTIN 7791018588972 tiene 13 dígitos y un dígito verificador válido, y no está en el catálogo. DENTIBLANC SIN ALCOHOL 250 ML no existe en el catálogo: el DENTIBLANC que hay es de MENTA. CC pasa a ML, el precio es 101,78 UYU, la categoría CUI-BUC-ENJ corresponde y la descripción respeta el formato. Todas las fuentes apuntan a la línea 13.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P03:LT-3336",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2104,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 625
+  },
+  "costo_usd": 0.01124,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P03:LT-3363": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Todos los campos coinciden con la línea 22 del CSV. El GTIN tiene dígito verificador válido y no está en el catálogo. El cepillo Dentiblanc suave del catálogo (SKU101967) es de 2 UN, así que es otro producto. La descripción y la categoría están bien armadas.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P03:LT-3363",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 1966,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 576
+  },
+  "costo_usd": 0.01047,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P03:LT-3324": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha es correcta. El GTIN 7790342802839 tiene dígito verificador válido (9) y no figura en el catálogo. El único PUREZA NEUTRO del catálogo es el de 500 ML, así que no hay duplicado. CC pasó a ML, la descripción sigue el formato de \"todo lo demás\", el precio 68,54 es en UYU y el jabón líquido no requiere FDS.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P03:LT-3324",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 1976,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 721
+  },
+  "costo_usd": 0.01194,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P03:LT-3357": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La línea 20 no trae EAN, así que corresponde gtin_faltante. Marca, tipo, variante, contenido (125 GR → 125 G) y unidades por envase coinciden con SKU102275 (JABON PUREZA ANTIBAC. 125G), por eso también va posible_duplicado. La descripción, la categoría, el precio de 48,42 UYU y los campos vacíos son correctos.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P03:LT-3357",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 1873,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 556
+  },
+  "costo_usd": 0.01009,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P03:LT-3354": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "El GTIN 7795848010542 ya está en el catálogo como SKU101253, así que el estado duplicado es correcto. Los campos coinciden con la línea 19 del CSV: GR pasa a G, el precio 61,20 queda en UYU y el dígito verificador es válido.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P03:LT-3354",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 1944,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 545
+  },
+  "costo_usd": 0.01012,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P01:AN-1109": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Todos los campos coinciden con la fila AN-1109 de la lista: Febril 1g, Paracetamol, Comp. rec. x 20, VL, EAN 7797385091657, $ 225,13. El dígito verificador del GTIN es válido (suma 123, verificador 7). El GTIN no está en el catálogo y no hay otro Febril 1 G x 20, así que no hay duplicado. La descripción respeta el formato de medicamentos y la categoría es coherente.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P01:AN-1109",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3730,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 802
+  },
+  "costo_usd": 0.01626,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P01:AN-1172": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Todos los campos coinciden con la fila AN-1172 de la lista: Tosil 15mg/5ml, Dextrometorfano, Jbe. x 120 ml, VL, EAN 7793821086737 y $ 213,12. El dígito verificador del GTIN es válido y el GTIN no está en el catálogo. La descripción sigue el formato de medicamentos y la categoría MED-RES-TOS es correcta. El estado lista_para_alta es correcto.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P01:AN-1172",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3627,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 714
+  },
+  "costo_usd": 0.01517,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P01:AN-1106": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Los campos coinciden con el bloque AN-1106 de la lista. El GTIN tiene dígito verificador válido y no está en el catálogo. La columna Monodroga está vacía para este ítem, así que principio_activo queda vacío y va a revisión por dato_obligatorio_faltante, como corresponde. La descripción sigue el formato de medicamentos y la categoría MED-DIG-ACI es correcta.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P01:AN-1106",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3561,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 898
+  },
+  "costo_usd": 0.01688,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P01:AN-1166": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha es correcta. El GTIN 7790468655227 tiene dígito verificador válido y no está en el catálogo. El precio 109,31 sale de la actualización con vigencia 15/10/2026, que es más reciente que la lista del 1/10. La descripción respeta el formato de medicamentos y los demás campos coinciden con el PDF.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P01:AN-1166",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 4073,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 863
+  },
+  "costo_usd": 0.01756,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P01:AN-1103": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Los datos coinciden con el bloque AN-1103 del PDF. El GTIN tiene dígito verificador válido y no está en el catálogo. La línea no trae monodroga, así que principio_activo vacío y la revisión por dato_obligatorio_faltante son correctos. La categoría queda vacía y no se completa por suposición.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P01:AN-1103",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3601,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 981
+  },
+  "costo_usd": 0.01779,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P01:AN-1139": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha es correcta. El GTIN tiene dígito verificador válido y no está en el catálogo. El precio 175,52 sale de la actualización con vigencia 15/10/2026, que es más reciente que la lista del 1/10. Los demás campos coinciden con la lista y no hay conflicto entre archivos.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P01:AN-1139",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 4072,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 665
+  },
+  "costo_usd": 0.01557,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P01:AN-1136": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha es correcta. El PDF dice «Comp. rec. x 20» y la actualización del xlsx dice «Comprimidos x 30», así que hay conflicto en el contenido. Por eso queda a_revision con conflicto_entre_fuentes y el contenido vacío. El precio de 200.8 sale de la lista más reciente (vigencia 15/10/2026). El GTIN es válido y no está en el catálogo.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P01:AN-1136",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 4024,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1100
+  },
+  "costo_usd": 0.01983,
+  "modelo": "claude-sonnet-5-5"
+ }
+}

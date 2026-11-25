@@ -217,6 +217,28 @@ citadas y abstención. Resultado actual: **29 de 29**. Tres cosas para leerlo bi
 - Las hipotéticas (Q19 a Q21) se verifican contra el estándar, no contra un dato de archivo.
 - La métrica no evalúa la redacción de las respuestas, solo datos y fuentes.
 
+## Auditoría: más allá de los proveedores con los que se ajustó
+
+El evaluador (15 fichas de Litoral y Andes) y las consultas (29) usan lo mismo con lo que se ajustó el sistema. Para
+medir los 9 proveedores hay una auditoría por muestreo, en `auditoria/`, que no es parte del pipeline:
+
+- **Muestreo estratificado** (`sorteo_auditoria.py`): 53 de las 208 listas para alta, repartidas por proveedor con
+  un mínimo de 2, semilla 20261126 fijada antes de sortear. Es el tamaño mínimo para que, sin errores, el error del
+  lote sea menor al 5 % con 95 % de confianza aun si los errores se concentran en un proveedor (sin estratos
+  alcanzan 49; repartidas por proveedor, 49 bajan a 94 %). Por proveedor no da conclusiones: la cota va del 26 % al 63 %.
+  Si aparece un error, se audita completo el proveedor donde apareció.
+- **Auditor con un modelo superior** (`auditor_modelo.py`, Claude Sonnet 5.5): ve la ficha, el texto crudo de todos
+  los lugares donde aparece el código, las fichas de seguridad, los candidatos del catálogo y el estándar, y devuelve
+  cada error con su cita. Validado antes con errores conocidos: **18 de 18** en la corrida original de Dermalab (los
+  18 por el nombre); 4 de 4 errores de marca conocidos marcados para revisión (3 como error y 1 como dudoso, que
+  cita la ficha de seguridad «Brisa y Frescor» y el catálogo); y 0 falsas alarmas en las 15 verificadas a mano.
+
+**Resultado sobre la muestra:** 50 correctas, 2 con error y 1 discutible. Los 2 errores son de Rivera: la marca
+Frescor quedó como Brisa (la ficha de seguridad dice "Brisa y Frescor"); la ficha tiene forma válida, así que ningún
+hook la frena, y en la corrida del agente único estaba bien. Por la regla, Rivera se audita completo. El caso discutible es HT40003, una espuma de afeitar con
+`peligro_deposito = pendiente_fds`: el estándar no dice si la espuma de afeitar cuenta como aerosol. Costo del auditor
+en la muestra: USD 0,73. Resultados en `auditoria/resultados_auditor/` y en la planilla de auditoría.
+
 ## Límites conocidos
 
 - El modelo no es determinista: la misma lista puede dar descripciones o variantes distintas entre corridas.
@@ -250,6 +272,7 @@ citadas y abstención. Resultado actual: **29 de 29**. Tres cosas para leerlo bi
 | `ejercicios/` | Ejercicios sueltos del curso (prompt v2, salida estructurada); el sistema no los usa. |
 | `resultados/final/` | La corrida final: por proveedor, la ficha y su traza (costo, caché, frenos de hooks), más la cola de revisión y el resumen. |
 | `resultados/agente_unico/` | La base de M1–M3, contra la que se compara ("vs agente único"). |
+| `auditoria/` | Auditoría de los 9 proveedores: sorteo estratificado de 53 y auditor con Sonnet 5.5 (ver "Auditoría"). |
 | `resultados/evidencia/` | Dermalab: la corrida original y el diagnóstico producto por producto; y las dos corridas con error. |
 
 ## Demo Day: app y slides

@@ -1,0 +1,967 @@
+{
+ "P02:RIV-1260": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha es correcta. El GTIN 7792602887266 tiene dígito verificador válido (la suma da 124, el verificador es 6) y no está en el catálogo. El shampoo Alborada anticaspa de 400 ML es distinto del de 200 ML (SKU102982), así que no es duplicado. La descripción, el contenido (400CC pasa a 400 ML), la categoría, el precio en UYU y las fuentes (fila 23) coinciden con el estándar y la planilla.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P02:RIV-1260",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2387,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 666
+  },
+  "costo_usd": 0.01221,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P02:RIV-1344": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha es correcta. El GTIN 7790055172229 tiene 13 dígitos y el dígito verificador es válido (suma 81, verificador 9). No está en el catálogo, y no hay un shampoo ALBORADA CABELLO GRASO de 750 ML, así que no es duplicado. \"750cc\" pasa a 750 ML. La descripción, la categoría y el precio en UYU coinciden con la fila 46. La fuente de todos los campos es esa misma fila.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P02:RIV-1344",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2429,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 649
+  },
+  "costo_usd": 0.01213,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P01:AN-1115": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La línea AN-1115 del PDF coincide con todos los campos: Gastrex 20 mg, Omeprazol, Caps. x 28, VL, EAN 7790106983514 y $ 246,07. El dígito verificador del GTIN da 4, así que es válido. El GTIN no está en el catálogo. La descripción sigue el formato de medicamentos y la categoría MED-DIG-ACI incluye omeprazol. No hay conflicto entre fuentes, porque hay un solo archivo.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P01:AN-1115",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3618,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 681
+  },
+  "costo_usd": 0.01483,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P01:AN-1160": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Todos los campos coinciden con el bloque AN-1160 de la lista (Tiroxan 100 mcg, Levotiroxina, Comprimidos x 30, VBR, $ 153,10). El GTIN 7798193783772 tiene dígito verificador válido y no está en el catálogo. La descripción sigue el formato de medicamentos y la categoría MED-CRO-MET corresponde a tiroides. Está bien que quede como lista_para_alta.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P01:AN-1160",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3610,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 699
+  },
+  "costo_usd": 0.01499,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P01:AN-1145": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Todos los campos coinciden con la fila AN-1145 de la lista (Gripanil, sobres x 12, VL, $ 268,81). El GTIN 7791495114022 tiene dígito verificador válido y no está en el catálogo. SKU102205 es el mismo producto en comprimidos x 20 y tiene otro GTIN. La descripción respeta el formato de medicamentos y la categoría MED-RES-GRI es correcta, así que corresponde lista_para_alta.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P01:AN-1145",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3712,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 746
+  },
+  "costo_usd": 0.01566,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P01:AN-1157": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha es correcta. El GTIN 7790003122382 tiene dígito verificador válido y no está en el catálogo. Los datos coinciden con el bloque AN-1157 del PDF. El precio 146,22 sale de la actualización con vigencia 15/10/2026, más reciente que la lista del 1/10. La descripción respeta el formato de medicamentos y la categoría MED-CRO-MET corresponde a tiroides.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P01:AN-1157",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 4019,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 654
+  },
+  "costo_usd": 0.01536,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P01:AN-1112": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Todos los campos coinciden con el bloque AN-1112 de la lista (Glucomet 850mg, Metformina, Comp. x 60, VBR, 7797092743948, $ 175,49). El GTIN tiene dígito verificador válido y no está en el catálogo. SKU102898 es Glucomet de 30 UN, o sea otro producto. La descripción y la categoría cumplen el estándar, y el estado lista_para_alta es correcto.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P01:AN-1112",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3636,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 674
+  },
+  "costo_usd": 0.01479,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P01:AN-1142": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha coincide con el bloque AN-1142 del PDF. El GTIN 7795761445278 tiene dígito verificador válido y no está en el catálogo; el Gripanil del catálogo es x 20 y tiene otro GTIN. El precio 197,3 sale de la actualización con vigencia 15/10/2026, que es más reciente que la lista del 1/10. La descripción, la condición de venta y la categoría cumplen el estándar.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P01:AN-1142",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 4158,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 748
+  },
+  "costo_usd": 0.01658,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P02:RIV-1350": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Los campos coinciden con la fila 47 del archivo. El GTIN 7790192741357 es válido y no está en el catálogo. ALBORADA RIZOS 400 ML es otro producto, así que no es duplicado. Contenido 750 cc = 750 ML, descripción bien armada y categoría correcta.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P02:RIV-1350",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2406,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 614
+  },
+  "costo_usd": 0.01173,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P02:RIV-1272": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Todos los campos coinciden con la fila 27 de ALTAS RIVERA OCT.xlsx. El GTIN tiene 13 dígitos y el dígito verificador es válido (6). No está en el catálogo y ningún producto de Alborada coincide en tipo, variante y contenido. Corresponde lista_para_alta.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P02:RIV-1272",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2486,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 608
+  },
+  "costo_usd": 0.01183,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P02:RIV-1236": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha es correcta. El GTIN 7795113452930 tiene 13 dígitos y el dígito verificador (0) coincide, y no está en el catálogo. Alborada Liso 400 ML no existe en el catálogo: solo están el de 750 ML y el de 200 ML. La descripción, la categoría, el precio y la moneda coinciden con la fila 16 y con el estándar.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P02:RIV-1236",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2387,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 546
+  },
+  "costo_usd": 0.01101,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P02:RIV-1296": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha coincide con la fila 55 de la planilla y con la FDS, que lista RIV-1296 y declara clase 2.1 y ONU 1950. El GTIN 7794545525540 tiene dígito verificador válido y no está en el catálogo. Los BRISA MUJER del catálogo son de 250 ML, otro contenido, así que no hay duplicado. La descripción, la categoría y el precio en UYU son correctos.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P02:RIV-1296",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3467,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 747
+  },
+  "costo_usd": 0.01518,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P02:RIV-1263": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "El GTIN 7790648889695 tiene dígito verificador válido (suma 155, dígito 5) y no está en el catálogo. ALBORADA COLOR 750 ML no existe en el catálogo: solo hay ALBORADA COLOR en 400 ML, que es otro producto. Descripción, unidad, categoría, precio y moneda coinciden con la fila 24 y con el estándar.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P02:RIV-1263",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2381,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 592
+  },
+  "costo_usd": 0.01146,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P02:RIV-1323": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha es correcta. El GTIN 7796792062359 tiene dígito verificador válido (9) y no está en el catálogo. El SKU100987 es el mismo shampoo pero de 750 ML, así que es otro producto. La descripción, el tipo, la variante, el contenido, el precio y la categoría coinciden con la fila 40 y con el estándar.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P02:RIV-1323",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2429,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 575
+  },
+  "costo_usd": 0.01139,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P02:RIV-1242": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Los datos de la fila 18 (\"ACOND. NATIVA LISO 400cc\", EAN 7790770756711, costo 145.87) están bien normalizados. El GTIN tiene dígito verificador válido: la suma da 119 y el dígito es 1. No está en el catálogo. El SKU100812 es NATIVA LISO de 750 CC, o sea otro contenido, así que no es duplicado. No hay conflicto entre fuentes ni faltantes, y el estado lista_para_alta es correcto.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P02:RIV-1242",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2362,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 664
+  },
+  "costo_usd": 0.01214,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P03:LT-3396": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Todos los campos coinciden con la línea 33 del CSV y con el estándar. El GTIN tiene 13 dígitos y el dígito verificador es válido (3). No está en el catálogo y no hay un jabón PUREZA GLICERINA de 90 G que sea el mismo producto. GR pasa a G y el precio 37,64 queda en UYU. La descripción está bien armada y la categoría es correcta.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P03:LT-3396",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 1850,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 576
+  },
+  "costo_usd": 0.01024,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P03:LT-3390": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha coincide con la línea 31 del CSV: GRS pasa a G, el precio 35,08 va en UYU y la descripción está bien armada. El GTIN 7797702204005 tiene 13 dígitos y el dígito verificador es válido (5). No está en el catálogo. Los jabones Lavanda Real del catálogo son antibacteriales, así que no es duplicado. No requiere FDS.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P03:LT-3390",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 1856,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 649
+  },
+  "costo_usd": 0.01098,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P03:LT-3441": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Los campos coinciden con la línea 50 del CSV. El GTIN 7790487691688 tiene dígito verificador válido (8) y no está en el catálogo. No hay SONRISA SENSIBLE de 180 G en el catálogo, así que no es duplicado. La descripción, la categoría y el precio en UYU son correctos, y el estado lista_para_alta corresponde.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P03:LT-3441",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 1944,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 701
+  },
+  "costo_usd": 0.01168,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P02:RIV-1293": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "marca",
+    "valor_en_ficha": "BRISA",
+    "valor_correcto": "FRESCOR",
+    "cita": "RIV-1293 | DESOD. BARRA FRESCOR S/ PERF. 50 G; catálogo SKU102415: DESODORANTE BARRA FRESCOR MUJER X 50 G, marca FRESCOR, proveedor P02",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "FRESCOR SIN PERFUME",
+    "valor_correcto": "SIN PERFUME",
+    "cita": "DESOD. BARRA FRESCOR S/ PERF. 50 G (FRESCOR es la marca; S/ PERF. = SIN PERFUME)",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "DESODORANTE BARRA BRISA FRESCOR SIN PERFUME X 50 G",
+    "valor_correcto": "DESODORANTE BARRA FRESCOR SIN PERFUME X 50 G",
+    "cita": "Estándar sección 3: TIPO MARCA VARIANTE X CONTENIDO UNIDAD; la fuente dice DESOD. BARRA FRESCOR S/ PERF. 50 G y no menciona BRISA",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "La marca BRISA no aparece en la fila 54. Parece tomada de otro producto del mismo archivo. La marca es FRESCOR, así que la variante y la descripción también están mal. El GTIN es válido, no está en el catálogo, y el precio, la categoría, el contenido y la unidad son correctos.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P02:RIV-1293",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2451,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1189
+  },
+  "costo_usd": 0.01757,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P03:LT-3414": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Todos los campos coinciden con la línea 39 del CSV y con el estándar. El GTIN 7794283405838 tiene dígito verificador válido y no está en el catálogo. El único SONRISA BLANQUEADORA del catálogo es de 180 G, así que es otro producto. No es duplicado y no hay motivo de revisión.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P03:LT-3414",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 1976,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 602
+  },
+  "costo_usd": 0.01075,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P03:LT-3366": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Los datos de la ficha coinciden con la línea 23 del CSV. El GTIN 7792055312834 tiene 13 dígitos y el dígito verificador es válido. Ese GTIN no está en el catálogo. HISOPOS NUBE 100 UN (SKU102632) es otro producto porque su contenido es 100 y no 200. La descripción, la categoría, el precio y la moneda cumplen el estándar. Hisopos no es una familia con FDS, así que `peligro_deposito` va vacío.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P03:LT-3366",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 1787,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 733
+  },
+  "costo_usd": 0.01168,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P03:LT-3360": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha coincide con la línea 21 del CSV: GRS pasa a G, el precio 37,82 está en UYU y el GTIN tiene dígito verificador válido (calculado 4). El GTIN no está en el catálogo. No hay un jabón PUREZA AVENA de 90 G en el catálogo. Los PUREZA ANTIBAC. son otra variante. La categoría y la descripción son correctas, así que corresponde lista_para_alta.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P03:LT-3360",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 1851,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 700
+  },
+  "costo_usd": 0.01148,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P02:RIV-1284": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "marca",
+    "valor_en_ficha": "BRISA",
+    "valor_correcto": "FRESCOR",
+    "cita": "RIV-1284 | DESODORANTE AER. FRESCOR HOMBRE 150ML | 779-4649-19388-1 | 93.12 (la fila no menciona BRISA; el catálogo tiene FRESCOR como marca, p. ej. SKU101092 «DESODORANTE AEROSOL FRESCOR HOMBRE X 250 ML», marca FRESCOR, variante HOMBRE)",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "FRESCOR HOMBRE",
+    "valor_correcto": "HOMBRE",
+    "cita": "DESODORANTE AER. FRESCOR HOMBRE 150ML; en el catálogo, SKU101092 tiene marca FRESCOR y variante HOMBRE",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "DESODORANTE AEROSOL BRISA FRESCOR HOMBRE X 150 ML",
+    "valor_correcto": "DESODORANTE AEROSOL FRESCOR HOMBRE X 150 ML",
+    "cita": "Estándar sección 3: «TIPO MARCA VARIANTE X CONTENIDO UNIDAD». La fila dice «DESODORANTE AER. FRESCOR HOMBRE 150ML», sin BRISA.",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "El GTIN es válido y no está en el catálogo. El precio, el contenido, la categoría y la FDS (ONU 1950, clase 2.1) son correctos. La marca BRISA no figura en la fila del proveedor, que dice FRESCOR HOMBRE. Falló la marca, y con ella la variante y la descripción.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P02:RIV-1284",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3492,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1571
+  },
+  "costo_usd": 0.02347,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P03:LT-3321": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha coincide con la línea 8 del CSV. El GTIN 7797556693871 tiene 13 dígitos y su dígito verificador es válido (1). No está en el catálogo: el DENTIBLANC del catálogo es de 90 G, así que es otro producto. La descripción, la categoría, el precio de 124,76 UYU y la ausencia de FDS son correctos, y el estado lista_para_alta es correcto.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P03:LT-3321",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2016,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 668
+  },
+  "costo_usd": 0.01149,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P03:LT-3330": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha coincide con la línea 11 del CSV. El GTIN 7792497428735 tiene 13 dígitos y el verificador (5) es válido, y no está en el catálogo. El DENTIBLANC del catálogo es de 90 G, así que es otro producto. La descripción, la unidad, el precio (55,51 en UYU) y la categoría son correctos, y \"lista_para_alta\" es el estado que corresponde.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P03:LT-3330",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 1997,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 744
+  },
+  "costo_usd": 0.01221,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P03:LT-3387": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha coincide con la línea 30 del CSV: 70 GRS pasa a 70 G y el precio 63,89 pasa a 63.89 UYU. El GTIN 7792922330572 tiene dígito verificador válido y no está en el catálogo. DENTIBLANC CARIES 70 G tampoco existe en el catálogo (solo está DENTIBLANC BLANQUEADORA 90 G). La descripción, la categoría CUI-BUC-PAS y el campo peligro_deposito vacío son correctos.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P03:LT-3387",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 1930,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 744
+  },
+  "costo_usd": 0.01208,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P03:LT-3378": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha coincide con la línea 27 del CSV. El GTIN 7797460628105 tiene dígito verificador válido (suma 125, verificador 5) y no está en el catálogo. SONRISA MENTA FRESCA existe solo en 90 y 180 G, que son contenidos distintos, así que no hay duplicado. La descripción, la categoría, el precio en UYU y las fuentes están bien.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P03:LT-3378",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 1954,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 647
+  },
+  "costo_usd": 0.01116,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P04:HT40051": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Todos los campos coinciden con la fila 19 de la hoja Altas. El GTIN 7799485518485 tiene 13 dígitos y un dígito verificador válido, y no está en el catálogo. El Pureza Hidratante del catálogo es de 1000 ML, así que es otro producto. La descripción, la categoría y la moneda cumplen el estándar, y no hace falta FDS.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P04:HT40051",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2590,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 627
+  },
+  "costo_usd": 0.01223,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P04:HT40036": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Los datos coinciden con la fila 14 de la hoja Altas. El GTIN 7790316942707 tiene dígito verificador válido (suma 93, dígito 7) y no está en el catálogo. No hay producto PUREZA COCO de 1000 ML en el catálogo, así que no es duplicado. La conversión de cc a ML, la descripción, la categoría y la moneda UYU son correctas.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P04:HT40036",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2561,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 633
+  },
+  "costo_usd": 0.01223,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P04:HT40048": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha es correcta. El GTIN 7795320460353 tiene dígito verificador válido y no está en el catálogo. Pureza Avena 1000 ML tampoco existe allí: solo hay de 400 y 750 ML. «1 Lts» pasa a 1000 ML, la descripción sigue el formato estándar, el precio de 160,39 coincide con la fila 18 y la categoría es correcta.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P04:HT40048",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2557,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 640
+  },
+  "costo_usd": 0.01229,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P04:HT40018": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Los datos coinciden con la fila 8 de la hoja Altas. El GTIN 7790002613935 tiene dígito verificador válido (5) y no está en el catálogo. Aquaviva Neutro 200 ML no existe todavía: los Aquaviva del catálogo son Manzanilla. La descripción, la categoría CUI-HIG-INT y la moneda UYU son correctas. No aplica FDS porque no es de las familias de peligro. Corresponde lista_para_alta.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P04:HT40018",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2537,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 691
+  },
+  "costo_usd": 0.01276,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-127": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha es correcta. El bloque del PDF \"Dermalab Sun SPF 50 … Contenido neto: 200 ml · Código: DL-127\" coincide con marca, tipo, variante y contenido. El GTIN 7792303037113 tiene dígito verificador válido (3). No está en el catálogo: el SKU103157 es FPS 50+ y tiene otro GTIN, así que es un producto distinto. El precio 1411.99 es el de la fila 8 y, al no indicar moneda, va en UYU. La descripción y la categoría cumplen el estándar.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P05:DL-127",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3354,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 996
+  },
+  "costo_usd": 0.01745,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-121": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "El GTIN 7796076691862 tiene dígito verificador válido (2) y no está en el catálogo. El bloque DL-121 del PDF dice Sun SPF 30, protector solar, 200 ml. El precio 1359.07 coincide con la fila 6 de la lista, sin moneda indicada, por lo que es UYU. La descripción y la categoría cumplen el estándar. No es duplicado de SKU103157, que es FPS 50+.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P05:DL-121",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3353,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 878
+  },
+  "costo_usd": 0.01627,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P06:BF-518": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Todos los campos coinciden con la fila 8 de la hoja Altas. El GTIN 7792140788902 tiene dígito verificador válido y no está en el catálogo. Pañales Pequeños Pasos M x 30 no existe en el catálogo: el M del catálogo es de 36 UN. El precio es el de lista (344,36), no el de 316,81 con descuento. La descripción sigue el formato de \"todo lo demás\". El estado lista_para_alta es correcto.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P06:BF-518",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2496,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 640
+  },
+  "costo_usd": 0.01217,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P04:HT40003": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "peligro_deposito",
+    "valor_en_ficha": "pendiente_fds",
+    "valor_correcto": "vacío (el campo no corresponde)",
+    "cita": "Estándar §9: «Los aerosoles, los alcoholes y el alcohol en gel, las lavandinas, los limpiadores y los insecticidas y repelentes se reciben con su ficha de datos de seguridad… Los demás productos no llevan este campo.» La espuma de afeitar no está en esa lista, y la fila HT40003 dice solo «ESPUMA DE AFEITAR FILO MENTOL | 300 | cc».",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [
+   {
+    "campo": "peligro_deposito",
+    "fuente_en_ficha": "HigieneTotal_novedades.xlsx · Altas · fila 2",
+    "fuente_correcta": "sin fuente (el campo no corresponde a este producto)"
+   }
+  ],
+  "comentario": "Los demás campos coinciden con la fila 2 del Excel. El GTIN es válido y no está en el catálogo. La categoría y el precio son correctos. 300 cc se normaliza a 300 ML y la descripción está bien armada. El único problema es que se cargó peligro_deposito=pendiente_fds en un producto que no es de las familias con FDS.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P04:HT40003",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2707,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1399
+  },
+  "costo_usd": 0.02018,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P06:BF-551": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha coincide con la fila 20 de la hoja Altas: BF-551, Pañal Pequeños Pasos, talle P, 60 un, precio de lista 572.95. El GTIN 7799065860171 tiene dígito verificador válido (1) y no está en el catálogo. Ningún producto del catálogo coincide en marca, tipo, variante y contenido. La descripción sigue el formato de \"todo lo demás\", la categoría BEB-PAN-INF es correcta y no corresponde FDS ni pack.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P06:BF-551",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2492,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 678
+  },
+  "costo_usd": 0.01254,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-109": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha es correcta. El bloque del PDF de DL-109 dice \"Dermalab Urea 10 %\", crema, 400 ml. El GTIN 7790670659075 tiene dígito verificador válido (suma 135, dígito 5) y no está en el catálogo. El precio 736.22 coincide con la fila 2 de la lista y se carga en UYU. La categoría DER-COR-HID corresponde a una crema de urea corporal, y la descripción respeta el formato de \"todo lo demás\".",
+  "ficha_correcta_modelo": true,
+  "item_id": "P05:DL-109",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3273,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 845
+  },
+  "costo_usd": 0.01578,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P06:BF-539": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha es correcta. El GTIN 7791115123588 tiene dígito verificador válido (suma 92, dígito 8) y no está en el catálogo. Los SKU parecidos de Pequeños Pasos Aloe son de 80 y 50 unidades, así que son productos distintos. La descripción sigue el formato del estándar, el precio de lista es 107,3 en UYU y la categoría BEB-PAN-TOA corresponde. Las fuentes apuntan a la fila 16 de la hoja Altas.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P06:BF-539",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2701,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 749
+  },
+  "costo_usd": 0.01367,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P06:BF-590": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha coincide con la fila 34 de BebeFeliz_altas.xlsx: BF-590 | Pañal Pequeños Pasos | M | 48 un | 7791123452588 | 544.37. El GTIN tiene 13 dígitos y el dígito verificador (8) es válido. No está en el catálogo, y el producto más parecido (M x 36, SKU100371) difiere en el contenido, así que no es duplicado. La descripción, la categoría, el precio de lista (sin el descuento del 8 %) y la moneda UYU son correctos.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P06:BF-590",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2496,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 710
+  },
+  "costo_usd": 0.01287,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P06:BF-515": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Todos los campos coinciden con la fila 7 de la hoja Altas. El GTIN 7796210745413 tiene dígito verificador válido (3) y no está en el catálogo. El precio es el de lista (64.54), no el precio con descuento. La descripción sigue el formato \"Todo lo demás\" y la categoría BEB-PAN-TOA es la correcta para toallitas húmedas. Las fuentes son precisas.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P06:BF-515",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2732,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 723
+  },
+  "costo_usd": 0.01347,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P06:BF-572": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha coincide con la fila 27 de BebeFeliz_altas.xlsx. El GTIN 7795238192599 tiene dígito verificador válido y no está en el catálogo. El SKU103304 es de otra variante (ALOE), así que no hay duplicado. El precio de lista (106.88, sin el descuento del 8%), la moneda UYU, la categoría y la descripción son correctos.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P06:BF-572",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2752,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 722
+  },
+  "costo_usd": 0.0135,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P07:LHS-269": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha coincide con el catálogo del proveedor y con la FDS. El GTIN 7793634603527 es válido (dígito verificador 7) y no está en el catálogo de Ceibo. La FDS incluye LHS-269 y declara clase 8 y ONU 1791, es decir `corrosivo`. La descripción, el precio de 54,71 en UYU y la categoría son correctos, y el estado `lista_para_alta` corresponde.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P07:LHS-269",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 4079,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 659
+  },
+  "costo_usd": 0.01553,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P06:BF-521": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha es correcta. Todos los datos coinciden con la fila 9 de BebeFeliz_altas.xlsx: GTIN 7792102155315 con dígito verificador válido, pack 2 x 36 UN y precio de lista 876.68. La descripción respeta el formato del estándar. El GTIN no está en el catálogo y no hay un producto igual, así que lista_para_alta es correcto.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P06:BF-521",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2508,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 745
+  },
+  "costo_usd": 0.01325,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P07:LHS-251": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Todos los campos coinciden con la línea \"LHS-251 Alcohol Clarita 96 % 250 ML 7792138038309 $ 76,06\". El GTIN tiene dígito verificador válido (9) y no está en el catálogo. La FDS lista LHS-251 y su sección 14 dice ONU 1170, clase 3, por lo que corresponde liquido_inflamable. La descripción respeta el formato del estándar y el estado lista_para_alta es correcto.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P07:LHS-251",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 4001,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 633
+  },
+  "costo_usd": 0.01511,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P07:LHS-263": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Todos los campos coinciden con la fila LHS-263 del catálogo del proveedor: \"Lavandina Clarita Ropa Blanca 1 LT 7794419396986 $ 59,59\". El GTIN tiene dígito verificador válido y no está en el catálogo de Ceibo, y tampoco hay otra lavandina Clarita ahí. 1 LT son 1000 ML. La FDS lista LHS-263 y su sección 14 dice ONU 1791, clase 8, o sea corrosivo. La descripción respeta el formato del estándar.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P07:LHS-263",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 4063,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 797
+  },
+  "costo_usd": 0.01688,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P07:LHS-236": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha es correcta. El GTIN 7793326504736 tiene dígito verificador válido y no está en el catálogo. La descripción, el contenido de 900 ML, el precio de $ 146,13 en UYU y la categoría HOG-LIM-BAN coinciden con el catálogo del proveedor y el estándar. La FDS incluye el código LHS-236 y en la sección 14 dice «No regulado», así que `no_peligroso` es correcto.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P07:LHS-236",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 4002,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 809
+  },
+  "costo_usd": 0.01687,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P07:LHS-242": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Todos los campos coinciden con el catálogo del proveedor (LHS-242, Alcohol Clarita 96 % 1 LT, GTIN 7798133076711, $ 168,14) y con la FDS (ONU 1170, clase 3, que da liquido_inflamable). El dígito verificador del GTIN es válido y el GTIN no está en el catálogo de Ceibo. Ningún producto del catálogo coincide en marca, tipo, variante y contenido, así que no hay duplicado y el estado lista_para_alta es correcto.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P07:LHS-242",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3991,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 768
+  },
+  "costo_usd": 0.01644,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P08:IN7039": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha coincide con la fila 14 y con el estándar. El UPC 748618345709 pasa a 0748618345709 y su dígito verificador es válido. 10,0 fl oz son 295,7 ML, que redondea a 296. El GTIN no está en el catálogo y no hay ningún producto equivalente. La descripción, la categoría, la moneda USD y el precio son correctos.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P08:IN7039",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2605,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 740
+  },
+  "costo_usd": 0.01339,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P09:NV-233": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Todos los campos coinciden con la línea 20 del mail. El GTIN 7799515902222 tiene dígito verificador válido y no está en el catálogo. La descripción sigue el formato de suplementos, la categoría NUT-VIT-MIN es la correcta para el zinc y condicion_venta queda vacía. El precio es $ 273,44, en UYU. Ningún producto del catálogo coincide en marca, tipo, contenido y concentración, así que el estado lista_para_alta es correcto.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P09:NV-233",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2268,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 748
+  },
+  "costo_usd": 0.0128,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P09:NV-230": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha coincide con la línea 19 del mail y con el estándar. El GTIN 7791681280616 tiene dígito verificador válido (suma 94, verificador 6) y no está en el catálogo. La descripción sigue el formato de suplementos y condicion_venta queda vacío. El precio es $ 452,87, es decir UYU, y la categoría NUT-VIT-VIT es la correcta.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P09:NV-230",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2380,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 730
+  },
+  "costo_usd": 0.01284,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P08:IN7042": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "Todos los campos coinciden con la fila 15 de la hoja New items. El UPC 718168608562 pasa a 0718168608562 y su dígito verificador da 2, así que es válido. Ese GTIN no está en el catálogo y no hay un producto equivalente. La descripción sigue el formato de suplementos y la condición de venta queda vacía, como corresponde. El precio y la moneda USD son los de la lista.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P08:IN7042",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2772,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 833
+  },
+  "costo_usd": 0.01465,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P09:NV-215": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [
+   {
+    "campo": "marca",
+    "fuente_en_ficha": "Mail_NaturalVida_altas.txt línea 14",
+    "fuente_correcta": "Mail_NaturalVida_altas.txt, encabezado (Asunto: «Altas de octubre - Natural Vida»); la línea 14 no nombra la marca"
+   }
+  ],
+  "comentario": "Todos los campos coinciden con la línea 14 del mail y con el estándar. El GTIN 7794471871513 tiene dígito verificador válido y no está en el catálogo. Es un suplemento, así que condicion_venta va vacío y la descripción sigue el formato de suplementos. Solo la fuente de la marca es imprecisa.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P09:NV-215",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2238,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 969
+  },
+  "costo_usd": 0.01495,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P08:IN7030": {
+  "ficha_correcta": true,
+  "errores": [],
+  "errores_de_fuente": [],
+  "comentario": "La ficha es correcta. El UPC 185187720344 pasa a GTIN-13 como 0185187720344, y su dígito verificador da 4, que es válido. Ese GTIN no está en el catálogo. Es un suplemento dietario, así que condicion_venta va vacío. La descripción sigue el formato de suplementos. La moneda y el precio salen de la columna \"Unit cost (USD)\". Los datos coinciden con la fila 11.",
+  "ficha_correcta_modelo": true,
+  "item_id": "P08:IN7030",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2742,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 786
+  },
+  "costo_usd": 0.01412,
+  "modelo": "claude-sonnet-5-5"
+ }
+}

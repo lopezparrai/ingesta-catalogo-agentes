@@ -25,3 +25,6 @@ data/proveedores/P10_Demo_Proveedor/
 
 # Carpeta demo completa (por ahora fuera del repo)
 demo/
+
+# Capturas que guarda la app de Claude
+Claude outputs/

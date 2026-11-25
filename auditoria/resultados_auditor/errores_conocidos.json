@@ -1,0 +1,150 @@
+{
+ "P02:RIV-1293": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "marca",
+    "valor_en_ficha": "BRISA",
+    "valor_correcto": "FRESCOR",
+    "cita": "RIV-1293 | DESOD. BARRA FRESCOR S/ PERF. 50 G; el catálogo tiene SKU102415 con marca FRESCOR (P02). «BRISA» no aparece en la fila del código.",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "FRESCOR SIN PERFUME",
+    "valor_correcto": "SIN PERFUME",
+    "cita": "DESOD. BARRA FRESCOR S/ PERF. 50 G: FRESCOR es la marca y la variante es S/ PERF. = SIN PERFUME",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "DESODORANTE BARRA BRISA FRESCOR SIN PERFUME X 50 G",
+    "valor_correcto": "DESODORANTE BARRA FRESCOR SIN PERFUME X 50 G",
+    "cita": "Estándar sección 3: TIPO MARCA VARIANTE X CONTENIDO UNIDAD, con marca FRESCOR y variante SIN PERFUME",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "El GTIN es válido y no está en el catálogo. El estado lista_para_alta está bien. La marca está mal: la fila dice FRESCOR, no BRISA. Eso arrastra errores en la variante y en la descripción.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P02:RIV-1293",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2451,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1232
+  },
+  "costo_usd": 0.018,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P02:RIV-1284": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "marca",
+    "valor_en_ficha": "BRISA",
+    "valor_correcto": "FRESCOR",
+    "cita": "fila 52: «DESODORANTE AER. FRESCOR HOMBRE 150ML». La fila no menciona BRISA. El catálogo tiene SKU101092 «DESODORANTE AEROSOL FRESCOR HOMBRE X 250 ML» con marca FRESCOR y variante HOMBRE.",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "FRESCOR HOMBRE",
+    "valor_correcto": "HOMBRE",
+    "cita": "Catálogo: SKU101092 tiene marca FRESCOR y variante HOMBRE. En la fila 52, FRESCOR es la marca y HOMBRE la variante.",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "DESODORANTE AEROSOL BRISA FRESCOR HOMBRE X 150 ML",
+    "valor_correcto": "DESODORANTE AEROSOL FRESCOR HOMBRE X 150 ML",
+    "cita": "Estándar sección 3: TIPO MARCA VARIANTE X CONTENIDO UNIDAD. Con marca FRESCOR y variante HOMBRE, la descripción no lleva BRISA.",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "El GTIN es válido y no está en el catálogo. El contenido, el precio, la categoría y los datos de la FDS (ONU 1950, clase 2.1, aerosol_inflamable) son correctos. La ficha toma BRISA como marca y deja FRESCOR dentro de la variante. La fila dice FRESCOR HOMBRE, y en el catálogo FRESCOR es una marca. Por eso la marca, la variante y la descripción quedan mal.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P02:RIV-1284",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3492,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1667
+  },
+  "costo_usd": 0.02443,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P02:RIV-1248": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "marca",
+    "valor_en_ficha": "BRISA",
+    "valor_correcto": "FRESCOR",
+    "cita": "fila 51: RIV-1248 | DESODORANTE AER. FRESCOR S/ PERF. X 150 ML (la fila no menciona BRISA). Catálogo: SKU103738 ... FRESCOR SPORT ... marca FRESCOR; SKU104074 DESOD. AEROSOL FRESCOR SIN PERFUME 250CC, marca FRESCOR",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "FRESCOR SIN PERFUME",
+    "valor_correcto": "SIN PERFUME",
+    "cita": "DESODORANTE AER. FRESCOR S/ PERF. X 150 ML; S/ = SIN, PERF. = PERFUME. FRESCOR es la marca, no parte de la variante",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "DESODORANTE AEROSOL BRISA FRESCOR SIN PERFUME X 150 ML",
+    "valor_correcto": "DESODORANTE AEROSOL FRESCOR SIN PERFUME X 150 ML",
+    "cita": "Estándar sección 3: TIPO MARCA VARIANTE X CONTENIDO UNIDAD. La fila dice DESODORANTE AER. FRESCOR S/ PERF. X 150 ML, sin BRISA",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "El GTIN es válido, el precio y el contenido coinciden con la fila, y la FDS indica clase 2.1 y ONU 1950, así que peligro_deposito y numero_onu están bien. El error está en la marca: la fila del proveedor dice FRESCOR y \"BRISA\" solo aparece en el título de la FDS. Eso arrastra errores en variante y descripción.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P02:RIV-1248",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3497,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1540
+  },
+  "costo_usd": 0.02317,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P02:RIV-1347": {
+  "ficha_correcta": true,
+  "errores": [
+   {
+    "campo": "marca",
+    "valor_en_ficha": "BRISA (variante FRESCOR MUJER)",
+    "valor_correcto": "BRISA o FRESCOR, a confirmar",
+    "cita": "fila 57: «DESOD. AER. FRESCOR MUJER 150cc» (sin marca); FDS: «Desodorante Aerosol Brisa y Frescor»; catálogo: SKU101960 «FRESCOR» como marca",
+    "tipo": "dudoso"
+   }
+  ],
+  "errores_de_fuente": [
+   {
+    "campo": "marca",
+    "fuente_en_ficha": "ALTAS RIVERA OCT.xlsx, hoja Altas, fila 57",
+    "fuente_correcta": "FDS_Brisa_Frescor_desaer.pdf, página 1 (la fila 57 no trae la palabra BRISA)"
+   }
+  ],
+  "comentario": "Los datos verificables están bien. El GTIN tiene 13 dígitos y el verificador (9) es válido. El contenido normaliza 150cc a 150 ML. El precio, la categoría, la descripción y la FDS (clase 2.1, ONU 1950) coinciden con las fuentes. No es duplicado: el GTIN no está en el catálogo. Lo único dudoso es la marca, porque la fila 57 no la dice y solo la sugiere la FDS («Brisa y Frescor»).",
+  "ficha_correcta_modelo": true,
+  "item_id": "P02:RIV-1347",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3476,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1935
+  },
+  "costo_usd": 0.02708,
+  "modelo": "claude-sonnet-5-5"
+ }
+}

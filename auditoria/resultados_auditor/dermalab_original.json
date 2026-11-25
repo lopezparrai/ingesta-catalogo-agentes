@@ -1,0 +1,880 @@
+{
+ "P05:DL-151": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "tipo",
+    "valor_en_ficha": "GEL LIMPIADOR",
+    "valor_correcto": "CREMA",
+    "cita": "Dermalab Hydra Plus\nCrema. Textura liviana de rápida absorción. Hidratación facial de uso diario.\nContenido neto: 50 ml · Código: DL-151",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "PURIFY",
+    "valor_correcto": "HYDRA PLUS",
+    "cita": "Dermalab Hydra Plus\nCrema. ... Contenido neto: 50 ml · Código: DL-151 (Purify es el bloque de DL-103 y DL-118)",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "GEL LIMPIADOR DERMALAB PURIFY X 50 ML",
+    "valor_correcto": "CREMA DERMALAB HYDRA PLUS X 50 ML",
+    "cita": "Todo lo demás: TIPO MARCA VARIANTE X CONTENIDO UNIDAD; bloque DL-151: Dermalab Hydra Plus / Crema / 50 ml",
+    "tipo": "error"
+   },
+   {
+    "campo": "categoria",
+    "valor_en_ficha": "DER-FAC-LIM",
+    "valor_correcto": "DER-FAC-HID",
+    "cita": "Crema. ... Hidratación facial de uso diario. (DER-FAC-HID: Hidratación facial)",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "La ficha tomó tipo y variante del producto vecino (Dermalab Purify, gel limpiador), no del bloque de DL-151, que es Dermalab Hydra Plus, una crema de hidratación facial de 50 ml. Por eso están mal tipo, variante, descripción y categoría. El estado a_revision y los motivos son correctos: no hay GTIN y falta el precio, que no figura en los archivos mostrados.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P05:DL-151",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2884,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1206
+  },
+  "costo_usd": 0.01861,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-106": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "tipo",
+    "valor_en_ficha": "CREMA",
+    "valor_correcto": "PROTECTOR SOLAR",
+    "cita": "Dermalab Sun SPF 50+\nProtector solar. Amplio espectro UVA/UVB. Resistente al agua.\nContenido neto: 50 ml · Código: DL-106",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "UREA 10 %",
+    "valor_correcto": "SUN FPS 50+",
+    "cita": "Dermalab Sun SPF 50+ ... Código: DL-106 (el bloque de Dermalab Urea 10 % es el de DL-109, 400 ml). El estándar pide FPS en vez de SPF.",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "CREMA DERMALAB UREA 10 % X 50 ML",
+    "valor_correcto": "PROTECTOR SOLAR DERMALAB SUN FPS 50+ X 50 ML",
+    "cita": "Dermalab Sun SPF 50+ / Protector solar / Contenido neto: 50 ml · Código: DL-106",
+    "tipo": "error"
+   },
+   {
+    "campo": "categoria",
+    "valor_en_ficha": "DER-COR-HID",
+    "valor_correcto": "DER-SOL-ADU",
+    "cita": "Protector solar. Amplio espectro UVA/UVB. Resistente al agua. ... Código: DL-106; taxonomía: DER-SOL-ADU, Protectores para adultos",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "Los datos de producto de la ficha son del bloque vecino (DL-109, Urea 10 %). El bloque de DL-106 es Dermalab Sun SPF 50+, protector solar de 50 ml. Por eso están mal tipo, variante, descripción y categoría. La marca, el contenido de 50 ML, el estado a_revision y los motivos (sin GTIN ni precio en los archivos) son correctos.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P05:DL-106",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2894,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1383
+  },
+  "costo_usd": 0.0204,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-118": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "tipo",
+    "valor_en_ficha": "PROTECTOR SOLAR",
+    "valor_correcto": "GEL LIMPIADOR",
+    "cita": "Dermalab Purify\nGel limpiador. Limpia en profundidad sin resecar. Para piel mixta a grasa.\nContenido neto: 150 ml · Código: DL-118",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "SUN FPS 30",
+    "valor_correcto": "PURIFY",
+    "cita": "Dermalab Purify\nGel limpiador. ... Contenido neto: 150 ml · Código: DL-118",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "PROTECTOR SOLAR DERMALAB SUN FPS 30 X 150 ML",
+    "valor_correcto": "GEL LIMPIADOR DERMALAB PURIFY X 150 ML",
+    "cita": "Todo lo demás: `TIPO MARCA VARIANTE X CONTENIDO UNIDAD`; el bloque de DL-118 es Dermalab Purify, Gel limpiador",
+    "tipo": "error"
+   },
+   {
+    "campo": "categoria",
+    "valor_en_ficha": "DER-SOL-ADU",
+    "valor_correcto": "DER-FAC-LIM",
+    "cita": "DER-FAC-LIM,Dermocosmética,Facial,Limpieza facial,\"Geles limpiadores, aguas micelares y desmaquillantes.\"",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "El bloque de DL-118 en el PDF es Dermalab Purify, un gel limpiador de 150 ml. La ficha tomó \"Sun SPF 30\", que es del bloque vecino (DL-121), y por eso tipo, variante, descripción y categoría están mal. El GTIN es válido y no está en el catálogo. El precio y el contenido coinciden con los archivos.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P05:DL-118",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3380,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1198
+  },
+  "costo_usd": 0.01952,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-103": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "tipo",
+    "valor_en_ficha": "PROTECTOR SOLAR",
+    "valor_correcto": "GEL LIMPIADOR",
+    "cita": "Dermalab Purify\nGel limpiador. Limpia en profundidad sin resecar. Para piel mixta a grasa.\nContenido neto: 300 ml · Código: DL-103",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "SUN FPS 50+",
+    "valor_correcto": "PURIFY",
+    "cita": "Dermalab Purify ... Contenido neto: 300 ml · Código: DL-103 (el bloque Dermalab Sun SPF 50+ es el de DL-106, 50 ml)",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "PROTECTOR SOLAR DERMALAB SUN FPS 50+ X 300 ML",
+    "valor_correcto": "GEL LIMPIADOR DERMALAB PURIFY X 300 ML",
+    "cita": "Todo lo demás: `TIPO MARCA VARIANTE X CONTENIDO UNIDAD`; DL-103 es Dermalab Purify, Gel limpiador, 300 ml",
+    "tipo": "error"
+   },
+   {
+    "campo": "categoria",
+    "valor_en_ficha": "DER-SOL-ADU",
+    "valor_correcto": "DER-FAC-LIM",
+    "cita": "DER-FAC-LIM,...,Limpieza facial,\"Geles limpiadores, aguas micelares y desmaquillantes.\"",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "La ficha tomó tipo, variante y categoría del bloque vecino (DL-106, Sun SPF 50+) y mezcló eso con el contenido de DL-103. DL-103 es Dermalab Purify, un gel limpiador de 300 ml. El estado a_revision y los motivos (sin GTIN y sin precio) son razonables.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P05:DL-103",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2942,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1206
+  },
+  "costo_usd": 0.01872,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-115": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "tipo",
+    "valor_en_ficha": "GEL LIMPIADOR",
+    "valor_correcto": "CREMA",
+    "cita": "Dermalab Hydra Plus SPF 30\nCrema. Textura liviana de rápida absorción. Hidratación facial de uso diario.\nContenido neto: 50 ml · Código: DL-115",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "PURIFY",
+    "valor_correcto": "HYDRA PLUS FPS 30",
+    "cita": "Dermalab Hydra Plus SPF 30\nCrema. ... Contenido neto: 50 ml · Código: DL-115 (Purify es el bloque vecino DL-103/DL-118)",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "GEL LIMPIADOR DERMALAB PURIFY X 50 ML",
+    "valor_correcto": "CREMA DERMALAB HYDRA PLUS FPS 30 X 50 ML",
+    "cita": "Todo lo demás: `TIPO MARCA VARIANTE X CONTENIDO UNIDAD`; el bloque de DL-115 es «Dermalab Hydra Plus SPF 30 / Crema»; SPF se escribe FPS",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "La ficha tomó tipo y variante de un bloque vecino (Purify, gel limpiador). El bloque de DL-115 es Dermalab Hydra Plus SPF 30, una crema de hidratación facial de 50 ml. El GTIN es válido y no está en el catálogo. El precio, la moneda, el contenido y la categoría DER-FAC-HID son correctos.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P05:DL-115",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3338,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1267
+  },
+  "costo_usd": 0.02013,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-121": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "tipo",
+    "valor_en_ficha": "SERUM",
+    "valor_correcto": "PROTECTOR SOLAR",
+    "cita": "Dermalab Sun SPF 30\nProtector solar. Amplio espectro UVA/UVB. Resistente al agua.\nContenido neto: 200 ml · Código: DL-121",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "LIFT NOCHE",
+    "valor_correcto": "SUN FPS 30",
+    "cita": "Dermalab Sun SPF 30 ... Contenido neto: 200 ml · Código: DL-121 (LIFT NOCHE es el bloque de DL-124)",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "SERUM DERMALAB LIFT NOCHE X 200 ML",
+    "valor_correcto": "PROTECTOR SOLAR DERMALAB SUN FPS 30 X 200 ML",
+    "cita": "Dermalab Sun SPF 30 ... Código: DL-121; estándar: TIPO MARCA VARIANTE X CONTENIDO UNIDAD, SPF se escribe FPS",
+    "tipo": "error"
+   },
+   {
+    "campo": "categoria",
+    "valor_en_ficha": "DER-FAC-ANT",
+    "valor_correcto": "DER-SOL-ADU",
+    "cita": "Protector solar. Amplio espectro UVA/UVB (DL-121); taxonomía: DER-SOL-ADU Protectores para adultos",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "La ficha tomó los datos del bloque vecino (Lift Noche, DL-124) en vez del de DL-121, que es Dermalab Sun SPF 30, protector solar de 200 ml. GTIN, precio y estado están bien: el GTIN es válido y no está en el catálogo, y SKU103157 es otra variante (FPS 50+).",
+  "ficha_correcta_modelo": false,
+  "item_id": "P05:DL-121",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3343,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1198
+  },
+  "costo_usd": 0.01945,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-109": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "tipo",
+    "valor_en_ficha": "SERUM",
+    "valor_correcto": "CREMA",
+    "cita": "Dermalab Urea 10 %\nCrema. Textura liviana de rápida absorción. Hidratación intensa para el cuerpo, ideal para piel muy seca.\nContenido neto: 400 ml · Código: DL-109",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "LIFT",
+    "valor_correcto": "UREA 10 %",
+    "cita": "Dermalab Urea 10 %\n...Contenido neto: 400 ml · Código: DL-109 (Dermalab Lift es el bloque de DL-112, con 30 ml)",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "SERUM DERMALAB LIFT X 400 ML",
+    "valor_correcto": "CREMA DERMALAB UREA 10 % X 400 ML",
+    "cita": "Dermalab Urea 10 %\nCrema. ... Contenido neto: 400 ml · Código: DL-109",
+    "tipo": "error"
+   },
+   {
+    "campo": "categoria",
+    "valor_en_ficha": "DER-FAC-ANT",
+    "valor_correcto": "DER-COR-HID",
+    "cita": "Hidratación intensa para el cuerpo (DL-109); taxonomía: DER-COR-HID 'Cremas y lociones de cuerpo, incluidas las de urea.'",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "La ficha tomó el nombre y la descripción del bloque vecino (Dermalab Lift, DL-112) y los combinó con el contenido de DL-109. El producto DL-109 es Dermalab Urea 10 %, una crema corporal de 400 ml. GTIN, precio y moneda son correctos y el GTIN no está en el catálogo.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P05:DL-109",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3292,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1211
+  },
+  "costo_usd": 0.01947,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-112": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "tipo",
+    "valor_en_ficha": "CREMA",
+    "valor_correcto": "SERUM",
+    "cita": "Dermalab Lift\nSérum. Con péptidos y ácido hialurónico. Reduce arrugas visibles en cuatro semanas.\nContenido neto: 30 ml · Código: DL-112",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "HYDRA PLUS FPS 30",
+    "valor_correcto": "LIFT",
+    "cita": "Dermalab Lift\nSérum. ... Contenido neto: 30 ml · Código: DL-112 (el bloque «Dermalab Hydra Plus SPF 30» es del código DL-115, 50 ml)",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "CREMA DERMALAB HYDRA PLUS FPS 30 X 30 ML",
+    "valor_correcto": "SERUM DERMALAB LIFT X 30 ML",
+    "cita": "Todo lo demás: TIPO MARCA VARIANTE X CONTENIDO UNIDAD; bloque DL-112: «Dermalab Lift / Sérum»",
+    "tipo": "error"
+   },
+   {
+    "campo": "categoria",
+    "valor_en_ficha": "DER-FAC-HID",
+    "valor_correcto": "DER-FAC-ANT",
+    "cita": "DER-FAC-ANT: «Sérums y cremas cuyo beneficio principal es antiarrugas o firmeza»; el bloque DL-112 dice «Reduce arrugas visibles en cuatro semanas»",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "La ficha tomó los datos del bloque vecino (Hydra Plus SPF 30, DL-115) en lugar del bloque de DL-112 (Dermalab Lift, sérum, 30 ml). Quedan mal tipo, variante, descripción y categoría. GTIN, precio y contenido están bien, y el GTIN no figura en el catálogo.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P05:DL-112",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3314,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1416
+  },
+  "costo_usd": 0.02157,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-124": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "tipo",
+    "valor_en_ficha": "PROTECTOR SOLAR",
+    "valor_correcto": "SERUM",
+    "cita": "Dermalab Lift Noche\nSérum. Con péptidos y ácido hialurónico. Reduce arrugas visibles en cuatro semanas.\nContenido neto: 30 ml · Código: DL-124",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "SUN FPS 50",
+    "valor_correcto": "LIFT NOCHE",
+    "cita": "Dermalab Lift Noche ... Contenido neto: 30 ml · Código: DL-124",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "PROTECTOR SOLAR DERMALAB SUN FPS 50 X 30 ML",
+    "valor_correcto": "SERUM DERMALAB LIFT NOCHE X 30 ML",
+    "cita": "Dermalab Lift Noche\nSérum. ... Contenido neto: 30 ml · Código: DL-124 (el bloque de Sun SPF 50 es el de DL-127, 200 ml)",
+    "tipo": "error"
+   },
+   {
+    "campo": "categoria",
+    "valor_en_ficha": "DER-SOL-ADU",
+    "valor_correcto": "DER-FAC-ANT",
+    "cita": "Taxonomía: DER-FAC-ANT «Sérums y cremas cuyo beneficio principal es antiarrugas o firmeza.» El texto dice: «Reduce arrugas visibles en cuatro semanas.»",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [
+   {
+    "campo": "marca",
+    "fuente_en_ficha": "Dermalab_lanzamientos_2026.pdf página 1",
+    "fuente_correcta": "Dermalab_lanzamientos_2026.pdf página 1 (bloque Dermalab Lift Noche, código DL-124)"
+   },
+   {
+    "campo": "tipo",
+    "fuente_en_ficha": "Dermalab_lanzamientos_2026.pdf página 1",
+    "fuente_correcta": "Dermalab_lanzamientos_2026.pdf página 1 (bloque Dermalab Lift Noche, código DL-124)"
+   }
+  ],
+  "comentario": "La ficha tomó tipo, variante, descripción y categoría del bloque vecino (Dermalab Sun SPF 50, DL-127). DL-124 es el sérum Lift Noche de 30 ml. GTIN válido, precio 737.72 y UYU correctos, y no hay duplicado en el catálogo.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P05:DL-124",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3401,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1435
+  },
+  "costo_usd": 0.02193,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-154": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "tipo",
+    "valor_en_ficha": "CREMA",
+    "valor_correcto": "AGUA MICELAR",
+    "cita": "Dermalab Sensitive\nAgua micelar. Desmaquilla y limpia en un solo paso. Apta para piel sensible.\nContenido neto: 400 ml · Código: DL-154",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "CLEAR",
+    "valor_correcto": "SENSITIVE",
+    "cita": "Dermalab Sensitive\nAgua micelar. ... Contenido neto: 400 ml · Código: DL-154 (Dermalab Clear es el encabezado del bloque siguiente, DL-130)",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "CREMA DERMALAB CLEAR X 400 ML",
+    "valor_correcto": "AGUA MICELAR DERMALAB SENSITIVE X 400 ML",
+    "cita": "Dermalab Sensitive\nAgua micelar. ... Contenido neto: 400 ml · Código: DL-154",
+    "tipo": "error"
+   },
+   {
+    "campo": "categoria",
+    "valor_en_ficha": "DER-FAC-ACN",
+    "valor_correcto": "DER-FAC-LIM",
+    "cita": "Taxonomía: DER-FAC-LIM «Geles limpiadores, aguas micelares y desmaquillantes.» El bloque de DL-154 es un agua micelar, no la crema para piel acneica (DL-130).",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "La ficha tomó el nombre, el tipo y la descripción del bloque vecino (Dermalab Clear, DL-130). El bloque de DL-154 es Dermalab Sensitive, agua micelar de 400 ml. El estado a_revision y los motivos son correctos: el PDF no trae GTIN, precio ni moneda.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P05:DL-154",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2825,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1253
+  },
+  "costo_usd": 0.01896,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-127": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "tipo",
+    "valor_en_ficha": "AGUA MICELAR",
+    "valor_correcto": "PROTECTOR SOLAR",
+    "cita": "Dermalab Sun SPF 50 / Protector solar. Amplio espectro UVA/UVB. Resistente al agua. / Contenido neto: 200 ml · Código: DL-127",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "SENSITIVE",
+    "valor_correcto": "SUN FPS 50",
+    "cita": "Dermalab Sun SPF 50 ... Contenido neto: 200 ml · Código: DL-127 (el título «Dermalab Sensitive» encabeza el bloque siguiente, DL-154). El estándar pide FPS en lugar de SPF.",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "AGUA MICELAR DERMALAB SENSITIVE X 200 ML",
+    "valor_correcto": "PROTECTOR SOLAR DERMALAB SUN FPS 50 X 200 ML",
+    "cita": "Todo lo demás: TIPO MARCA VARIANTE X CONTENIDO UNIDAD; el bloque de DL-127 es Dermalab Sun SPF 50, protector solar",
+    "tipo": "error"
+   },
+   {
+    "campo": "categoria",
+    "valor_en_ficha": "DER-FAC-LIM",
+    "valor_correcto": "DER-SOL-ADU",
+    "cita": "DER-SOL-ADU,Dermocosmética,Protección solar,Protectores para adultos; DL-127 es Protector solar, no agua micelar",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "La ficha tomó el título y la descripción del bloque vecino (Dermalab Sensitive, agua micelar, DL-154) en vez del bloque de DL-127, que es Dermalab Sun SPF 50, protector solar de 200 ml. Tipo, variante, descripción y categoría están mal. GTIN, precio, moneda y contenido son correctos, y el GTIN no está en el catálogo.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P05:DL-127",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3331,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1542
+  },
+  "costo_usd": 0.02286,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-133": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "variante",
+    "valor_en_ficha": "KIDS FPS 50+",
+    "valor_correcto": "SUN FPS 30",
+    "cita": "Dermalab Sun SPF 30\nProtector solar. Amplio espectro UVA/UVB. Resistente al agua.\nContenido neto: 50 ml · Código: DL-133\nDermalab Sun Kids SPF 50+",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "PROTECTOR SOLAR DERMALAB KIDS FPS 50+ X 50 ML",
+    "valor_correcto": "PROTECTOR SOLAR DERMALAB SUN FPS 30 X 50 ML",
+    "cita": "Dermalab Sun SPF 30 ... Contenido neto: 50 ml · Código: DL-133",
+    "tipo": "error"
+   },
+   {
+    "campo": "categoria",
+    "valor_en_ficha": "DER-SOL-INF",
+    "valor_correcto": "DER-SOL-ADU",
+    "cita": "Dermalab Sun SPF 30 ... Código: DL-133 (el título 'Dermalab Sun Kids SPF 50+' al final de la página es el encabezado del producto siguiente, no del bloque DL-133). Taxonomía: DER-SOL-INF = 'Protectores formulados para niños o bebés.'",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "Los datos de la ficha vienen del título del producto vecino: 'Dermalab Sun Kids SPF 50+' es el encabezado del bloque siguiente, cortado al pie de la página. El bloque de DL-133 es 'Dermalab Sun SPF 30', 50 ml. Por eso la variante, la descripción y la categoría están mal. El GTIN es válido y no está en el catálogo, y el precio coincide con la lista.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P05:DL-133",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3412,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1419
+  },
+  "costo_usd": 0.02179,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-136": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "tipo",
+    "valor_en_ficha": "GEL",
+    "valor_correcto": "PROTECTOR SOLAR",
+    "cita": "Protector solar. Amplio espectro UVA/UVB. Resistente al agua. Formulado especialmente para la piel de los niños.\nContenido neto: 200 ml · Código: DL-136",
+    "tipo": "error"
+   },
+   {
+    "campo": "categoria",
+    "valor_en_ficha": "DER-SOL-POS",
+    "valor_correcto": "DER-SOL-INF",
+    "cita": "Formulado especialmente para la piel de los niños. ... Código: DL-136 / taxonomía: DER-SOL-INF «Protectores formulados para niños o bebés.»",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "AFTER SUN",
+    "valor_correcto": "vacío o el nombre del producto de DL-136 (no figura en el texto)",
+    "cita": "Dermalab Sun After Sun\nGel. Calma y refresca la piel después de la exposición al sol.\nContenido neto: 200 ml · Código: DL-139",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "GEL DERMALAB AFTER SUN X 200 ML",
+    "valor_correcto": "PROTECTOR SOLAR DERMALAB (variante si se determina) X 200 ML",
+    "cita": "El bloque 'Dermalab Sun After Sun / Gel...' termina en 'Código: DL-139'; el bloque que termina en DL-136 es 'Protector solar... piel de los niños'",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [
+   {
+    "campo": "marca",
+    "fuente_en_ficha": "Dermalab_lanzamientos_2026.pdf p.1",
+    "fuente_correcta": "Dermalab_lanzamientos_2026.pdf p.2"
+   },
+   {
+    "campo": "tipo",
+    "fuente_en_ficha": "Dermalab_lanzamientos_2026.pdf p.1",
+    "fuente_correcta": "Dermalab_lanzamientos_2026.pdf p.2"
+   },
+   {
+    "campo": "contenido",
+    "fuente_en_ficha": "Dermalab_lanzamientos_2026.pdf p.1",
+    "fuente_correcta": "Dermalab_lanzamientos_2026.pdf p.2"
+   },
+   {
+    "campo": "unidad",
+    "fuente_en_ficha": "Dermalab_lanzamientos_2026.pdf p.1",
+    "fuente_correcta": "Dermalab_lanzamientos_2026.pdf p.2"
+   },
+   {
+    "campo": "categoria",
+    "fuente_en_ficha": "Dermalab_lanzamientos_2026.pdf p.1",
+    "fuente_correcta": "Dermalab_lanzamientos_2026.pdf p.2"
+   }
+  ],
+  "comentario": "La ficha tomó los datos del bloque vecino (DL-139, After Sun, gel). El DL-136 es un protector solar para niños de 200 ml, así que tipo, categoría, variante y descripción están mal. GTIN, precio y contenido son correctos.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P05:DL-136",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2694,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1873
+  },
+  "costo_usd": 0.0249,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-139": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "tipo",
+    "valor_en_ficha": "PROTECTOR SOLAR",
+    "valor_correcto": "GEL",
+    "cita": "Dermalab Sun After Sun\nGel. Calma y refresca la piel después de la exposición al sol.\nContenido neto: 200 ml · Código: DL-139",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "FPS 50",
+    "valor_correcto": "SUN AFTER SUN",
+    "cita": "Dermalab Sun After Sun\nGel. Calma y refresca la piel después de la exposición al sol.\nContenido neto: 200 ml · Código: DL-139 (el «Dermalab Sun SPF 50» pertenece al código DL-142)",
+    "tipo": "error"
+   },
+   {
+    "campo": "categoria",
+    "valor_en_ficha": "DER-SOL-ADU",
+    "valor_correcto": "DER-SOL-POS",
+    "cita": "DER-SOL-POS ... Post solar: After sun y geles calmantes para después del sol.",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "PROTECTOR SOLAR DERMALAB FPS 50 X 200 ML",
+    "valor_correcto": "GEL DERMALAB SUN AFTER SUN X 200 ML",
+    "cita": "Todo lo demás: TIPO MARCA VARIANTE X CONTENIDO UNIDAD; el bloque de DL-139 es «Dermalab Sun After Sun / Gel.»",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "La ficha tomó tipo, variante y categoría del bloque vecino (DL-142, Sun SPF 50, protector solar). El bloque de DL-139 es Dermalab Sun After Sun, un gel post solar de 200 ml. GTIN válido y precio coherentes con la fila 12.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P05:DL-139",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2708,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1421
+  },
+  "costo_usd": 0.02041,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-130": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "tipo",
+    "valor_en_ficha": "PROTECTOR SOLAR",
+    "valor_correcto": "CREMA",
+    "cita": "Dermalab Clear\nCrema. Textura liviana de rápida absorción. Para piel con tendencia acneica: reduce brillos e imperfecciones.\nContenido neto: 40 ml · Código: DL-130",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "FPS 30",
+    "valor_correcto": "CLEAR",
+    "cita": "Dermalab Clear ... Contenido neto: 40 ml · Código: DL-130 (el «Dermalab Sun SPF 30» es el bloque siguiente, código DL-133)",
+    "tipo": "error"
+   },
+   {
+    "campo": "categoria",
+    "valor_en_ficha": "DER-SOL-ADU",
+    "valor_correcto": "DER-FAC-ACN",
+    "cita": "Para piel con tendencia acneica: reduce brillos e imperfecciones. (taxonomía: DER-FAC-ACN, Piel acneica)",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "PROTECTOR SOLAR DERMALAB FPS 30 X 40 ML",
+    "valor_correcto": "CREMA DERMALAB CLEAR X 40 ML",
+    "cita": "Estándar sección 3: TIPO MARCA VARIANTE X CONTENIDO UNIDAD; bloque DL-130: «Dermalab Clear. Crema.»",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [
+   {
+    "campo": "tipo",
+    "fuente_en_ficha": "Dermalab_lanzamientos_2026.pdf p.1 (leído del bloque vecino DL-133)",
+    "fuente_correcta": "Dermalab_lanzamientos_2026.pdf p.1, bloque «Dermalab Clear» (DL-130)"
+   }
+  ],
+  "comentario": "La ficha tomó tipo y variante (Protector solar, SPF 30) del bloque vecino DL-133. El bloque de DL-130 es Dermalab Clear, una crema para piel acneica de 40 ml. Por eso tipo, variante, categoría y descripción están mal. GTIN, precio y contenido son correctos.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P05:DL-130",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 3374,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1322
+  },
+  "costo_usd": 0.02075,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-142": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "tipo",
+    "valor_en_ficha": "AGUA MICELAR",
+    "valor_correcto": "PROTECTOR SOLAR",
+    "cita": "Dermalab Sun SPF 50\nProtector solar. Amplio espectro UVA/UVB. Resistente al agua.\nContenido neto: 50 ml · Código: DL-142",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "SENSITIVE",
+    "valor_correcto": "SUN FPS 50",
+    "cita": "Dermalab Sun SPF 50 ... Contenido neto: 50 ml · Código: DL-142 (el estándar pide FPS en lugar de SPF)",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "AGUA MICELAR DERMALAB SENSITIVE X 50 ML",
+    "valor_correcto": "PROTECTOR SOLAR DERMALAB SUN FPS 50 X 50 ML",
+    "cita": "Todo lo demás: `TIPO MARCA VARIANTE X CONTENIDO UNIDAD`",
+    "tipo": "error"
+   },
+   {
+    "campo": "categoria",
+    "valor_en_ficha": "DER-FAC-LIM",
+    "valor_correcto": "DER-SOL-ADU",
+    "cita": "DER-SOL-ADU,Dermocosmética,Protección solar,Protectores para adultos (el DL-142 es un protector solar no infantil)",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "La ficha usó el bloque vecino (Dermalab Sensitive, agua micelar, código DL-145) y no el del código DL-142. En el PDF el código va al final de cada bloque, y el bloque de DL-142 es Dermalab Sun SPF 50, un protector solar de 50 ml. El GTIN es válido, no está en el catálogo, y el precio y el contenido son correctos.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P05:DL-142",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2723,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1497
+  },
+  "costo_usd": 0.0212,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-145": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "tipo",
+    "valor_en_ficha": "CREMA",
+    "valor_correcto": "AGUA MICELAR",
+    "cita": "Dermalab Sensitive\nAgua micelar. Desmaquilla y limpia en un solo paso. Apta para piel sensible.\nContenido neto: 200 ml · Código: DL-145",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "UREA 10 %",
+    "valor_correcto": "SENSITIVE",
+    "cita": "Dermalab Sensitive ... Contenido neto: 200 ml · Código: DL-145",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "CREMA DERMALAB UREA 10 % X 200 ML",
+    "valor_correcto": "AGUA MICELAR DERMALAB SENSITIVE X 200 ML",
+    "cita": "Dermalab Sensitive\nAgua micelar... Código: DL-145 (el bloque de Urea 10 % termina en Código: DL-148)",
+    "tipo": "error"
+   },
+   {
+    "campo": "categoria",
+    "valor_en_ficha": "DER-COR-HID",
+    "valor_correcto": "DER-FAC-LIM",
+    "cita": "Limpieza facial: Geles limpiadores, aguas micelares y desmaquillantes.",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "En el PDF cada bloque termina con su código: el DL-145 corresponde a Dermalab Sensitive (agua micelar), no a Urea 10 %, que es del DL-148. Tipo, variante, descripción y categoría vienen del producto vecino. GTIN, precio y contenido están bien.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P05:DL-145",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2662,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1387
+  },
+  "costo_usd": 0.01997,
+  "modelo": "claude-sonnet-5-5"
+ },
+ "P05:DL-148": {
+  "ficha_correcta": false,
+  "errores": [
+   {
+    "campo": "marca",
+    "valor_en_ficha": "null",
+    "valor_correcto": "DERMALAB",
+    "cita": "Dermalab Urea 10 % / Crema. Textura liviana de rápida absorción... Contenido neto: 200 ml · Código: DL-148",
+    "tipo": "error"
+   },
+   {
+    "campo": "tipo",
+    "valor_en_ficha": "null",
+    "valor_correcto": "CREMA",
+    "cita": "Crema. Textura liviana de rápida absorción. Hidratación intensa para el cuerpo... Código: DL-148 (CREMA figura en el vocabulario)",
+    "tipo": "error"
+   },
+   {
+    "campo": "variante",
+    "valor_en_ficha": "null",
+    "valor_correcto": "UREA 10 %",
+    "cita": "Dermalab Urea 10 %",
+    "tipo": "error"
+   },
+   {
+    "campo": "categoria",
+    "valor_en_ficha": "null",
+    "valor_correcto": "DER-COR-HID",
+    "cita": "DER-COR-HID ... Cremas y lociones de cuerpo, incluidas las de urea.",
+    "tipo": "error"
+   },
+   {
+    "campo": "descripcion",
+    "valor_en_ficha": "null",
+    "valor_correcto": "CREMA DERMALAB UREA 10 % X 200 ML",
+    "cita": "Todo lo demás: `TIPO MARCA VARIANTE X CONTENIDO UNIDAD`",
+    "tipo": "error"
+   },
+   {
+    "campo": "estado",
+    "valor_en_ficha": "a_revision",
+    "valor_correcto": "lista_para_alta",
+    "cita": "El GTIN 7796703472314 tiene 13 dígitos y dígito verificador válido, no está en el catálogo. Los datos no informados sí figuran en el PDF.",
+    "tipo": "error"
+   },
+   {
+    "campo": "motivos_revision",
+    "valor_en_ficha": "[\"dato_obligatorio_faltante\"]",
+    "valor_correcto": "[]",
+    "cita": "dato_obligatorio_faltante solo aplica si el dato 'no está en ningún archivo del proveedor'; marca, tipo y categoría se determinan del bloque DL-148.",
+    "tipo": "error"
+   }
+  ],
+  "errores_de_fuente": [],
+  "comentario": "La ficha dejó vacíos marca, tipo, variante, categoría y descripción, que se podían determinar del bloque DL-148 del PDF (Dermalab Urea 10 %, crema, 200 ml). Sin esos vacíos el ítem queda lista_para_alta. GTIN válido y sin duplicado en el catálogo. El precio y el contenido son correctos.",
+  "ficha_correcta_modelo": false,
+  "item_id": "P05:DL-148",
+  "lecturas_fallidas": 0,
+  "uso": {
+   "input": 2397,
+   "cache_escrito": 0,
+   "cache_leido": 7792,
+   "output": 1671
+  },
+  "costo_usd": 0.02228,
+  "modelo": "claude-sonnet-5-5"
+ }
+}
