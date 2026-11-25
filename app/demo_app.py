@@ -523,6 +523,9 @@ def _seccion_pedido(pids: list, fichas: list, NOM: dict, fijo: str | None):
                     archivos = [a for a in fila.get("archivos", "").split(" | ") if a and "fichas_de_seguridad" not in a]
     except Exception:
         pass
+    if not archivos:
+        carp = next((c for c in (RAIZ / "data" / "proveedores").glob(f"{pv_sel}_*") if c.is_dir()), None)
+        archivos = sorted(f.name for f in carp.iterdir() if f.is_file()) if carp else []
     txt = CAL.mensaje_proveedor(NOM.get(pv_sel, pv_sel), " y ".join(archivos) or "el archivo enviado",
                                 [x for x in fichas if CAL.proveedor_de(x["item_id"]) == pv_sel])
     st.caption("Borrador armado por código a partir de los motivos (no lo redacta el modelo). Revisalo antes de enviarlo.")
@@ -539,6 +542,11 @@ with tab_cat:
     else:
         NOM = _nombres_proveedores()
         pids = sorted({CAL.proveedor_de(x["item_id"]) for x in todas})
+        carpeta_demo = next((c for c in ("demo", "demo_ensayo") if (RES / c / "resumen_corrida.json").exists()), None)
+        fichas_demo = cargar_fichas(carpeta_demo) if carpeta_demo else []
+        if fichas_demo:
+            pids = pids + [PROV_DEMO[:3]]
+            NOM[PROV_DEMO[:3]] = "Demo Proveedor"
         st.session_state.setdefault("pv_sel_cat", "TODOS")
         todos_activo = st.session_state["pv_sel_cat"] == "TODOS"
         if st.button("Todos los proveedores", key="ver_todos", type="primary" if todos_activo else "secondary"):
@@ -549,18 +557,23 @@ with tab_cat:
             with col:
                 activo = st.session_state["pv_sel_cat"] == pid
                 borde = f"3px solid {VERDE_CLARO}" if activo else "3px solid transparent"
-                st.markdown(f"<div class='logo-card' style='border:{borde}'>{logo_img(pid)}</div>", unsafe_allow_html=True)
+                st.markdown(f"<div class='logo-card' style='border:{borde}'>{logo_img(pid) or '<b style=color:#2C3E50;font-size:.8rem;text-align:center>Archivo nuevo</b>'}</div>", unsafe_allow_html=True)
                 if st.button("Ver", key=f"ver_{pid}", use_container_width=True, type="primary" if activo else "secondary"):
                     st.session_state["pv_sel_cat"] = pid
                     st.rerun()
 
         pid = st.session_state["pv_sel_cat"]
         todos = pid == "TODOS"
-        fp = todas if todos else [x for x in todas if CAL.proveedor_de(x["item_id"]) == pid]
+        es_demo = pid == PROV_DEMO[:3]
+        base = fichas_demo if es_demo else todas
+        fp = todas if todos else [x for x in base if CAL.proveedor_de(x["item_id"]) == pid]
         c = pd.Series([x.get("estado") for x in fp]).value_counts()
         patron = "P*_traza.json" if todos else f"{pid}_*_traza.json"
-        costo = sum((leer_json(f, {}).get("costo_usd", 0) or 0) for f in (RES / "final").glob(patron) if f.stem.startswith("P") and f.stem[1:3].isdigit())
+        carpeta_costo = (RES / carpeta_demo) if es_demo else (RES / "final")
+        costo = sum((leer_json(f, {}).get("costo_usd", 0) or 0) for f in carpeta_costo.glob(patron) if f.stem.startswith("P") and f.stem[1:3].isdigit())
         st.markdown(f"### {'Todos los proveedores' if todos else html.escape(NOM.get(pid, pid))}")
+        if es_demo:
+            st.caption(f"Es el archivo que entró en la demo (`resultados/{carpeta_demo}`): se actualiza cada vez que procesás uno nuevo. No forma parte de la carga completa de los 9 proveedores.")
         k1, k2, k3, k4, k5 = st.columns(5)
         k1.metric("Productos", len(fp))
         k2.metric("Listos para alta", int(c.get("lista_para_alta", 0)))
@@ -594,7 +607,7 @@ with tab_cat:
         else:
             st.info("No hay productos con los estados elegidos.")
 
-        _seccion_pedido(pids, todas, NOM, None if todos else pid)
+        _seccion_pedido(pids, base, NOM, None if todos else pid)
 
 # ============================================================================= Scorecard de calidad (Bayes empírico)
 def _grafico_scorecard(orden, nombres, n, k, media, ic, mu):
