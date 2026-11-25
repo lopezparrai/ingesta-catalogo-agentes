@@ -1,12 +1,8 @@
-# Ingesta de catálogo — Taligent AI Spring Camp
+# Ingesta de catálogo — Proyecto final Taligent AI Spring Camp
 
-Proyecto final del curso de agentes. Toma las listas de productos nuevos que mandan los proveedores de
-Farmacias Ceibo (cadena ficticia) y las convierte en **fichas que cumplen el estándar de la cadena**: detecta
-los productos que ya existen en el catálogo, y **manda a revisión lo que no puede resolver, con el motivo**.
-Cada campo de cada ficha guarda de dónde salió (archivo y página, hoja y fila, o línea).
+El sistema toma las listas de productos nuevos que envían los proveedores de Farmacias Ceibo (una cadena ficticia) y las convierte en fichas que cumplen el estándar de la cadena. En el camino reconoce los productos que ya están en el catálogo y manda a revisión lo que no puede resolver, indicando el motivo. Cada campo de cada ficha guarda su origen: archivo y página, hoja y fila, o línea.
 
-El sistema corre con la API de Anthropic y Claude Haiku 5.5 (`claude-haiku-5-5`). La auditoría (ver "Auditoría") usa un
-modelo superior, Claude Sonnet 5.5, y no es parte del pipeline.
+Funciona con la API de Anthropic y Claude Haiku 5.5 (claude-haiku-5-5). La auditoría (ver Auditoría) usa un modelo más capaz, Claude Sonnet 5.5, la cual corre por separado y sirve para validar los resultados, no para generarlos.
 
 ## Cómo se usa
 
