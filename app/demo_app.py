@@ -12,8 +12,10 @@ import html
 import json
 import os
 import shutil
+import re
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 import pandas as pd
@@ -30,7 +32,7 @@ RESPUESTAS = RAIZ / "asistente" / "resultados" / "respuestas.json"
 
 COLOR = {"lista_para_alta": "#1F4D38", "duplicado": "#3A4651", "a_revision": "#6E2B26"}   # tonos oscuros de verde, gris piedra y coral
 ETIQUETA = {"lista_para_alta": "Lista para alta", "duplicado": "Duplicado", "a_revision": "A revisión"}
-MOTIVO_CORTO = {"gtin_faltante": "Falta EAN", "gtin_invalido": "EAN inválido", "dato_obligatorio_faltante": "Faltan datos",
+MOTIVO_CORTO = {"gtin_faltante": "Falta GTIN", "gtin_invalido": "GTIN inválido", "dato_obligatorio_faltante": "Faltan datos",
                 "conflicto_entre_fuentes": "Archivos en conflicto", "posible_duplicado": "Posible duplicado"}
 
 CLIENTE = "Farmacias Ceibo"
@@ -123,7 +125,11 @@ def pintar(df: pd.DataFrame):
     def fila(r):
         c = colores.get(r.name, "")
         return [f"background-color: {c}; color: #F9F9F9" if c else ""] * len(r)
-    return disp.style.apply(fila, axis=1).format({"Precio de costo": "{:.2f}"}, na_rep="")
+    disp = disp[["Producto", "Estado", "Descripción", "Motivos", "Duplicado de", "GTIN", "Precio de costo"]]
+    vacio = lambda v: "" if v is None or v != v else v
+    return (disp.style.apply(fila, axis=1)
+            .format(lambda v: "" if v is None or v != v else f"{v:.2f}", subset=["Precio de costo"])
+            .format(vacio, subset=["Producto", "Estado", "Descripción", "Motivos", "Duplicado de", "GTIN"]))
 
 
 def resumen_tokens_costo(carpeta: str):
@@ -161,6 +167,19 @@ CSS_LOGOS = """<style>
 .logos{display:flex;flex-wrap:wrap;gap:10px;margin:4px 0 14px}
 .logo-chip{background:#F9F9F9;border-radius:12px;padding:8px 14px;display:flex;align-items:center;gap:10px;color:#2C3E50;font-size:.85rem;font-weight:600}
 .logo-chip img{height:38px;width:auto}
+.logo-card{background:#F9F9F9;border-radius:12px;height:74px;display:flex;align-items:center;justify-content:center;padding:6px;margin-bottom:6px}
+.logo-card img{max-height:58px;max-width:100%;width:auto}
+.score{width:100%;border-collapse:collapse;font-size:.92rem;color:#F9F9F9}
+.score th{background:#2F4254;padding:8px 10px;text-align:left;font-weight:600;font-size:.8rem}
+.score td{padding:6px 10px;border-top:1px solid #2F4254}
+.score .c{text-align:center} .score .rk{color:#B8C4CE;width:28px} .score .nm{font-weight:600} .score .sub{color:#B8C4CE}
+.score .big{font-weight:800;color:#3FA06F;font-size:1.05rem}
+.logo-mini{background:#F9F9F9;border-radius:8px;width:62px;height:34px;display:flex;align-items:center;justify-content:center;padding:2px}
+.logo-mini img{max-height:28px;max-width:56px;width:auto}
+.pasos{display:flex;gap:8px;flex-wrap:wrap;margin:2px 0 6px}
+.paso{padding:6px 14px;border-radius:999px;border:1px solid #2F4254;color:#B8C4CE;font-size:.9rem}
+.paso.on{border-color:#E74C3C;color:#F9F9F9;font-weight:600}
+.paso.ok{background:#1F4D38;border-color:#3FA06F;color:#F9F9F9}
 </style>"""
 
 
@@ -190,7 +209,7 @@ st.markdown(f"""<div class="cabecera">{_img}
             unsafe_allow_html=True)
 
 st.markdown(CSS_LOGOS, unsafe_allow_html=True)
-tab_ing, tab_asi, tab_prov = st.tabs(["Archivo nuevo", "Consultas", "Calidad por proveedor"])
+tab_ing, tab_asi, tab_cat, tab_prov = st.tabs(["Archivo nuevo", "Consultas", "Proveedores", "Calidad por proveedor"])
 
 # ============================================================================= Archivo nuevo
 with tab_ing:
@@ -216,26 +235,65 @@ with tab_ing:
                 (carpeta_prov / Path(subido.name).name).write_bytes(subido.getvalue())
             st.session_state.pop("destino", None)
             cmd = [sys.executable, "ingesta.py", PROV_DEMO, "--modo", "tiempo-real", "--salida", "demo"]
-            st.code(" ".join(cmd), language="text")
-            caja = st.empty()
-            lineas: list[str] = []
             env = {**os.environ, "PYTHONUNBUFFERED": "1", "PYTHONIOENCODING": "utf-8"}
             proc = subprocess.Popen(cmd, cwd=RAIZ, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                                     text=True, encoding="utf-8", errors="replace", env=env)
+            t0 = time.time()
+            estado = st.status("Procesando el archivo…", expanded=True)
+            with estado:
+                pasos_ph, detalle_ph = st.empty(), st.empty()
+            with st.expander("Ver el log técnico"):
+                log_ph = st.empty()
+            fase, rondas, avisos, lineas = 0, 0, [], []
+            PASOS = ["Leer el archivo", "Extraer los datos", "Armar las fichas", "Listo"]
+
+            def dibujar():
+                chips = []
+                for n, nombre in enumerate(PASOS):
+                    if n < fase:
+                        chips.append(f"<span class='paso ok'>✓ {nombre}</span>")
+                    elif n == fase:
+                        chips.append(f"<span class='paso on'>● {nombre}</span>")
+                    else:
+                        chips.append(f"<span class='paso'>{nombre}</span>")
+                pasos_ph.markdown("<div class='pasos'>" + "".join(chips) + "</div>", unsafe_allow_html=True)
+                txt = f"Tiempo: {time.time() - t0:.0f} s"
+                if rondas:
+                    txt += f" · ronda de escritura {rondas}"
+                detalle_ph.caption(txt)
+                estado.update(label=f"{PASOS[min(fase, 3)]}… ({time.time() - t0:.0f} s)")
+
+            def ruido(l: str) -> bool:
+                return (any(ch in l for ch in "│┃╭╮╰╯─━┌┐└┘|+") and len(re.sub(r"[\s│┃╭╮╰╯─━┌┐└┘|+\-=]", "", l)) < 3) \
+                    or bool(re.search(r"[▀-▟]", l)) or any(k in l for k in ("FastMCP", "gofastmcp", "Deploy free", "Update available",
+                                                                           "pip install --upgrade", "Starting MCP server", "Server:"))
+
+            fase = 1
+            dibujar()
             for linea in proc.stdout:
                 linea = linea.rstrip()
-                if not linea:
+                if not linea or ruido(linea):
                     continue
-                esc = html.escape(linea)
+                m = re.search(r"Ronda (\d+)", linea)
+                if m:
+                    fase, rondas = 2, int(m.group(1))
+                elif "RESUMEN" in linea:
+                    fase = 3
                 if "hook FRENÓ" in linea or "FALLÓ" in linea:
-                    esc = f"<span style='color:#ff6b5e;font-weight:600'>{esc}</span>"
-                lineas.append(esc)
-                caja.markdown("<pre style='font-size:12px;line-height:1.35'>" + "\n".join(lineas[-30:]) + "</pre>",
-                              unsafe_allow_html=True)
+                    avisos.append(linea)
+                    with estado:
+                        st.warning(linea[:300])
+                lineas.append(linea)
+                log_ph.code("\n".join(lineas[-40:]), language="text")
+                dibujar()
             rc = proc.wait()
             if rc == 0:
+                fase = 3
+                dibujar()
+                estado.update(label=f"Listo en {time.time() - t0:.0f} s", state="complete", expanded=False)
                 st.session_state["destino"] = "demo"
             else:
+                estado.update(label=f"La corrida terminó con error (código {rc})", state="error")
                 st.error(f"La corrida terminó con error (código {rc}). Usá la corrida guardada.")
     else:
         guardadas = [c for c in ("demo_ensayo", "demo") if (RES / c / "resumen_corrida.json").exists()]
@@ -408,98 +466,192 @@ with tab_asi:
             preg = st.selectbox("Pregunta", [r["pregunta"] for r in resps], key="resp_ensayada")
             _pintar_respuesta(next(y for y in resps if y["pregunta"] == preg))
 
-# ============================================================================= Proveedores
+# ============================================================================= Proveedores (lo ya procesado)
+def _nombres_proveedores() -> dict:
+    out = {}
+    try:
+        import csv as _csv
+        with open(RAIZ / "data" / "proveedores" / "proveedores.csv", encoding="utf-8-sig", newline="") as fh:
+            for fila in _csv.DictReader(fh):
+                out[fila["proveedor_id"]] = fila.get("nombre") or fila["proveedor_id"]
+    except Exception:
+        pass
+    return out
+
+
+with tab_cat:
+    st.subheader("Lo que ya se procesó, proveedor por proveedor")
+    st.caption("La carga completa de los 9 proveedores (`resultados/final`): sus fichas, lo que quedó a revisión y de dónde salió cada dato.")
+    todas = cargar_fichas("final") if (RES / "final").exists() else []
+    if not todas:
+        st.warning("No encuentro la corrida completa en resultados/final.")
+    else:
+        NOM = _nombres_proveedores()
+        pids = sorted({CAL.proveedor_de(x["item_id"]) for x in todas})
+        st.session_state.setdefault("pv_sel_cat", pids[0])
+        cols = st.columns(len(pids))
+        for col, pid in zip(cols, pids):
+            with col:
+                activo = st.session_state["pv_sel_cat"] == pid
+                borde = f"3px solid {VERDE_CLARO}" if activo else "3px solid transparent"
+                st.markdown(f"<div class='logo-card' style='border:{borde}'>{logo_img(pid)}</div>", unsafe_allow_html=True)
+                if st.button("Ver", key=f"ver_{pid}", use_container_width=True, type="primary" if activo else "secondary"):
+                    st.session_state["pv_sel_cat"] = pid
+                    st.rerun()
+
+        pid = st.session_state["pv_sel_cat"]
+        fp = [x for x in todas if CAL.proveedor_de(x["item_id"]) == pid]
+        c = pd.Series([x.get("estado") for x in fp]).value_counts()
+        costo = sum((leer_json(f, {}).get("costo_usd", 0) or 0) for f in (RES / "final").glob(f"{pid}_*_traza.json"))
+        st.markdown(f"### {html.escape(NOM.get(pid, pid))}")
+        k1, k2, k3, k4, k5 = st.columns(5)
+        k1.metric("Productos", len(fp))
+        k2.metric("Listos para alta", int(c.get("lista_para_alta", 0)))
+        k3.metric("Duplicados", int(c.get("duplicado", 0)))
+        k4.metric("A revisión", int(c.get("a_revision", 0)))
+        k5.metric("Costo", f"USD {costo:.4f}")
+
+        filtro = st.multiselect("Estados a mostrar", list(ETIQUETA), default=list(ETIQUETA), format_func=lambda e: ETIQUETA[e], key=f"filtro_{pid}")
+        vista = [x for x in fp if x.get("estado") in filtro]
+        if vista:
+            st.dataframe(pintar(df_fichas(vista)), use_container_width=True, hide_index=True)
+            st.caption("Verde: lista para alta · Gris: duplicado (con su SKU) · Coral: a revisión (con su motivo).")
+
+            st.markdown("#### Cada dato, con su origen")
+            item = st.selectbox("Producto", [x["item_id"] for x in vista], key=f"item_{pid}")
+            x = next(y for y in vista if y.get("item_id") == item)
+            est = x.get("estado")
+            borde = {"lista_para_alta": VERDE_CLARO, "duplicado": PIEDRA, "a_revision": CORAL}.get(est, PIEDRA)
+            st.markdown(f"<div class='estado-box' style='background:{COLOR.get(est, '#333')};border-color:{borde}'>"
+                        f"<b>{ETIQUETA.get(est, est)}</b>"
+                        + (f" · ya existe como <b>{x['duplicado_de']}</b>" if x.get("duplicado_de") else "")
+                        + (f" · motivo: <b>{', '.join(MOTIVO_CORTO.get(m, m) for m in (x.get('motivos_revision') or []))}</b>" if x.get("motivos_revision") else "")
+                        + "</div>", unsafe_allow_html=True)
+            fi, fu = x.get("ficha") or {}, x.get("fuentes") or {}
+            campos = pd.DataFrame([{"Campo": k, "Valor": "" if v is None else str(v), "De dónde salió": fuente_txt(fu.get(k))}
+                                   for k, v in fi.items() if v is not None or k in fu])
+            st.dataframe(campos, use_container_width=True, hide_index=True)
+        else:
+            st.info("No hay productos con los estados elegidos.")
+
+# ============================================================================= Scorecard de calidad (Bayes empírico)
+def _grafico_scorecard(orden, nombres, n, k, media, ic, mu):
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    fig, ax = plt.subplots(figsize=(7.2, 4.4))
+    fig.patch.set_alpha(0)
+    ax.set_facecolor("none")
+    ys = list(range(len(orden)))[::-1]
+    for y, i in zip(ys, orden):
+        ax.plot([ic[i][0], ic[i][1]], [y, y], color=VERDE_CLARO, lw=6, alpha=.35, solid_capstyle="round")
+        ax.plot([k[i] / n[i], media[i]], [y, y], color=PIEDRA, lw=1.2, ls=":")
+        ax.scatter([k[i] / n[i]], [y], s=70, facecolors="none", edgecolors=CORAL, linewidths=1.8, zorder=3)
+        ax.scatter([media[i]], [y], s=80, color=VERDE_CLARO, zorder=4)
+    ax.axvline(mu, color=PIEDRA, ls="--", lw=1)
+    ax.text(mu, len(orden) - .35, "  media de los 9", color="#B8C4CE", fontsize=9, va="bottom")
+    ax.set_yticks(ys)
+    ax.set_yticklabels([nombres[i] for i in orden], color="#F9F9F9", fontsize=10)
+    ax.xaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0, decimals=0))
+    ax.tick_params(axis="x", colors="#B8C4CE")
+    ax.tick_params(axis="y", length=0)
+    for sp in ("top", "right", "left"):
+        ax.spines[sp].set_visible(False)
+    ax.spines["bottom"].set_color("#2F4254")
+    ax.set_xlim(0, max(k[i] / n[i] for i in orden) + .06)
+    ax.set_xlabel("Tasa de productos a revisión", color="#B8C4CE")
+    ax.scatter([], [], s=70, facecolors="none", edgecolors=CORAL, linewidths=1.8, label="Tasa cruda")
+    ax.scatter([], [], s=80, color=VERDE_CLARO, label="Tasa ajustada (shrinkage)")
+    ax.plot([], [], color=VERDE_CLARO, lw=6, alpha=.35, label="Intervalo del 90 %")
+    ax.legend(loc="lower right", frameon=False, labelcolor="#F9F9F9", fontsize=9)
+    fig.tight_layout()
+    return fig
+
+
 with tab_prov:
-    st.subheader("Qué le falla a cada proveedor")
-    st.caption("Sobre la corrida completa de 9 proveedores (`resultados/final`). Un producto a revisión es un problema en los datos "
-               "que mandó el proveedor; ver abajo qué se puede y qué no se puede afirmar.")
+    st.subheader("Scorecard de calidad de proveedores")
+    st.caption("¿A qué proveedor conviene auditar primero? Un porcentaje crudo engaña cuando el proveedor mandó pocos productos: "
+               "3 productos con 1 a revisión es 33 %, pero 40 con 10 es 25 % y pesa más. El shrinkage bayesiano corrige eso.")
     fin = cargar_fichas("final") if (RES / "final").exists() else []
     if not fin:
         st.warning("No encuentro la corrida completa en resultados/final.")
     else:
-        nombres = {}
-        try:
-            import csv as _csv
-            with open(RAIZ / "data" / "proveedores" / "proveedores.csv", encoding="utf-8-sig", newline="") as fh:
-                for fila in _csv.DictReader(fh):
-                    nombres[fila["proveedor_id"]] = fila
-        except Exception:
-            pass
-        nom = lambda p: (nombres.get(p, {}).get("nombre") or p)
-        st.markdown("<div class='logos'>" + "".join(
-            f"<div class='logo-chip'>{logo_img(p)}<span>{html.escape(nom(p))}</span></div>" for p in sorted({calidad_prov for calidad_prov in
-            [CAL.proveedor_de(x['item_id']) for x in fin]})) + "</div>", unsafe_allow_html=True)
+        NOMP = _nombres_proveedores()
+        nom = lambda p: NOMP.get(p, p)
 
         @st.cache_data(show_spinner=False)
         def _analisis(_mt: float):
             return CAL.analisis(fin)
-        A = _analisis(float((RES / "final" / "resumen_corrida.json").stat().st_mtime) if (RES / "final" / "resumen_corrida.json").exists() else 0.0)
-        provs, n, k, por_tipo = A["provs"], A["n"], A["k"], A["por_tipo"]
-        tipos_vis = [t for t in CAL.TIPOS if t != "posible_duplicado"]
+        _rs = RES / "final" / "resumen_corrida.json"
+        A = _analisis(float(_rs.stat().st_mtime) if _rs.exists() else 0.0)
+        provs, n, k = A["provs"], [int(x) for x in A["n"]], [int(x) for x in A["k"]]
+        media, ic, ppeor, mu, kappa = A["post_media"], A["post_ic"], A["p_peor"], float(A["mu_prior"]), float(A["kappa_prior"])
+        orden = sorted(range(len(provs)), key=lambda i: -media[i])
 
-        filas = []
-        for i, pv in enumerate(provs):
-            lo, hi = CAL.wilson(int(k[i]), int(n[i]))
-            dom = [CAL.NOMBRE_TIPO[t] for t in tipos_vis if por_tipo[i, CAL.TIPOS.index(t)] > 0]
-            fila = {"Proveedor": nom(pv), "Productos": int(n[i]), "A revisión": int(k[i]),
-                    "Tasa": f"{k[i] / n[i]:.0%}", "Intervalo 95 %": f"{lo:.0%} a {hi:.0%}"}
-            for t in tipos_vis:
-                fila[CAL.NOMBRE_TIPO[t]] = int(por_tipo[i, CAL.TIPOS.index(t)])
-            fila["Perfil"] = " + ".join(dom) if dom else "Sin problemas"
-            filas.append(fila)
-        dfp = pd.DataFrame(filas)
-        cols_tipo = [CAL.NOMBRE_TIPO[t] for t in tipos_vis]
-        st.dataframe(dfp.style.background_gradient(subset=cols_tipo, cmap=_cmap_coral(), vmin=0, vmax=max(1, int(por_tipo.max()) + 1)),
-                     use_container_width=True, hide_index=True)
-        tot_k, tot_n = int(k.sum()), int(n.sum())
-        lo, hi = CAL.wilson(tot_k, tot_n)
-        st.markdown(f"En total, **{tot_k} de {tot_n}** productos ({tot_k / tot_n:.1%}) quedaron a revisión "
-                    f"(intervalo de Wilson 95 %: {lo:.1%} a {hi:.1%}).")
+        filas = ""
+        for r, i in enumerate(orden, 1):
+            peso = n[i] / (n[i] + kappa)
+            filas += (f"<tr><td class='rk'>{r}</td><td><div class='logo-mini'>{logo_img(provs[i])}</div></td>"
+                      f"<td class='nm'>{html.escape(nom(provs[i]))}</td><td class='c'>{n[i]}</td><td class='c'>{k[i]}</td>"
+                      f"<td class='c'>{k[i] / n[i]:.0%}</td><td class='c big'>{media[i]:.1%}</td>"
+                      f"<td class='c sub'>{ic[i][0]:.0%} a {ic[i][1]:.0%}</td>"
+                      f"<td class='c'>{ppeor[i]:.0%}</td><td class='c'>{peso:.0%}</td></tr>")
+        st.markdown(
+            "<table class='score'><tr><th>#</th><th></th><th>Proveedor</th><th class='c'>Productos</th><th class='c'>A revisión</th>"
+            "<th class='c'>Tasa cruda</th><th class='c'>Tasa ajustada</th><th class='c'>Intervalo 90 %</th>"
+            "<th class='c'>Prob. de ser el peor</th><th class='c'>Peso de sus datos</th></tr>" + filas + "</table>",
+            unsafe_allow_html=True)
+        st.caption("Ordenado por tasa ajustada, de mayor a menor riesgo. «Peso de sus datos»: cuánto de la estimación sale de lo que mandó "
+                   "ese proveedor y cuánto de la media de los 9. Con pocos productos pesa poco.")
 
-        st.markdown("### ¿Hay proveedores peores que otros?")
-        ph = A["p_tipos_holm"]
-        st.info(
-            f"**Considerando todos los problemas juntos, no.** Las diferencias entre proveedores en la tasa de revisión son "
-            f"compatibles con el azar (p = {A['p_global']:.2f}): con 257 productos y 9 proveedores, un ranking de quién falla más "
-            f"no se sostiene.\n\n"
-            f"**Por tipo de problema sí hay patrón.** Los datos obligatorios faltantes se concentran en pocos proveedores "
-            f"(p ajustado = {ph['dato_obligatorio_faltante']:.3f}). La falta de EAN y los conflictos entre archivos también "
-            f"se concentran, pero con la corrección por probar varios tipos a la vez quedan en el límite "
-            f"(p ajustado = {ph['gtin_faltante']:.2f} y {ph['conflicto_entre_fuentes']:.2f}).\n\n"
-            f"**Lo útil para Compras:** no priorizar por proveedor sino por tipo de problema. Un pedido de EAN resuelve la mayor parte "
-            f"de la cola; los datos obligatorios y los conflictos entre archivos son pedidos distintos a proveedores distintos.")
+        tot_k, tot_n = sum(k), sum(n)
+        top = orden[0]
+        st.markdown("#### Cómo leerlo")
+        c1, c2 = st.columns([1.2, 1])
+        with c1:
+            import io
+            _buf = io.BytesIO()
+            _grafico_scorecard(orden, {i: nom(provs[i]) for i in range(len(provs))}, n, k, media, ic, mu).savefig(_buf, format="png", transparent=True, dpi=200, bbox_inches="tight")
+            st.image(_buf)
+        with c2:
+            st.markdown(
+                f"**Para Compras, orden de auditoría:** {html.escape(nom(provs[orden[0]]))} → {html.escape(nom(provs[orden[1]]))} → "
+                f"{html.escape(nom(provs[orden[2]]))}\n\n"
+                f"Por cada 100 productos de {html.escape(nom(provs[top]))} se esperan unos **{media[top] * 100:.0f}** a revisión "
+                f"(entre {ic[top][0] * 100:.0f} y {ic[top][1] * 100:.0f}).\n\n"
+                f"**Pero la diferencia es chica.** Con shrinkage, los 9 proveedores quedan entre {min(media):.0%} y {max(media):.0%}, "
+                f"con intervalos que se solapan, y ninguno pasa de {max(ppeor):.0%} de probabilidad de ser el peor. Los porcentajes "
+                f"crudos (de {min(kk / nn for kk, nn in zip(k, n)):.0%} a {max(kk / nn for kk, nn in zip(k, n)):.0%}) exageran el contraste. "
+                f"Con todo junto, los proveedores no se distinguen en la tasa total (p = {A['p_global']:.2f}).\n\n"
+                f"En total, {tot_k} de {tot_n} productos ({tot_k / tot_n:.1%}) quedaron a revisión.")
 
-        with st.expander("Detalle estadístico"):
-            tp = pd.DataFrame([{"Tipo de problema": CAL.NOMBRE_TIPO[t], "Casos": int(por_tipo[:, CAL.TIPOS.index(t)].sum()),
-                                "p (permutación)": round(A["p_tipos"][t], 4), "p ajustado (Holm)": round(A["p_tipos_holm"][t], 4)}
-                               for t in CAL.TIPOS])
-            st.dataframe(tp, use_container_width=True, hide_index=True)
-            st.markdown("**Cómo se calculó.** Chi-cuadrado de homogeneidad entre proveedores, con el p por permutación de 10.000 "
-                        "reordenamientos al azar (hay celdas con pocos casos y el chi-cuadrado clásico no es confiable). "
-                        "Se prueban 5 tipos a la vez, así que se corrige con Holm. Semilla fija: el resultado es el mismo en cada corrida.")
-            est = pd.DataFrame({"Proveedor": [nom(pv) for pv in provs], "Tasa observada": [f"{k[i] / n[i]:.1%}" for i in range(len(provs))],
-                                "Tasa con contracción": [f"{A['post_media'][i]:.1%}" for i in range(len(provs))],
-                                "Intervalo 90 %": [f"{A['post_ic'][i][0]:.1%} a {A['post_ic'][i][1]:.1%}" for i in range(len(provs))],
-                                "Prob. de ser el de más problemas": [f"{A['p_peor'][i]:.0%}" for i in range(len(provs))]})
-            st.dataframe(est, use_container_width=True, hide_index=True)
-            st.markdown(f"**Contracción.** Estimación beta-binomial de Bayes empírico (tasa media {A['mu_prior']:.0%}, "
-                        f"concentración {A['kappa_prior']:.0f}): acerca la tasa de los proveedores con pocos productos a la del conjunto, "
-                        f"para no sacar conclusiones de 14 o 18 casos. Que ningún proveedor supere el {A['p_peor'].max():.0%} de "
-                        f"probabilidad de ser el peor es otra forma de ver que no hay uno que se destaque.")
+        with st.expander("Cómo se calculó"):
+            st.markdown(
+                f"Modelo **beta-binomial** con **Bayes empírico**. La tasa real de cada proveedor se supone sacada de una distribución Beta cuya media "
+                f"y dispersión se estiman con los 9 proveedores juntos: media **{mu:.1%}**, concentración **{kappa:.0f}**, equivalente a {kappa:.0f} "
+                f"productos \"virtuales\" con la tasa media.\n\n"
+                f"La tasa ajustada de un proveedor con *n* productos y *k* a revisión es (k + {mu * kappa:.1f}) / (n + {kappa:.0f}): "
+                f"un compromiso entre lo que mostró y la media. Cuanto menos mandó, más se acerca a la media; por eso «Peso de sus datos» es n / (n + {kappa:.0f}). "
+                f"El intervalo y la probabilidad de ser el peor salen de simular 20.000 veces la distribución posterior de cada proveedor. "
+                f"Semilla fija: el resultado no cambia entre corridas.")
 
-        st.markdown("### Pedido listo para cada proveedor")
-        pv_sel = st.selectbox("Proveedor", provs, format_func=nom, key="pv_pedido")
+        st.markdown("#### Pedido listo para cada proveedor")
+        pv_sel = st.selectbox("Proveedor", [provs[i] for i in orden], format_func=nom, key="pv_pedido")
         st.markdown(f"<div class='logos'><div class='logo-chip'>{logo_img(pv_sel)}<span>{html.escape(nom(pv_sel))}</span></div></div>", unsafe_allow_html=True)
-        info = nombres.get(pv_sel, {})
-        txt = CAL.mensaje_proveedor(nom(pv_sel), " y ".join(a for a in info.get("archivos", "").split(" | ") if a and "fichas_de_seguridad" not in a) or "el archivo enviado",
+        archivos = []
+        try:
+            import csv as _csv
+            with open(RAIZ / "data" / "proveedores" / "proveedores.csv", encoding="utf-8-sig", newline="") as fh:
+                for fila in _csv.DictReader(fh):
+                    if fila["proveedor_id"] == pv_sel:
+                        archivos = [a for a in fila.get("archivos", "").split(" | ") if a and "fichas_de_seguridad" not in a]
+        except Exception:
+            pass
+        txt = CAL.mensaje_proveedor(nom(pv_sel), " y ".join(archivos) or "el archivo enviado",
                                     [x for x in fin if CAL.proveedor_de(x["item_id"]) == pv_sel])
         st.caption("Borrador armado por código a partir de los motivos (no lo redacta el modelo). Revisalo antes de enviarlo.")
         st.code(txt, language="text")
         st.download_button("Descargar borrador", txt, file_name=f"pedido_{pv_sel}.txt")
 
-        st.markdown("### Qué hay que tener en cuenta")
-        st.markdown("- **La cola mide lo que el sistema detectó**, no la calidad real del archivo: un dato malo que pasó sin frenar no figura acá.\n"
-                    "- Los proveedores se usaron para ajustar el sistema (menos Dermalab, y su segunda corrida no es una prueba limpia), así que "
-                    "parte del perfil de cada uno refleja decisiones de diseño y no solo sus datos.\n"
-                    "- Los motivos no son independientes (la falta de EAN arrastra el posible duplicado), por eso el posible duplicado no se cuenta aparte.\n"
-                    "- Con más proveedores o más cargas, el ranking podría empezar a sostenerse; hoy el tamaño de muestra no alcanza.")
+        st.caption("Ojo: «a revisión» es lo que el sistema detectó, no el error real del proveedor, y los 9 proveedores son pocos para estimar la media. "
+                   "Un dato malo que pasó sin frenar no figura acá.")

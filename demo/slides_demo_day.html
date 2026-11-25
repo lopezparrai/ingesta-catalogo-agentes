@@ -154,8 +154,8 @@
     <div class="card"><div class="num c">25</div><div class="eti"><b>A revisión</b><br>10 % del total, cada uno con su motivo</div></div>
   </div>
   <div class="card" style="margin-top:14px;padding:14px 22px"><h3>Por qué quedan en la cola de revisión <span style="font-weight:400;color:var(--texto2);font-size:15px">(un producto puede tener más de un motivo)</span></h3>
-    <div class="barra"><div class="n" style="width:250px">Falta el EAN</div><div class="b c" style="width:62%">18</div></div><div class="barra"><div class="n" style="width:250px">Posible duplicado (sin EAN para confirmar)</div><div class="b c" style="width:48%">14</div></div><div class="barra"><div class="n" style="width:250px">Datos obligatorios faltantes</div><div class="b c" style="width:24%">7</div></div><div class="barra"><div class="n" style="width:250px">Datos que no coinciden entre archivos</div><div class="b c" style="width:7%">2</div></div><div class="barra"><div class="n" style="width:250px">EAN inválido</div><div class="b c" style="width:7%">2</div></div>
-    <p class="nota" style="margin-top:8px">La mayor parte es una sola cosa: productos <b>sin EAN</b>. Sin él no se puede confirmar si ya existen en el catálogo.</p></div>
+    <div class="barra"><div class="n" style="width:250px">Falta el GTIN</div><div class="b c" style="width:62%">18</div></div><div class="barra"><div class="n" style="width:250px">Posible duplicado (sin GTIN para confirmar)</div><div class="b c" style="width:48%">14</div></div><div class="barra"><div class="n" style="width:250px">Datos obligatorios faltantes</div><div class="b c" style="width:24%">7</div></div><div class="barra"><div class="n" style="width:250px">Datos que no coinciden entre archivos</div><div class="b c" style="width:7%">2</div></div><div class="barra"><div class="n" style="width:250px">GTIN inválido</div><div class="b c" style="width:7%">2</div></div>
+    <p class="nota" style="margin-top:8px">La mayor parte es una sola cosa: productos <b>sin GTIN</b>. Sin él no se puede confirmar si ya existen en el catálogo.</p></div>
   <div class="pie"><span>Farmacias Ceibo</span><span>4 / 8</span></div>
 </section>
 <!-- 4 DERMALAB -->
@@ -172,7 +172,7 @@
   </table>
   <div class="grid g2" style="margin-top:18px;gap:18px">
     <div class="alerta"><b>Los 18 nombres salieron mal:</b> cada código recibió el nombre del bloque siguiente. El PDF trae el nombre arriba del código y el sistema los leyó al revés.</div>
-    <div class="card"><h3>Por qué no lo frenó nada</h3><p>Los hooks revisan la <b>forma</b> de la ficha, no si el dato <b>corresponde</b>. El contenido, el EAN y el precio sí coincidían.</p></div>
+    <div class="card"><h3>Por qué no lo frenó nada</h3><p>Los hooks revisan la <b>forma</b> de la ficha, no si el dato <b>corresponde</b>. El contenido, el GTIN y el precio sí coincidían.</p></div>
   </div>
   <p class="nota" style="margin-top:12px">Se arregló después; esa segunda corrida <b>no es una prueba limpia</b>. Un formato que no se vio puede fallar de forma parecida: por eso se propone una auditoría por muestreo.</p>
   <div class="pie"><span>Farmacias Ceibo</span><span>5 / 8</span></div>
@@ -228,7 +228,7 @@
   <p class="sub" style="margin-bottom:22px">Entra un archivo nuevo, salen las fichas y la cola de revisión, y se le pregunta al asistente.</p>
   <div class="grid g2" style="gap:22px">
     <div class="card"><h3>Qué quedó para después</h3>
-      <p>· <b>Record linkage</b> para los duplicados sin EAN: la mayor parte de la cola de revisión viene de ahí.<br>
+      <p>· <b>Record linkage</b> para los duplicados sin GTIN: la mayor parte de la cola de revisión viene de ahí.<br>
       · <b>Línea base de clasificación</b> para saber cuánto aporta el modelo.<br>
       · <b>Ordenar el catálogo viejo</b>, cargado antes del estándar, sin tocarlo.<br>
       · Probar más proveedores nuevos, que es lo que de verdad mide generalización.</p></div>

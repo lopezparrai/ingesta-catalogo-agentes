@@ -4,7 +4,7 @@ Todo es código determinista sobre las fichas ya generadas (no llama a la API). 
 
 Idea: un producto "a revisión" es un defecto de los datos que mandó el proveedor (todos los de la corrida final tienen
 `gtin_faltante`, `gtin_invalido`, `dato_obligatorio_faltante` o `conflicto_entre_fuentes`; `posible_duplicado` es consecuencia
-de no tener EAN para confirmar). Se mide:
+de no tener GTIN para confirmar). Se mide:
   1. la tasa de defecto por proveedor con intervalo de Wilson;
   2. si los proveedores difieren entre sí (chi-cuadrado con p por permutación, porque hay celdas con pocos casos);
   3. lo mismo por tipo de problema, con corrección de Holm por probar varios tipos a la vez;
@@ -16,11 +16,11 @@ import numpy as np
 
 TIPOS = ["gtin_faltante", "gtin_invalido", "dato_obligatorio_faltante", "conflicto_entre_fuentes", "posible_duplicado"]
 NOMBRE_TIPO = {
-    "gtin_faltante": "Falta el EAN",
-    "gtin_invalido": "EAN inválido",
+    "gtin_faltante": "Falta el GTIN",
+    "gtin_invalido": "GTIN inválido",
     "dato_obligatorio_faltante": "Datos obligatorios faltantes",
     "conflicto_entre_fuentes": "Datos que no coinciden entre archivos",
-    "posible_duplicado": "Posible duplicado (sin EAN para confirmar)",
+    "posible_duplicado": "Posible duplicado (sin GTIN para confirmar)",
 }
 SEMILLA = 20261125
 
@@ -133,7 +133,7 @@ def mensaje_proveedor(nombre: str, archivos: str, fichas_prov: list[dict]) -> st
     if not any(grupos.values()):
         return f"{nombre}: no hay productos a revisión. Nada para pedirle."
     pedidos = {
-        "gtin_faltante": "Código de barras (EAN/GTIN) de estos productos. Sin él no podemos confirmar si ya están en nuestro catálogo:",
+        "gtin_faltante": "Código de barras (GTIN) de estos productos. Sin él no podemos confirmar si ya están en nuestro catálogo:",
         "gtin_invalido": "Revisar el código de barras de estos productos: el dígito verificador no es válido:",
         "dato_obligatorio_faltante": "Completar datos obligatorios que faltan en estos productos:",
         "conflicto_entre_fuentes": "Confirmar cuál de sus archivos rige: los datos de estos productos no coinciden entre sí:",
