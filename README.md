@@ -101,12 +101,12 @@ ya tiene el caché cargado y la ventaja del paralelo no se exagera.
 
 ### Qué puede hacer cada agente
 
-En las slides: Agente 1 = extractores, Agente 2 = escritor, Agente 3 = asistente de consultas; el orquestador es código.
+Numerados como en la app: Agente 1 = extractores, Agente 2 = escritor, Agente 3 = asistente de consultas; el orquestador es código.
 
 | Agente | Tools | Ve | No puede |
 |---|---|---|---|
 | Extractor (Agente 1) | `leer_lista_proveedor`, `leer_excel`, `leer_pdf_con_citas` (solo de **su** archivo) | Su archivo | Escribir, buscar en el catálogo, registrar fichas, leer otros archivos |
-| Consolidador (el orquestador de las slides) | (es código) | Salidas de todos los extractores | — |
+| Consolidador (el orquestador) | (es código) | Salidas de todos los extractores | — |
 | Escritor (Agente 2) | `validar_gtin_tool`, `buscar_en_catalogo`, `buscar_candidatos_en_catalogo`, `leer_estandar`, `convertir_contenido_tool`, `registrar_ficha` | Datos extraídos, contexto y fichas de seguridad | Leer archivos del proveedor |
 | Asistente (Agente 3) | `buscar_fichas`, `leer_fuente`, `buscar_codigo_en_archivos` y las de lectura del servidor MCP (ver "Asistente de consultas") | Fichas generadas y archivos originales | Registrar o cambiar fichas |
 
@@ -285,7 +285,7 @@ en la muestra: USD 0,73. Resultados en `auditoria/resultados_auditor/` y en la p
 | `calidad.py` | El scorecard de calidad por proveedor (Beta-Binomial con Bayes empírico). |
 | `data/` | El material del curso (catálogo, estándar, consultas y los archivos de los 9 proveedores). Son los datos de entrada. |
 | `evaluador.py`, `evals/` | Evaluación contra fichas verificadas a mano. |
-| `demo/` | Solo se versiona el archivo de ejemplo de la demo en vivo (`Demo_altas_noviembre.csv`, con casos de duplicado, GTIN inválido, posible duplicado y un texto que pide saltear la revisión). Las slides y el guion no se versionan. |
+| `demo/` | Solo se versiona el archivo de ejemplo de la demo en vivo (`Demo_altas_noviembre.csv`, con casos de duplicado, GTIN inválido, posible duplicado y un texto que pide saltear la revisión). |
 | `asistente/` | Todo el asistente de consultas: `asistente.py` (solo lectura, fuentes verificadas), `prueba_asistente.py` (sin API), `evaluar_consultas.py` y `verificar_esperado.py` (evaluación y verificación a mano), `consultas_esperado.json` y `resultados/respuestas.json` (la salida). |
 | `prueba_hooks.py`, `prueba_ingesta.py` | Pruebas sin API de los hooks, del motor de rondas y de los controles de precio y de FDS. |
 | `ejercicios/` | Ejercicios de los módulos del curso (M1, M2, prompt v2, salida estructurada); el sistema no los usa. |
@@ -294,9 +294,9 @@ en la muestra: USD 0,73. Resultados en `auditoria/resultados_auditor/` y en la p
 | `auditoria/` | Auditoría de los 9 proveedores: sorteo estratificado de 53 y auditor con Sonnet 5.5 (ver "Auditoría"). |
 | `resultados/evidencia/` | Dermalab: la corrida original y el diagnóstico producto por producto; y las dos corridas con error. |
 
-## Demo Day: app y slides
+## Demo Day: la app
 
-> De la carpeta `demo/` solo se versiona `Demo_altas_noviembre.csv`, el archivo que usa la app si no se sube otro; las slides y el guion quedan en la máquina de quien armó la demo.
+> De la carpeta `demo/` solo se versiona `Demo_altas_noviembre.csv`, el archivo que usa la app si no se sube otro.
 
 `streamlit run app/demo_app.py`. Cuatro pestañas:
 
@@ -311,6 +311,4 @@ en la muestra: USD 0,73. Resultados en `auditoria/resultados_auditor/` y en la p
 
 Dos interruptores: **Vista técnica** (arriba a la derecha: agentes, tokens, caché, hooks y tools; apagada es la vista
 de Compras) y **En vivo / Respaldo** (menú lateral: con Respaldo se muestra la corrida y las respuestas ya ensayadas,
-sin API). Costos, Dermalab y la carga completa están en las slides; el análisis estadístico, solo en la app.
-
-- `demo/slides_demo_day.html`: las 9 slides (tema oscuro). `demo/GUION_DEMO.md`: el guion de 15 minutos.
+sin API).
