@@ -346,7 +346,8 @@ with tab_ing:
 
             def ruido(l: str) -> bool:
                 return (any(ch in l for ch in "│┃╭╮╰╯─━┌┐└┘|+") and len(re.sub(r"[\s│┃╭╮╰╯─━┌┐└┘|+\-=]", "", l)) < 3) \
-                    or bool(re.search(r"[▀-▟]", l)) or any(k in l for k in ("FastMCP", "gofastmcp", "Deploy free", "Update available",
+                    or bool(re.search(r"[▀-▟]", l)) or bool(re.search(r"\\u25[0-9a-fA-F]{2}", l)) \
+                    or any(k in l for k in ("transport 'stdio'", "es_error = bool", "FastMCP", "gofastmcp", "Deploy free", "Update available",
                                                                            "pip install --upgrade", "Starting MCP server", "Server:"))
 
             cola_lineas: "queue.Queue" = queue.Queue()
