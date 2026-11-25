@@ -1,16 +1,17 @@
-"""Ayuda para verificar a mano evals/consultas_esperado.json.
+"""Ayuda para verificar a mano asistente/consultas_esperado.json.
 Muestra, por cada caso, la pregunta, lo que se espera y el DATO CRUDO de cada fuente esperada (leído del archivo
 original). Vos comparás con tus ojos y respondés s (coincide), n (no) o Enter (saltear).
-  py verificar_esperado.py              # interactivo: marca verificado_a_mano=true con 's'
-  py verificar_esperado.py --imprimir   # solo imprime todo (para leer o guardar en un txt)
+  py asistente/verificar_esperado.py              # interactivo: marca verificado_a_mano=true con 's'
+  py asistente/verificar_esperado.py --imprimir   # solo imprime todo (para leer o guardar en un txt)
 """
 import json
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import asistente as S
 
-RUTA = Path(__file__).parent / "evals" / "consultas_esperado.json"
+RUTA = Path(__file__).resolve().parent / "consultas_esperado.json"
 esp = json.loads(RUTA.read_text(encoding="utf-8"))
 preg = json.loads(S.CONSULTAS.read_text(encoding="utf-8-sig"))
 textos = {q["id"]: q["texto"] for q in preg["consultas"]}

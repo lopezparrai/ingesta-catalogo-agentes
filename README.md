@@ -30,12 +30,12 @@ python ingesta.py P03_Distribuidora_Litoral P09_Natural_Vida --modo tiempo-real
 python prueba_hooks.py      # hooks y permisos
 python prueba_ingesta.py       # motor de rondas del Batch y controles, con un cliente falso
 python esquema.py           # valida contra el esquema todas las fichas ya generadas
-python prueba_asistente.py  # tools y hook del asistente de consultas
+python asistente/prueba_asistente.py  # tools y hook del asistente de consultas
 
 # Asistente de consultas (usa la API; ver su sección)
-python asistente.py                # las 23 consultas y 2 conversaciones de data/consultas/consultas.json
-python asistente.py -i             # chat interactivo
-python evaluar_consultas.py        # compara las respuestas con evals/consultas_esperado.json
+python asistente/asistente.py       # las 23 consultas y 2 conversaciones de data/consultas/consultas.json
+python asistente/asistente.py -i    # chat interactivo
+python asistente/evaluar_consultas.py   # compara las respuestas con el esperado verificado a mano
 ```
 
 Un archivo nuevo de un proveedor entra sin intervención: se deja en su carpeta y se vuelve a correr el comando.
@@ -203,9 +203,9 @@ un prompt (no es un hook) y es el punto más débil que queda.
   los resultados de las tools; así el costo no crece con cada turno. El hilo recuerda qué fuentes se vieron.
 - **Costo:** unos USD 0,0004 a 0,004 por pregunta; las 29 respuestas, alrededor de USD 0,04.
 
-**Evaluación** (`evaluar_consultas.py`, `evals/consultas_esperado.json`): el esperado se calculó desde las fichas
+**Evaluación** (`asistente/evaluar_consultas.py`, `asistente/consultas_esperado.json`): el esperado se calculó desde las fichas
 finales y los archivos originales, no desde las respuestas del modelo, y se verificó a mano con
-`verificar_esperado.py` (muestra el dato crudo de cada fuente). Mide valor, productos, fuentes esperadas entre las
+`asistente/verificar_esperado.py` (muestra el dato crudo de cada fuente). Mide valor, productos, fuentes esperadas entre las
 citadas y abstención. Resultado actual: **29 de 29**. Tres cosas para leerlo bien:
 - Es el mismo conjunto de preguntas con el que se ajustó el asistente: la primera corrida tuvo defectos que se
   arreglaron (el modelo dudaba de sus respuestas anteriores en las conversaciones porque el hilo no guardaba las
@@ -242,9 +242,7 @@ citadas y abstención. Resultado actual: **29 de 29**. Tres cosas para leerlo bi
 | `ingesta.py` | **Comando principal**: todos los proveedores, por Batch o en tiempo real, con costo y tiempo. Reusa la extracción y la consolidación del orquestador y ejecuta el escritor por rondas. |
 | `data/` | El material del curso (catálogo, estándar, consultas y los archivos de los 9 proveedores). Son los datos de entrada. |
 | `evaluador.py`, `evals/` | Evaluación contra fichas verificadas a mano. |
-| `asistente.py` | Asistente conversacional de consultas (solo lectura, fuentes verificadas); salidas en `resultados/consultas/`. |
-| `evaluar_consultas.py`, `verificar_esperado.py` | Evaluación de las respuestas del asistente y ayuda para verificar a mano el esperado. |
-| `prueba_asistente.py` | Pruebas sin API de las tools y del hook de fuentes del asistente. |
+| `asistente/` | Todo el asistente de consultas: `asistente.py` (solo lectura, fuentes verificadas), `prueba_asistente.py` (sin API), `evaluar_consultas.py` y `verificar_esperado.py` (evaluación y verificación a mano), `consultas_esperado.json` y `resultados/respuestas.json` (la salida). |
 | `prueba_hooks.py`, `prueba_ingesta.py` | Pruebas sin API de los hooks, del motor de rondas y de los controles de precio y de FDS. |
 | `ejercicios/` | Ejercicios sueltos del curso (prompt v2, salida estructurada); el sistema no los usa. |
 | `resultados/final/` | La corrida final: por proveedor, la ficha y su traza (costo, caché, frenos de hooks), más la cola de revisión y el resumen. |

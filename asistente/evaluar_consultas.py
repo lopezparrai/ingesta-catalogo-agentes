@@ -1,12 +1,12 @@
-"""Compara resultados/consultas/respuestas.json con evals/consultas_esperado.json.
+"""Compara asistente/resultados/respuestas.json con asistente/consultas_esperado.json.
 Mide: valor, productos citados, fuentes esperadas entre las citadas, y abstención donde corresponde.
-Uso: py evaluar_consultas.py"""
+Uso: py asistente/evaluar_consultas.py"""
 import json
 from pathlib import Path
 
-RAIZ = Path(__file__).parent
-resp = json.loads((RAIZ / "resultados" / "consultas" / "respuestas.json").read_text(encoding="utf-8"))["respuestas"]
-esp = json.loads((RAIZ / "evals" / "consultas_esperado.json").read_text(encoding="utf-8"))
+AQUI = Path(__file__).resolve().parent
+resp = json.loads((AQUI / "resultados" / "respuestas.json").read_text(encoding="utf-8"))["respuestas"]
+esp = json.loads((AQUI / "consultas_esperado.json").read_text(encoding="utf-8"))
 
 
 def clave(f):

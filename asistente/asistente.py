@@ -6,11 +6,11 @@ Responde preguntas de Compras sobre lo que hizo la ingesta ("¿por qué LT-3447 
   2. Los números los cuenta el código (buscar_fichas devuelve total y por_estado), no el modelo.
   3. Toda fuente que cita tiene que haberla visto en el resultado de una tool; si no, un hook la frena.
 
-Uso:
-  py asistente.py                      # las 23 consultas + 2 conversaciones de data/consultas/consultas.json
-  py asistente.py --solo Q07 V01       # algunas
-  py asistente.py -i                   # modo interactivo
-  py asistente.py "¿Cuántos quedaron pendientes de FDS?"   # una pregunta libre
+Uso (desde la raíz del repo):
+  py asistente/asistente.py            # las 23 consultas + 2 conversaciones de data/consultas/consultas.json
+  py asistente/asistente.py --solo Q07 V01  # algunas
+  py asistente/asistente.py -i         # modo interactivo
+  py asistente/asistente.py "¿Cuántos quedaron pendientes de FDS?"   # una pregunta libre
 """
 import asyncio
 import csv
@@ -20,6 +20,8 @@ import sys
 import time
 import unicodedata
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # agente_base y esquema viven en la raíz
 
 from mcp import ClientSession
 from mcp.client.stdio import stdio_client
@@ -32,7 +34,7 @@ RAIZ = A.RAIZ
 FINAL = RAIZ / "resultados" / "final"
 PROVEEDORES = RAIZ / "data" / "proveedores"
 CONSULTAS = RAIZ / "data" / "consultas" / "consultas.json"
-SALIDA = RAIZ / "resultados" / "consultas"
+SALIDA = Path(__file__).resolve().parent / "resultados"
 MAX_ITERACIONES = 12
 TOOLS_MCP_PERMITIDAS = {"leer_estandar", "buscar_en_catalogo", "buscar_candidatos_en_catalogo", "validar_gtin_tool"}
 SUFIJOS_NO_FICHAS = ("_traza", "_extraccion")

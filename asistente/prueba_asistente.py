@@ -1,4 +1,8 @@
-"""Pruebas offline (sin API) de las tools y del hook de fuentes del asistente. Uso: py prueba_asistente.py"""
+"""Pruebas offline (sin API) de las tools y del hook de fuentes del asistente. Uso: py asistente/prueba_asistente.py"""
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import asistente as S
 
 d = S.Datos()
