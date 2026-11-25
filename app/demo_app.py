@@ -192,13 +192,17 @@ def resumen_tokens_costo(carpeta: str):
     return inp, out, cache, costo, frenos, lista_frenos
 
 
+# Mismo criterio que hook_al_terminar_fuentes (agente_base.py): estos campos se derivan de otros y no llevan fuente propia
+CAMPOS_DERIVADOS = {"descripcion", "categoria", "proveedor_id"}
+
+
 def datos_con_fuente(fichas: list[dict]) -> tuple:
-    """(datos con fuente, datos con valor) sobre todas las fichas."""
+    """(datos con fuente, datos que deben tenerla) sobre todas las fichas."""
     con = tot = 0
     for x in fichas:
         fu = x.get("fuentes") or {}
         for k, v in (x.get("ficha") or {}).items():
-            if v is not None:
+            if v is not None and k not in CAMPOS_DERIVADOS and not (k == "peligro_deposito" and v == "pendiente_fds"):
                 tot += 1
                 con += k in fu
     return con, tot
@@ -594,7 +598,7 @@ with tab_ing:
         k7.metric("Tiempo", f"{res.get('segundos_total', 0):.0f} s")
         con_f, tot_f = datos_con_fuente(f_d)
         k8.metric("Datos con su fuente", pct(con_f / tot_f, 0 if con_f == tot_f else 1) if tot_f else "—",
-                  help=f"{con_f} de {tot_f} datos de las fichas dicen de qué archivo y línea, hoja o página salieron.")
+                  help=f"{con_f} de {tot_f} datos leídos de los archivos dicen de qué archivo y línea, hoja o página salieron. La descripción y la categoría se arman a partir de esos datos.")
 
         extr_d = cargar_extraccion(destino)
         if TECNICO:

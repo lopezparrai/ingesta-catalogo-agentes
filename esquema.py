@@ -212,9 +212,12 @@ if __name__ == "__main__":
     raiz = Path(__file__).parent
     total = malos = 0
     for ruta in sorted(raiz.glob("resultados/*/*.json")):
-        if ruta.name.endswith(("_traza.json", "_extraccion.json")) or ruta.name.startswith("resumen") or ruta.name == "cola_de_revision.json":
+        if ruta.name.endswith(("_traza.json", "_extraccion.json")) or ruta.name.startswith(("resumen", "_")) or ruta.name == "cola_de_revision.json":
+            continue   # "_proveedor.json" lo escribe la app de la demo: es metadato, no fichas
+        datos = json.loads(ruta.read_text(encoding="utf-8"))
+        if not isinstance(datos, list):
             continue
-        for r in json.loads(ruta.read_text(encoding="utf-8")):
+        for r in datos:
             total += 1
             motivo = validar_resultado(r)
             if motivo:
