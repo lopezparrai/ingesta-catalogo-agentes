@@ -1,0 +1,543 @@
+[
+  {
+    "archivo": "P06_Bebe_Feliz/BebeFeliz_altas.xlsx",
+    "datos": {
+      "archivo": "BebeFeliz_altas.xlsx",
+      "tipo_archivo": "lista",
+      "vigencia": null,
+      "moneda": null,
+      "iva": null,
+      "filas": [
+        {
+          "codigo": "BF-503",
+          "campos": {
+            "Producto": "Leche Crecer",
+            "Talle / etapa": "Etapa 1",
+            "Cantidad": "0,4 kg",
+            "EAN": "7798993880961",
+            "Precio lista": 707.39,
+            "Precio c/desc. 8%": 650.8
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 3
+          }
+        },
+        {
+          "codigo": "BF-506",
+          "campos": {
+            "Producto": "Pañal Pequeños Pasos",
+            "Talle / etapa": "P",
+            "Cantidad": "30 un",
+            "EAN": "7790090972334",
+            "Precio lista": 387.99,
+            "Precio c/desc. 8%": 356.95
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 4
+          }
+        },
+        {
+          "codigo": "BF-509",
+          "campos": {
+            "Producto": "Pañal Pequeños Pasos Pack Ahorro x2",
+            "Talle / etapa": "G",
+            "Cantidad": "2 x 60 un",
+            "EAN": "7794244558504",
+            "Precio lista": 1101.14,
+            "Precio c/desc. 8%": 1013.05
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 5
+          }
+        },
+        {
+          "codigo": "BF-512",
+          "campos": {
+            "Producto": "Leche Crecer",
+            "Talle / etapa": "Etapa 2",
+            "Cantidad": "0,8 kg",
+            "EAN": "7799123291527",
+            "Precio lista": 1173.47,
+            "Precio c/desc. 8%": 1079.59
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 6
+          }
+        },
+        {
+          "codigo": "BF-515",
+          "campos": {
+            "Producto": "Toallitas Pequeños Pasos Sin Perfume",
+            "Talle / etapa": null,
+            "Cantidad": "x 50",
+            "EAN": "7796210745413",
+            "Precio lista": 64.54,
+            "Precio c/desc. 8%": 59.38
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 7
+          }
+        },
+        {
+          "codigo": "BF-518",
+          "campos": {
+            "Producto": "Pañal Pequeños Pasos",
+            "Talle / etapa": "M",
+            "Cantidad": "30 un",
+            "EAN": "7792140788902",
+            "Precio lista": 344.36,
+            "Precio c/desc. 8%": 316.81
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 8
+          }
+        },
+        {
+          "codigo": "BF-521",
+          "campos": {
+            "Producto": "Pañal Pequeños Pasos Pack Ahorro x2",
+            "Talle / etapa": "XG",
+            "Cantidad": "2 x 36 un",
+            "EAN": "7792102155315",
+            "Precio lista": 876.68,
+            "Precio c/desc. 8%": 806.55
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 9
+          }
+        },
+        {
+          "codigo": "BF-524",
+          "campos": {
+            "Producto": "Pañal Pequeños Pasos",
+            "Talle / etapa": "XG",
+            "Cantidad": "60 un",
+            "EAN": "7795086583884",
+            "Precio lista": 652.89,
+            "Precio c/desc. 8%": 600.66
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 10
+          }
+        },
+        {
+          "codigo": "BF-593",
+          "campos": {
+            "Producto": "Toallitas Pequeños Pasos Sin Perfume",
+            "Talle / etapa": null,
+            "Cantidad": "x 80",
+            "EAN": null,
+            "Precio lista": 95.67,
+            "Precio c/desc. 8%": 88.02
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 11
+          }
+        },
+        {
+          "codigo": "BF-527",
+          "campos": {
+            "Producto": "Crema de cambio Pequeños Pasos Oxido De Zinc",
+            "Talle / etapa": null,
+            "Cantidad": "120 g",
+            "EAN": "7797745670423",
+            "Precio lista": 252.88,
+            "Precio c/desc. 8%": 232.65
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 12
+          }
+        },
+        {
+          "codigo": "BF-530",
+          "campos": {
+            "Producto": "Toallitas Pequeños Pasos Aloe",
+            "Talle / etapa": null,
+            "Cantidad": "x 80",
+            "EAN": "7790113299042",
+            "Precio lista": 92.34,
+            "Precio c/desc. 8%": 84.95
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 13
+          }
+        },
+        {
+          "codigo": "BF-533",
+          "campos": {
+            "Producto": "Leche Crecer",
+            "Talle / etapa": "Etapa 3",
+            "Cantidad": "0,4 kg",
+            "EAN": "7793806669115",
+            "Precio lista": 626.29,
+            "Precio c/desc. 8%": 576.19
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 14
+          }
+        },
+        {
+          "codigo": "BF-536",
+          "campos": {
+            "Producto": "Pañal Pequeños Pasos",
+            "Talle / etapa": "P",
+            "Cantidad": "48 un",
+            "EAN": "7798512624519",
+            "Precio lista": 490.45,
+            "Precio c/desc. 8%": 451.21
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 15
+          }
+        },
+        {
+          "codigo": "BF-539",
+          "campos": {
+            "Producto": "Toallitas Pequeños Pasos Aloe",
+            "Talle / etapa": null,
+            "Cantidad": "x 100",
+            "EAN": "7791115123588",
+            "Precio lista": 107.3,
+            "Precio c/desc. 8%": 98.72
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 16
+          }
+        },
+        {
+          "codigo": "BF-542",
+          "campos": {
+            "Producto": "Toallitas Pequeños Pasos Recien Nacido",
+            "Talle / etapa": null,
+            "Cantidad": "x 100",
+            "EAN": "7793633072348",
+            "Precio lista": 120.75,
+            "Precio c/desc. 8%": 111.09
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 17
+          }
+        },
+        {
+          "codigo": "BF-545",
+          "campos": {
+            "Producto": "Pañal Pequeños Pasos",
+            "Talle / etapa": "XG",
+            "Cantidad": "48 un",
+            "EAN": "7799705856731",
+            "Precio lista": 490.74,
+            "Precio c/desc. 8%": 451.48
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 18
+          }
+        },
+        {
+          "codigo": "BF-548",
+          "campos": {
+            "Producto": "Pañal Pequeños Pasos Pack Ahorro x2",
+            "Talle / etapa": "G",
+            "Cantidad": "2 x 36 un",
+            "EAN": "7797400605036",
+            "Precio lista": 802.64,
+            "Precio c/desc. 8%": 738.43
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 19
+          }
+        },
+        {
+          "codigo": "BF-551",
+          "campos": {
+            "Producto": "Pañal Pequeños Pasos",
+            "Talle / etapa": "P",
+            "Cantidad": "60 un",
+            "EAN": "7799065860171",
+            "Precio lista": 572.95,
+            "Precio c/desc. 8%": 527.11
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 20
+          }
+        },
+        {
+          "codigo": "BF-554",
+          "campos": {
+            "Producto": "Pañal Pequeños Pasos",
+            "Talle / etapa": "G",
+            "Cantidad": "48 un",
+            "EAN": "7793445721922",
+            "Precio lista": 493.39,
+            "Precio c/desc. 8%": 453.92
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 21
+          }
+        },
+        {
+          "codigo": "BF-557",
+          "campos": {
+            "Producto": "Pañal Pequeños Pasos",
+            "Talle / etapa": "P",
+            "Cantidad": "36 un",
+            "EAN": "7792454135881",
+            "Precio lista": 461.65,
+            "Precio c/desc. 8%": 424.72
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 22
+          }
+        },
+        {
+          "codigo": "BF-560",
+          "campos": {
+            "Producto": "Crema de cambio Pequeños Pasos Oxido De Zinc",
+            "Talle / etapa": null,
+            "Cantidad": "60 g",
+            "EAN": "7793767735416",
+            "Precio lista": 142.23,
+            "Precio c/desc. 8%": 130.85
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 23
+          }
+        },
+        {
+          "codigo": "BF-563",
+          "campos": {
+            "Producto": "Pañal Pequeños Pasos",
+            "Talle / etapa": "XXG",
+            "Cantidad": "36 un",
+            "EAN": "7792103310119",
+            "Precio lista": 418.2,
+            "Precio c/desc. 8%": 384.74
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 24
+          }
+        },
+        {
+          "codigo": "BF-566",
+          "campos": {
+            "Producto": "Toallitas Pequeños Pasos Recien Nacido",
+            "Talle / etapa": null,
+            "Cantidad": "x 50",
+            "EAN": "7792950681844",
+            "Precio lista": 68.08,
+            "Precio c/desc. 8%": 62.63
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 25
+          }
+        },
+        {
+          "codigo": "BF-569",
+          "campos": {
+            "Producto": "Toallitas Pequeños Pasos Sin Perfume",
+            "Talle / etapa": null,
+            "Cantidad": "x 100",
+            "EAN": "7795940032626",
+            "Precio lista": 122.3,
+            "Precio c/desc. 8%": 112.52
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 26
+          }
+        },
+        {
+          "codigo": "BF-572",
+          "campos": {
+            "Producto": "Toallitas Pequeños Pasos Recien Nacido",
+            "Talle / etapa": null,
+            "Cantidad": "x 80",
+            "EAN": "7795238192599",
+            "Precio lista": 106.88,
+            "Precio c/desc. 8%": 98.33
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 27
+          }
+        },
+        {
+          "codigo": "BF-596",
+          "campos": {
+            "Producto": "Toallitas Pequeños Pasos Aloe",
+            "Talle / etapa": null,
+            "Cantidad": "x 50",
+            "EAN": null,
+            "Precio lista": 68.16,
+            "Precio c/desc. 8%": 62.71
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 28
+          }
+        },
+        {
+          "codigo": "BF-575",
+          "campos": {
+            "Producto": "Leche Crecer",
+            "Talle / etapa": "Etapa 1",
+            "Cantidad": "0,8 kg",
+            "EAN": "7796618742595",
+            "Precio lista": 1202.01,
+            "Precio c/desc. 8%": 1105.85
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 29
+          }
+        },
+        {
+          "codigo": "BF-578",
+          "campos": {
+            "Producto": "Pañal Pequeños Pasos",
+            "Talle / etapa": "XG",
+            "Cantidad": "30 un",
+            "EAN": "7795033505631",
+            "Precio lista": 387.78,
+            "Precio c/desc. 8%": 356.76
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 30
+          }
+        },
+        {
+          "codigo": "BF-581",
+          "campos": {
+            "Producto": "Leche Crecer",
+            "Talle / etapa": "Etapa 3",
+            "Cantidad": "800 g",
+            "EAN": "7795958112549",
+            "Precio lista": 1230.97,
+            "Precio c/desc. 8%": 1132.49
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 31
+          }
+        },
+        {
+          "codigo": "BF-584",
+          "campos": {
+            "Producto": "Pañal Pequeños Pasos",
+            "Talle / etapa": "M",
+            "Cantidad": "60 un",
+            "EAN": "7796875264953",
+            "Precio lista": 584.01,
+            "Precio c/desc. 8%": 537.29
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 32
+          }
+        },
+        {
+          "codigo": "BF-587",
+          "campos": {
+            "Producto": "Leche Crecer",
+            "Talle / etapa": "Etapa 2",
+            "Cantidad": "0,4 kg",
+            "EAN": "7799616137905",
+            "Precio lista": 647.77,
+            "Precio c/desc. 8%": 595.95
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 33
+          }
+        },
+        {
+          "codigo": "BF-590",
+          "campos": {
+            "Producto": "Pañal Pequeños Pasos",
+            "Talle / etapa": "M",
+            "Cantidad": "48 un",
+            "EAN": "7791123452588",
+            "Precio lista": 544.37,
+            "Precio c/desc. 8%": 500.82
+          },
+          "fuente": {
+            "archivo": "BebeFeliz_altas.xlsx",
+            "hoja": "Altas",
+            "fila": 34
+          }
+        }
+      ],
+      "fds": null,
+      "contexto": "Hoja 'Altas', fila 1 con encabezados de grupo: 'Datos del producto' (columnas A a E) y 'Precios' (columna F). Fila 2 con nombres de columna: 'Código', 'Producto', 'Talle / etapa', 'Cantidad', 'EAN', 'Precio lista', 'Precio c/desc. 8%'. La columna 'Precio c/desc. 8%' es el nombre de columna tal como figura en el archivo; no hay otra aclaración sobre el descuento, la vigencia, la moneda ni el IVA en el archivo.",
+      "notas": [
+        "El archivo tiene una única hoja ('Altas'); no hay hojas omitidas ni listas de productos discontinuados.",
+        "El archivo no indica vigencia, moneda ni si los precios incluyen IVA.",
+        "Sin EAN en las filas BF-593 y BF-596 (celda vacía, se deja null).",
+        "Sin talle / etapa en las filas de toallitas y cremas (celda vacía, se deja null)."
+      ]
+    },
+    "error": null,
+    "segundos": 26.3,
+    "uso": {
+      "input": 7462,
+      "output": 7653,
+      "cache_escrito": 0,
+      "cache_leido": 0
+    },
+    "costo_usd": 0.0045727
+  }
+]

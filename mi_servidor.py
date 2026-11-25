@@ -199,7 +199,9 @@ CONSULTA_PDF = (
     "incluyen IVA, tal como lo dice el documento. "
     "Después transcribí CADA fila de producto en su propia oración, empezando por su código, con todos sus datos "
     "tal como aparecen (código, nombre, monodroga o principio activo, presentación, condición de venta, "
-    "código de barras, precio). Son filas de una tabla: no omitas ninguna, ni siquiera las parecidas entre sí. "
+    "código de barras, precio). Puede ser una tabla o una ficha por producto, y en una ficha el nombre y la descripción pueden ir "
+    "ARRIBA del código: los datos de un producto son los de su propio bloque o fila (el que contiene su código), "
+    "nunca los del bloque que viene después. No omitas ninguna, ni siquiera las parecidas entre sí. "
     "No normalices, no corrijas y no completes nada. Si una celda está vacía, escribí que está vacía."
 )
  

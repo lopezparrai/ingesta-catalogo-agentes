@@ -1,53 +1,63 @@
 {
   "modo": "tiempo-real",
-  "segundos_total": 123.9,
-  "segundos_extraccion": 60.1,
-  "segundos_escritura": 63.8,
+  "segundos_total": 160.9,
+  "segundos_extraccion": 50.2,
+  "segundos_escritura": 110.7,
   "rondas": [
     {
       "ronda": 1,
-      "pedidos": 2,
-      "segundos": 17.8,
+      "pedidos": 8,
+      "segundos": 20.3,
       "batch_id": null,
-      "ok": 2,
+      "ok": 8,
       "error": 0,
       "vencidos": 0,
       "cancelados": 0
     },
     {
       "ronda": 2,
-      "pedidos": 2,
-      "segundos": 2.4,
+      "pedidos": 8,
+      "segundos": 23.6,
       "batch_id": null,
-      "ok": 2,
+      "ok": 8,
       "error": 0,
       "vencidos": 0,
       "cancelados": 0
     },
     {
       "ronda": 3,
-      "pedidos": 2,
-      "segundos": 24.4,
+      "pedidos": 8,
+      "segundos": 27.3,
       "batch_id": null,
-      "ok": 2,
+      "ok": 8,
       "error": 0,
       "vencidos": 0,
       "cancelados": 0
     },
     {
       "ronda": 4,
-      "pedidos": 2,
-      "segundos": 14.2,
+      "pedidos": 8,
+      "segundos": 17.5,
       "batch_id": null,
-      "ok": 2,
+      "ok": 8,
       "error": 0,
       "vencidos": 0,
       "cancelados": 0
     },
     {
       "ronda": 5,
+      "pedidos": 6,
+      "segundos": 16.5,
+      "batch_id": null,
+      "ok": 6,
+      "error": 0,
+      "vencidos": 0,
+      "cancelados": 0
+    },
+    {
+      "ronda": 6,
       "pedidos": 2,
-      "segundos": 2.6,
+      "segundos": 3.2,
       "batch_id": null,
       "ok": 2,
       "error": 0,
@@ -55,20 +65,33 @@
       "cancelados": 0
     }
   ],
-  "fichas": 18,
-  "costo_usd": 0.0398,
-  "costo_por_ficha_usd": 0.00221,
+  "fichas": 75,
+  "costo_usd": 0.1537,
+  "costo_por_ficha_usd": 0.00205,
   "proveedores": [
     {
-      "carpeta": "P05_Dermalab",
-      "fichas": 18,
-      "esperadas": 18,
+      "carpeta": "P02_Cosmetica_Rivera",
+      "fichas": 50,
+      "esperadas": 50,
       "estados": {
-        "lista_para_alta": 13,
-        "duplicado": 0,
-        "a_revision": 5
+        "lista_para_alta": 44,
+        "duplicado": 5,
+        "a_revision": 1
       },
-      "costo_usd": 0.0398,
+      "costo_usd": 0.0964,
+      "frenos_de_hooks": 0,
+      "fallas": []
+    },
+    {
+      "carpeta": "P07_Limpieza_Hogar_Sur",
+      "fichas": 25,
+      "esperadas": 25,
+      "estados": {
+        "lista_para_alta": 20,
+        "duplicado": 3,
+        "a_revision": 2
+      },
+      "costo_usd": 0.0573,
       "frenos_de_hooks": 0,
       "fallas": []
     }

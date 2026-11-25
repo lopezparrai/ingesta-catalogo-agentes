@@ -1,40 +1,35 @@
 {
-  "modo": "batch",
+  "modo": "tiempo-real",
   "fichas": 25,
   "sin_registrar": [],
   "fallas": [],
-  "frenos_de_hooks": [
-    {
-      "item_id": null,
-      "hook": "[hook_al_terminar_fuentes] campos sin fuente: P07:LHS-233: ['unidades_por_envase']; P07:LHS-275: ['unidades_por_envase']; P07:LHS-236: ['unidades_por_envase']; P07:LHS-239: ['unidades_por_envase']; P07:LHS-242: ['unidades_por_envase']; P07:LHS-245: ['unidades_por_envase']; P07:LHS-248: ['unidades_por_envase']; P07:LHS-251: ['unidades_por_envase']; P07:LHS-254: ['unidades_por_envase']; P07:LHS-257: ['unidades_por_envase']"
-    }
-  ],
-  "costo_usd": 0.0495,
-  "costo_por_ficha_usd": 0.00198,
+  "frenos_de_hooks": [],
+  "costo_usd": 0.0573,
+  "costo_por_ficha_usd": 0.00229,
   "uso_escritor": {
-    "input": 264871,
-    "output": 56425,
+    "input": 199521,
+    "output": 47420,
     "cache_escrito": 0,
-    "cache_leido": 238289
+    "cache_leido": 196238
   },
   "lotes": [
     {
       "lote": "P07-lote0",
       "estado": "terminada",
       "iteraciones": 4,
-      "costo_usd": 0.0083
+      "costo_usd": 0.017
     },
     {
       "lote": "P07-lote1",
       "estado": "terminada",
-      "iteraciones": 6,
-      "costo_usd": 0.0155
+      "iteraciones": 4,
+      "costo_usd": 0.0194
     },
     {
       "lote": "P07-lote2",
       "estado": "terminada",
       "iteraciones": 3,
-      "costo_usd": 0.0048
+      "costo_usd": 0.0092
     }
   ]
 }

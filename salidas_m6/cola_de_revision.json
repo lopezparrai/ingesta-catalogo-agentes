@@ -1,41 +1,25 @@
 [
   {
-    "item_id": "P05:DL-151",
+    "item_id": "P02:RIV-1203",
     "motivos_revision": [
-      "gtin_faltante",
-      "dato_obligatorio_faltante"
+      "gtin_invalido"
     ],
     "duplicado_de": null
   },
   {
-    "item_id": "P05:DL-103",
+    "item_id": "P07:LHS-275",
     "motivos_revision": [
       "gtin_faltante",
-      "dato_obligatorio_faltante"
+      "posible_duplicado"
     ],
-    "duplicado_de": null
+    "duplicado_de": "SKU101386"
   },
   {
-    "item_id": "P05:DL-106",
+    "item_id": "P07:LHS-272",
     "motivos_revision": [
       "gtin_faltante",
-      "dato_obligatorio_faltante"
+      "posible_duplicado"
     ],
-    "duplicado_de": null
-  },
-  {
-    "item_id": "P05:DL-154",
-    "motivos_revision": [
-      "gtin_faltante",
-      "dato_obligatorio_faltante"
-    ],
-    "duplicado_de": null
-  },
-  {
-    "item_id": "P05:DL-148",
-    "motivos_revision": [
-      "dato_obligatorio_faltante"
-    ],
-    "duplicado_de": null
+    "duplicado_de": "SKU102282"
   }
 ]

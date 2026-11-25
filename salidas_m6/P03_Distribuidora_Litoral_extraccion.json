@@ -1,0 +1,809 @@
+[
+  {
+    "archivo": "P03_Distribuidora_Litoral/litoral_altas_102026.csv",
+    "datos": {
+      "archivo": "litoral_altas_102026.csv",
+      "tipo_archivo": "lista",
+      "vigencia": null,
+      "moneda": null,
+      "iva": null,
+      "filas": [
+        {
+          "codigo": "LT-3303",
+          "campos": {
+            "descripcion": "PASTA DENTAL BLANQ.",
+            "marca": "SONRISA",
+            "contenido": "90",
+            "unidad": "GR",
+            "ean": "7793469616846",
+            "precio": "68,91"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 2
+          }
+        },
+        {
+          "codigo": "LT-3306",
+          "campos": {
+            "descripcion": "Jabon Antibacterial",
+            "marca": "LAVANDA REAL",
+            "contenido": "125",
+            "unidad": "GR",
+            "ean": "7790863076870",
+            "precio": "45,37"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 3
+          }
+        },
+        {
+          "codigo": "LT-3309",
+          "campos": {
+            "descripcion": "Pasta Dental Menta Fresca",
+            "marca": "DENTIBLANC",
+            "contenido": "90",
+            "unidad": "G",
+            "ean": "7792214191911",
+            "precio": "65,74"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 4
+          }
+        },
+        {
+          "codigo": "LT-3312",
+          "campos": {
+            "descripcion": "JABON LIQUIDO NEUTRO",
+            "marca": "PUREZA",
+            "contenido": "0,5",
+            "unidad": "LT",
+            "ean": "7799626810102",
+            "precio": "115,87"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 5
+          }
+        },
+        {
+          "codigo": "LT-3315",
+          "campos": {
+            "descripcion": "PASTA DENTAL SENSIBLE",
+            "marca": "DENTIBLANC",
+            "contenido": "90",
+            "unidad": "GR",
+            "ean": "7799643701780",
+            "precio": "66,87"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 6
+          }
+        },
+        {
+          "codigo": "LT-3318",
+          "campos": {
+            "descripcion": "ALGODON ZIG ZAG",
+            "marca": "NUBE",
+            "contenido": "140",
+            "unidad": "G",
+            "ean": "7790267858324",
+            "precio": "69,21"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 7
+          }
+        },
+        {
+          "codigo": "LT-3321",
+          "campos": {
+            "descripcion": "Pasta Dental Blanqueadora",
+            "marca": "DENTIBLANC",
+            "contenido": "180",
+            "unidad": "G",
+            "ean": "7797556693871",
+            "precio": "124,76"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 8
+          }
+        },
+        {
+          "codigo": "LT-3324",
+          "campos": {
+            "descripcion": "Jabon Liquido Neutro",
+            "marca": "PUREZA",
+            "contenido": "250",
+            "unidad": "CC",
+            "ean": "7790342802839",
+            "precio": "68,54"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 9
+          }
+        },
+        {
+          "codigo": "LT-3327",
+          "campos": {
+            "descripcion": "CEPILLO DENTAL MEDIO",
+            "marca": "SONRISA",
+            "contenido": "2",
+            "unidad": "UNID",
+            "ean": "7798971881317",
+            "precio": "96,95"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 10
+          }
+        },
+        {
+          "codigo": "LT-3330",
+          "campos": {
+            "descripcion": "PASTA DENTAL BLANQ.",
+            "marca": "DENTIBLANC",
+            "contenido": "70",
+            "unidad": "G",
+            "ean": "7792497428735",
+            "precio": "55,51"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 11
+          }
+        },
+        {
+          "codigo": "LT-3333",
+          "campos": {
+            "descripcion": "Pasta Dental Blanq.",
+            "marca": "DENTIBLANC",
+            "contenido": "90",
+            "unidad": "G",
+            "ean": "7798096023746",
+            "precio": "67,82"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 12
+          }
+        },
+        {
+          "codigo": "LT-3336",
+          "campos": {
+            "descripcion": "ENJUAGUE BUCAL SIN ALCOHOL",
+            "marca": "DENTIBLANC",
+            "contenido": "250",
+            "unidad": "CC",
+            "ean": "7791018588972",
+            "precio": "101,78"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 13
+          }
+        },
+        {
+          "codigo": "LT-3339",
+          "campos": {
+            "descripcion": "PASTA DENTAL SENSIBLE",
+            "marca": "DENTIBLANC",
+            "contenido": "70",
+            "unidad": "GR",
+            "ean": "7790865988232",
+            "precio": "56,25"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 14
+          }
+        },
+        {
+          "codigo": "LT-3342",
+          "campos": {
+            "descripcion": "Algodon Zig Zag",
+            "marca": "NUBE",
+            "contenido": "70",
+            "unidad": "GRS",
+            "ean": "7796168081588",
+            "precio": "47,78"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 15
+          }
+        },
+        {
+          "codigo": "LT-3345",
+          "campos": {
+            "descripcion": "Jabon Liquido Antibacterial",
+            "marca": "PUREZA",
+            "contenido": "0,25",
+            "unidad": "LT",
+            "ean": "7793358846682",
+            "precio": "76,17"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 16
+          }
+        },
+        {
+          "codigo": "LT-3348",
+          "campos": {
+            "descripcion": "Pasta Dental Menta Fresca",
+            "marca": "DENTIBLANC",
+            "contenido": "70",
+            "unidad": "GRS",
+            "ean": "7793619638384",
+            "precio": "59,43"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 17
+          }
+        },
+        {
+          "codigo": "LT-3351",
+          "campos": {
+            "descripcion": "Jabon Liquido Avena",
+            "marca": "PUREZA",
+            "contenido": "500",
+            "unidad": "ML",
+            "ean": "7798948345705",
+            "precio": "112,34"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 18
+          }
+        },
+        {
+          "codigo": "LT-3354",
+          "campos": {
+            "descripcion": "Pasta Dental Sensible",
+            "marca": "SONRISA",
+            "contenido": "70",
+            "unidad": "GR",
+            "ean": "7795848010542",
+            "precio": "61,20"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 19
+          }
+        },
+        {
+          "codigo": "LT-3357",
+          "campos": {
+            "descripcion": "JABON ANTIBACTERIAL",
+            "marca": "PUREZA",
+            "contenido": "125",
+            "unidad": "GR",
+            "ean": null,
+            "precio": "48,42"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 20
+          }
+        },
+        {
+          "codigo": "LT-3360",
+          "campos": {
+            "descripcion": "Jabon Avena",
+            "marca": "PUREZA",
+            "contenido": "90",
+            "unidad": "GRS",
+            "ean": "7794413279544",
+            "precio": "37,82"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 21
+          }
+        },
+        {
+          "codigo": "LT-3363",
+          "campos": {
+            "descripcion": "CEPILLO DENTAL SUAVE",
+            "marca": "DENTIBLANC",
+            "contenido": "1",
+            "unidad": "UN",
+            "ean": "7792998932205",
+            "precio": "52,52"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 22
+          }
+        },
+        {
+          "codigo": "LT-3366",
+          "campos": {
+            "descripcion": "Hisopos",
+            "marca": "NUBE",
+            "contenido": "200",
+            "unidad": "UN",
+            "ean": "7792055312834",
+            "precio": "71,09"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 23
+          }
+        },
+        {
+          "codigo": "LT-3369",
+          "campos": {
+            "descripcion": "CEPILLO DENTAL SUAVE",
+            "marca": "SONRISA",
+            "contenido": "2",
+            "unidad": "UN",
+            "ean": "7790743922976",
+            "precio": "89,57"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 24
+          }
+        },
+        {
+          "codigo": "LT-3372",
+          "campos": {
+            "descripcion": "Cepillo Dental Medio",
+            "marca": "DENTIBLANC",
+            "contenido": "1",
+            "unidad": "UN",
+            "ean": "7799894711811",
+            "precio": "56,75"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 25
+          }
+        },
+        {
+          "codigo": "LT-3375",
+          "campos": {
+            "descripcion": "JABON GLICERINA",
+            "marca": "LAVANDA REAL",
+            "contenido": "90",
+            "unidad": "G",
+            "ean": "7796805044617",
+            "precio": "32,86"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 26
+          }
+        },
+        {
+          "codigo": "LT-3378",
+          "campos": {
+            "descripcion": "Pasta Dental Menta Fresca",
+            "marca": "SONRISA",
+            "contenido": "70",
+            "unidad": "G",
+            "ean": "7797460628105",
+            "precio": "60,43"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 27
+          }
+        },
+        {
+          "codigo": "LT-3381",
+          "campos": {
+            "descripcion": "JABON LIQUIDO AVENA",
+            "marca": "PUREZA",
+            "contenido": "250",
+            "unidad": "ML",
+            "ean": "7799349440273",
+            "precio": "63,47"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 28
+          }
+        },
+        {
+          "codigo": "LT-3384",
+          "campos": {
+            "descripcion": "JABON AVENA",
+            "marca": "LAVANDA REAL",
+            "contenido": "125",
+            "unidad": "G",
+            "ean": "7795777303821",
+            "precio": "45,46"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 29
+          }
+        },
+        {
+          "codigo": "LT-3387",
+          "campos": {
+            "descripcion": "Pasta Dental Caries",
+            "marca": "DENTIBLANC",
+            "contenido": "70",
+            "unidad": "GRS",
+            "ean": "7792922330572",
+            "precio": "63,89"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 30
+          }
+        },
+        {
+          "codigo": "LT-3390",
+          "campos": {
+            "descripcion": "JABON AVENA",
+            "marca": "LAVANDA REAL",
+            "contenido": "90",
+            "unidad": "GRS",
+            "ean": "7797702204005",
+            "precio": "35,08"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 31
+          }
+        },
+        {
+          "codigo": "LT-3393",
+          "campos": {
+            "descripcion": "Pasta Dental Caries",
+            "marca": "DENTIBLANC",
+            "contenido": "90",
+            "unidad": "GR",
+            "ean": "7796606860782",
+            "precio": "67,32"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 32
+          }
+        },
+        {
+          "codigo": "LT-3396",
+          "campos": {
+            "descripcion": "Jabon Glicerina",
+            "marca": "PUREZA",
+            "contenido": "90",
+            "unidad": "GR",
+            "ean": "7794062327283",
+            "precio": "37,64"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 33
+          }
+        },
+        {
+          "codigo": "LT-3399",
+          "campos": {
+            "descripcion": "JABON GLICERINA",
+            "marca": "PUREZA",
+            "contenido": "125",
+            "unidad": "G",
+            "ean": "7790829525725",
+            "precio": "42,48"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 34
+          }
+        },
+        {
+          "codigo": "LT-3402",
+          "campos": {
+            "descripcion": "JABON GLICERINA",
+            "marca": "LAVANDA REAL",
+            "contenido": "125",
+            "unidad": "G",
+            "ean": "7795538327196",
+            "precio": "41,70"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 35
+          }
+        },
+        {
+          "codigo": "LT-3405",
+          "campos": {
+            "descripcion": "JABON AVENA",
+            "marca": "PUREZA",
+            "contenido": "125",
+            "unidad": "GRS",
+            "ean": "7798762369147",
+            "precio": "39,89"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 36
+          }
+        },
+        {
+          "codigo": "LT-3408",
+          "campos": {
+            "descripcion": "PASTA DENTAL CARIES",
+            "marca": "DENTIBLANC",
+            "contenido": "180",
+            "unidad": "GRS",
+            "ean": "7796556998863",
+            "precio": "125,31"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 37
+          }
+        },
+        {
+          "codigo": "LT-3411",
+          "campos": {
+            "descripcion": "PASTA DENTAL SENSIBLE",
+            "marca": "SONRISA",
+            "contenido": "90",
+            "unidad": "GR",
+            "ean": "7795219613808",
+            "precio": "70,60"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 38
+          }
+        },
+        {
+          "codigo": "LT-3414",
+          "campos": {
+            "descripcion": "PASTA DENTAL BLANQUEADORA",
+            "marca": "SONRISA",
+            "contenido": "70",
+            "unidad": "GR",
+            "ean": "7794283405838",
+            "precio": "55,96"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 39
+          }
+        },
+        {
+          "codigo": "LT-3417",
+          "campos": {
+            "descripcion": "ENJUAGUE BUCAL S/ ALCOHOL",
+            "marca": "DENTIBLANC",
+            "contenido": "0,5",
+            "unidad": "LT",
+            "ean": "7795205443723",
+            "precio": "161,71"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 40
+          }
+        },
+        {
+          "codigo": "LT-3450",
+          "campos": {
+            "descripcion": "Hisopos",
+            "marca": "NUBE",
+            "contenido": "100",
+            "unidad": "UNID",
+            "ean": null,
+            "precio": "41,84"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 41
+          }
+        }
+      ],
+      "fds": null,
+      "contexto": "Encabezado de columnas del archivo (tal cual): codigo, descripcion, marca, contenido, unidad, ean, precio. El archivo no trae vigencia, moneda ni aclaración sobre IVA, y no tiene otras líneas de texto fuera de las filas de producto (las líneas 42 a 51 son filas de producto, sin aclaraciones).",
+      "notas": [
+        "Se extrajeron las filas de índice 0 a 39 (líneas 2 a 41): 40 filas. El campo 'codigo' va en el nivel superior de cada fila y no se repite en 'campos'.",
+        "Las filas de índice 40 a 49 (líneas 42 a 51, códigos LT-3420 a LT-3444) no se extrajeron, según la instrucción; solo se leyeron para completar el contexto del archivo, y no contienen notas ni aclaraciones.",
+        "El archivo completo tiene 50 filas de producto (total_filas = 50).",
+        "Ean vacío en LT-3357 (línea 20), LT-3450 (línea 41): se dejó null."
+      ]
+    },
+    "error": null,
+    "segundos": 27.1,
+    "uso": {
+      "input": 16759,
+      "output": 6368,
+      "cache_escrito": 0,
+      "cache_leido": 0
+    },
+    "costo_usd": 0.0048598999999999995
+  },
+  {
+    "archivo": "P03_Distribuidora_Litoral/litoral_altas_102026.csv",
+    "datos": {
+      "archivo": "litoral_altas_102026.csv",
+      "tipo_archivo": "lista",
+      "vigencia": null,
+      "moneda": null,
+      "iva": null,
+      "filas": [
+        {
+          "codigo": "LT-3420",
+          "campos": {
+            "descripcion": "ALGODON HIDROFILO",
+            "marca": "NUBE",
+            "contenido": "70",
+            "unidad": "GRS",
+            "ean": "7799874686399",
+            "precio": "41,15"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 42
+          }
+        },
+        {
+          "codigo": "LT-3423",
+          "campos": {
+            "descripcion": "Algodon Hidrofilo",
+            "marca": "NUBE",
+            "contenido": "140",
+            "unidad": "G",
+            "ean": "7793675505019",
+            "precio": "65,81"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 43
+          }
+        },
+        {
+          "codigo": "LT-3426",
+          "campos": {
+            "descripcion": "CEPILLO DENTAL MEDIO",
+            "marca": "SONRISA",
+            "contenido": "1",
+            "unidad": "UNID",
+            "ean": "7792916781618",
+            "precio": "52,54"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 44
+          }
+        },
+        {
+          "codigo": "LT-3429",
+          "campos": {
+            "descripcion": "Cepillo Dental Suave",
+            "marca": "SONRISA",
+            "contenido": "1",
+            "unidad": "UNID",
+            "ean": "7799645764783",
+            "precio": "52,83"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 45
+          }
+        },
+        {
+          "codigo": "LT-3447",
+          "campos": {
+            "descripcion": "JABON ANTIBAC.",
+            "marca": "PUREZA",
+            "contenido": "90",
+            "unidad": "GR",
+            "ean": null,
+            "precio": "34,20"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 46
+          }
+        },
+        {
+          "codigo": "LT-3432",
+          "campos": {
+            "descripcion": "PASTA DENTAL MENTA FRESCA",
+            "marca": "SONRISA",
+            "contenido": "180",
+            "unidad": "GRS",
+            "ean": "7798055626131",
+            "precio": "114,38"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 47
+          }
+        },
+        {
+          "codigo": "LT-3435",
+          "campos": {
+            "descripcion": "Cepillo Dental Medio",
+            "marca": "DENTIBLANC",
+            "contenido": "2",
+            "unidad": "UN",
+            "ean": "7790145357833",
+            "precio": "94,33"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 48
+          }
+        },
+        {
+          "codigo": "LT-3438",
+          "campos": {
+            "descripcion": "PASTA DENTAL MENTA FRESCA",
+            "marca": "DENTIBLANC",
+            "contenido": "180",
+            "unidad": "G",
+            "ean": "7792649499088",
+            "precio": "108,93"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 49
+          }
+        },
+        {
+          "codigo": "LT-3441",
+          "campos": {
+            "descripcion": "Pasta Dental Sensible",
+            "marca": "SONRISA",
+            "contenido": "180",
+            "unidad": "G",
+            "ean": "7790487691688",
+            "precio": "123,80"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 50
+          }
+        },
+        {
+          "codigo": "LT-3444",
+          "campos": {
+            "descripcion": "Pasta Dental Sensible",
+            "marca": "DENTIBLANC",
+            "contenido": "180",
+            "unidad": "GR",
+            "ean": "7792011235092",
+            "precio": "119,93"
+          },
+          "fuente": {
+            "archivo": "litoral_altas_102026.csv",
+            "linea": 51
+          }
+        }
+      ],
+      "fds": null,
+      "contexto": "El archivo tiene 50 filas de datos (líneas 2 a 51), con columnas: codigo, descripcion, marca, contenido, unidad, ean, precio. No se encontró en el archivo ninguna línea de vigencia, moneda, IVA, título, aclaración ni nota al pie: las lecturas devolvieron solo filas de producto y la fila de encabezado no apareció como dato.",
+      "notas": [
+        "Extraídas solo las filas de índice 40 a 49 (líneas 42 a 51), según la instrucción. Las líneas 2 a 41 se leyeron únicamente para revisar el contexto y no se extrajeron.",
+        "LT-3447 (línea 46) y LT-3450 (línea 41, no extraída) tienen el EAN vacío; en LT-3447 quedó como null.",
+        "La vigencia, la moneda y la condición de IVA no figuran en el archivo según lo devuelto por la herramienta; quedaron en null."
+      ]
+    },
+    "error": null,
+    "segundos": 17.6,
+    "uso": {
+      "input": 14379,
+      "output": 2839,
+      "cache_escrito": 0,
+      "cache_leido": 0
+    },
+    "costo_usd": 0.0028574
+  }
+]

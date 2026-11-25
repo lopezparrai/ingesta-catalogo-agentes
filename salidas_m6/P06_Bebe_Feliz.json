@@ -30,11 +30,6 @@
         "hoja": "Altas",
         "fila": 3
       },
-      "descripcion": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 3
-      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -70,6 +65,11 @@
         "hoja": "Altas",
         "fila": 3
       },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -80,12 +80,12 @@
         "hoja": "Altas",
         "fila": 3
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 3
       },
-      "proveedor_id": {
+      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 3
@@ -123,11 +123,6 @@
         "hoja": "Altas",
         "fila": 4
       },
-      "descripcion": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 4
-      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -163,6 +158,11 @@
         "hoja": "Altas",
         "fila": 4
       },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -173,12 +173,12 @@
         "hoja": "Altas",
         "fila": 4
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 4
       },
-      "proveedor_id": {
+      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 4
@@ -216,11 +216,6 @@
         "hoja": "Altas",
         "fila": 5
       },
-      "descripcion": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 5
-      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -256,6 +251,11 @@
         "hoja": "Altas",
         "fila": 5
       },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -266,12 +266,12 @@
         "hoja": "Altas",
         "fila": 5
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 5
       },
-      "proveedor_id": {
+      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 5
@@ -309,11 +309,6 @@
         "hoja": "Altas",
         "fila": 6
       },
-      "descripcion": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 6
-      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -349,6 +344,11 @@
         "hoja": "Altas",
         "fila": 6
       },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -359,12 +359,12 @@
         "hoja": "Altas",
         "fila": 6
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 6
       },
-      "proveedor_id": {
+      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 6
@@ -402,11 +402,6 @@
         "hoja": "Altas",
         "fila": 7
       },
-      "descripcion": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 7
-      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -442,6 +437,11 @@
         "hoja": "Altas",
         "fila": 7
       },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -452,12 +452,12 @@
         "hoja": "Altas",
         "fila": 7
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 7
       },
-      "proveedor_id": {
+      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 7
@@ -495,11 +495,6 @@
         "hoja": "Altas",
         "fila": 8
       },
-      "descripcion": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 8
-      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -535,6 +530,11 @@
         "hoja": "Altas",
         "fila": 8
       },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -545,12 +545,12 @@
         "hoja": "Altas",
         "fila": 8
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 8
       },
-      "proveedor_id": {
+      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 8
@@ -588,11 +588,6 @@
         "hoja": "Altas",
         "fila": 9
       },
-      "descripcion": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 9
-      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -628,6 +623,11 @@
         "hoja": "Altas",
         "fila": 9
       },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -638,12 +638,12 @@
         "hoja": "Altas",
         "fila": 9
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 9
       },
-      "proveedor_id": {
+      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 9
@@ -681,11 +681,6 @@
         "hoja": "Altas",
         "fila": 10
       },
-      "descripcion": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 10
-      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -721,6 +716,11 @@
         "hoja": "Altas",
         "fila": 10
       },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -731,12 +731,12 @@
         "hoja": "Altas",
         "fila": 10
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 10
       },
-      "proveedor_id": {
+      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 10
@@ -772,11 +772,6 @@
       "variante": "SIN PERFUME"
     },
     "fuentes": {
-      "descripcion": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -812,6 +807,11 @@
         "hoja": "Altas",
         "fila": 11
       },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -822,12 +822,12 @@
         "hoja": "Altas",
         "fila": 11
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 11
       },
-      "proveedor_id": {
+      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 11
@@ -865,11 +865,6 @@
         "hoja": "Altas",
         "fila": 12
       },
-      "descripcion": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 12
-      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -905,6 +900,11 @@
         "hoja": "Altas",
         "fila": 12
       },
+      "codigo_proveedor": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
       "precio_costo": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -915,12 +915,12 @@
         "hoja": "Altas",
         "fila": 12
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 12
       },
-      "proveedor_id": {
+      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 12
@@ -956,6 +956,11 @@
         "hoja": "Altas",
         "fila": 13
       },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -1007,11 +1012,6 @@
         "fila": 13
       },
       "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 13
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 13
@@ -1047,6 +1047,11 @@
         "hoja": "Altas",
         "fila": 14
       },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -1098,11 +1103,6 @@
         "fila": 14
       },
       "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 14
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 14
@@ -1130,11 +1130,15 @@
       "precio_costo": 490.45,
       "moneda": "UYU",
       "proveedor_id": "P06",
-      "codigo_proveedor": "BF-536",
-      "peligro_deposito": null
+      "codigo_proveedor": "BF-536"
     },
     "fuentes": {
       "gtin": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 15
@@ -1190,11 +1194,6 @@
         "fila": 15
       },
       "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 15
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 15
@@ -1230,6 +1229,11 @@
         "hoja": "Altas",
         "fila": 16
       },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -1281,11 +1285,6 @@
         "fila": 16
       },
       "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 16
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 16
@@ -1321,6 +1320,11 @@
         "hoja": "Altas",
         "fila": 17
       },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -1372,11 +1376,6 @@
         "fila": 17
       },
       "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 17
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 17
@@ -1412,6 +1411,11 @@
         "hoja": "Altas",
         "fila": 18
       },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -1463,11 +1467,6 @@
         "fila": 18
       },
       "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 18
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 18
@@ -1503,6 +1502,11 @@
         "hoja": "Altas",
         "fila": 19
       },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -1554,11 +1558,6 @@
         "fila": 19
       },
       "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 19
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 19
@@ -1594,6 +1593,11 @@
         "hoja": "Altas",
         "fila": 20
       },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -1645,11 +1649,6 @@
         "fila": 20
       },
       "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 20
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 20
@@ -1685,6 +1684,11 @@
         "hoja": "Altas",
         "fila": 21
       },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -1736,11 +1740,6 @@
         "fila": 21
       },
       "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 21
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 21
@@ -1776,6 +1775,11 @@
         "hoja": "Altas",
         "fila": 22
       },
+      "descripcion": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 22
+      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -1827,11 +1831,6 @@
         "fila": 22
       },
       "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 22
-      },
-      "descripcion": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 22
@@ -1919,12 +1918,12 @@
         "hoja": "Altas",
         "fila": 23
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 23
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 23
@@ -2012,12 +2011,12 @@
         "hoja": "Altas",
         "fila": 24
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 24
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 24
@@ -2105,12 +2104,12 @@
         "hoja": "Altas",
         "fila": 25
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 25
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 25
@@ -2198,12 +2197,12 @@
         "hoja": "Altas",
         "fila": 26
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 26
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 26
@@ -2291,12 +2290,12 @@
         "hoja": "Altas",
         "fila": 27
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 27
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 27
@@ -2382,12 +2381,12 @@
         "hoja": "Altas",
         "fila": 28
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 28
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 28
@@ -2475,12 +2474,12 @@
         "hoja": "Altas",
         "fila": 29
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 29
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 29
@@ -2568,12 +2567,12 @@
         "hoja": "Altas",
         "fila": 30
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 30
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 30
@@ -2661,12 +2660,12 @@
         "hoja": "Altas",
         "fila": 31
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 31
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 31
@@ -2754,12 +2753,12 @@
         "hoja": "Altas",
         "fila": 32
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 32
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 32
@@ -2798,11 +2797,6 @@
         "fila": 33
       },
       "descripcion": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 33
-      },
-      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 33
@@ -2848,6 +2842,11 @@
         "fila": 33
       },
       "moneda": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 33
@@ -2895,11 +2894,6 @@
         "hoja": "Altas",
         "fila": 34
       },
-      "codigo_proveedor": {
-        "archivo": "BebeFeliz_altas.xlsx",
-        "hoja": "Altas",
-        "fila": 34
-      },
       "marca": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
@@ -2941,6 +2935,11 @@
         "fila": 34
       },
       "moneda": {
+        "archivo": "BebeFeliz_altas.xlsx",
+        "hoja": "Altas",
+        "fila": 34
+      },
+      "codigo_proveedor": {
         "archivo": "BebeFeliz_altas.xlsx",
         "hoja": "Altas",
         "fila": 34

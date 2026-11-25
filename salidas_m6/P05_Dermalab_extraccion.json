@@ -1,0 +1,513 @@
+[
+  {
+    "archivo": "P05_Dermalab/Dermalab_lanzamientos_2026.pdf",
+    "datos": {
+      "archivo": "Dermalab_lanzamientos_2026.pdf",
+      "tipo_archivo": "lista",
+      "vigencia": null,
+      "moneda": null,
+      "iva": null,
+      "filas": [
+        {
+          "codigo": "DL-151",
+          "campos": {
+            "nombre": "Dermalab Hydra Plus",
+            "descripcion": "Crema. Textura liviana de rápida absorción. Hidratación facial de uso diario.",
+            "contenido_neto": "50 ml",
+            "monodroga": "no figura",
+            "condicion_venta": "no figura",
+            "codigo_barras": "no figura",
+            "precio": "no figura"
+          },
+          "fuente": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 1
+          }
+        },
+        {
+          "codigo": "DL-103",
+          "campos": {
+            "nombre": "Dermalab Purify",
+            "descripcion": "Gel limpiador. Limpia en profundidad sin resecar. Para piel mixta a grasa.",
+            "contenido_neto": "300 ml",
+            "monodroga": "no figura",
+            "condicion_venta": "no figura",
+            "codigo_barras": "no figura",
+            "precio": "no figura"
+          },
+          "fuente": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 1
+          }
+        },
+        {
+          "codigo": "DL-106",
+          "campos": {
+            "nombre": "Dermalab Sun SPF 50+",
+            "descripcion": "Protector solar. Amplio espectro UVA/UVB. Resistente al agua.",
+            "contenido_neto": "50 ml",
+            "monodroga": "no figura",
+            "condicion_venta": "no figura",
+            "codigo_barras": "no figura",
+            "precio": "no figura"
+          },
+          "fuente": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 1
+          }
+        },
+        {
+          "codigo": "DL-109",
+          "campos": {
+            "nombre": "Dermalab Urea 10 %",
+            "descripcion": "Crema. Textura liviana de rápida absorción. Hidratación intensa para el cuerpo, ideal para piel muy seca.",
+            "contenido_neto": "400 ml",
+            "monodroga": "no figura",
+            "condicion_venta": "no figura",
+            "codigo_barras": "no figura",
+            "precio": "no figura"
+          },
+          "fuente": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 1
+          }
+        },
+        {
+          "codigo": "DL-112",
+          "campos": {
+            "nombre": "Dermalab Lift",
+            "descripcion": "Sérum. Con péptidos y ácido hialurónico. Reduce arrugas visibles en cuatro semanas.",
+            "contenido_neto": "30 ml",
+            "monodroga": "no figura",
+            "condicion_venta": "no figura",
+            "codigo_barras": "no figura",
+            "precio": "no figura"
+          },
+          "fuente": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 1
+          }
+        },
+        {
+          "codigo": "DL-115",
+          "campos": {
+            "nombre": "Dermalab Hydra Plus SPF 30",
+            "descripcion": "Crema. Textura liviana de rápida absorción. Hidratación facial de uso diario.",
+            "contenido_neto": "50 ml",
+            "monodroga": "no figura",
+            "condicion_venta": "no figura",
+            "codigo_barras": "no figura",
+            "precio": "no figura"
+          },
+          "fuente": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 1
+          }
+        },
+        {
+          "codigo": "DL-118",
+          "campos": {
+            "nombre": "Dermalab Purify",
+            "descripcion": "Gel limpiador. Limpia en profundidad sin resecar. Para piel mixta a grasa.",
+            "contenido_neto": "150 ml",
+            "monodroga": "no figura",
+            "condicion_venta": "no figura",
+            "codigo_barras": "no figura",
+            "precio": "no figura"
+          },
+          "fuente": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 1
+          }
+        },
+        {
+          "codigo": "DL-121",
+          "campos": {
+            "nombre": "Dermalab Sun SPF 30",
+            "descripcion": "Protector solar. Amplio espectro UVA/UVB. Resistente al agua.",
+            "contenido_neto": "200 ml",
+            "monodroga": "no figura",
+            "condicion_venta": "no figura",
+            "codigo_barras": "no figura",
+            "precio": "no figura"
+          },
+          "fuente": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 1
+          }
+        },
+        {
+          "codigo": "DL-124",
+          "campos": {
+            "nombre": "Dermalab Lift Noche",
+            "descripcion": "Sérum. Con péptidos y ácido hialurónico. Reduce arrugas visibles en cuatro semanas.",
+            "contenido_neto": "30 ml",
+            "monodroga": "no figura",
+            "condicion_venta": "no figura",
+            "codigo_barras": "no figura",
+            "precio": "no figura"
+          },
+          "fuente": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 1
+          }
+        },
+        {
+          "codigo": "DL-127",
+          "campos": {
+            "nombre": "Dermalab Sun SPF 50",
+            "descripcion": "Protector solar. Amplio espectro UVA/UVB. Resistente al agua.",
+            "contenido_neto": "200 ml",
+            "monodroga": "no figura",
+            "condicion_venta": "no figura",
+            "codigo_barras": "no figura",
+            "precio": "no figura"
+          },
+          "fuente": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 1
+          }
+        },
+        {
+          "codigo": "DL-154",
+          "campos": {
+            "nombre": "Dermalab Sensitive",
+            "descripcion": "Agua micelar. Desmaquilla y limpia en un solo paso. Apta para piel sensible.",
+            "contenido_neto": "400 ml",
+            "monodroga": "no figura",
+            "condicion_venta": "no figura",
+            "codigo_barras": "no figura",
+            "precio": "no figura"
+          },
+          "fuente": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 1
+          }
+        },
+        {
+          "codigo": "DL-130",
+          "campos": {
+            "nombre": "Dermalab Clear",
+            "descripcion": "Crema. Textura liviana de rápida absorción. Para piel con tendencia acneica: reduce brillos e imperfecciones.",
+            "contenido_neto": "40 ml",
+            "monodroga": "no figura",
+            "condicion_venta": "no figura",
+            "codigo_barras": "no figura",
+            "precio": "no figura"
+          },
+          "fuente": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 1
+          }
+        },
+        {
+          "codigo": "DL-133",
+          "campos": {
+            "nombre": "Dermalab Sun SPF 30",
+            "descripcion": "Protector solar. Amplio espectro UVA/UVB. Resistente al agua.",
+            "contenido_neto": "50 ml",
+            "monodroga": "no figura",
+            "condicion_venta": "no figura",
+            "codigo_barras": "no figura",
+            "precio": "no figura"
+          },
+          "fuente": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 1
+          }
+        },
+        {
+          "codigo": "DL-136",
+          "campos": {
+            "nombre": "Dermalab Sun Kids SPF 50+",
+            "descripcion": "Protector solar. Amplio espectro UVA/UVB. Resistente al agua. Formulado especialmente para la piel de los niños.",
+            "contenido_neto": "200 ml",
+            "monodroga": "no figura",
+            "condicion_venta": "no figura",
+            "codigo_barras": "no figura",
+            "precio": "no figura"
+          },
+          "fuente": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 2
+          }
+        },
+        {
+          "codigo": "DL-139",
+          "campos": {
+            "nombre": "Dermalab Sun After Sun",
+            "descripcion": "Gel. Calma y refresca la piel después de la exposición al sol.",
+            "contenido_neto": "200 ml",
+            "monodroga": "no figura",
+            "condicion_venta": "no figura",
+            "codigo_barras": "no figura",
+            "precio": "no figura"
+          },
+          "fuente": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 2
+          }
+        },
+        {
+          "codigo": "DL-142",
+          "campos": {
+            "nombre": "Dermalab Sun SPF 50",
+            "descripcion": "Protector solar. Amplio espectro UVA/UVB. Resistente al agua.",
+            "contenido_neto": "50 ml",
+            "monodroga": "no figura",
+            "condicion_venta": "no figura",
+            "codigo_barras": "no figura",
+            "precio": "no figura"
+          },
+          "fuente": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 2
+          }
+        },
+        {
+          "codigo": "DL-145",
+          "campos": {
+            "nombre": "Dermalab Sensitive",
+            "descripcion": "Agua micelar. Desmaquilla y limpia en un solo paso. Apta para piel sensible.",
+            "contenido_neto": "200 ml",
+            "monodroga": "no figura",
+            "condicion_venta": "no figura",
+            "codigo_barras": "no figura",
+            "precio": "no figura"
+          },
+          "fuente": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 2
+          }
+        },
+        {
+          "codigo": "DL-148",
+          "campos": {
+            "nombre": "Dermalab Urea 10 %",
+            "descripcion": "Crema. Textura liviana de rápida absorción. Hidratación intensa para el cuerpo, ideal para piel muy seca.",
+            "contenido_neto": "200 ml",
+            "monodroga": "no figura",
+            "condicion_venta": "no figura",
+            "codigo_barras": "no figura",
+            "precio": "no figura"
+          },
+          "fuente": {
+            "archivo": "Dermalab_lanzamientos_2026.pdf",
+            "pagina": 2
+          }
+        }
+      ],
+      "fds": null,
+      "contexto": "Pie de página p.1: \"Dermalab S.A. Página 1 de 2\". Pie de página p.2: \"Dermalab S.A. Página 2 de 2\". El documento indica: \"Los códigos EAN y los precios están en la lista de precios vigente.\" No indica vigencia, moneda ni si los precios incluyen IVA. Monodroga, condición de venta, código de barras (EAN) y precio no figuran en ninguna ficha.",
+      "notas": [
+        "Son 18 productos. Los nombres Dermalab Sensitive (DL-154 y DL-145), Dermalab Purify (DL-103 y DL-118), Dermalab Sun SPF 30 (DL-121 y DL-133), Dermalab Sun SPF 50 (DL-127 y DL-142) y Dermalab Urea 10 % (DL-109 y DL-148) se repiten con códigos distintos; se transcribieron todos por separado.",
+        "DL-136 (Dermalab Sun Kids SPF 50+): el nombre aparece al final de la página 1 (justo antes del pie de página) y la categoría, descripción, contenido neto y código en la página 2. Se toma como fuente la página 2. La cita de la descripción del motor de lectura figura como página 1 en una lectura inicial, pero una consulta específica la ubicó en la página 2.",
+        "Las filas de DL-151 a DL-133 y la de DL-136 se transcribieron de fichas en las que el nombre y la descripción preceden al código; cada bloque toma su propio código según la ficha."
+      ]
+    },
+    "error": null,
+    "segundos": 62.0,
+    "uso": {
+      "input": 21881,
+      "output": 6795,
+      "cache_escrito": 0,
+      "cache_leido": 0
+    },
+    "costo_usd": 0.0055856000000000005
+  },
+  {
+    "archivo": "P05_Dermalab/Dermalab_lista_precios.xlsx",
+    "datos": {
+      "archivo": "Dermalab_lista_precios.xlsx",
+      "tipo_archivo": "lista",
+      "vigencia": null,
+      "moneda": null,
+      "iva": "Sin IVA según el encabezado de columna 'Costo s/IVA'; el archivo no declara vigencia ni moneda",
+      "filas": [
+        {
+          "codigo": "DL-109",
+          "campos": {
+            "EAN": 7790670659075,
+            "Costo s/IVA": 736.22
+          },
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 2
+          }
+        },
+        {
+          "codigo": "DL-112",
+          "campos": {
+            "EAN": 7798965900758,
+            "Costo s/IVA": 828.13
+          },
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 3
+          }
+        },
+        {
+          "codigo": "DL-115",
+          "campos": {
+            "EAN": 7793567937577,
+            "Costo s/IVA": 470.59
+          },
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 4
+          }
+        },
+        {
+          "codigo": "DL-118",
+          "campos": {
+            "EAN": 7792480811629,
+            "Costo s/IVA": 344.84
+          },
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 5
+          }
+        },
+        {
+          "codigo": "DL-121",
+          "campos": {
+            "EAN": 7796076691862,
+            "Costo s/IVA": 1359.07
+          },
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 6
+          }
+        },
+        {
+          "codigo": "DL-124",
+          "campos": {
+            "EAN": 7790632544999,
+            "Costo s/IVA": 737.72
+          },
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 7
+          }
+        },
+        {
+          "codigo": "DL-127",
+          "campos": {
+            "EAN": 7792303037113,
+            "Costo s/IVA": 1411.99
+          },
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 8
+          }
+        },
+        {
+          "codigo": "DL-130",
+          "campos": {
+            "EAN": 7791057086095,
+            "Costo s/IVA": 506.73
+          },
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 9
+          }
+        },
+        {
+          "codigo": "DL-133",
+          "campos": {
+            "EAN": 7798938462672,
+            "Costo s/IVA": 567.78
+          },
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 10
+          }
+        },
+        {
+          "codigo": "DL-136",
+          "campos": {
+            "EAN": 7798006871252,
+            "Costo s/IVA": 627.19
+          },
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 11
+          }
+        },
+        {
+          "codigo": "DL-139",
+          "campos": {
+            "EAN": 7798937409364,
+            "Costo s/IVA": 379.41
+          },
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 12
+          }
+        },
+        {
+          "codigo": "DL-142",
+          "campos": {
+            "EAN": 7798622877447,
+            "Costo s/IVA": 514.27
+          },
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 13
+          }
+        },
+        {
+          "codigo": "DL-145",
+          "campos": {
+            "EAN": 7794743202533,
+            "Costo s/IVA": 271.28
+          },
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 14
+          }
+        },
+        {
+          "codigo": "DL-148",
+          "campos": {
+            "EAN": 7796703472314,
+            "Costo s/IVA": 458.22
+          },
+          "fuente": {
+            "archivo": "Dermalab_lista_precios.xlsx",
+            "hoja": "Lista",
+            "fila": 15
+          }
+        }
+      ],
+      "fds": null,
+      "contexto": "Encabezados de la hoja 'Lista' (fila 1): 'Código', 'EAN', 'Costo s/IVA'. El archivo tiene una sola hoja. No contiene vigencia, moneda, ni aclaraciones sobre precios o IVA fuera de los encabezados.",
+      "notas": [
+        "Única hoja del archivo: 'Lista'. No se omitieron hojas.",
+        "No hay productos discontinuados, descuentos ni aclaraciones en el archivo."
+      ]
+    },
+    "error": null,
+    "segundos": 11.1,
+    "uso": {
+      "input": 5968,
+      "output": 2122,
+      "cache_escrito": 0,
+      "cache_leido": 0
+    },
+    "costo_usd": 0.0016578000000000003
+  }
+]

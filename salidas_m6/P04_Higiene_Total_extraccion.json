@@ -1,0 +1,477 @@
+[
+  {
+    "archivo": "P04_Higiene_Total/HigieneTotal_novedades.xlsx",
+    "datos": {
+      "archivo": "HigieneTotal_novedades.xlsx",
+      "tipo_archivo": "lista",
+      "vigencia": null,
+      "moneda": null,
+      "iva": null,
+      "filas": [
+        {
+          "codigo": "HT40003",
+          "campos": {
+            "Item": "HT40003",
+            "Descripcion": "ESPUMA DE AFEITAR FILO MENTOL",
+            "Cont.": 300,
+            "UM": "cc",
+            "EAN13": "7796370729803",
+            "Costo": 135.92
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 2
+          }
+        },
+        {
+          "codigo": "HT40006",
+          "campos": {
+            "Item": "HT40006",
+            "Descripcion": "GEL DE DUCHA PUREZA HIDRATANTE",
+            "Cont.": 1,
+            "UM": "Lts",
+            "EAN13": "7797758531421",
+            "Costo": 137.23
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 3
+          }
+        },
+        {
+          "codigo": "HT40084",
+          "campos": {
+            "Item": "HT40084",
+            "Descripcion": "Shampoo Aquaviva Bebe",
+            "Cont.": 200,
+            "UM": "cc",
+            "EAN13": null,
+            "Costo": 94.34
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 4
+          }
+        },
+        {
+          "codigo": "HT40009",
+          "campos": {
+            "Item": "HT40009",
+            "Descripcion": "GEL DE DUCHA AQUAVIVA COCO",
+            "Cont.": 1000,
+            "UM": "ml.",
+            "EAN13": "7796251060483",
+            "Costo": 165.27
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 5
+          }
+        },
+        {
+          "codigo": "HT40012",
+          "campos": {
+            "Item": "HT40012",
+            "Descripcion": "Gel De Ducha Aquaviva Avena",
+            "Cont.": 400,
+            "UM": "ml.",
+            "EAN13": "7790987175794",
+            "Costo": 80.36
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 6
+          }
+        },
+        {
+          "codigo": "HT40015",
+          "campos": {
+            "Item": "HT40015",
+            "Descripcion": "Gel De Ducha Aquaviva Hidratante",
+            "Cont.": 400,
+            "UM": "ml.",
+            "EAN13": "7798125295830",
+            "Costo": 81.26
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 7
+          }
+        },
+        {
+          "codigo": "HT40018",
+          "campos": {
+            "Item": "HT40018",
+            "Descripcion": "Jabon Intimo Aquaviva Neutro",
+            "Cont.": 200,
+            "UM": "ML",
+            "EAN13": "7790002613935",
+            "Costo": 120.21
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 8
+          }
+        },
+        {
+          "codigo": "HT40021",
+          "campos": {
+            "Item": "HT40021",
+            "Descripcion": "ESPUMA DE AFEITAR FILO PIEL SENSIBLE",
+            "Cont.": 300,
+            "UM": "ml.",
+            "EAN13": "7795697680668",
+            "Costo": 134.36
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 9
+          }
+        },
+        {
+          "codigo": "HT40024",
+          "campos": {
+            "Item": "HT40024",
+            "Descripcion": "JABON INTIMO AQUAVIVA NEUTRO",
+            "Cont.": 400,
+            "UM": "ML",
+            "EAN13": "7792665528410",
+            "Costo": 187.76
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 10
+          }
+        },
+        {
+          "codigo": "HT40027",
+          "campos": {
+            "Item": "HT40027",
+            "Descripcion": "Gel De Ducha Aquaviva Hidratante",
+            "Cont.": 1000,
+            "UM": "cc",
+            "EAN13": "7799984089141",
+            "Costo": 149.16
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 11
+          }
+        },
+        {
+          "codigo": "HT40030",
+          "campos": {
+            "Item": "HT40030",
+            "Descripcion": "Gel De Ducha Pureza Hidratante",
+            "Cont.": 400,
+            "UM": "ml.",
+            "EAN13": "7794561447222",
+            "Costo": 77.62
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 12
+          }
+        },
+        {
+          "codigo": "HT40033",
+          "campos": {
+            "Item": "HT40033",
+            "Descripcion": "TOALLITAS HUMEDAS AQUAVIVA ALOE",
+            "Cont.": 80,
+            "UM": "Un",
+            "EAN13": null,
+            "Costo": 92.36
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 13
+          }
+        },
+        {
+          "codigo": "HT40036",
+          "campos": {
+            "Item": "HT40036",
+            "Descripcion": "Gel De Ducha Pureza Coco",
+            "Cont.": 1000,
+            "UM": "cc",
+            "EAN13": "7790316942707",
+            "Costo": 153.24
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 14
+          }
+        },
+        {
+          "codigo": "HT40039",
+          "campos": {
+            "Item": "HT40039",
+            "Descripcion": "SHAMPOO AQUAVIVA BEBE",
+            "Cont.": 400,
+            "UM": "ml.",
+            "EAN13": "7797825499241",
+            "Costo": 144.64
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 15
+          }
+        },
+        {
+          "codigo": "HT40042",
+          "campos": {
+            "Item": "HT40042",
+            "Descripcion": "Gel De Ducha Pureza Coco",
+            "Cont.": 400,
+            "UM": "ML",
+            "EAN13": "7795817779319",
+            "Costo": 84.1
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 16
+          }
+        },
+        {
+          "codigo": "HT40045",
+          "campos": {
+            "Item": "HT40045",
+            "Descripcion": "GEL DE DUCHA PUREZA AVENA",
+            "Cont.": 750,
+            "UM": "cc",
+            "EAN13": null,
+            "Costo": 119.63
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 17
+          }
+        },
+        {
+          "codigo": "HT40048",
+          "campos": {
+            "Item": "HT40048",
+            "Descripcion": "GEL DE DUCHA PUREZA AVENA",
+            "Cont.": 1,
+            "UM": "Lts",
+            "EAN13": "7795320460353",
+            "Costo": 160.39
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 18
+          }
+        },
+        {
+          "codigo": "HT40051",
+          "campos": {
+            "Item": "HT40051",
+            "Descripcion": "Gel De Ducha Pureza Hidratante",
+            "Cont.": 750,
+            "UM": "ML",
+            "EAN13": "7799485518485",
+            "Costo": 116.92
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 19
+          }
+        },
+        {
+          "codigo": "HT40054",
+          "campos": {
+            "Item": "HT40054",
+            "Descripcion": "GEL DE DUCHA AQUAVIVA COCO",
+            "Cont.": 400,
+            "UM": "cc",
+            "EAN13": "7796018158446",
+            "Costo": 84.83
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 20
+          }
+        },
+        {
+          "codigo": "HT40057",
+          "campos": {
+            "Item": "HT40057",
+            "Descripcion": "Gel De Ducha Pureza Coco",
+            "Cont.": 750,
+            "UM": "cc",
+            "EAN13": "7790965488168",
+            "Costo": 123.54
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 21
+          }
+        },
+        {
+          "codigo": "HT40060",
+          "campos": {
+            "Item": "HT40060",
+            "Descripcion": "Gel De Ducha Aquaviva Avena",
+            "Cont.": 750,
+            "UM": "ML",
+            "EAN13": "7795788466911",
+            "Costo": 135.61
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 22
+          }
+        },
+        {
+          "codigo": "HT40063",
+          "campos": {
+            "Item": "HT40063",
+            "Descripcion": "Desodorante Roll On Aquaviva Sin Perfume",
+            "Cont.": 50,
+            "UM": "cc",
+            "EAN13": null,
+            "Costo": 83.71
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 23
+          }
+        },
+        {
+          "codigo": "HT40066",
+          "campos": {
+            "Item": "HT40066",
+            "Descripcion": "Espuma De Afeitar Filo Mentol",
+            "Cont.": 200,
+            "UM": "ML",
+            "EAN13": "7792609650870",
+            "Costo": 98.58
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 24
+          }
+        },
+        {
+          "codigo": "HT40069",
+          "campos": {
+            "Item": "HT40069",
+            "Descripcion": "SHAMPOO AQUAVIVA BEBE MANZANILLA",
+            "Cont.": 200,
+            "UM": "ml.",
+            "EAN13": "7796640214909",
+            "Costo": 98.81
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 25
+          }
+        },
+        {
+          "codigo": "HT40072",
+          "campos": {
+            "Item": "HT40072",
+            "Descripcion": "Gel De Ducha Aquaviva Avena",
+            "Cont.": 1000,
+            "UM": "ml.",
+            "EAN13": "7798403125217",
+            "Costo": 158.99
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 26
+          }
+        },
+        {
+          "codigo": "HT40081",
+          "campos": {
+            "Item": "HT40081",
+            "Descripcion": "Desodorante Roll On Aquaviva Mujer",
+            "Cont.": 50,
+            "UM": "ML",
+            "EAN13": null,
+            "Costo": 85.86
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 27
+          }
+        },
+        {
+          "codigo": "HT40075",
+          "campos": {
+            "Item": "HT40075",
+            "Descripcion": "TOALLITAS HUMEDAS AQUAVIVA SIN PERFUME",
+            "Cont.": 50,
+            "UM": "unid",
+            "EAN13": "7792719267425",
+            "Costo": 69.36
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 28
+          }
+        },
+        {
+          "codigo": "HT40078",
+          "campos": {
+            "Item": "HT40078",
+            "Descripcion": "GEL DE DUCHA AQUAVIVA HIDRATANTE",
+            "Cont.": 750,
+            "UM": "cc",
+            "EAN13": "7794182377663",
+            "Costo": 115.8
+          },
+          "fuente": {
+            "archivo": "HigieneTotal_novedades.xlsx",
+            "hoja": "Altas",
+            "fila": 29
+          }
+        }
+      ],
+      "fds": null,
+      "contexto": "Encabezados de la hoja Altas: Item, Descripcion, Cont., UM, EAN13, Costo. No hay vigencia, moneda ni aclaración de IVA en el archivo.",
+      "notas": [
+        "Hoja 'Discontinuados' omitida: lista 8 productos dados de baja (HT32855, HT37398, HT31535, HT30106, HT35962, HT37280, HT37162, HT30040), no son altas nuevas.",
+        "La hoja 'Altas' tiene 28 filas de producto (filas 2 a 29); no se normalizaron descripciones, unidades ni costos."
+      ]
+    },
+    "error": null,
+    "segundos": 23.4,
+    "uso": {
+      "input": 7630,
+      "output": 6067,
+      "cache_escrito": 0,
+      "cache_leido": 0
+    },
+    "costo_usd": 0.0037965
+  }
+]

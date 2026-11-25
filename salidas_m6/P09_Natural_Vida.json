@@ -17,16 +17,17 @@
       "marca": "NATURAL VIDA",
       "moneda": "UYU",
       "numero_onu": null,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
       "peligro_deposito": null,
       "precio_costo": 357.43,
       "principio_activo": "VALERIANA",
       "proveedor_id": "P09",
       "tipo": "CAPSULAS",
-      "unidad": "UN",
-      "unidades_por_envase": 1,
       "variante": null
     },
     "fuentes": {
+      "gtin": null,
       "descripcion": {
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 10
@@ -99,13 +100,13 @@
       "marca": "NATURAL VIDA",
       "moneda": "UYU",
       "numero_onu": null,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
       "peligro_deposito": null,
       "precio_costo": 319.12,
       "principio_activo": "HIERRO",
       "proveedor_id": "P09",
       "tipo": "COMPRIMIDOS",
-      "unidad": "UN",
-      "unidades_por_envase": 1,
       "variante": null
     },
     "fuentes": {
@@ -181,13 +182,13 @@
       "marca": "NATURAL VIDA",
       "moneda": "UYU",
       "numero_onu": null,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
       "peligro_deposito": null,
       "precio_costo": 692.24,
       "principio_activo": "CURCUMA",
       "proveedor_id": "P09",
       "tipo": "CAPSULAS",
-      "unidad": "UN",
-      "unidades_por_envase": 1,
       "variante": null
     },
     "fuentes": {
@@ -261,13 +262,13 @@
       "marca": "NATURAL VIDA",
       "moneda": "UYU",
       "numero_onu": null,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
       "peligro_deposito": null,
       "precio_costo": 262.87,
       "principio_activo": "VITAMINA C",
       "proveedor_id": "P09",
       "tipo": "COMPRIMIDOS EFERVESCENTES",
-      "unidad": "UN",
-      "unidades_por_envase": 1,
       "variante": null
     },
     "fuentes": {
@@ -345,13 +346,13 @@
       "marca": "NATURAL VIDA",
       "moneda": "UYU",
       "numero_onu": null,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
       "peligro_deposito": null,
       "precio_costo": 597.23,
       "principio_activo": "MELATONINA",
       "proveedor_id": "P09",
       "tipo": "COMPRIMIDOS",
-      "unidad": "UN",
-      "unidades_por_envase": 1,
       "variante": null
     },
     "fuentes": {
@@ -429,13 +430,13 @@
       "marca": "NATURAL VIDA",
       "moneda": "UYU",
       "numero_onu": null,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
       "peligro_deposito": null,
-      "precio_costo": 436.0,
+      "precio_costo": 436,
       "principio_activo": "CITRATO DE MAGNESIO",
       "proveedor_id": "P09",
       "tipo": "CAPSULAS",
-      "unidad": "UN",
-      "unidades_por_envase": 1,
       "variante": null
     },
     "fuentes": {
@@ -513,13 +514,13 @@
       "marca": "NATURAL VIDA",
       "moneda": "UYU",
       "numero_onu": null,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
       "peligro_deposito": null,
       "precio_costo": 412.05,
       "principio_activo": "MELATONINA",
       "proveedor_id": "P09",
       "tipo": "COMPRIMIDOS",
-      "unidad": "UN",
-      "unidades_por_envase": 1,
       "variante": null
     },
     "fuentes": {
@@ -597,13 +598,13 @@
       "marca": "NATURAL VIDA",
       "moneda": "UYU",
       "numero_onu": null,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
       "peligro_deposito": null,
       "precio_costo": 484.05,
       "principio_activo": "ZINC",
       "proveedor_id": "P09",
       "tipo": "COMPRIMIDOS",
-      "unidad": "UN",
-      "unidades_por_envase": 1,
       "variante": null
     },
     "fuentes": {
@@ -681,13 +682,13 @@
       "marca": "NATURAL VIDA",
       "moneda": "UYU",
       "numero_onu": null,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
       "peligro_deposito": null,
       "precio_costo": 348.9,
       "principio_activo": "MELATONINA",
       "proveedor_id": "P09",
       "tipo": "COMPRIMIDOS",
-      "unidad": "UN",
-      "unidades_por_envase": 1,
       "variante": null
     },
     "fuentes": {
@@ -765,13 +766,13 @@
       "marca": "NATURAL VIDA",
       "moneda": "UYU",
       "numero_onu": null,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
       "peligro_deposito": null,
       "precio_costo": 452.87,
       "principio_activo": "VITAMINA C",
       "proveedor_id": "P09",
       "tipo": "COMPRIMIDOS EFERVESCENTES",
-      "unidad": "UN",
-      "unidades_por_envase": 1,
       "variante": null
     },
     "fuentes": {
@@ -863,10 +864,6 @@
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 20
       },
-      "descripcion": {
-        "archivo": "Mail_NaturalVida_altas.txt",
-        "linea": 20
-      },
       "marca": {
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 20
@@ -912,6 +909,10 @@
         "linea": 20
       },
       "codigo_proveedor": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 20
+      },
+      "descripcion": {
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 20
       }
@@ -947,10 +948,6 @@
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 21
       },
-      "descripcion": {
-        "archivo": "Mail_NaturalVida_altas.txt",
-        "linea": 21
-      },
       "marca": {
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 21
@@ -996,6 +993,10 @@
         "linea": 21
       },
       "codigo_proveedor": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 21
+      },
+      "descripcion": {
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 21
       }
@@ -1031,10 +1032,6 @@
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 22
       },
-      "descripcion": {
-        "archivo": "Mail_NaturalVida_altas.txt",
-        "linea": 22
-      },
       "marca": {
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 22
@@ -1078,6 +1075,10 @@
       "codigo_proveedor": {
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 22
+      },
+      "descripcion": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 22
       }
     }
   },
@@ -1108,10 +1109,6 @@
     },
     "fuentes": {
       "gtin": {
-        "archivo": "Mail_NaturalVida_altas.txt",
-        "linea": 23
-      },
-      "descripcion": {
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 23
       },
@@ -1160,6 +1157,10 @@
         "linea": 23
       },
       "codigo_proveedor": {
+        "archivo": "Mail_NaturalVida_altas.txt",
+        "linea": 23
+      },
+      "descripcion": {
         "archivo": "Mail_NaturalVida_altas.txt",
         "linea": 23
       }

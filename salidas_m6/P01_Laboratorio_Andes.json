@@ -7,34 +7,34 @@
       "conflicto_entre_fuentes"
     ],
     "ficha": {
-      "categoria": "MED-DOL-ANA",
-      "codigo_proveedor": "AN-1136",
-      "concentracion": "500 MG",
-      "condicion_venta": "VENTA_LIBRE",
-      "contenido": null,
-      "descripcion": "FEBRIL 500 MG COMPRIMIDOS",
       "gtin": "7790950373011",
+      "descripcion": "FEBRIL 500 MG COMPRIMIDOS",
       "marca": "FEBRIL",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 200.8,
-      "principio_activo": "Paracetamol",
-      "proveedor_id": "P01",
       "tipo": "COMPRIMIDOS",
+      "variante": null,
+      "contenido": null,
       "unidad": "UN",
       "unidades_por_envase": 1,
-      "variante": null
+      "principio_activo": "PARACETAMOL",
+      "concentracion": "500 MG",
+      "condicion_venta": "VENTA_LIBRE",
+      "categoria": "MED-DOL-ANA",
+      "precio_costo": 200.8,
+      "moneda": "UYU",
+      "proveedor_id": "P01",
+      "codigo_proveedor": "AN-1136",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
-      "codigo_proveedor": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 5
-      },
       "gtin": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 5
       },
       "marca": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -42,17 +42,14 @@
         "fila": 5
       },
       "tipo": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
-      "concentracion": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
         "fila": 5
       },
       "unidad": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 5
       },
       "unidades_por_envase": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -63,13 +60,19 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
+      "concentracion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 5
+      },
       "condicion_venta": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
       "categoria": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 5
       },
       "precio_costo": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -81,6 +84,11 @@
         "pagina": 1
       },
       "proveedor_id": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 5
+      },
+      "codigo_proveedor": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
         "fila": 5
@@ -95,34 +103,34 @@
       "conflicto_entre_fuentes"
     ],
     "ficha": {
-      "categoria": "MED-DER-ANF",
-      "codigo_proveedor": "AN-1133",
-      "concentracion": "1 %",
-      "condicion_venta": "VENTA_LIBRE",
-      "contenido": null,
-      "descripcion": "MICOSTOP 1 % CREMA",
       "gtin": "7798467198943",
+      "descripcion": "MICOSTOP 1 % CREMA",
       "marca": "MICOSTOP",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 205.38,
-      "principio_activo": "Clotrimazol",
-      "proveedor_id": "P01",
       "tipo": "CREMA",
+      "variante": null,
+      "contenido": null,
       "unidad": "G",
       "unidades_por_envase": 1,
-      "variante": null
+      "principio_activo": "CLOTRIMAZOL",
+      "concentracion": "1 %",
+      "condicion_venta": "VENTA_LIBRE",
+      "categoria": "MED-DER-ANF",
+      "precio_costo": 205.38,
+      "moneda": "UYU",
+      "proveedor_id": "P01",
+      "codigo_proveedor": "AN-1133",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
-      "codigo_proveedor": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 6
-      },
       "gtin": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 6
       },
       "marca": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -130,17 +138,14 @@
         "fila": 6
       },
       "tipo": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
-      "concentracion": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
         "fila": 6
       },
       "unidad": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 6
       },
       "unidades_por_envase": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -151,13 +156,19 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
+      "concentracion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 6
+      },
       "condicion_venta": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
       "categoria": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 6
       },
       "precio_costo": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -172,94 +183,11 @@
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
         "fila": 6
-      }
-    }
-  },
-  {
-    "item_id": "P01:AN-1148",
-    "estado": "a_revision",
-    "duplicado_de": null,
-    "motivos_revision": [
-      "conflicto_entre_fuentes"
-    ],
-    "ficha": {
-      "categoria": "MED-RES-GRI",
-      "codigo_proveedor": "AN-1148",
-      "concentracion": "500 MG + 4 MG + 10 MG",
-      "condicion_venta": "VENTA_LIBRE",
-      "contenido": 6,
-      "descripcion": "GRIPANIL 500 MG + 4 MG + 10 MG X 6 UN",
-      "gtin": "7796730355338",
-      "marca": "GRIPANIL",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 182.26,
-      "principio_activo": "Paracetamol + Clorfeniramina + Fenilefrina",
-      "proveedor_id": "P01",
-      "tipo": null,
-      "unidad": "UN",
-      "unidades_por_envase": 1,
-      "variante": null
-    },
-    "fuentes": {
+      },
       "codigo_proveedor": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
-        "fila": 9
-      },
-      "gtin": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
-      "marca": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 9
-      },
-      "contenido": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
-      "concentracion": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 9
-      },
-      "unidad": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
-      "unidades_por_envase": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 9
-      },
-      "principio_activo": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
-      "condicion_venta": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
-      "categoria": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
-      "precio_costo": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 9
-      },
-      "moneda": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
-      "proveedor_id": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 9
+        "fila": 6
       }
     }
   },
@@ -269,34 +197,34 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "MED-DIG-LAX",
-      "codigo_proveedor": "AN-1166",
-      "concentracion": "5 MG",
-      "condicion_venta": "VENTA_LIBRE",
-      "contenido": 20,
-      "descripcion": "LAXOFIB 5 MG COMPRIMIDOS X 20 UN",
       "gtin": "7790468655227",
+      "descripcion": "LAXOFIB 5 MG COMPRIMIDOS X 20 UN",
       "marca": "LAXOFIB",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 109.31,
-      "principio_activo": "BISACODILO",
-      "proveedor_id": "P01",
       "tipo": "COMPRIMIDOS",
+      "variante": null,
+      "contenido": 20,
       "unidad": "UN",
       "unidades_por_envase": 1,
-      "variante": null
+      "principio_activo": "BISACODILO",
+      "concentracion": "5 MG",
+      "condicion_venta": "VENTA_LIBRE",
+      "categoria": "MED-DIG-LAX",
+      "precio_costo": 109.31,
+      "moneda": "UYU",
+      "proveedor_id": "P01",
+      "codigo_proveedor": "AN-1166",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
-      "codigo_proveedor": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 7
-      },
       "gtin": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 7
       },
       "marca": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -309,11 +237,6 @@
         "fila": 7
       },
       "contenido": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 7
-      },
-      "concentracion": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
         "fila": 7
@@ -332,13 +255,19 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
+      "concentracion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 7
+      },
       "condicion_venta": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
       "categoria": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 7
       },
       "precio_costo": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -350,6 +279,11 @@
         "pagina": 1
       },
       "proveedor_id": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 7
+      },
+      "codigo_proveedor": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
         "fila": 7
@@ -362,34 +296,34 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "MED-RES-GRI",
-      "codigo_proveedor": "AN-1142",
-      "concentracion": "500 MG + 4 MG + 10 MG",
-      "condicion_venta": "VENTA_LIBRE",
-      "contenido": 10,
-      "descripcion": "GRIPANIL 500 MG + 4 MG + 10 MG COMPRIMIDOS X 10 UN",
       "gtin": "7795761445278",
+      "descripcion": "GRIPANIL 500 MG + 4 MG + 10 MG COMPRIMIDOS X 10 UN",
       "marca": "GRIPANIL",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 197.3,
-      "principio_activo": "PARACETAMOL + CLORFENIRAMINA + FENILEFRINA",
-      "proveedor_id": "P01",
       "tipo": "COMPRIMIDOS",
+      "variante": null,
+      "contenido": 10,
       "unidad": "UN",
       "unidades_por_envase": 1,
-      "variante": null
+      "principio_activo": "PARACETAMOL + CLORFENIRAMINA + FENILEFRINA",
+      "concentracion": "500 MG + 4 MG + 10 MG",
+      "condicion_venta": "VENTA_LIBRE",
+      "categoria": "MED-RES-GRI",
+      "precio_costo": 197.3,
+      "moneda": "UYU",
+      "proveedor_id": "P01",
+      "codigo_proveedor": "AN-1142",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
-      "codigo_proveedor": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 8
-      },
       "gtin": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 8
       },
       "marca": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -402,11 +336,6 @@
         "fila": 8
       },
       "contenido": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 8
-      },
-      "concentracion": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
         "fila": 8
@@ -425,13 +354,19 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
+      "concentracion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 8
+      },
       "condicion_venta": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
       "categoria": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 8
       },
       "precio_costo": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -446,6 +381,107 @@
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
         "fila": 8
+      },
+      "codigo_proveedor": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 8
+      }
+    }
+  },
+  {
+    "item_id": "P01:AN-1148",
+    "estado": "a_revision",
+    "duplicado_de": null,
+    "motivos_revision": [
+      "conflicto_entre_fuentes"
+    ],
+    "ficha": {
+      "gtin": "7796730355338",
+      "descripcion": "GRIPANIL 500 MG + 4 MG + 10 MG X 6 UN",
+      "marca": "GRIPANIL",
+      "tipo": null,
+      "variante": null,
+      "contenido": 6,
+      "unidad": "UN",
+      "unidades_por_envase": 1,
+      "principio_activo": "PARACETAMOL + CLORFENIRAMINA + FENILEFRINA",
+      "concentracion": "500 MG + 4 MG + 10 MG",
+      "condicion_venta": "VENTA_LIBRE",
+      "categoria": "MED-RES-GRI",
+      "precio_costo": 182.26,
+      "moneda": "UYU",
+      "proveedor_id": "P01",
+      "codigo_proveedor": "AN-1148",
+      "peligro_deposito": null,
+      "numero_onu": null
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 9
+      },
+      "marca": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 9
+      },
+      "contenido": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 9
+      },
+      "unidad": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 9
+      },
+      "unidades_por_envase": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 9
+      },
+      "principio_activo": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "concentracion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 9
+      },
+      "condicion_venta": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "categoria": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 9
+      },
+      "precio_costo": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 9
+      },
+      "moneda": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "proveedor_id": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 9
+      },
+      "codigo_proveedor": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 9
       }
     }
   },
@@ -455,34 +491,34 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "MED-CRO-CAR",
-      "codigo_proveedor": "AN-1139",
-      "concentracion": "20 MG",
-      "condicion_venta": "BAJO_RECETA",
-      "contenido": 30,
-      "descripcion": "CARDIOPRES 20 MG COMPRIMIDOS X 30 UN",
       "gtin": "7797752654089",
+      "descripcion": "CARDIOPRES 20 MG COMPRIMIDOS X 30 UN",
       "marca": "CARDIOPRES",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 175.52,
-      "principio_activo": "ENALAPRIL",
-      "proveedor_id": "P01",
       "tipo": "COMPRIMIDOS",
+      "variante": null,
+      "contenido": 30,
       "unidad": "UN",
       "unidades_por_envase": 1,
-      "variante": null
+      "principio_activo": "ENALAPRIL",
+      "concentracion": "20 MG",
+      "condicion_venta": "BAJO_RECETA",
+      "categoria": "MED-CRO-CAR",
+      "precio_costo": 175.52,
+      "moneda": "UYU",
+      "proveedor_id": "P01",
+      "codigo_proveedor": "AN-1139",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
-      "codigo_proveedor": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 10
-      },
       "gtin": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 10
       },
       "marca": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -495,11 +531,6 @@
         "fila": 10
       },
       "contenido": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 10
-      },
-      "concentracion": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
         "fila": 10
@@ -518,13 +549,19 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
+      "concentracion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 10
+      },
       "condicion_venta": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
       "categoria": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 10
       },
       "precio_costo": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -536,6 +573,11 @@
         "pagina": 1
       },
       "proveedor_id": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 10
+      },
+      "codigo_proveedor": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
         "fila": 10
@@ -548,34 +590,34 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "MED-CRO-MET",
-      "codigo_proveedor": "AN-1157",
-      "concentracion": "50 MCG",
-      "condicion_venta": "BAJO_RECETA",
-      "contenido": 30,
-      "descripcion": "TIROXAN 50 MCG COMPRIMIDOS X 30 UN",
       "gtin": "7790003122382",
+      "descripcion": "TIROXAN 50 MCG COMPRIMIDOS X 30 UN",
       "marca": "TIROXAN",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 146.22,
-      "principio_activo": "LEVOTIROXINA",
-      "proveedor_id": "P01",
       "tipo": "COMPRIMIDOS",
+      "variante": null,
+      "contenido": 30,
       "unidad": "UN",
       "unidades_por_envase": 1,
-      "variante": null
+      "principio_activo": "LEVOTIROXINA",
+      "concentracion": "50 MCG",
+      "condicion_venta": "BAJO_RECETA",
+      "categoria": "MED-CRO-MET",
+      "precio_costo": 146.22,
+      "moneda": "UYU",
+      "proveedor_id": "P01",
+      "codigo_proveedor": "AN-1157",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
-      "codigo_proveedor": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 11
-      },
       "gtin": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 11
       },
       "marca": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -588,11 +630,6 @@
         "fila": 11
       },
       "contenido": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 11
-      },
-      "concentracion": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
         "fila": 11
@@ -611,13 +648,19 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
+      "concentracion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 11
+      },
       "condicion_venta": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
       "categoria": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 11
       },
       "precio_costo": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -629,6 +672,11 @@
         "pagina": 1
       },
       "proveedor_id": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 11
+      },
+      "codigo_proveedor": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
         "fila": 11
@@ -641,34 +689,34 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "MED-DER-COR",
-      "codigo_proveedor": "AN-1124",
-      "concentracion": "1 %",
-      "condicion_venta": "VENTA_LIBRE",
-      "contenido": 30,
-      "descripcion": "DERMACORT 1 % CREMA X 30 G",
       "gtin": "7796462699472",
+      "descripcion": "DERMACORT 1 % CREMA X 30 G",
       "marca": "DERMACORT",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 320.8,
-      "principio_activo": "HIDROCORTISONA",
-      "proveedor_id": "P01",
       "tipo": "CREMA",
+      "variante": null,
+      "contenido": 30,
       "unidad": "G",
       "unidades_por_envase": 1,
-      "variante": null
+      "principio_activo": "HIDROCORTISONA",
+      "concentracion": "1 %",
+      "condicion_venta": "VENTA_LIBRE",
+      "categoria": "MED-DER-COR",
+      "precio_costo": 320.8,
+      "moneda": "UYU",
+      "proveedor_id": "P01",
+      "codigo_proveedor": "AN-1124",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
-      "codigo_proveedor": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 12
-      },
       "gtin": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 12
       },
       "marca": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -681,11 +729,6 @@
         "fila": 12
       },
       "contenido": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 12
-      },
-      "concentracion": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
         "fila": 12
@@ -704,13 +747,19 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
+      "concentracion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 12
+      },
       "condicion_venta": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
       "categoria": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 12
       },
       "precio_costo": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -722,6 +771,11 @@
         "pagina": 1
       },
       "proveedor_id": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 12
+      },
+      "codigo_proveedor": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
         "fila": 12
@@ -734,34 +788,34 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "MED-DOL-TOP",
-      "codigo_proveedor": "AN-1151",
-      "concentracion": "1 %",
-      "condicion_venta": "VENTA_LIBRE",
-      "contenido": 60,
-      "descripcion": "FLEXIGEL 1 % GEL X 60 G",
       "gtin": "7797593529355",
+      "descripcion": "FLEXIGEL 1 % GEL X 60 G",
       "marca": "FLEXIGEL",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 257.32,
-      "principio_activo": "DICLOFENAC",
-      "proveedor_id": "P01",
       "tipo": "GEL",
+      "variante": null,
+      "contenido": 60,
       "unidad": "G",
       "unidades_por_envase": 1,
-      "variante": null
+      "principio_activo": "DICLOFENAC",
+      "concentracion": "1 %",
+      "condicion_venta": "VENTA_LIBRE",
+      "categoria": "MED-DOL-TOP",
+      "precio_costo": 257.32,
+      "moneda": "UYU",
+      "proveedor_id": "P01",
+      "codigo_proveedor": "AN-1151",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
-      "codigo_proveedor": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 13
-      },
       "gtin": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 13
       },
       "marca": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -774,11 +828,6 @@
         "fila": 13
       },
       "contenido": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 13
-      },
-      "concentracion": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
         "fila": 13
@@ -797,13 +846,19 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
+      "concentracion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 13
+      },
       "condicion_venta": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
       "categoria": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 13
       },
       "precio_costo": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -815,6 +870,11 @@
         "pagina": 1
       },
       "proveedor_id": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 13
+      },
+      "codigo_proveedor": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
         "fila": 13
@@ -827,34 +887,34 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "MED-DOL-ANA",
-      "codigo_proveedor": "AN-1154",
-      "concentracion": "600 MG",
-      "condicion_venta": "BAJO_RECETA",
-      "contenido": 20,
-      "descripcion": "DOLOREX 600 MG COMPRIMIDOS X 20 UN",
       "gtin": "7795669252633",
+      "descripcion": "DOLOREX 600 MG COMPRIMIDOS X 20 UN",
       "marca": "DOLOREX",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 368.61,
-      "principio_activo": "IBUPROFENO",
-      "proveedor_id": "P01",
       "tipo": "COMPRIMIDOS",
+      "variante": null,
+      "contenido": 20,
       "unidad": "UN",
       "unidades_por_envase": 1,
-      "variante": null
+      "principio_activo": "IBUPROFENO",
+      "concentracion": "600 MG",
+      "condicion_venta": "BAJO_RECETA",
+      "categoria": "MED-DOL-ANA",
+      "precio_costo": 368.61,
+      "moneda": "UYU",
+      "proveedor_id": "P01",
+      "codigo_proveedor": "AN-1154",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
-      "codigo_proveedor": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 14
-      },
       "gtin": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 14
       },
       "marca": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -867,11 +927,6 @@
         "fila": 14
       },
       "contenido": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 14
-      },
-      "concentracion": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
         "fila": 14
@@ -890,13 +945,19 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
+      "concentracion": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 14
+      },
       "condicion_venta": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
       "categoria": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 14
       },
       "precio_costo": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
@@ -908,6 +969,11 @@
         "pagina": 1
       },
       "proveedor_id": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 14
+      },
+      "codigo_proveedor": {
         "archivo": "Actualizacion_precios_Andes.xlsx",
         "hoja": "Actualización",
         "fila": 14
@@ -944,52 +1010,35 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "codigo_proveedor": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 15
-      },
-      "proveedor_id": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 15
-      },
       "descripcion": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 15
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
       },
       "marca": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 15
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
       },
       "tipo": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 15
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
       },
       "contenido": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 15
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
       },
       "unidad": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 15
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
       },
       "unidades_por_envase": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 15
-      },
-      "concentracion": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 15
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
       },
       "principio_activo": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "concentracion": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
@@ -1009,6 +1058,15 @@
       "moneda": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
+      },
+      "proveedor_id": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 15
       }
     }
   },
@@ -1042,52 +1100,35 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "codigo_proveedor": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 16
-      },
-      "proveedor_id": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 16
-      },
       "descripcion": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 16
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
       },
       "marca": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 16
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
       },
       "tipo": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 16
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
       },
       "contenido": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 16
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
       },
       "unidad": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 16
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
       },
       "unidades_por_envase": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 16
-      },
-      "concentracion": {
-        "archivo": "Actualizacion_precios_Andes.xlsx",
-        "hoja": "Actualización",
-        "fila": 16
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
       },
       "principio_activo": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "concentracion": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
@@ -1107,6 +1148,15 @@
       "moneda": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
+      },
+      "proveedor_id": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
+        "archivo": "Actualizacion_precios_Andes.xlsx",
+        "hoja": "Actualización",
+        "fila": 16
       }
     }
   },
@@ -1142,14 +1192,6 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "codigo_proveedor": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
-      "proveedor_id": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
       "descripcion": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
@@ -1189,6 +1231,14 @@
       "moneda": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
+      },
+      "proveedor_id": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
       }
     }
   },
@@ -1200,14 +1250,14 @@
       "dato_obligatorio_faltante"
     ],
     "ficha": {
-      "categoria": "MED-DIG-ACI",
+      "categoria": null,
       "codigo_proveedor": "AN-1106",
       "concentracion": "400 MG + 400 MG/5 ML",
       "condicion_venta": "VENTA_LIBRE",
       "contenido": 200,
-      "descripcion": "ANTIACID 400 MG + 400 MG/5 ML SUSPENSION X 200 ML",
+      "descripcion": "400 MG + 400 MG/5 ML SUSPENSION X 200 ML",
       "gtin": "7799252522035",
-      "marca": "ANTIACID",
+      "marca": null,
       "moneda": "UYU",
       "numero_onu": null,
       "peligro_deposito": null,
@@ -1224,19 +1274,7 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "codigo_proveedor": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
-      "proveedor_id": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
       "descripcion": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
-      "marca": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
@@ -1264,15 +1302,19 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "categoria": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
       "precio_costo": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
       "moneda": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "proveedor_id": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       }
@@ -1308,14 +1350,6 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "codigo_proveedor": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
-      "proveedor_id": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
       "descripcion": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
@@ -1340,11 +1374,11 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "concentracion": {
+      "principio_activo": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "principio_activo": {
+      "concentracion": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
@@ -1361,6 +1395,14 @@
         "pagina": 1
       },
       "moneda": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "proveedor_id": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       }
@@ -1396,14 +1438,6 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "codigo_proveedor": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
-      "proveedor_id": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
       "descripcion": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
@@ -1428,11 +1462,11 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "concentracion": {
+      "principio_activo": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "principio_activo": {
+      "concentracion": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
@@ -1449,6 +1483,14 @@
         "pagina": 1
       },
       "moneda": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "proveedor_id": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       }
@@ -1484,14 +1526,6 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "codigo_proveedor": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
-      "proveedor_id": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
       "descripcion": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
@@ -1516,11 +1550,11 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "concentracion": {
+      "principio_activo": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "principio_activo": {
+      "concentracion": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
@@ -1537,6 +1571,14 @@
         "pagina": 1
       },
       "moneda": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "proveedor_id": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       }
@@ -1572,14 +1614,6 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "codigo_proveedor": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
-      "proveedor_id": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
       "descripcion": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
@@ -1604,11 +1638,11 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "concentracion": {
+      "principio_activo": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "principio_activo": {
+      "concentracion": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
@@ -1625,6 +1659,14 @@
         "pagina": 1
       },
       "moneda": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "proveedor_id": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       }
@@ -1660,14 +1702,6 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "codigo_proveedor": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
-      "proveedor_id": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
       "descripcion": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
@@ -1692,11 +1726,11 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "concentracion": {
+      "principio_activo": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "principio_activo": {
+      "concentracion": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
@@ -1713,6 +1747,14 @@
         "pagina": 1
       },
       "moneda": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "proveedor_id": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       }
@@ -1748,14 +1790,6 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "codigo_proveedor": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
-      "proveedor_id": {
-        "archivo": "Lista_de_precios_octubre_2026.pdf",
-        "pagina": 1
-      },
       "descripcion": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
@@ -1780,11 +1814,11 @@
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "concentracion": {
+      "principio_activo": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
-      "principio_activo": {
+      "concentracion": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       },
@@ -1801,6 +1835,14 @@
         "pagina": 1
       },
       "moneda": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "proveedor_id": {
+        "archivo": "Lista_de_precios_octubre_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
         "archivo": "Lista_de_precios_octubre_2026.pdf",
         "pagina": 1
       }
@@ -1827,9 +1869,7 @@
       "precio_costo": 201.55,
       "moneda": "UYU",
       "proveedor_id": "P01",
-      "codigo_proveedor": "AN-1130",
-      "peligro_deposito": null,
-      "numero_onu": null
+      "codigo_proveedor": "AN-1130"
     },
     "fuentes": {
       "gtin": {
@@ -1915,9 +1955,7 @@
       "precio_costo": 268.81,
       "moneda": "UYU",
       "proveedor_id": "P01",
-      "codigo_proveedor": "AN-1145",
-      "peligro_deposito": null,
-      "numero_onu": null
+      "codigo_proveedor": "AN-1145"
     },
     "fuentes": {
       "gtin": {
@@ -2003,9 +2041,7 @@
       "precio_costo": 153.1,
       "moneda": "UYU",
       "proveedor_id": "P01",
-      "codigo_proveedor": "AN-1160",
-      "peligro_deposito": null,
-      "numero_onu": null
+      "codigo_proveedor": "AN-1160"
     },
     "fuentes": {
       "gtin": {
@@ -2077,7 +2113,7 @@
     "motivos_revision": [],
     "ficha": {
       "gtin": "7793821086737",
-      "descripcion": "TOSIL 15 MG/5 ML JARABE X 120 ML",
+      "descripcion": "TOSIL JARABE 15 MG/5 ML X 120 ML",
       "marca": "TOSIL",
       "tipo": "JARABE",
       "variante": null,
@@ -2091,9 +2127,7 @@
       "precio_costo": 213.12,
       "moneda": "UYU",
       "proveedor_id": "P01",
-      "codigo_proveedor": "AN-1172",
-      "peligro_deposito": null,
-      "numero_onu": null
+      "codigo_proveedor": "AN-1172"
     },
     "fuentes": {
       "gtin": {
@@ -2165,7 +2199,7 @@
     "motivos_revision": [],
     "ficha": {
       "gtin": "7793831128717",
-      "descripcion": "FEBRIL 120 MG/5 ML JARABE X 100 ML",
+      "descripcion": "FEBRIL JARABE 120 MG/5 ML X 100 ML",
       "marca": "FEBRIL",
       "tipo": "JARABE",
       "variante": null,
@@ -2179,9 +2213,7 @@
       "precio_costo": 194.57,
       "moneda": "UYU",
       "proveedor_id": "P01",
-      "codigo_proveedor": "AN-1175",
-      "peligro_deposito": null,
-      "numero_onu": null
+      "codigo_proveedor": "AN-1175"
     },
     "fuentes": {
       "gtin": {
@@ -2267,9 +2299,7 @@
       "precio_costo": 120.52,
       "moneda": "UYU",
       "proveedor_id": "P01",
-      "codigo_proveedor": "AN-1178",
-      "peligro_deposito": null,
-      "numero_onu": null
+      "codigo_proveedor": "AN-1178"
     },
     "fuentes": {
       "gtin": {

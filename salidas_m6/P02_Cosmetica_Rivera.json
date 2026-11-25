@@ -13,7 +13,7 @@
       "condicion_venta": null,
       "contenido": 200,
       "descripcion": "ACONDICIONADOR NATIVA LISO X 200 ML",
-      "gtin": "7793092189062",
+      "gtin": null,
       "marca": "NATIVA",
       "moneda": "UYU",
       "numero_onu": null,
@@ -27,7 +27,7 @@
       "variante": "LISO"
     },
     "fuentes": {
-      "gtin": {
+      "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 7
@@ -37,12 +37,12 @@
         "hoja": "Altas",
         "fila": 7
       },
-      "descripcion": {
+      "contenido": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 7
       },
-      "marca": {
+      "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 7
@@ -67,22 +67,17 @@
         "hoja": "Altas",
         "fila": 7
       },
-      "variante": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 7
-      },
-      "contenido": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 7
-      },
       "unidad": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 7
       },
       "unidades_por_envase": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "variante": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 7
@@ -130,27 +125,7 @@
         "hoja": "Altas",
         "fila": 8
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 8
-      },
       "marca": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 8
-      },
-      "moneda": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 8
-      },
-      "precio_costo": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 8
-      },
-      "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 8
@@ -171,6 +146,26 @@
         "fila": 8
       },
       "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 8
@@ -223,27 +218,7 @@
         "hoja": "Altas",
         "fila": 9
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 9
-      },
       "marca": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 9
-      },
-      "moneda": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 9
-      },
-      "precio_costo": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 9
-      },
-      "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 9
@@ -264,6 +239,26 @@
         "fila": 9
       },
       "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 9
@@ -316,27 +311,7 @@
         "hoja": "Altas",
         "fila": 10
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 10
-      },
       "marca": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 10
-      },
-      "moneda": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 10
-      },
-      "precio_costo": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 10
-      },
-      "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 10
@@ -357,6 +332,26 @@
         "fila": 10
       },
       "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 10
@@ -417,27 +412,7 @@
         "hoja": "Altas",
         "fila": 11
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
       "marca": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
-      "moneda": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
-      "precio_costo": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
-      "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 11
@@ -458,6 +433,26 @@
         "fila": 11
       },
       "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 11
@@ -510,27 +505,7 @@
         "hoja": "Altas",
         "fila": 12
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 12
-      },
       "marca": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 12
-      },
-      "moneda": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 12
-      },
-      "precio_costo": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 12
-      },
-      "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 12
@@ -551,6 +526,26 @@
         "fila": 12
       },
       "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
+      "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 12
@@ -603,27 +598,7 @@
         "hoja": "Altas",
         "fila": 13
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 13
-      },
       "marca": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 13
-      },
-      "moneda": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 13
-      },
-      "precio_costo": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 13
-      },
-      "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 13
@@ -644,6 +619,26 @@
         "fila": 13
       },
       "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
+      "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 13
@@ -696,27 +691,7 @@
         "hoja": "Altas",
         "fila": 14
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 14
-      },
       "marca": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 14
-      },
-      "moneda": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 14
-      },
-      "precio_costo": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 14
-      },
-      "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 14
@@ -737,6 +712,26 @@
         "fila": 14
       },
       "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
+      "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 14
@@ -764,7 +759,7 @@
       "concentracion": null,
       "condicion_venta": null,
       "contenido": 250,
-      "descripcion": "TRATAMIENTO CAPILAR ALBORADA REPARACION X 250 G",
+      "descripcion": "TRATAMIENTO CAPILAR ALBORADA X 250 G",
       "gtin": "7798764197571",
       "marca": "ALBORADA",
       "moneda": "UYU",
@@ -776,7 +771,7 @@
       "tipo": "TRATAMIENTO CAPILAR",
       "unidad": "G",
       "unidades_por_envase": 1,
-      "variante": "REPARACION"
+      "variante": null
     },
     "fuentes": {
       "gtin": {
@@ -789,12 +784,27 @@
         "hoja": "Altas",
         "fila": 15
       },
-      "descripcion": {
+      "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 15
       },
-      "marca": {
+      "tipo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "contenido": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "unidad": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
+      "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 15
@@ -810,26 +820,6 @@
         "fila": 15
       },
       "proveedor_id": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 15
-      },
-      "tipo": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 15
-      },
-      "variante": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 15
-      },
-      "contenido": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 15
-      },
-      "unidad": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 15
@@ -882,27 +872,7 @@
         "hoja": "Altas",
         "fila": 16
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 16
-      },
       "marca": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 16
-      },
-      "moneda": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 16
-      },
-      "precio_costo": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 16
-      },
-      "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 16
@@ -927,6 +897,26 @@
         "hoja": "Altas",
         "fila": 16
       },
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "moneda": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "precio_costo": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
+      "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
       "unidades_por_envase": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -945,24 +935,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-CAP-SHA",
-      "codigo_proveedor": "RIV-1239",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 750,
-      "descripcion": "SHAMPOO EN SECO ALBORADA X 750 ML",
       "gtin": "7799517845237",
+      "descripcion": "SHAMPOO EN SECO ALBORADA X 750 ML",
       "marca": "ALBORADA",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": "pendiente_fds",
-      "precio_costo": 224.46,
-      "principio_activo": null,
-      "proveedor_id": "P02",
       "tipo": "SHAMPOO EN SECO",
+      "variante": null,
+      "contenido": 750,
       "unidad": "ML",
       "unidades_por_envase": 1,
-      "variante": null
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 224.46,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1239",
+      "peligro_deposito": "pendiente_fds",
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -1033,24 +1023,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-CAP-ACO",
-      "codigo_proveedor": "RIV-1242",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 400,
-      "descripcion": "ACONDICIONADOR NATIVA LISO X 400 ML",
       "gtin": "7790770756711",
+      "descripcion": "ACONDICIONADOR NATIVA LISO X 400 ML",
       "marca": "NATIVA",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 145.87,
-      "principio_activo": null,
-      "proveedor_id": "P02",
       "tipo": "ACONDICIONADOR",
+      "variante": "LISO",
+      "contenido": 400,
       "unidad": "ML",
       "unidades_por_envase": 1,
-      "variante": "LISO"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 145.87,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1242",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -1068,12 +1058,12 @@
         "hoja": "Altas",
         "fila": 18
       },
-      "tipo": {
+      "variante": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 18
       },
-      "variante": {
+      "tipo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 18
@@ -1126,24 +1116,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-CAP-ACO",
-      "codigo_proveedor": "RIV-1245",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 400,
-      "descripcion": "ACONDICIONADOR BRISA RIZOS X 400 ML",
       "gtin": "7793315341342",
+      "descripcion": "ACONDICIONADOR BRISA RIZOS X 400 ML",
       "marca": "BRISA",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 140.31,
-      "principio_activo": null,
-      "proveedor_id": "P02",
       "tipo": "ACONDICIONADOR",
+      "variante": "RIZOS",
+      "contenido": 400,
       "unidad": "ML",
       "unidades_por_envase": 1,
-      "variante": "RIZOS"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 140.31,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1245",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -1161,12 +1151,12 @@
         "hoja": "Altas",
         "fila": 19
       },
-      "tipo": {
+      "variante": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 19
       },
-      "variante": {
+      "tipo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 19
@@ -1219,24 +1209,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-CAP-SHA",
-      "codigo_proveedor": "RIV-1251",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 750,
-      "descripcion": "SHAMPOO NATIVA RIZOS X 750 ML",
       "gtin": "7795601362468",
+      "descripcion": "SHAMPOO NATIVA RIZOS X 750 ML",
       "marca": "NATIVA",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 222.53,
-      "principio_activo": null,
-      "proveedor_id": "P02",
       "tipo": "SHAMPOO",
+      "variante": "RIZOS",
+      "contenido": 750,
       "unidad": "ML",
       "unidades_por_envase": 1,
-      "variante": "RIZOS"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 222.53,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1251",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -1254,12 +1244,12 @@
         "hoja": "Altas",
         "fila": 20
       },
-      "tipo": {
+      "variante": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 20
       },
-      "variante": {
+      "tipo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 20
@@ -1312,24 +1302,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-CAP-ACO",
-      "codigo_proveedor": "RIV-1254",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 750,
-      "descripcion": "ACONDICIONADOR NATIVA COLOR X 750 ML",
       "gtin": "7796999557627",
+      "descripcion": "ACONDICIONADOR NATIVA COLOR X 750 ML",
       "marca": "NATIVA",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 260.83,
-      "principio_activo": null,
-      "proveedor_id": "P02",
       "tipo": "ACONDICIONADOR",
+      "variante": "COLOR",
+      "contenido": 750,
       "unidad": "ML",
       "unidades_por_envase": 1,
-      "variante": "COLOR"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 260.83,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1254",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -1347,12 +1337,12 @@
         "hoja": "Altas",
         "fila": 21
       },
-      "tipo": {
+      "variante": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 21
       },
-      "variante": {
+      "tipo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 21
@@ -1405,24 +1395,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-CAP-SHA",
-      "codigo_proveedor": "RIV-1257",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 400,
-      "descripcion": "SHAMPOO BRISA ANTICASPA X 400 ML",
       "gtin": "7794327626397",
+      "descripcion": "SHAMPOO BRISA ANTICASPA X 400 ML",
       "marca": "BRISA",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 150.02,
-      "principio_activo": null,
-      "proveedor_id": "P02",
       "tipo": "SHAMPOO",
+      "variante": "ANTICASPA",
+      "contenido": 400,
       "unidad": "ML",
       "unidades_por_envase": 1,
-      "variante": "ANTICASPA"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 150.02,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1257",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -1440,12 +1430,12 @@
         "hoja": "Altas",
         "fila": 22
       },
-      "tipo": {
+      "variante": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 22
       },
-      "variante": {
+      "tipo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 22
@@ -1498,24 +1488,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-CAP-SHA",
-      "codigo_proveedor": "RIV-1260",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 400,
-      "descripcion": "SHAMPOO ALBORADA ANTICASPA X 400 ML",
       "gtin": "7792602887266",
+      "descripcion": "SHAMPOO ALBORADA ANTICASPA X 400 ML",
       "marca": "ALBORADA",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 163.53,
-      "principio_activo": null,
-      "proveedor_id": "P02",
       "tipo": "SHAMPOO",
+      "variante": "ANTICASPA",
+      "contenido": 400,
       "unidad": "ML",
       "unidades_por_envase": 1,
-      "variante": "ANTICASPA"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-SHA",
+      "precio_costo": 163.53,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1260",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -1533,12 +1523,12 @@
         "hoja": "Altas",
         "fila": 23
       },
-      "tipo": {
+      "variante": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 23
       },
-      "variante": {
+      "tipo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 23
@@ -1591,24 +1581,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-CAP-ACO",
-      "codigo_proveedor": "RIV-1263",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 750,
-      "descripcion": "ACONDICIONADOR ALBORADA COLOR X 750 ML",
       "gtin": "7790648889695",
+      "descripcion": "ACONDICIONADOR ALBORADA COLOR X 750 ML",
       "marca": "ALBORADA",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 240.91,
-      "principio_activo": null,
-      "proveedor_id": "P02",
       "tipo": "ACONDICIONADOR",
+      "variante": "COLOR",
+      "contenido": 750,
       "unidad": "ML",
       "unidades_por_envase": 1,
-      "variante": "COLOR"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 240.91,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1263",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -1626,12 +1616,12 @@
         "hoja": "Altas",
         "fila": 24
       },
-      "tipo": {
+      "variante": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 24
       },
-      "variante": {
+      "tipo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 24
@@ -1684,24 +1674,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-CAP-FIJ",
-      "codigo_proveedor": "RIV-1266",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 200,
-      "descripcion": "LACA BRISA FIJACION FUERTE X 200 ML",
       "gtin": "7793662132327",
+      "descripcion": "LACA BRISA FIJACION FUERTE X 200 ML",
       "marca": "BRISA",
-      "moneda": "UYU",
-      "numero_onu": "1950",
-      "peligro_deposito": "aerosol_inflamable",
-      "precio_costo": 130.72,
-      "principio_activo": null,
-      "proveedor_id": "P02",
       "tipo": "LACA",
+      "variante": "FIJACION FUERTE",
+      "contenido": 200,
       "unidad": "ML",
       "unidades_por_envase": 1,
-      "variante": "FIJACION FUERTE"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-FIJ",
+      "precio_costo": 130.72,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1266",
+      "peligro_deposito": "aerosol_inflamable",
+      "numero_onu": "1950"
     },
     "fuentes": {
       "gtin": {
@@ -1719,12 +1709,12 @@
         "hoja": "Altas",
         "fila": 25
       },
-      "tipo": {
+      "variante": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 25
       },
-      "variante": {
+      "tipo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 25
@@ -1785,24 +1775,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-CAP-ACO",
-      "codigo_proveedor": "RIV-1269",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 200,
-      "descripcion": "ACONDICIONADOR NATIVA COLOR X 200 ML",
       "gtin": "7798168600288",
+      "descripcion": "ACONDICIONADOR NATIVA COLOR X 200 ML",
       "marca": "NATIVA",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 102.56,
-      "principio_activo": null,
-      "proveedor_id": "P02",
       "tipo": "ACONDICIONADOR",
+      "variante": "COLOR",
+      "contenido": 200,
       "unidad": "ML",
       "unidades_por_envase": 1,
-      "variante": "COLOR"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-CAP-ACO",
+      "precio_costo": 102.56,
+      "moneda": "UYU",
+      "proveedor_id": "P02",
+      "codigo_proveedor": "RIV-1269",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -1820,12 +1810,12 @@
         "hoja": "Altas",
         "fila": 26
       },
-      "tipo": {
+      "variante": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 26
       },
-      "variante": {
+      "tipo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 26
@@ -1903,11 +1893,6 @@
         "hoja": "Altas",
         "fila": 27
       },
-      "codigo_proveedor": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 27
-      },
       "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -1959,6 +1944,11 @@
         "fila": 27
       },
       "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "codigo_proveedor": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 27
@@ -1996,11 +1986,6 @@
         "hoja": "Altas",
         "fila": 28
       },
-      "codigo_proveedor": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 28
-      },
       "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -2052,6 +2037,11 @@
         "fila": 28
       },
       "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 28
+      },
+      "codigo_proveedor": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 28
@@ -2089,11 +2079,6 @@
         "hoja": "Altas",
         "fila": 29
       },
-      "codigo_proveedor": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 29
-      },
       "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -2145,6 +2130,11 @@
         "fila": 29
       },
       "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 29
+      },
+      "codigo_proveedor": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 29
@@ -2182,11 +2172,6 @@
         "hoja": "Altas",
         "fila": 30
       },
-      "codigo_proveedor": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 30
-      },
       "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -2238,6 +2223,11 @@
         "fila": 30
       },
       "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 30
+      },
+      "codigo_proveedor": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 30
@@ -2275,11 +2265,6 @@
         "hoja": "Altas",
         "fila": 31
       },
-      "codigo_proveedor": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 31
-      },
       "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -2331,6 +2316,11 @@
         "fila": 31
       },
       "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 31
+      },
+      "codigo_proveedor": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 31
@@ -2368,11 +2358,6 @@
         "hoja": "Altas",
         "fila": 32
       },
-      "codigo_proveedor": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 32
-      },
       "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -2424,6 +2409,11 @@
         "fila": 32
       },
       "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 32
+      },
+      "codigo_proveedor": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 32
@@ -2461,11 +2451,6 @@
         "hoja": "Altas",
         "fila": 33
       },
-      "codigo_proveedor": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 33
-      },
       "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -2517,6 +2502,11 @@
         "fila": 33
       },
       "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 33
+      },
+      "codigo_proveedor": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 33
@@ -2554,11 +2544,6 @@
         "hoja": "Altas",
         "fila": 34
       },
-      "codigo_proveedor": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 34
-      },
       "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -2610,6 +2595,11 @@
         "fila": 34
       },
       "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 34
+      },
+      "codigo_proveedor": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 34
@@ -2647,11 +2637,6 @@
         "hoja": "Altas",
         "fila": 35
       },
-      "codigo_proveedor": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 35
-      },
       "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -2703,6 +2688,11 @@
         "fila": 35
       },
       "proveedor_id": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 35
+      },
+      "codigo_proveedor": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 35
@@ -2740,11 +2730,6 @@
         "hoja": "Altas",
         "fila": 36
       },
-      "codigo_proveedor": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 36
-      },
       "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -2799,6 +2784,11 @@
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 36
+      },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 36
       }
     }
   },
@@ -2829,11 +2819,6 @@
     },
     "fuentes": {
       "gtin": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 37
-      },
-      "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 37
@@ -2884,6 +2869,11 @@
         "fila": 37
       },
       "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 37
+      },
+      "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 37
@@ -2926,11 +2916,6 @@
         "hoja": "Altas",
         "fila": 38
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 38
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -2977,6 +2962,11 @@
         "fila": 38
       },
       "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 38
+      },
+      "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 38
@@ -3019,11 +3009,6 @@
         "hoja": "Altas",
         "fila": 39
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 39
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -3070,6 +3055,11 @@
         "fila": 39
       },
       "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 39
+      },
+      "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 39
@@ -3120,11 +3110,6 @@
         "hoja": "Altas",
         "fila": 40
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 40
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -3171,6 +3156,11 @@
         "fila": 40
       },
       "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 40
+      },
+      "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 40
@@ -3213,11 +3203,6 @@
         "hoja": "Altas",
         "fila": 41
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 41
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -3264,6 +3249,11 @@
         "fila": 41
       },
       "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 41
+      },
+      "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 41
@@ -3306,11 +3296,6 @@
         "hoja": "Altas",
         "fila": 42
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 42
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -3357,6 +3342,11 @@
         "fila": 42
       },
       "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 42
+      },
+      "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 42
@@ -3399,11 +3389,6 @@
         "hoja": "Altas",
         "fila": 43
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 43
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -3450,6 +3435,11 @@
         "fila": 43
       },
       "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 43
+      },
+      "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 43
@@ -3492,11 +3482,6 @@
         "hoja": "Altas",
         "fila": 44
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 44
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -3543,6 +3528,11 @@
         "fila": 44
       },
       "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 44
+      },
+      "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 44
@@ -3585,11 +3575,6 @@
         "hoja": "Altas",
         "fila": 45
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 45
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -3636,6 +3621,11 @@
         "fila": 45
       },
       "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 45
+      },
+      "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 45
@@ -3678,11 +3668,6 @@
         "hoja": "Altas",
         "fila": 46
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 46
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -3729,6 +3714,11 @@
         "fila": 46
       },
       "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 46
+      },
+      "descripcion": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 46
@@ -3771,11 +3761,6 @@
         "hoja": "Altas",
         "fila": 47
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 47
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -3806,11 +3791,6 @@
         "hoja": "Altas",
         "fila": 47
       },
-      "categoria": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 47
-      },
       "precio_costo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -3821,12 +3801,22 @@
         "hoja": "Altas",
         "fila": 47
       },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 47
+      },
       "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 47
       },
-      "codigo_proveedor": {
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 47
+      },
+      "categoria": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 47
@@ -3864,11 +3854,6 @@
         "hoja": "Altas",
         "fila": 49
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 49
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -3899,11 +3884,6 @@
         "hoja": "Altas",
         "fila": 49
       },
-      "categoria": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 49
-      },
       "precio_costo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -3914,12 +3894,22 @@
         "hoja": "Altas",
         "fila": 49
       },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 49
+      },
       "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 49
       },
-      "codigo_proveedor": {
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 49
+      },
+      "categoria": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 49
@@ -3965,11 +3955,6 @@
         "hoja": "Altas",
         "fila": 50
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 50
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -4000,11 +3985,6 @@
         "hoja": "Altas",
         "fila": 50
       },
-      "categoria": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 50
-      },
       "precio_costo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -4015,12 +3995,22 @@
         "hoja": "Altas",
         "fila": 50
       },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 50
+      },
       "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 50
       },
-      "codigo_proveedor": {
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 50
+      },
+      "categoria": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 50
@@ -4058,11 +4048,6 @@
         "hoja": "Altas",
         "fila": 51
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 51
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -4093,11 +4078,6 @@
         "hoja": "Altas",
         "fila": 51
       },
-      "categoria": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 51
-      },
       "precio_costo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -4108,12 +4088,22 @@
         "hoja": "Altas",
         "fila": 51
       },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 51
+      },
       "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 51
       },
-      "codigo_proveedor": {
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 51
+      },
+      "categoria": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 51
@@ -4159,11 +4149,6 @@
         "hoja": "Altas",
         "fila": 52
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 52
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -4194,11 +4179,6 @@
         "hoja": "Altas",
         "fila": 52
       },
-      "categoria": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 52
-      },
       "precio_costo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -4209,12 +4189,22 @@
         "hoja": "Altas",
         "fila": 52
       },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 52
+      },
       "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 52
       },
-      "codigo_proveedor": {
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 52
+      },
+      "categoria": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 52
@@ -4260,11 +4250,6 @@
         "hoja": "Altas",
         "fila": 53
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 53
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -4295,11 +4280,6 @@
         "hoja": "Altas",
         "fila": 53
       },
-      "categoria": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 53
-      },
       "precio_costo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -4310,12 +4290,22 @@
         "hoja": "Altas",
         "fila": 53
       },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 53
+      },
       "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 53
       },
-      "codigo_proveedor": {
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 53
+      },
+      "categoria": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 53
@@ -4361,11 +4351,6 @@
         "hoja": "Altas",
         "fila": 54
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 54
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -4396,11 +4381,6 @@
         "hoja": "Altas",
         "fila": 54
       },
-      "categoria": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 54
-      },
       "precio_costo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -4411,12 +4391,22 @@
         "hoja": "Altas",
         "fila": 54
       },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 54
+      },
       "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 54
       },
-      "codigo_proveedor": {
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 54
+      },
+      "categoria": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 54
@@ -4454,11 +4444,6 @@
         "hoja": "Altas",
         "fila": 55
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 55
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -4489,11 +4474,6 @@
         "hoja": "Altas",
         "fila": 55
       },
-      "categoria": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 55
-      },
       "precio_costo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -4504,12 +4484,22 @@
         "hoja": "Altas",
         "fila": 55
       },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 55
+      },
       "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 55
       },
-      "codigo_proveedor": {
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 55
+      },
+      "categoria": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 55
@@ -4555,11 +4545,6 @@
         "hoja": "Altas",
         "fila": 56
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 56
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -4590,11 +4575,6 @@
         "hoja": "Altas",
         "fila": 56
       },
-      "categoria": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 56
-      },
       "precio_costo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -4605,12 +4585,22 @@
         "hoja": "Altas",
         "fila": 56
       },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 56
+      },
       "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 56
       },
-      "codigo_proveedor": {
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 56
+      },
+      "categoria": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 56
@@ -4656,11 +4646,6 @@
         "hoja": "Altas",
         "fila": 57
       },
-      "descripcion": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 57
-      },
       "marca": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -4691,11 +4676,6 @@
         "hoja": "Altas",
         "fila": 57
       },
-      "categoria": {
-        "archivo": "ALTAS RIVERA OCT.xlsx",
-        "hoja": "Altas",
-        "fila": 57
-      },
       "precio_costo": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
@@ -4706,12 +4686,22 @@
         "hoja": "Altas",
         "fila": 57
       },
+      "codigo_proveedor": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 57
+      },
       "proveedor_id": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 57
       },
-      "codigo_proveedor": {
+      "descripcion": {
+        "archivo": "ALTAS RIVERA OCT.xlsx",
+        "hoja": "Altas",
+        "fila": 57
+      },
+      "categoria": {
         "archivo": "ALTAS RIVERA OCT.xlsx",
         "hoja": "Altas",
         "fila": 57

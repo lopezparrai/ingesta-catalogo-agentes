@@ -28,7 +28,7 @@ python lote.py P03_Distribuidora_Litoral P09_Natural_Vida --modo tiempo-real
 
 # Pruebas que no llaman a la API (cuestan USD 0)
 python prueba_hooks.py      # hooks y permisos
-python prueba_lote.py       # motor de rondas del Batch, con un cliente falso
+python prueba_lote.py       # motor de rondas del Batch y controles, con un cliente falso
 python esquema.py           # valida contra el esquema todas las fichas ya generadas
 ```
 
@@ -207,23 +207,56 @@ fuentes, estado contra motivos. La ficha equivocada es perfectamente válida: el
 código **son del mismo bloque**. Además, con una sola fuente por campo, la cita del nombre apunta a una página
 que sí contiene ese texto, así que tampoco se detecta por ahí.
 
-**Mi hipótesis de la causa (no verificada).** Con los demás proveedores el código viene antes o en la misma fila
-que el nombre; con este PDF la lectura asoció cada código con el título que tenía a continuación. No pude
-confirmarlo porque `lote.py` no guarda la salida de los extractores (sí lo hace `orquestador.py`), y repetir la
-extracción sería abrir el apartado por segunda vez.
+**La causa.** La consulta con la que el lector de PDF (`leer_pdf_con_citas`) transcribe un documento decía
+"son filas de una tabla" y "empezando por su código". Eso vale para una tabla, pero en este PDF el nombre va arriba
+del código, así que cada código recibía el título que venía después.
 
-**Qué haría (no aplicado).** (1) Que el extractor devuelva, junto con cada fila, el texto exacto del bloque del
-que sacó nombre y código, y que un hook compruebe que ambos estén en el mismo bloque. (2) Un control de
-coherencia entre el tipo que dice el bloque ("Crema", "Gel", "Sérum") y la categoría de la ficha: acá se habría
-visto en casi todos los casos. (3) Guardar la salida de los extractores también en `lote.py`, para poder
-diagnosticar.
+### Después del hallazgo (el arreglo no es una prueba limpia)
+
+Se corrigió tres cosas: la consulta del lector de PDF (ahora aclara que puede ser una ficha por producto con el
+nombre arriba del código y que los datos son los del bloque que contiene el código), la misma regla en las
+instrucciones del extractor (incluido un título cortado por un salto de página) y `lote.py`, que ahora guarda la
+extracción de cada proveedor para poder diagnosticar.
+
+Con el arreglo, **los 18 nombres coinciden con el PDF** (14 `lista_para_alta`, 4 `a_revision`; las 4 de revisión
+son productos que no están en la lista de precios, así que no tienen EAN ni costo). La corrida original quedó
+guardada en `salidas_m6/P05_Dermalab_corrida_original.json`. Esta segunda corrida **no cuenta como prueba
+limpia**: el sistema ya se había ajustado mirando este proveedor. Lo que queda es que el defecto era de una
+consulta pensada para tablas, y que los hooks de forma no lo habrían detectado nunca.
+
+Lo que haría además (no aplicado): que el extractor devuelva el texto exacto del bloque de cada fila y un hook
+compruebe que nombre y código están en el mismo bloque, y un control de coherencia entre el tipo que dice el bloque
+("Crema", "Gel", "Sérum") y la categoría.
+
+## Fallas intermitentes y controles en código
+
+Al volver a correr todo después del arreglo aparecieron tres fallas que no tenían que ver con Dermalab y que
+**con los mismos datos y el mismo código unas veces ocurren y otras no**:
+
+| Falla | Dónde | Efecto |
+|---|---|---|
+| El escritor dejó `unidades_por_envase` sin fuente y el sistema lo vació | Litoral | 14 productos a revisión (se corrigió con una regla en el prompt) |
+| El escritor dejó `precio_costo` vacío en un lote entero aunque la extracción lo traía | Rivera y Litoral | 10 y 14 productos a revisión |
+| La extracción de una ficha de seguridad salió sin la sección 14 (transporte) | Limpieza Hogar Sur | 6 productos a revisión |
+
+Ninguna cargó datos mal: todas terminaron en `a_revision`, que es la falla segura. Pero cambian el resultado de
+una corrida a otra. Un prompt más largo no lo arregla; cuando el dato es obligatorio, lo controla el código:
+
+- `hook_no_perder_precio` (`lote.py`): al terminar un lote, si la extracción de un producto trae precio y la ficha
+  quedó sin `precio_costo`, no deja cerrar y se lo devuelve al modelo (2 reintentos).
+- `validar_extraccion` (`orquestador.py`): una FDS sin sección 14 se le devuelve al extractor para que la lea de
+  nuevo; si el documento dice que no está regulado, ese texto se acepta.
+
+`prueba_lote.py` verifica los dos controles sin llamar a la API. La regla de `unidades_por_envase` sigue siendo
+un prompt (no es un hook) y es el punto más débil que queda.
 
 ## Límites conocidos
 
 - El modelo no es determinista: la misma lista puede dar descripciones o variantes distintas entre corridas.
 - El Batch tarda minutos por ronda (42 minutos los 8 proveedores); hay que tener el proceso corriendo hasta que termine.
 - Con un GTIN inválido, la corrida por Batch dejó el GTIN en la ficha (con su fuente) y las otras corridas lo dejaron vacío; el estado y el motivo (`a_revision`, `gtin_invalido`) son los mismos.
-- Dermalab (el apartado) salió con los nombres de los productos corridos un bloque: ver la sección anterior.
+- Dermalab (el apartado) salió con los nombres de los productos corridos un bloque; se arregló después y esa segunda corrida no es una prueba limpia (ver arriba).
+- El modelo falla de forma intermitente en pasos que antes andaban; los controles en código reducen el riesgo pero no lo eliminan.
 - Pendiente: asistente de consultas sobre lo generado (`consultas/consultas.json`).
 
 ## Archivos
@@ -236,6 +269,7 @@ diagnosticar.
 | `orquestador.py` | Extractores en paralelo, consolidación en código y escritor (modo tiempo real, por proveedor). |
 | `lote.py` | Comando único: todos los proveedores, por Batch o en tiempo real, con costo y tiempo. |
 | `evaluador.py`, `evals/` | Evaluación contra fichas verificadas a mano. |
-| `prueba_hooks.py`, `prueba_lote.py` | Pruebas sin API de los hooks y del motor de rondas. |
+| `prueba_hooks.py`, `prueba_lote.py` | Pruebas sin API de los hooks, del motor de rondas y de los controles de precio y de FDS. |
+| `diagnostico_dermalab.md` | Comparación producto por producto de la corrida original de Dermalab. |
 | `ejercicios/` | Ejercicios sueltos del curso (prompt v2, salida estructurada); el sistema no los usa. |
 | `salidas/`, `salidas_m4/`, `salidas_m6/` | Salidas del agente único, del orquestador y de la corrida final. |

@@ -55,9 +55,15 @@ no normalizás, no corregís, no completás, no buscás duplicados. Eso lo hace 
 - Fuente de cada fila: CSV/txt {"archivo", "linea"} con el '_linea'; Excel {"archivo", "hoja", "fila"} con la hoja y
   la fila que devuelve leer_excel; PDF {"archivo", "pagina"} con la página de la cita que respalda la fila.
   'archivo' es el nombre del archivo sin carpeta. Nunca inventes una página.
+- Si el archivo es una ficha por producto (un bloque con nombre, descripción, contenido y código) y no una tabla,
+  el nombre y la descripción de un producto son los del bloque que contiene SU código, aunque el nombre vaya
+  arriba del código: lo que viene después del código es del producto siguiente. Un título cortado por un
+  salto de página pertenece al bloque que continúa en la página siguiente.
 - Si una hoja de Excel lista productos discontinuados, retirados o dados de baja (no son productos nuevos),
   no la extraigas: anotala en "notas".
-- Si el archivo es una ficha de seguridad (FDS), no hay filas de producto: completá "fds".
+- Si el archivo es una ficha de seguridad (FDS), no hay filas de producto: completá "fds". Para leerla pasale a
+  leer_pdf_con_citas una consulta propia que pida transcribir completa la sección 14 (número ONU, clase y texto)
+  y los códigos comerciales: la consulta por defecto es para listas de productos y no la trae.
 </reglas>
 
 <salida>
@@ -120,6 +126,13 @@ def validar_extraccion(datos: dict) -> None:
     if datos["tipo_archivo"] == "fds":
         if not isinstance(datos.get("fds"), dict):
             raise ValueError("un archivo de tipo 'fds' necesita el objeto 'fds'")
+        seccion = datos["fds"].get("seccion_14") or {}
+        if not any(seccion.get(k) for k in ("numero_onu", "clase", "texto")):
+            raise ValueError(
+                "la FDS no trae la sección 14 (transporte). Volvé a llamar a leer_pdf_con_citas con una consulta que "
+                "pida transcribir completa la sección 14 'Información relativa al transporte' (número ONU, clase y "
+                "texto) y los códigos comerciales de la ficha; si el documento dice que no está regulado, ese texto "
+                "va en seccion_14.texto")
         return
     for i, fila in enumerate(datos.get("filas") or []):
         if not str(fila.get("codigo") or "").strip():

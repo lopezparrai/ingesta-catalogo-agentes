@@ -58,12 +58,35 @@ class Conv:
     iteraciones: int = 0
     errores_api: int = 0
     reintentos_al_terminar: int = 0
+    reintentos_precio: int = 0
+    con_precio: set = field(default_factory=set)    # productos cuya extracción trae un precio
     frenos: list = field(default_factory=list)      # lo que frenaron los hooks, con su motivo
     traza: list = field(default_factory=list)
     uso: dict = field(default_factory=lambda: {"input": 0, "output": 0, "cache_escrito": 0, "cache_leido": 0})
     costo_usd: float = 0.0
     estado: str = "activa"                          # activa | terminada | fallida
     nota: str = ""
+
+
+import re as _re
+
+_CLAVE_PRECIO = _re.compile(r"(precio|costo|cost|price)", _re.I)
+
+
+def tiene_precio(producto: dict) -> bool:
+    """¿Alguna observación del producto trae un precio? (columna con 'precio' o 'costo' en el nombre y un valor)."""
+    for o in producto.get("observaciones", []):
+        for k, v in (o.get("campos") or {}).items():
+            if _CLAVE_PRECIO.search(str(k)) and str(v).strip() not in ("", "None", "null"):
+                return True
+    return False
+
+
+def hook_no_perder_precio(fichas: dict, con_precio: set) -> list[str]:
+    """Al terminar: si la extracción trae precio y la ficha quedó sin precio_costo, es un dato perdido en el
+    traspaso (ya pasó: un lote entero del escritor lo dejó vacío). Se lo devuelve al modelo para que lo revise."""
+    return [i for i, r in fichas.items()
+            if i in con_precio and (r.get("ficha") or {}).get("precio_costo") in (None, "")]
 
 
 # ---------------------------------------------------------------------------
@@ -199,6 +222,15 @@ async def avanzar(conv: Conv, msg, session, factor: float) -> None:
             _fallar(conv, f"llegó al límite de {MAX_ITERACIONES} iteraciones sin registrar {faltan}")
         return
 
+    perdidos = hook_no_perder_precio(conv.fichas, conv.con_precio)
+    if perdidos and conv.reintentos_precio < A.HOOKS_REINTENTOS_AL_TERMINAR:
+        conv.reintentos_precio += 1
+        conv.frenos.append({"item_id": None, "hook": f"[hook_no_perder_precio] sin precio_costo aunque la extracción lo trae: {', '.join(perdidos)}"})
+        conv.mensajes.append({"role": "user", "content": (
+            f"Bloqueado por hook al terminar: estos productos tienen precio en los datos extraídos y quedaron con "
+            f"precio_costo vacío: {', '.join(perdidos)}. Registralos de nuevo con el precio (convertido a número) y "
+            "su fuente. Si el precio quedó vacío a propósito por una regla del criterio, dejalo y explicalo en los motivos.")})
+        return
     problemas = A.hook_al_terminar_fuentes(conv.fichas)   # hook al terminar: ningún campo sin fuente
     if problemas and conv.reintentos_al_terminar < A.HOOKS_REINTENTOS_AL_TERMINAR:
         conv.reintentos_al_terminar += 1
@@ -314,6 +346,7 @@ def main() -> None:
             convs.append(Conv(
                 cid=f"{pid}-lote{i // O.LOTE_ESCRITOR}", carpeta=c,
                 esperados=[productos[x]["item_id"] for x in lote],
+                con_precio={productos[x]["item_id"] for x in lote if tiene_precio(productos[x])},
                 mensajes=[{"role": "user", "content": O.tarea_escritor(pid, productos, lote, contextos, fds)}]))
         print(f"  [consolidación {c}] {len(productos)} producto(s), {len(fds)} FDS, "
               f"{len([x for x in convs if x.carpeta == c])} lote(s)")
@@ -338,6 +371,8 @@ def main() -> None:
         costo = costo_extraccion[c] + sum(x.costo_usd for x in cs)
         fallas = [{"lote": x.cid, "motivo": x.nota} for x in cs if x.estado == "fallida"]
         frenos = [f for x in cs for f in x.frenos]
+        (SALIDAS_M6 / f"{c}_extraccion.json").write_text(
+            json.dumps(por_carpeta[c], indent=2, ensure_ascii=False, default=str), encoding="utf-8")
         (SALIDAS_M6 / f"{c}.json").write_text(
             json.dumps(list(fichas.values()), indent=2, ensure_ascii=False), encoding="utf-8")
         (SALIDAS_M6 / f"{c}_traza.json").write_text(json.dumps({

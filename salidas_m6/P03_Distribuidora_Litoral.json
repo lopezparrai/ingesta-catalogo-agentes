@@ -5,24 +5,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-BUC-PAS",
-      "codigo_proveedor": "LT-3303",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 90,
-      "descripcion": "PASTA DENTAL SONRISA BLANQUEADORA X 90 G",
       "gtin": "7793469616846",
+      "descripcion": "PASTA DENTAL SONRISA BLANQUEADORA X 90 G",
       "marca": "SONRISA",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 68.91,
-      "principio_activo": null,
-      "proveedor_id": "P03",
       "tipo": "PASTA DENTAL",
+      "variante": "BLANQUEADORA",
+      "contenido": 90,
       "unidad": "G",
       "unidades_por_envase": 1,
-      "variante": "BLANQUEADORA"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-BUC-PAS",
+      "precio_costo": 68.91,
+      "moneda": "UYU",
+      "proveedor_id": "P03",
+      "codigo_proveedor": "LT-3303",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -85,24 +85,24 @@
     "duplicado_de": "SKU102786",
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-HIG-JAB",
-      "codigo_proveedor": "LT-3306",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 125,
-      "descripcion": "JABON LAVANDA REAL ANTIBACTERIAL X 125 G",
       "gtin": "7790863076870",
+      "descripcion": "JABON LAVANDA REAL ANTIBACTERIAL X 125 G",
       "marca": "LAVANDA REAL",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 45.37,
-      "principio_activo": null,
-      "proveedor_id": "P03",
       "tipo": "JABON",
+      "variante": "ANTIBACTERIAL",
+      "contenido": 125,
       "unidad": "G",
       "unidades_por_envase": 1,
-      "variante": "ANTIBACTERIAL"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-JAB",
+      "precio_costo": 45.37,
+      "moneda": "UYU",
+      "proveedor_id": "P03",
+      "codigo_proveedor": "LT-3306",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -165,24 +165,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-BUC-PAS",
-      "codigo_proveedor": "LT-3309",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 90,
-      "descripcion": "PASTA DENTAL DENTIBLANC MENTA FRESCA X 90 G",
       "gtin": "7792214191911",
+      "descripcion": "PASTA DENTAL DENTIBLANC MENTA FRESCA X 90 G",
       "marca": "DENTIBLANC",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 65.74,
-      "principio_activo": null,
-      "proveedor_id": "P03",
       "tipo": "PASTA DENTAL",
+      "variante": "MENTA FRESCA",
+      "contenido": 90,
       "unidad": "G",
       "unidades_por_envase": 1,
-      "variante": "MENTA FRESCA"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-BUC-PAS",
+      "precio_costo": 65.74,
+      "moneda": "UYU",
+      "proveedor_id": "P03",
+      "codigo_proveedor": "LT-3309",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -245,24 +245,24 @@
     "duplicado_de": "SKU104011",
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-HIG-JAB",
-      "codigo_proveedor": "LT-3312",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 500,
-      "descripcion": "JABON LIQUIDO PUREZA NEUTRO X 500 ML",
       "gtin": "7799626810102",
+      "descripcion": "JABON LIQUIDO PUREZA NEUTRO X 500 ML",
       "marca": "PUREZA",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 115.87,
-      "principio_activo": null,
-      "proveedor_id": "P03",
       "tipo": "JABON LIQUIDO",
+      "variante": "NEUTRO",
+      "contenido": 500,
       "unidad": "ML",
       "unidades_por_envase": 1,
-      "variante": "NEUTRO"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-JAB",
+      "precio_costo": 115.87,
+      "moneda": "UYU",
+      "proveedor_id": "P03",
+      "codigo_proveedor": "LT-3312",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -325,24 +325,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-BUC-PAS",
-      "codigo_proveedor": "LT-3315",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 90,
-      "descripcion": "PASTA DENTAL DENTIBLANC SENSIBLE X 90 G",
       "gtin": "7799643701780",
+      "descripcion": "PASTA DENTAL DENTIBLANC SENSIBLE X 90 G",
       "marca": "DENTIBLANC",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 66.87,
-      "principio_activo": null,
-      "proveedor_id": "P03",
       "tipo": "PASTA DENTAL",
+      "variante": "SENSIBLE",
+      "contenido": 90,
       "unidad": "G",
       "unidades_por_envase": 1,
-      "variante": "SENSIBLE"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-BUC-PAS",
+      "precio_costo": 66.87,
+      "moneda": "UYU",
+      "proveedor_id": "P03",
+      "codigo_proveedor": "LT-3315",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -405,24 +405,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-HIG-ALG",
-      "codigo_proveedor": "LT-3318",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 140,
-      "descripcion": "ALGODON NUBE ZIG ZAG X 140 G",
       "gtin": "7790267858324",
+      "descripcion": "ALGODON NUBE ZIG ZAG X 140 G",
       "marca": "NUBE",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 69.21,
-      "principio_activo": null,
-      "proveedor_id": "P03",
       "tipo": "ALGODON",
+      "variante": "ZIG ZAG",
+      "contenido": 140,
       "unidad": "G",
       "unidades_por_envase": 1,
-      "variante": "ZIG ZAG"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-ALG",
+      "precio_costo": 69.21,
+      "moneda": "UYU",
+      "proveedor_id": "P03",
+      "codigo_proveedor": "LT-3318",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -485,24 +485,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-BUC-PAS",
-      "codigo_proveedor": "LT-3321",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 180,
-      "descripcion": "PASTA DENTAL DENTIBLANC BLANQUEADORA X 180 G",
       "gtin": "7797556693871",
+      "descripcion": "PASTA DENTAL DENTIBLANC BLANQUEADORA X 180 G",
       "marca": "DENTIBLANC",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 124.76,
-      "principio_activo": null,
-      "proveedor_id": "P03",
       "tipo": "PASTA DENTAL",
+      "variante": "BLANQUEADORA",
+      "contenido": 180,
       "unidad": "G",
       "unidades_por_envase": 1,
-      "variante": "BLANQUEADORA"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-BUC-PAS",
+      "precio_costo": 124.76,
+      "moneda": "UYU",
+      "proveedor_id": "P03",
+      "codigo_proveedor": "LT-3321",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -565,24 +565,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-HIG-JAB",
-      "codigo_proveedor": "LT-3324",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 250,
-      "descripcion": "JABON LIQUIDO PUREZA NEUTRO X 250 ML",
       "gtin": "7790342802839",
+      "descripcion": "JABON LIQUIDO PUREZA NEUTRO X 250 ML",
       "marca": "PUREZA",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 68.54,
-      "principio_activo": null,
-      "proveedor_id": "P03",
       "tipo": "JABON LIQUIDO",
+      "variante": "NEUTRO",
+      "contenido": 250,
       "unidad": "ML",
       "unidades_por_envase": 1,
-      "variante": "NEUTRO"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-HIG-JAB",
+      "precio_costo": 68.54,
+      "moneda": "UYU",
+      "proveedor_id": "P03",
+      "codigo_proveedor": "LT-3324",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -645,24 +645,24 @@
     "duplicado_de": "SKU102387",
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-BUC-CEP",
-      "codigo_proveedor": "LT-3327",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 2,
-      "descripcion": "CEPILLO DENTAL SONRISA MEDIO X 2 UN",
       "gtin": "7798971881317",
+      "descripcion": "CEPILLO DENTAL SONRISA MEDIO X 2 UN",
       "marca": "SONRISA",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 96.95,
-      "principio_activo": null,
-      "proveedor_id": "P03",
       "tipo": "CEPILLO DENTAL",
+      "variante": "MEDIO",
+      "contenido": 2,
       "unidad": "UN",
       "unidades_por_envase": 1,
-      "variante": "MEDIO"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-BUC-CEP",
+      "precio_costo": 96.95,
+      "moneda": "UYU",
+      "proveedor_id": "P03",
+      "codigo_proveedor": "LT-3327",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -725,24 +725,24 @@
     "duplicado_de": null,
     "motivos_revision": [],
     "ficha": {
-      "categoria": "CUI-BUC-PAS",
-      "codigo_proveedor": "LT-3330",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 70,
-      "descripcion": "PASTA DENTAL DENTIBLANC BLANQUEADORA X 70 G",
       "gtin": "7792497428735",
+      "descripcion": "PASTA DENTAL DENTIBLANC BLANQUEADORA X 70 G",
       "marca": "DENTIBLANC",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 55.51,
-      "principio_activo": null,
-      "proveedor_id": "P03",
       "tipo": "PASTA DENTAL",
+      "variante": "BLANQUEADORA",
+      "contenido": 70,
       "unidad": "G",
       "unidades_por_envase": 1,
-      "variante": "BLANQUEADORA"
+      "principio_activo": null,
+      "concentracion": null,
+      "condicion_venta": null,
+      "categoria": "CUI-BUC-PAS",
+      "precio_costo": 55.51,
+      "moneda": "UYU",
+      "proveedor_id": "P03",
+      "codigo_proveedor": "LT-3330",
+      "peligro_deposito": null,
+      "numero_onu": null
     },
     "fuentes": {
       "gtin": {
@@ -1468,11 +1468,11 @@
       "variante": "ANTIBACTERIAL"
     },
     "fuentes": {
-      "marca": {
+      "descripcion": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 20
       },
-      "descripcion": {
+      "marca": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 20
       },
@@ -1668,11 +1668,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 22
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 22
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 22
       }
@@ -1744,11 +1744,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 23
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 23
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 23
       }
@@ -1824,11 +1824,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 24
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 24
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 24
       }
@@ -1904,11 +1904,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 25
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 25
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 25
       }
@@ -1984,11 +1984,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 26
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 26
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 26
       }
@@ -2064,11 +2064,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 27
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 27
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 27
       }
@@ -2144,11 +2144,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 28
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 28
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 28
       }
@@ -2224,11 +2224,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 29
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 29
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 29
       }
@@ -2304,11 +2304,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 30
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 30
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 30
       }
@@ -2384,11 +2384,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 31
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 31
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 31
       }
@@ -2420,15 +2420,7 @@
       "variante": "CARIES"
     },
     "fuentes": {
-      "categoria": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 32
-      },
-      "codigo_proveedor": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 32
-      },
-      "contenido": {
+      "gtin": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 32
       },
@@ -2436,23 +2428,19 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 32
       },
-      "gtin": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 32
-      },
       "marca": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 32
       },
-      "moneda": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 32
-      },
-      "precio_costo": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 32
-      },
       "tipo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 32
+      },
+      "variante": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 32
+      },
+      "contenido": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 32
       },
@@ -2464,11 +2452,23 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 32
       },
-      "variante": {
+      "categoria": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 32
+      },
+      "precio_costo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 32
+      },
+      "moneda": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 32
       },
       "proveedor_id": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 32
+      },
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 32
       }
@@ -2500,15 +2500,7 @@
       "variante": "GLICERINA"
     },
     "fuentes": {
-      "categoria": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 33
-      },
-      "codigo_proveedor": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 33
-      },
-      "contenido": {
+      "gtin": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 33
       },
@@ -2516,23 +2508,19 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 33
       },
-      "gtin": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 33
-      },
       "marca": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 33
       },
-      "moneda": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 33
-      },
-      "precio_costo": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 33
-      },
       "tipo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 33
+      },
+      "variante": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 33
+      },
+      "contenido": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 33
       },
@@ -2544,11 +2532,23 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 33
       },
-      "variante": {
+      "categoria": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 33
+      },
+      "precio_costo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 33
+      },
+      "moneda": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 33
       },
       "proveedor_id": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 33
+      },
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 33
       }
@@ -2580,15 +2580,7 @@
       "variante": "GLICERINA"
     },
     "fuentes": {
-      "categoria": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 34
-      },
-      "codigo_proveedor": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 34
-      },
-      "contenido": {
+      "gtin": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 34
       },
@@ -2596,23 +2588,19 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 34
       },
-      "gtin": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 34
-      },
       "marca": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 34
       },
-      "moneda": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 34
-      },
-      "precio_costo": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 34
-      },
       "tipo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 34
+      },
+      "variante": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 34
+      },
+      "contenido": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 34
       },
@@ -2624,11 +2612,23 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 34
       },
-      "variante": {
+      "categoria": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 34
+      },
+      "precio_costo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 34
+      },
+      "moneda": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 34
       },
       "proveedor_id": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 34
+      },
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 34
       }
@@ -2660,15 +2660,7 @@
       "variante": "GLICERINA"
     },
     "fuentes": {
-      "categoria": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 35
-      },
-      "codigo_proveedor": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 35
-      },
-      "contenido": {
+      "gtin": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 35
       },
@@ -2676,23 +2668,19 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 35
       },
-      "gtin": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 35
-      },
       "marca": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 35
       },
-      "moneda": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 35
-      },
-      "precio_costo": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 35
-      },
       "tipo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 35
+      },
+      "variante": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 35
+      },
+      "contenido": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 35
       },
@@ -2704,11 +2692,23 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 35
       },
-      "variante": {
+      "categoria": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 35
+      },
+      "precio_costo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 35
+      },
+      "moneda": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 35
       },
       "proveedor_id": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 35
+      },
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 35
       }
@@ -2740,15 +2740,7 @@
       "variante": "AVENA"
     },
     "fuentes": {
-      "categoria": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 36
-      },
-      "codigo_proveedor": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 36
-      },
-      "contenido": {
+      "gtin": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 36
       },
@@ -2756,23 +2748,19 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 36
       },
-      "gtin": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 36
-      },
       "marca": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 36
       },
-      "moneda": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 36
-      },
-      "precio_costo": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 36
-      },
       "tipo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 36
+      },
+      "variante": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 36
+      },
+      "contenido": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 36
       },
@@ -2784,11 +2772,23 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 36
       },
-      "variante": {
+      "categoria": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 36
+      },
+      "precio_costo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 36
+      },
+      "moneda": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 36
       },
       "proveedor_id": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 36
+      },
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 36
       }
@@ -2820,15 +2820,7 @@
       "variante": "CARIES"
     },
     "fuentes": {
-      "categoria": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 37
-      },
-      "codigo_proveedor": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 37
-      },
-      "contenido": {
+      "gtin": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 37
       },
@@ -2836,23 +2828,19 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 37
       },
-      "gtin": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 37
-      },
       "marca": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 37
       },
-      "moneda": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 37
-      },
-      "precio_costo": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 37
-      },
       "tipo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 37
+      },
+      "variante": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 37
+      },
+      "contenido": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 37
       },
@@ -2864,11 +2852,23 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 37
       },
-      "variante": {
+      "categoria": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 37
+      },
+      "precio_costo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 37
+      },
+      "moneda": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 37
       },
       "proveedor_id": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 37
+      },
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 37
       }
@@ -2900,15 +2900,7 @@
       "variante": "SENSIBLE"
     },
     "fuentes": {
-      "categoria": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 38
-      },
-      "codigo_proveedor": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 38
-      },
-      "contenido": {
+      "gtin": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 38
       },
@@ -2916,23 +2908,19 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 38
       },
-      "gtin": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 38
-      },
       "marca": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 38
       },
-      "moneda": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 38
-      },
-      "precio_costo": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 38
-      },
       "tipo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 38
+      },
+      "variante": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 38
+      },
+      "contenido": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 38
       },
@@ -2944,11 +2932,23 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 38
       },
-      "variante": {
+      "categoria": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 38
+      },
+      "precio_costo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 38
+      },
+      "moneda": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 38
       },
       "proveedor_id": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 38
+      },
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 38
       }
@@ -2980,15 +2980,7 @@
       "variante": "BLANQUEADORA"
     },
     "fuentes": {
-      "categoria": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 39
-      },
-      "codigo_proveedor": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 39
-      },
-      "contenido": {
+      "gtin": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 39
       },
@@ -2996,23 +2988,19 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 39
       },
-      "gtin": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 39
-      },
       "marca": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 39
       },
-      "moneda": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 39
-      },
-      "precio_costo": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 39
-      },
       "tipo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 39
+      },
+      "variante": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 39
+      },
+      "contenido": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 39
       },
@@ -3024,11 +3012,23 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 39
       },
-      "variante": {
+      "categoria": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 39
+      },
+      "precio_costo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 39
+      },
+      "moneda": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 39
       },
       "proveedor_id": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 39
+      },
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 39
       }
@@ -3060,15 +3060,7 @@
       "variante": "SIN ALCOHOL"
     },
     "fuentes": {
-      "categoria": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 40
-      },
-      "codigo_proveedor": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 40
-      },
-      "contenido": {
+      "gtin": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 40
       },
@@ -3076,23 +3068,19 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 40
       },
-      "gtin": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 40
-      },
       "marca": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 40
       },
-      "moneda": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 40
-      },
-      "precio_costo": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 40
-      },
       "tipo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 40
+      },
+      "variante": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 40
+      },
+      "contenido": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 40
       },
@@ -3104,11 +3092,23 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 40
       },
-      "variante": {
+      "categoria": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 40
+      },
+      "precio_costo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 40
+      },
+      "moneda": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 40
       },
       "proveedor_id": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 40
+      },
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 40
       }
@@ -3143,18 +3143,6 @@
       "variante": null
     },
     "fuentes": {
-      "categoria": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 41
-      },
-      "codigo_proveedor": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 41
-      },
-      "contenido": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 41
-      },
       "descripcion": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 41
@@ -3163,15 +3151,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 41
       },
-      "moneda": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 41
-      },
-      "precio_costo": {
-        "archivo": "litoral_altas_102026.csv",
-        "linea": 41
-      },
       "tipo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 41
+      },
+      "contenido": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 41
       },
@@ -3183,7 +3167,23 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 41
       },
+      "categoria": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 41
+      },
+      "precio_costo": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 41
+      },
+      "moneda": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 41
+      },
       "proveedor_id": {
+        "archivo": "litoral_altas_102026.csv",
+        "linea": 41
+      },
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 41
       }
@@ -3255,11 +3255,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 42
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 42
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 42
       }
@@ -3331,11 +3331,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 43
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 43
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 43
       }
@@ -3411,11 +3411,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 44
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 44
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 44
       }
@@ -3491,11 +3491,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 45
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 45
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 45
       }
@@ -3570,11 +3570,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 46
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 46
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 46
       }
@@ -3650,11 +3650,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 47
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 47
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 47
       }
@@ -3730,11 +3730,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 48
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 48
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 48
       }
@@ -3810,11 +3810,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 49
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 49
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 49
       }
@@ -3890,11 +3890,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 50
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 50
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 50
       }
@@ -3970,11 +3970,11 @@
         "archivo": "litoral_altas_102026.csv",
         "linea": 51
       },
-      "proveedor_id": {
+      "codigo_proveedor": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 51
       },
-      "codigo_proveedor": {
+      "proveedor_id": {
         "archivo": "litoral_altas_102026.csv",
         "linea": 51
       }

@@ -60,6 +60,16 @@
         "hoja": "Altas",
         "fila": 2
       },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 2
+      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -76,11 +86,6 @@
         "fila": 2
       },
       "codigo_proveedor": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 2
-      },
-      "unidades_por_envase": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 2
@@ -148,6 +153,16 @@
         "hoja": "Altas",
         "fila": 3
       },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 3
+      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -164,11 +179,6 @@
         "fila": 3
       },
       "codigo_proveedor": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 3
-      },
-      "unidades_por_envase": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 3
@@ -234,6 +244,16 @@
         "hoja": "Altas",
         "fila": 4
       },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 4
+      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -250,16 +270,6 @@
         "fila": 4
       },
       "codigo_proveedor": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 4
-      },
-      "unidades_por_envase": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 4
-      },
-      "categoria": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 4
@@ -327,6 +337,16 @@
         "hoja": "Altas",
         "fila": 5
       },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 5
+      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -343,16 +363,6 @@
         "fila": 5
       },
       "codigo_proveedor": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 5
-      },
-      "unidades_por_envase": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 5
-      },
-      "categoria": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 5
@@ -420,6 +430,16 @@
         "hoja": "Altas",
         "fila": 6
       },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 6
+      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -436,16 +456,6 @@
         "fila": 6
       },
       "codigo_proveedor": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 6
-      },
-      "unidades_por_envase": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 6
-      },
-      "categoria": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 6
@@ -513,6 +523,16 @@
         "hoja": "Altas",
         "fila": 7
       },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 7
+      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -529,16 +549,6 @@
         "fila": 7
       },
       "codigo_proveedor": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 7
-      },
-      "unidades_por_envase": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 7
-      },
-      "categoria": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 7
@@ -606,6 +616,16 @@
         "hoja": "Altas",
         "fila": 8
       },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 8
+      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -622,16 +642,6 @@
         "fila": 8
       },
       "codigo_proveedor": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 8
-      },
-      "unidades_por_envase": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 8
-      },
-      "categoria": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 8
@@ -699,6 +709,16 @@
         "hoja": "Altas",
         "fila": 9
       },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 9
+      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -715,21 +735,6 @@
         "fila": 9
       },
       "codigo_proveedor": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 9
-      },
-      "unidades_por_envase": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 9
-      },
-      "categoria": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 9
-      },
-      "peligro_deposito": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 9
@@ -797,6 +802,16 @@
         "hoja": "Altas",
         "fila": 10
       },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 10
+      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -813,16 +828,6 @@
         "fila": 10
       },
       "codigo_proveedor": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 10
-      },
-      "unidades_por_envase": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 10
-      },
-      "categoria": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 10
@@ -890,6 +895,16 @@
         "hoja": "Altas",
         "fila": 11
       },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 11
+      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -906,16 +921,6 @@
         "fila": 11
       },
       "codigo_proveedor": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
-      "unidades_por_envase": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 11
-      },
-      "categoria": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 11
@@ -988,11 +993,6 @@
         "hoja": "Altas",
         "fila": 12
       },
-      "categoria": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 12
-      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -1003,12 +1003,17 @@
         "hoja": "Altas",
         "fila": 12
       },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 12
+      },
       "proveedor_id": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 12
       },
-      "codigo_proveedor": {
+      "categoria": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 12
@@ -1079,11 +1084,6 @@
         "hoja": "Altas",
         "fila": 13
       },
-      "categoria": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 13
-      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -1094,12 +1094,17 @@
         "hoja": "Altas",
         "fila": 13
       },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 13
+      },
       "proveedor_id": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 13
       },
-      "codigo_proveedor": {
+      "categoria": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 13
@@ -1172,11 +1177,6 @@
         "hoja": "Altas",
         "fila": 14
       },
-      "categoria": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 14
-      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -1187,12 +1187,17 @@
         "hoja": "Altas",
         "fila": 14
       },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 14
+      },
       "proveedor_id": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 14
       },
-      "codigo_proveedor": {
+      "categoria": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 14
@@ -1265,11 +1270,6 @@
         "hoja": "Altas",
         "fila": 15
       },
-      "categoria": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 15
-      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -1280,12 +1280,17 @@
         "hoja": "Altas",
         "fila": 15
       },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 15
+      },
       "proveedor_id": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 15
       },
-      "codigo_proveedor": {
+      "categoria": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 15
@@ -1358,11 +1363,6 @@
         "hoja": "Altas",
         "fila": 16
       },
-      "categoria": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 16
-      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -1373,12 +1373,17 @@
         "hoja": "Altas",
         "fila": 16
       },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 16
+      },
       "proveedor_id": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 16
       },
-      "codigo_proveedor": {
+      "categoria": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 16
@@ -1449,11 +1454,6 @@
         "hoja": "Altas",
         "fila": 17
       },
-      "categoria": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 17
-      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -1464,12 +1464,17 @@
         "hoja": "Altas",
         "fila": 17
       },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 17
+      },
       "proveedor_id": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 17
       },
-      "codigo_proveedor": {
+      "categoria": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 17
@@ -1542,11 +1547,6 @@
         "hoja": "Altas",
         "fila": 18
       },
-      "categoria": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 18
-      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -1557,12 +1557,17 @@
         "hoja": "Altas",
         "fila": 18
       },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 18
+      },
       "proveedor_id": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 18
       },
-      "codigo_proveedor": {
+      "categoria": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 18
@@ -1635,11 +1640,6 @@
         "hoja": "Altas",
         "fila": 19
       },
-      "categoria": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 19
-      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -1650,12 +1650,17 @@
         "hoja": "Altas",
         "fila": 19
       },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 19
+      },
       "proveedor_id": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 19
       },
-      "codigo_proveedor": {
+      "categoria": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 19
@@ -1728,11 +1733,6 @@
         "hoja": "Altas",
         "fila": 20
       },
-      "categoria": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 20
-      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -1743,12 +1743,17 @@
         "hoja": "Altas",
         "fila": 20
       },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 20
+      },
       "proveedor_id": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 20
       },
-      "codigo_proveedor": {
+      "categoria": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 20
@@ -1821,11 +1826,6 @@
         "hoja": "Altas",
         "fila": 21
       },
-      "categoria": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 21
-      },
       "precio_costo": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
@@ -1836,12 +1836,17 @@
         "hoja": "Altas",
         "fila": 21
       },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 21
+      },
       "proveedor_id": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 21
       },
-      "codigo_proveedor": {
+      "categoria": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 21
@@ -1942,97 +1947,6 @@
     }
   },
   {
-    "item_id": "P04:HT40063",
-    "estado": "a_revision",
-    "duplicado_de": "SKU102254",
-    "motivos_revision": [
-      "gtin_faltante",
-      "posible_duplicado"
-    ],
-    "ficha": {
-      "categoria": "CUI-DES-BAR",
-      "codigo_proveedor": "HT40063",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 50,
-      "descripcion": "DESODORANTE ROLL ON AQUAVIVA SIN PERFUME X 50 ML",
-      "gtin": null,
-      "marca": "AQUAVIVA",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 83.71,
-      "principio_activo": null,
-      "proveedor_id": "P04",
-      "tipo": "DESODORANTE ROLL ON",
-      "unidad": "ML",
-      "unidades_por_envase": 1,
-      "variante": "SIN PERFUME"
-    },
-    "fuentes": {
-      "descripcion": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "marca": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "tipo": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "variante": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "contenido": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "unidad": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "unidades_por_envase": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "categoria": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "precio_costo": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "moneda": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "proveedor_id": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      },
-      "codigo_proveedor": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 23
-      }
-    }
-  },
-  {
     "item_id": "P04:HT40066",
     "estado": "lista_para_alta",
     "duplicado_de": null,
@@ -2119,6 +2033,11 @@
         "fila": 24
       },
       "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 24
+      },
+      "peligro_deposito": {
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 24
@@ -2312,6 +2231,188 @@
     }
   },
   {
+    "item_id": "P04:HT40063",
+    "estado": "a_revision",
+    "duplicado_de": "SKU102254",
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ],
+    "ficha": {
+      "categoria": "CUI-DES-BAR",
+      "codigo_proveedor": "HT40063",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 50,
+      "descripcion": "DESODORANTE ROLL ON AQUAVIVA SIN PERFUME X 50 ML",
+      "gtin": null,
+      "marca": "AQUAVIVA",
+      "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 83.71,
+      "principio_activo": null,
+      "proveedor_id": "P04",
+      "tipo": "DESODORANTE ROLL ON",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "SIN PERFUME"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 23
+      }
+    }
+  },
+  {
+    "item_id": "P04:HT40081",
+    "estado": "a_revision",
+    "duplicado_de": "SKU101771",
+    "motivos_revision": [
+      "gtin_faltante",
+      "posible_duplicado"
+    ],
+    "ficha": {
+      "categoria": "CUI-DES-BAR",
+      "codigo_proveedor": "HT40081",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 50,
+      "descripcion": "DESODORANTE ROLL ON AQUAVIVA MUJER X 50 ML",
+      "gtin": null,
+      "marca": "AQUAVIVA",
+      "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 85.86,
+      "principio_activo": null,
+      "proveedor_id": "P04",
+      "tipo": "DESODORANTE ROLL ON",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "MUJER"
+    },
+    "fuentes": {
+      "descripcion": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "marca": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "tipo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "variante": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "contenido": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "unidad": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "unidades_por_envase": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "categoria": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "precio_costo": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "moneda": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "proveedor_id": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      },
+      "codigo_proveedor": {
+        "archivo": "HigieneTotal_novedades.xlsx",
+        "hoja": "Altas",
+        "fila": 27
+      }
+    }
+  },
+  {
     "item_id": "P04:HT40075",
     "estado": "lista_para_alta",
     "duplicado_de": null,
@@ -2494,97 +2595,6 @@
         "archivo": "HigieneTotal_novedades.xlsx",
         "hoja": "Altas",
         "fila": 29
-      }
-    }
-  },
-  {
-    "item_id": "P04:HT40081",
-    "estado": "a_revision",
-    "duplicado_de": "SKU101771",
-    "motivos_revision": [
-      "gtin_faltante",
-      "posible_duplicado"
-    ],
-    "ficha": {
-      "categoria": "CUI-DES-BAR",
-      "codigo_proveedor": "HT40081",
-      "concentracion": null,
-      "condicion_venta": null,
-      "contenido": 50,
-      "descripcion": "DESODORANTE ROLL ON AQUAVIVA MUJER X 50 ML",
-      "gtin": null,
-      "marca": "AQUAVIVA",
-      "moneda": "UYU",
-      "numero_onu": null,
-      "peligro_deposito": null,
-      "precio_costo": 85.86,
-      "principio_activo": null,
-      "proveedor_id": "P04",
-      "tipo": "DESODORANTE ROLL ON",
-      "unidad": "ML",
-      "unidades_por_envase": 1,
-      "variante": "MUJER"
-    },
-    "fuentes": {
-      "descripcion": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 27
-      },
-      "marca": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 27
-      },
-      "tipo": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 27
-      },
-      "variante": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 27
-      },
-      "contenido": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 27
-      },
-      "unidad": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 27
-      },
-      "unidades_por_envase": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 27
-      },
-      "categoria": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 27
-      },
-      "precio_costo": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 27
-      },
-      "moneda": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 27
-      },
-      "proveedor_id": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 27
-      },
-      "codigo_proveedor": {
-        "archivo": "HigieneTotal_novedades.xlsx",
-        "hoja": "Altas",
-        "fila": 27
       }
     }
   }

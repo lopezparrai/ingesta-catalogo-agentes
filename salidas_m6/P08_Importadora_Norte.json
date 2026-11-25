@@ -35,6 +35,16 @@
         "hoja": "New items",
         "fila": 2
       },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 2
+      },
       "marca": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -65,11 +75,6 @@
         "hoja": "New items",
         "fila": 2
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 2
-      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -81,11 +86,6 @@
         "fila": 2
       },
       "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 2
-      },
-      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 2
@@ -136,6 +136,16 @@
         "hoja": "New items",
         "fila": 3
       },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 3
+      },
       "marca": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -166,11 +176,6 @@
         "hoja": "New items",
         "fila": 3
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 3
-      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -182,11 +187,6 @@
         "fila": 3
       },
       "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 3
-      },
-      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 3
@@ -204,7 +204,7 @@
       "concentracion": null,
       "condicion_venta": null,
       "contenido": 227,
-      "descripcion": "CREMA PURE CARE INTENSIVE HANDS X 227 G",
+      "descripcion": "CREMA PURE CARE MANOS INTENSIVA X 227 G",
       "gtin": "0921365957672",
       "marca": "PURE CARE",
       "moneda": "USD",
@@ -216,7 +216,7 @@
       "tipo": "CREMA",
       "unidad": "G",
       "unidades_por_envase": 1,
-      "variante": "INTENSIVE HANDS"
+      "variante": "MANOS INTENSIVA"
     },
     "fuentes": {
       "gtin": {
@@ -225,6 +225,16 @@
         "fila": 4
       },
       "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 4
+      },
+      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 4
@@ -259,11 +269,6 @@
         "hoja": "New items",
         "fila": 4
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 4
-      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -275,11 +280,6 @@
         "fila": 4
       },
       "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 4
-      },
-      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 4
@@ -322,6 +322,16 @@
         "hoja": "New items",
         "fila": 5
       },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 5
+      },
       "marca": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -357,11 +367,6 @@
         "hoja": "New items",
         "fila": 5
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -373,11 +378,6 @@
         "fila": 5
       },
       "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 5
-      },
-      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 5
@@ -395,7 +395,7 @@
       "concentracion": null,
       "condicion_venta": null,
       "contenido": 198,
-      "descripcion": "GEL DE AFEITAR PURE CARE SENSITIVE X 198 ML",
+      "descripcion": "GEL DE AFEITAR PURE CARE SENSIBLE X 198 ML",
       "gtin": "0317169955172",
       "marca": "PURE CARE",
       "moneda": "USD",
@@ -407,7 +407,7 @@
       "tipo": "GEL DE AFEITAR",
       "unidad": "ML",
       "unidades_por_envase": 1,
-      "variante": "SENSITIVE"
+      "variante": "SENSIBLE"
     },
     "fuentes": {
       "gtin": {
@@ -416,6 +416,16 @@
         "fila": 6
       },
       "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 6
+      },
+      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 6
@@ -450,11 +460,6 @@
         "hoja": "New items",
         "fila": 6
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 6
-      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -466,11 +471,6 @@
         "fila": 6
       },
       "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 6
-      },
-      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 6
@@ -496,7 +496,7 @@
       "concentracion": null,
       "condicion_venta": null,
       "contenido": 500,
-      "descripcion": "ENJUAGUE BUCAL PURE CARE COOL MINT X 500 ML",
+      "descripcion": "ENJUAGUE BUCAL PURE CARE MENTA FRESCA X 500 ML",
       "gtin": "0013232310571",
       "marca": "PURE CARE",
       "moneda": "USD",
@@ -508,7 +508,7 @@
       "tipo": "ENJUAGUE BUCAL",
       "unidad": "ML",
       "unidades_por_envase": 1,
-      "variante": "COOL MINT"
+      "variante": "MENTA FRESCA"
     },
     "fuentes": {
       "gtin": {
@@ -517,6 +517,16 @@
         "fila": 7
       },
       "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 7
+      },
+      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 7
@@ -551,11 +561,6 @@
         "hoja": "New items",
         "fila": 7
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 7
-      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -567,11 +572,6 @@
         "fila": 7
       },
       "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 7
-      },
-      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 7
@@ -589,7 +589,7 @@
       "concentracion": null,
       "condicion_venta": null,
       "contenido": 100,
-      "descripcion": "VITALIS COMPRIMIDOS X 100 UN",
+      "descripcion": "VITALIS MULTIVITAMINICO COMPRIMIDOS X 100 UN",
       "gtin": "0366254962564",
       "marca": "VITALIS",
       "moneda": "USD",
@@ -601,7 +601,7 @@
       "tipo": "COMPRIMIDOS",
       "unidad": "UN",
       "unidades_por_envase": 1,
-      "variante": null
+      "variante": "MULTIVITAMINICO"
     },
     "fuentes": {
       "gtin": {
@@ -614,12 +614,27 @@
         "hoja": "New items",
         "fila": 8
       },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
       "marca": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 8
       },
       "tipo": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 8
+      },
+      "variante": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 8
@@ -639,11 +654,6 @@
         "hoja": "New items",
         "fila": 8
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 8
-      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -655,11 +665,6 @@
         "fila": 8
       },
       "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 8
-      },
-      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 8
@@ -677,7 +682,7 @@
       "concentracion": null,
       "condicion_venta": null,
       "contenido": 296,
-      "descripcion": "LOCION PURE CARE SHEA BUTTER X 296 ML",
+      "descripcion": "LOCION PURE CARE MANTECA DE KARITE X 296 ML",
       "gtin": "0103763096362",
       "marca": "PURE CARE",
       "moneda": "USD",
@@ -689,7 +694,7 @@
       "tipo": "LOCION",
       "unidad": "ML",
       "unidades_por_envase": 1,
-      "variante": "SHEA BUTTER"
+      "variante": "MANTECA DE KARITE"
     },
     "fuentes": {
       "gtin": {
@@ -698,6 +703,16 @@
         "fila": 9
       },
       "descripcion": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 9
+      },
+      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 9
@@ -732,11 +747,6 @@
         "hoja": "New items",
         "fila": 9
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 9
-      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -748,11 +758,6 @@
         "fila": 9
       },
       "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 9
-      },
-      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 9
@@ -795,6 +800,16 @@
         "hoja": "New items",
         "fila": 10
       },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 10
+      },
       "marca": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -830,11 +845,6 @@
         "hoja": "New items",
         "fila": 10
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 10
-      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -846,11 +856,6 @@
         "fila": 10
       },
       "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 10
-      },
-      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 10
@@ -893,6 +898,16 @@
         "hoja": "New items",
         "fila": 11
       },
+      "categoria": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
+      "codigo_proveedor": {
+        "archivo": "NorteImports_new_items_Q4.xlsx",
+        "hoja": "New items",
+        "fila": 11
+      },
       "marca": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -928,11 +943,6 @@
         "hoja": "New items",
         "fila": 11
       },
-      "categoria": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 11
-      },
       "precio_costo": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
@@ -944,11 +954,6 @@
         "fila": 11
       },
       "proveedor_id": {
-        "archivo": "NorteImports_new_items_Q4.xlsx",
-        "hoja": "New items",
-        "fila": 11
-      },
-      "codigo_proveedor": {
         "archivo": "NorteImports_new_items_Q4.xlsx",
         "hoja": "New items",
         "fila": 11

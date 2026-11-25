@@ -1,0 +1,862 @@
+[
+  {
+    "archivo": "P02_Cosmetica_Rivera/ALTAS RIVERA OCT.xlsx",
+    "datos": {
+      "archivo": "ALTAS RIVERA OCT.xlsx",
+      "tipo_archivo": "lista",
+      "vigencia": "Planilla de altas - Octubre 2026",
+      "moneda": null,
+      "iva": null,
+      "filas": [
+        {
+          "codigo": "RIV-1203",
+          "campos": {
+            "COD. RIV": "RIV-1203",
+            "DESCRIPCION": "ACOND. NATIVA LISO X 200 ML",
+            "EAN": "7793092189062",
+            "P. COSTO": 104.24,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 7
+          }
+        },
+        {
+          "codigo": "RIV-1206",
+          "campos": {
+            "COD. RIV": "RIV-1206",
+            "DESCRIPCION": "ACONDICIONADOR BRISA COLOR 400 CC",
+            "EAN": "779-7137-44403-8",
+            "P. COSTO": 147.76,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 8
+          }
+        },
+        {
+          "codigo": "RIV-1215",
+          "campos": {
+            "COD. RIV": "RIV-1215",
+            "DESCRIPCION": "SH. NATIVA COLOR 750cc",
+            "EAN": "7794047919526",
+            "P. COSTO": 228.04,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 9
+          }
+        },
+        {
+          "codigo": "RIV-1218",
+          "campos": {
+            "COD. RIV": "RIV-1218",
+            "DESCRIPCION": "LACA BRISA FIJ. FUERTE 400ML",
+            "EAN": "7795881296972",
+            "P. COSTO": 207.35,
+            "OBS": "PACK PROMO CON NECESER"
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 10
+          }
+        },
+        {
+          "codigo": "RIV-1221",
+          "campos": {
+            "COD. RIV": "RIV-1221",
+            "DESCRIPCION": "ACONDICIONADOR ALBORADA RIZOS 200cc",
+            "EAN": "7798224690956",
+            "P. COSTO": 97.39,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 11
+          }
+        },
+        {
+          "codigo": "RIV-1224",
+          "campos": {
+            "COD. RIV": "RIV-1224",
+            "DESCRIPCION": "ACOND. NATIVA RIZOS 750 CC",
+            "EAN": "779-6508-19801-3",
+            "P. COSTO": 259.48,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 12
+          }
+        },
+        {
+          "codigo": "RIV-1227",
+          "campos": {
+            "COD. RIV": "RIV-1227",
+            "DESCRIPCION": "SHAMPOO NATIVA COLOR 200 ML",
+            "EAN": "7799181018920",
+            "P. COSTO": 98.26,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 13
+          }
+        },
+        {
+          "codigo": "RIV-1230",
+          "campos": {
+            "COD. RIV": "RIV-1230",
+            "DESCRIPCION": "ACONDICIONADOR NATIVA CABELLO SECO X 200 ML",
+            "EAN": "7791396383145",
+            "P. COSTO": 86.6,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 14
+          }
+        },
+        {
+          "codigo": "RIV-1233",
+          "campos": {
+            "COD. RIV": "RIV-1233",
+            "DESCRIPCION": "TRAT. CAP. ALBORADA REP/CION 250 GRS",
+            "EAN": "7798764197571",
+            "P. COSTO": 151.1,
+            "OBS": "NUEVO AROMA"
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 15
+          }
+        },
+        {
+          "codigo": "RIV-1236",
+          "campos": {
+            "COD. RIV": "RIV-1236",
+            "DESCRIPCION": "ACOND. ALBORADA LISO 400ML",
+            "EAN": "7795113452930",
+            "P. COSTO": 149.05,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 16
+          }
+        },
+        {
+          "codigo": "RIV-1239",
+          "campos": {
+            "COD. RIV": "RIV-1239",
+            "DESCRIPCION": "SH. ALBORADA CAB. SECO 750ML",
+            "EAN": "779-9517-84523-7",
+            "P. COSTO": 224.46,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 17
+          }
+        },
+        {
+          "codigo": "RIV-1242",
+          "campos": {
+            "COD. RIV": "RIV-1242",
+            "DESCRIPCION": "ACOND. NATIVA LISO 400cc",
+            "EAN": "7790770756711",
+            "P. COSTO": 145.87,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 18
+          }
+        },
+        {
+          "codigo": "RIV-1245",
+          "campos": {
+            "COD. RIV": "RIV-1245",
+            "DESCRIPCION": "ACOND. BRISA RIZOS X 400 ML",
+            "EAN": "7793315341342",
+            "P. COSTO": 140.31,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 19
+          }
+        },
+        {
+          "codigo": "RIV-1251",
+          "campos": {
+            "COD. RIV": "RIV-1251",
+            "DESCRIPCION": "SH. NATIVA RIZOS 750cc",
+            "EAN": "7795601362468",
+            "P. COSTO": 222.53,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 20
+          }
+        },
+        {
+          "codigo": "RIV-1254",
+          "campos": {
+            "COD. RIV": "RIV-1254",
+            "DESCRIPCION": "ACOND. NATIVA COLOR 750 CC",
+            "EAN": "7796999557627",
+            "P. COSTO": 260.83,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 21
+          }
+        },
+        {
+          "codigo": "RIV-1257",
+          "campos": {
+            "COD. RIV": "RIV-1257",
+            "DESCRIPCION": "SH. BRISA ANTICASPA X 400 ML",
+            "EAN": "7794327626397",
+            "P. COSTO": 150.02,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 22
+          }
+        },
+        {
+          "codigo": "RIV-1260",
+          "campos": {
+            "COD. RIV": "RIV-1260",
+            "DESCRIPCION": "SH. ALBORADA ANTICASPA 400cc",
+            "EAN": "7792602887266",
+            "P. COSTO": 163.53,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 23
+          }
+        },
+        {
+          "codigo": "RIV-1263",
+          "campos": {
+            "COD. RIV": "RIV-1263",
+            "DESCRIPCION": "ACOND. ALBORADA COLOR 750 ML",
+            "EAN": "779-0648-88969-5",
+            "P. COSTO": 240.91,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 24
+          }
+        },
+        {
+          "codigo": "RIV-1266",
+          "campos": {
+            "COD. RIV": "RIV-1266",
+            "DESCRIPCION": "LACA BRISA FIJACION FUERTE X 200 ML",
+            "EAN": "7793662132327",
+            "P. COSTO": 130.72,
+            "OBS": "PROMO: LLEVA 2 PAGA 1 HASTA 31/10"
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 25
+          }
+        },
+        {
+          "codigo": "RIV-1269",
+          "campos": {
+            "COD. RIV": "RIV-1269",
+            "DESCRIPCION": "ACOND. NATIVA COLOR 200ML",
+            "EAN": "779-8168-60028-8",
+            "P. COSTO": 102.56,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 26
+          }
+        },
+        {
+          "codigo": "RIV-1272",
+          "campos": {
+            "COD. RIV": "RIV-1272",
+            "DESCRIPCION": "TRAT. CAP. ALBORADA REP/CION 500 GR",
+            "EAN": "7799572038346",
+            "P. COSTO": 213.92,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 27
+          }
+        },
+        {
+          "codigo": "RIV-1275",
+          "campos": {
+            "COD. RIV": "RIV-1275",
+            "DESCRIPCION": "TRAT. CAP. ALBORADA NUTRICION 0,5 KG",
+            "EAN": "7798610293297",
+            "P. COSTO": 244.02,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 28
+          }
+        },
+        {
+          "codigo": "RIV-1278",
+          "campos": {
+            "COD. RIV": "RIV-1278",
+            "DESCRIPCION": "SH. NATIVA CABELLO SECO X 400 ML",
+            "EAN": "7794517445487",
+            "P. COSTO": 163.24,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 29
+          }
+        },
+        {
+          "codigo": "RIV-1281",
+          "campos": {
+            "COD. RIV": "RIV-1281",
+            "DESCRIPCION": "SH. BRISA RIZOS 750cc",
+            "EAN": "7792149966981",
+            "P. COSTO": 263.4,
+            "OBS": "PROMO: LLEVA 2 PAGA 1 HASTA 31/10"
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 30
+          }
+        },
+        {
+          "codigo": "RIV-1287",
+          "campos": {
+            "COD. RIV": "RIV-1287",
+            "DESCRIPCION": "ACOND. BRISA CABELLO SECO 200 CC",
+            "EAN": "7792917530000",
+            "P. COSTO": 88.55,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 31
+          }
+        },
+        {
+          "codigo": "RIV-1299",
+          "campos": {
+            "COD. RIV": "RIV-1299",
+            "DESCRIPCION": "SH. BRISA ANTICASPA 750ML",
+            "EAN": "7799656985474",
+            "P. COSTO": 248.73,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 32
+          }
+        },
+        {
+          "codigo": "RIV-1302",
+          "campos": {
+            "COD. RIV": "RIV-1302",
+            "DESCRIPCION": "ACOND. ALBORADA CAB. SECO 200ML",
+            "EAN": "779-5129-69466-9",
+            "P. COSTO": 103.8,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 33
+          }
+        },
+        {
+          "codigo": "RIV-1305",
+          "campos": {
+            "COD. RIV": "RIV-1305",
+            "DESCRIPCION": "SH. BRISA CAB. SECO X 200 ML",
+            "EAN": "7796577461292",
+            "P. COSTO": 86.21,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 34
+          }
+        },
+        {
+          "codigo": "RIV-1308",
+          "campos": {
+            "COD. RIV": "RIV-1308",
+            "DESCRIPCION": "SH. ALBORADA ANTICASPA X 750 ML",
+            "EAN": "7795641615111",
+            "P. COSTO": 249,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 35
+          }
+        },
+        {
+          "codigo": "RIV-1311",
+          "campos": {
+            "COD. RIV": "RIV-1311",
+            "DESCRIPCION": "TRAT. CAP. NATIVA REP/CION 250GR",
+            "EAN": "7790939889434",
+            "P. COSTO": 141.6,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 36
+          }
+        },
+        {
+          "codigo": "RIV-1314",
+          "campos": {
+            "COD. RIV": "RIV-1314",
+            "DESCRIPCION": "SH. ALBORADA COLOR 750cc",
+            "EAN": "7793624320243",
+            "P. COSTO": 216.61,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 37
+          }
+        },
+        {
+          "codigo": "RIV-1317",
+          "campos": {
+            "COD. RIV": "RIV-1317",
+            "DESCRIPCION": "SH. BRISA CAB. GRASO 200cc",
+            "EAN": "779-6197-36389-1",
+            "P. COSTO": 90.58,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 38
+          }
+        },
+        {
+          "codigo": "RIV-1320",
+          "campos": {
+            "COD. RIV": "RIV-1320",
+            "DESCRIPCION": "LACA BRISA FIJ. NORMAL X 200 ML",
+            "EAN": "7793988505690",
+            "P. COSTO": 115.32,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 39
+          }
+        },
+        {
+          "codigo": "RIV-1323",
+          "campos": {
+            "COD. RIV": "RIV-1323",
+            "DESCRIPCION": "SH. NATIVA CABELLO GRASO 200 ML",
+            "EAN": "7796792062359",
+            "P. COSTO": 90.67,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 40
+          }
+        },
+        {
+          "codigo": "RIV-1326",
+          "campos": {
+            "COD. RIV": "RIV-1326",
+            "DESCRIPCION": "ACOND. NATIVA CAB. SECO 750ML",
+            "EAN": "7795275662987",
+            "P. COSTO": 240.97,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 41
+          }
+        },
+        {
+          "codigo": "RIV-1329",
+          "campos": {
+            "COD. RIV": "RIV-1329",
+            "DESCRIPCION": "ACOND. BRISA LISO X 750 ML",
+            "EAN": "7794351465818",
+            "P. COSTO": 259.13,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 42
+          }
+        },
+        {
+          "codigo": "RIV-1335",
+          "campos": {
+            "COD. RIV": "RIV-1335",
+            "DESCRIPCION": "SH. NATIVA CAB. SECO 200 CC",
+            "EAN": "7798289615987",
+            "P. COSTO": 97.3,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 43
+          }
+        },
+        {
+          "codigo": "RIV-1338",
+          "campos": {
+            "COD. RIV": "RIV-1338",
+            "DESCRIPCION": "ACOND. BRISA CABELLO SECO 400cc",
+            "EAN": "7794585652466",
+            "P. COSTO": 151.98,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 44
+          }
+        },
+        {
+          "codigo": "RIV-1341",
+          "campos": {
+            "COD. RIV": "RIV-1341",
+            "DESCRIPCION": "SH. NATIVA RIZOS 400 CC",
+            "EAN": "7791886910868",
+            "P. COSTO": 146.14,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 45
+          }
+        },
+        {
+          "codigo": "RIV-1344",
+          "campos": {
+            "COD. RIV": "RIV-1344",
+            "DESCRIPCION": "SH. ALBORADA CABELLO GRASO 750cc",
+            "EAN": "779-0055-17222-9",
+            "P. COSTO": 219.47,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 46
+          }
+        },
+        {
+          "codigo": "RIV-1350",
+          "campos": {
+            "COD. RIV": "RIV-1350",
+            "DESCRIPCION": "ACONDICIONADOR ALBORADA RIZOS 750cc",
+            "EAN": "779-0192-74135-7",
+            "P. COSTO": 236.17,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 47
+          }
+        },
+        {
+          "codigo": "RIV-1209",
+          "campos": {
+            "COD. RIV": "RIV-1209",
+            "DESCRIPCION": "DESODORANTE AER. BRISA SPORT X 150 ML",
+            "EAN": "7796326549554",
+            "P. COSTO": 91.32,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 49
+          }
+        },
+        {
+          "codigo": "RIV-1212",
+          "campos": {
+            "COD. RIV": "RIV-1212",
+            "DESCRIPCION": "DESOD. AER. BRISA HOMBRE 150cc",
+            "EAN": "7797985763688",
+            "P. COSTO": 78.95,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 50
+          }
+        },
+        {
+          "codigo": "RIV-1248",
+          "campos": {
+            "COD. RIV": "RIV-1248",
+            "DESCRIPCION": "DESODORANTE AER. FRESCOR S/ PERF. X 150 ML",
+            "EAN": "779-8056-68249-5",
+            "P. COSTO": 86.93,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 51
+          }
+        },
+        {
+          "codigo": "RIV-1284",
+          "campos": {
+            "COD. RIV": "RIV-1284",
+            "DESCRIPCION": "DESODORANTE AER. FRESCOR HOMBRE 150ML",
+            "EAN": "779-4649-19388-1",
+            "P. COSTO": 93.12,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 52
+          }
+        },
+        {
+          "codigo": "RIV-1290",
+          "campos": {
+            "COD. RIV": "RIV-1290",
+            "DESCRIPCION": "DESOD. AER. BRISA SPORT 250 CC",
+            "EAN": "7798150645501",
+            "P. COSTO": 123.34,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 53
+          }
+        },
+        {
+          "codigo": "RIV-1293",
+          "campos": {
+            "COD. RIV": "RIV-1293",
+            "DESCRIPCION": "DESOD. BARRA FRESCOR S/ PERF. 50 G",
+            "EAN": "779-5133-73648-5",
+            "P. COSTO": 94.17,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 54
+          }
+        },
+        {
+          "codigo": "RIV-1296",
+          "campos": {
+            "COD. RIV": "RIV-1296",
+            "DESCRIPCION": "DESOD. AEROSOL BRISA MUJER X 150 ML",
+            "EAN": "779-4545-52554-0",
+            "P. COSTO": 76.91,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 55
+          }
+        },
+        {
+          "codigo": "RIV-1332",
+          "campos": {
+            "COD. RIV": "RIV-1332",
+            "DESCRIPCION": "DESOD. AER. BRISA S/ PERF. 250 CC",
+            "EAN": "779-7624-52849-4",
+            "P. COSTO": 117.77,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 56
+          }
+        },
+        {
+          "codigo": "RIV-1347",
+          "campos": {
+            "COD. RIV": "RIV-1347",
+            "DESCRIPCION": "DESOD. AER. FRESCOR MUJER 150cc",
+            "EAN": "7792991638319",
+            "P. COSTO": 92.57,
+            "OBS": null
+          },
+          "fuente": {
+            "archivo": "ALTAS RIVERA OCT.xlsx",
+            "hoja": "Altas",
+            "fila": 57
+          }
+        }
+      ],
+      "fds": null,
+      "contexto": "Fila 1 (título): \"COSMÉTICA RIVERA S.A.\". Fila 2 (título): \"Planilla de altas - Octubre 2026\". Fila 5 (encabezados de columnas): \"COD. RIV\", \"DESCRIPCION\", \"EAN\", \"P. COSTO\", \"OBS\". La hoja no indica moneda ni si los precios incluyen IVA. Las observaciones de promo (\"PACK PROMO CON NECESER\", \"PROMO: LLEVA 2 PAGA 1 HASTA 31/10\") y \"NUEVO AROMA\" están en la columna OBS de cada fila, copiadas tal cual.",
+      "notas": [
+        "El libro tiene una sola hoja: 'Altas'. No hay hojas omitidas ni productos discontinuados.",
+        "Las filas 7 a 47 y 49 a 57 están separadas por una fila vacía (48); son todas altas de la misma planilla.",
+        "Los EAN se copiaron tal como aparecen, incluidos los que tienen guiones (ej. '779-7137-44403-8'); no fueron normalizados.",
+        "Las filas con OBS vacía en el Excel figuran con OBS null."
+      ]
+    },
+    "error": null,
+    "segundos": 38.3,
+    "uso": {
+      "input": 8621,
+      "output": 10911,
+      "cache_escrito": 0,
+      "cache_leido": 0
+    },
+    "costo_usd": 0.0063176000000000005
+  },
+  {
+    "archivo": "P02_Cosmetica_Rivera/fichas_de_seguridad/FDS_Brisa_Frescor_desaer.pdf",
+    "datos": {
+      "archivo": "FDS_Brisa_Frescor_desaer.pdf",
+      "tipo_archivo": "fds",
+      "vigencia": null,
+      "moneda": null,
+      "iva": null,
+      "filas": [],
+      "fds": {
+        "codigos_comerciales": [
+          "RIV-1209",
+          "RIV-1248",
+          "RIV-1284",
+          "RIV-1290",
+          "RIV-1296",
+          "RIV-1332",
+          "RIV-1347"
+        ],
+        "seccion_14": {
+          "numero_onu": "1950",
+          "clase": "2.1",
+          "texto": "Sección 14. Información relativa al transporte\nNúmero ONU: 1950\nDesignación oficial de transporte: AEROSOLES\nClase de peligro para el transporte: 2.1\nGrupo de embalaje: —"
+        },
+        "pagina": 1
+      },
+      "contexto": "Identificación\nProducto: Desodorante Aerosol Brisa y Frescor\nCódigos comerciales: RIV-1209, RIV-1248, RIV-1284, RIV-1290, RIV-1296, RIV-1332, RIV-1347\nProveedor: Cosmética Rivera S.A.\nPie de página: FDS · Desodorante Aerosol Brisa y Frescor Página 1 de 1",
+      "notas": [
+        "Ficha de seguridad (FDS) de una sola página; no contiene filas de producto.",
+        "Los siete códigos comerciales figuran en la sección 1 (Identificación), página 1.",
+        "Grupo de embalaje en la sección 14: '—' (no informado)."
+      ]
+    },
+    "error": null,
+    "segundos": 20.8,
+    "uso": {
+      "input": 6803,
+      "output": 1038,
+      "cache_escrito": 0,
+      "cache_leido": 0
+    },
+    "costo_usd": 0.0011993000000000001
+  },
+  {
+    "archivo": "P02_Cosmetica_Rivera/fichas_de_seguridad/FDS_Brisa_laca.pdf",
+    "datos": {
+      "archivo": "FDS_Brisa_laca.pdf",
+      "tipo_archivo": "fds",
+      "vigencia": null,
+      "moneda": null,
+      "iva": null,
+      "filas": [],
+      "fds": {
+        "codigos_comerciales": [
+          "RIV-1218",
+          "RIV-1266",
+          "RIV-1320"
+        ],
+        "seccion_14": {
+          "numero_onu": "1950",
+          "clase": "2.1",
+          "texto": "Información relativa al transporte\nNúmero ONU: 1950\nDesignación oficial de transporte: AEROSOLES\nClase de peligro para el transporte: 2.1\nGrupo de embalaje: —"
+        },
+        "pagina": 1
+      },
+      "contexto": "Identificación\nProducto: Laca Brisa\nCódigos comerciales: RIV-1218, RIV-1266, RIV-1320\nProveedor: Cosmética Rivera S.A.",
+      "notas": [
+        "Ficha de seguridad: no contiene filas de producto. Los códigos H222 y H229 son frases de peligro (SGA), no códigos de producto. El número 1950 es el número ONU, no un código comercial.",
+        "Grupo de embalaje indicado como guion (—) en la sección 14, sin valor especificado."
+      ]
+    },
+    "error": null,
+    "segundos": 21.0,
+    "uso": {
+      "input": 6772,
+      "output": 993,
+      "cache_escrito": 0,
+      "cache_leido": 0
+    },
+    "costo_usd": 0.0011737
+  }
+]
