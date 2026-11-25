@@ -13,6 +13,7 @@ Todo corre con la API de Anthropic y Claude Haiku 5.5 (`claude-haiku-5-5`).
 | `mi_servidor.py` | Servidor MCP (FastMCP): lee estándar, archivos de proveedores y catálogo; valida GTIN. |
 | `agente.py` | Loop del agente con Claude: procesa un proveedor y registra las fichas. |
 | `orquestador.py` | M4: extractores en paralelo, consolidación en código y escritor único. |
+| `prueba_hooks.py` | M5: prueba de los hooks y permisos sin llamar a la API (16 casos, cuesta USD 0). |
 | `prompt_v2.py` | Prompt de sistema v2 (M6). |
 | `salida_estructurada.py` | Clasificación con salida estructurada y validación con pydantic (M6). |
 | `evaluador.py` | Compara `salidas/*.json` contra fichas verificadas a mano en `evals/`. |
@@ -40,8 +41,9 @@ python evaluador.py                           # evaluar contra evals/
 
 - M1–M3: funcionando sobre Litoral y los proveedores P01, P02, P04, P06, P07, P08 y P09.
 - M4: orquestador multi-agente (abajo).
+- M5: criterio como prompt MCP, hooks y permisos por agente (abajo).
 - M6: prompt v2 y salida estructurada.
-- Pendiente: M5 (hooks y permisos documentados), Dermalab (P05) e integración de los 9 proveedores con un
+- Pendiente: Dermalab (P05) e integración de los 9 proveedores con un
   comando y asistente de consultas.
 
 ## M4 — Orquestación multi-agente (`orquestador.py`)
@@ -107,3 +109,39 @@ a veces) son variación del modelo entre corridas, no de la arquitectura.
   después de tocar un prompt se corren **todos** los casos, no solo el que falló.
 - Workflow y no agente libre: los pasos se pueden enumerar de antemano (extraer → consolidar → escribir), el
   costo y la latencia son acotados y se puede evaluar cada etapa por separado.
+
+## M5 — Criterio por MCP, hooks y permisos
+
+**Un archivo nuevo entra sin intervención.** Se deja en la carpeta del proveedor y se corre un solo comando
+(`python orquestador.py P0X_Nombre`). Nadie aprueba nada a mano: lo que no corresponde lo frena el código.
+
+**El criterio de revisión vive en el servidor MCP**, como prompt (`criterio_revision` en `mi_servidor.py`).
+Los agentes lo piden al arrancar (`session.get_prompt`), así que cambiar una regla de negocio es editar el
+servidor, no cada agente. Va cacheado junto con el estándar.
+
+**Hooks en el loop** (`agente.py`). Corren en código y le devuelven al modelo el motivo como error:
+
+| Cuándo | Hook | Qué frena |
+|---|---|---|
+| Antes de cada tool | `hook_permisos` | Una tool que el agente no tiene permitida |
+| Antes de `registrar_ficha` | `hook_ficha_coherente` | Estado, motivos y `duplicado_de` incoherentes entre sí; motivos fuera del vocabulario |
+| Antes de `registrar_ficha` | `hook_alta_valida` | Una `lista_para_alta` con GTIN inválido o de 13 dígitos mal formado, obligatorios vacíos, valores fuera del vocabulario o de la taxonomía, texto con minúsculas, tildes o ®/™ |
+| Después de cada tool | `hook_despues_traza` | No frena: guarda la traza completa (qué se llamó y qué devolvió) |
+| Al terminar | `hook_al_terminar_fuentes` | Un campo completado sin su fuente; la ficha vuelve al modelo (2 reintentos) y, si sigue sin fuente, el campo se vacía |
+
+`hook_alta_valida` devuelve **todos** los problemas juntos para que el modelo corrija en un solo intento. Lo que
+son cuentas (dígito verificador, conversión de unidades) lo resuelve código, no el modelo.
+
+**Permisos por agente en código** (`PERMISOS` en `agente.py`, ver la tabla de M4): lo que un agente no puede
+hacer lo impide `hook_permisos`, no el prompt. El extractor no puede escribir; el escritor no puede leer
+archivos del proveedor.
+
+**Cómo se verifica.** `python prueba_hooks.py` toma una ficha real y la rompe de a una cosa (GTIN con dígito
+verificador cambiado, UPC sin el 0, moneda fuera del vocabulario, categoría inventada, descripción en
+minúsculas, precio vacío, motivo inventado, extractor que intenta registrar, escritor que intenta leer un
+Excel, campo sin fuente al terminar). Cada caso tiene que ser frenado por el hook que corresponde. Son 16 casos,
+sin llamar a la API: si un cambio rompe un hook, se ve antes de gastar un token. En una corrida real, el loop
+imprime `[hook FRENÓ] ...` y cuenta `fichas_frenadas_por_hooks` en la traza.
+
+Por qué hooks y no más prompt: el prompt sube la probabilidad de que el modelo se porte bien y nunca la
+garantiza; cuando la regla es "nunca" o "siempre", la respuesta está en el código.
