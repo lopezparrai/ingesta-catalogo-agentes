@@ -1,0 +1,29 @@
+{
+  "modo": "tiempo-real",
+  "fichas": 18,
+  "sin_registrar": [],
+  "fallas": [],
+  "frenos_de_hooks": [],
+  "costo_usd": 0.0398,
+  "costo_por_ficha_usd": 0.00221,
+  "uso_escritor": {
+    "input": 137226,
+    "output": 30733,
+    "cache_escrito": 14017,
+    "cache_leido": 126153
+  },
+  "lotes": [
+    {
+      "lote": "P05-lote0",
+      "estado": "terminada",
+      "iteraciones": 4,
+      "costo_usd": 0.018
+    },
+    {
+      "lote": "P05-lote1",
+      "estado": "terminada",
+      "iteraciones": 4,
+      "costo_usd": 0.0141
+    }
+  ]
+}

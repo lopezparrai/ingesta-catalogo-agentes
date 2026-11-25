@@ -1,0 +1,1465 @@
+[
+  {
+    "item_id": "P05:DL-151",
+    "estado": "a_revision",
+    "duplicado_de": null,
+    "motivos_revision": [
+      "gtin_faltante",
+      "dato_obligatorio_faltante"
+    ],
+    "ficha": {
+      "categoria": "DER-FAC-LIM",
+      "codigo_proveedor": "DL-151",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 50,
+      "descripcion": "GEL LIMPIADOR DERMALAB PURIFY X 50 ML",
+      "gtin": null,
+      "marca": "DERMALAB",
+      "moneda": null,
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": null,
+      "principio_activo": null,
+      "proveedor_id": "P05",
+      "tipo": "GEL LIMPIADOR",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "PURIFY"
+    },
+    "fuentes": {
+      "marca": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "categoria": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "contenido": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "variante": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "proveedor_id": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      }
+    }
+  },
+  {
+    "item_id": "P05:DL-103",
+    "estado": "a_revision",
+    "duplicado_de": null,
+    "motivos_revision": [
+      "gtin_faltante",
+      "dato_obligatorio_faltante"
+    ],
+    "ficha": {
+      "categoria": "DER-SOL-ADU",
+      "codigo_proveedor": "DL-103",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 300,
+      "descripcion": "PROTECTOR SOLAR DERMALAB SUN FPS 50+ X 300 ML",
+      "gtin": null,
+      "marca": "DERMALAB",
+      "moneda": null,
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": null,
+      "principio_activo": null,
+      "proveedor_id": "P05",
+      "tipo": "PROTECTOR SOLAR",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "SUN FPS 50+"
+    },
+    "fuentes": {
+      "marca": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "categoria": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "contenido": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "variante": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "proveedor_id": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      }
+    }
+  },
+  {
+    "item_id": "P05:DL-106",
+    "estado": "a_revision",
+    "duplicado_de": null,
+    "motivos_revision": [
+      "gtin_faltante",
+      "dato_obligatorio_faltante"
+    ],
+    "ficha": {
+      "categoria": "DER-COR-HID",
+      "codigo_proveedor": "DL-106",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 50,
+      "descripcion": "CREMA DERMALAB UREA 10 % X 50 ML",
+      "gtin": null,
+      "marca": "DERMALAB",
+      "moneda": null,
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": null,
+      "principio_activo": null,
+      "proveedor_id": "P05",
+      "tipo": "CREMA",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "UREA 10 %"
+    },
+    "fuentes": {
+      "marca": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "categoria": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "contenido": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "variante": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "proveedor_id": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      }
+    }
+  },
+  {
+    "item_id": "P05:DL-109",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-FAC-ANT",
+      "codigo_proveedor": "DL-109",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 400,
+      "descripcion": "SERUM DERMALAB LIFT X 400 ML",
+      "gtin": "7790670659075",
+      "marca": "DERMALAB",
+      "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 736.22,
+      "principio_activo": null,
+      "proveedor_id": "P05",
+      "tipo": "SERUM",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "LIFT"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 2
+      },
+      "codigo_proveedor": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 2
+      },
+      "precio_costo": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 2
+      },
+      "moneda": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 2
+      },
+      "proveedor_id": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 2
+      },
+      "marca": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "categoria": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "contenido": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "variante": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      }
+    }
+  },
+  {
+    "item_id": "P05:DL-112",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-FAC-HID",
+      "codigo_proveedor": "DL-112",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 30,
+      "descripcion": "CREMA DERMALAB HYDRA PLUS FPS 30 X 30 ML",
+      "gtin": "7798965900758",
+      "marca": "DERMALAB",
+      "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 828.13,
+      "principio_activo": null,
+      "proveedor_id": "P05",
+      "tipo": "CREMA",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "HYDRA PLUS FPS 30"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 3
+      },
+      "codigo_proveedor": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 3
+      },
+      "precio_costo": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 3
+      },
+      "moneda": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 3
+      },
+      "proveedor_id": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 3
+      },
+      "marca": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "categoria": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "contenido": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "variante": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      }
+    }
+  },
+  {
+    "item_id": "P05:DL-115",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-FAC-LIM",
+      "codigo_proveedor": "DL-115",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 50,
+      "descripcion": "GEL LIMPIADOR DERMALAB PURIFY X 50 ML",
+      "gtin": "7793567937577",
+      "marca": "DERMALAB",
+      "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 470.59,
+      "principio_activo": null,
+      "proveedor_id": "P05",
+      "tipo": "GEL LIMPIADOR",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "PURIFY"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 4
+      },
+      "codigo_proveedor": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 4
+      },
+      "precio_costo": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 4
+      },
+      "moneda": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 4
+      },
+      "proveedor_id": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 4
+      },
+      "marca": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "categoria": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "contenido": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "variante": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      }
+    }
+  },
+  {
+    "item_id": "P05:DL-118",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-SOL-ADU",
+      "codigo_proveedor": "DL-118",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 150,
+      "descripcion": "PROTECTOR SOLAR DERMALAB SUN FPS 30 X 150 ML",
+      "gtin": "7792480811629",
+      "marca": "DERMALAB",
+      "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 344.84,
+      "principio_activo": null,
+      "proveedor_id": "P05",
+      "tipo": "PROTECTOR SOLAR",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "SUN FPS 30"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 5
+      },
+      "codigo_proveedor": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 5
+      },
+      "precio_costo": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 5
+      },
+      "moneda": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 5
+      },
+      "proveedor_id": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 5
+      },
+      "marca": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "categoria": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "contenido": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "variante": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      }
+    }
+  },
+  {
+    "item_id": "P05:DL-121",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-FAC-ANT",
+      "codigo_proveedor": "DL-121",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 200,
+      "descripcion": "SERUM DERMALAB LIFT NOCHE X 200 ML",
+      "gtin": "7796076691862",
+      "marca": "DERMALAB",
+      "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 1359.07,
+      "principio_activo": null,
+      "proveedor_id": "P05",
+      "tipo": "SERUM",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "LIFT NOCHE"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 6
+      },
+      "codigo_proveedor": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 6
+      },
+      "precio_costo": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 6
+      },
+      "moneda": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 6
+      },
+      "proveedor_id": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 6
+      },
+      "marca": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "categoria": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "contenido": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "variante": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      }
+    }
+  },
+  {
+    "item_id": "P05:DL-124",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-SOL-ADU",
+      "codigo_proveedor": "DL-124",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 30,
+      "descripcion": "PROTECTOR SOLAR DERMALAB SUN FPS 50 X 30 ML",
+      "gtin": "7790632544999",
+      "marca": "DERMALAB",
+      "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 737.72,
+      "principio_activo": null,
+      "proveedor_id": "P05",
+      "tipo": "PROTECTOR SOLAR",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "SUN FPS 50"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 7
+      },
+      "codigo_proveedor": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 7
+      },
+      "precio_costo": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 7
+      },
+      "moneda": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 7
+      },
+      "proveedor_id": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 7
+      },
+      "marca": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "categoria": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "contenido": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "variante": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      }
+    }
+  },
+  {
+    "item_id": "P05:DL-127",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-FAC-LIM",
+      "codigo_proveedor": "DL-127",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 200,
+      "descripcion": "AGUA MICELAR DERMALAB SENSITIVE X 200 ML",
+      "gtin": "7792303037113",
+      "marca": "DERMALAB",
+      "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 1411.99,
+      "principio_activo": null,
+      "proveedor_id": "P05",
+      "tipo": "AGUA MICELAR",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "SENSITIVE"
+    },
+    "fuentes": {
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 8
+      },
+      "codigo_proveedor": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 8
+      },
+      "precio_costo": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 8
+      },
+      "moneda": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 8
+      },
+      "proveedor_id": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 8
+      },
+      "marca": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "categoria": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "contenido": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "variante": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      }
+    }
+  },
+  {
+    "item_id": "P05:DL-154",
+    "estado": "a_revision",
+    "duplicado_de": null,
+    "motivos_revision": [
+      "gtin_faltante",
+      "dato_obligatorio_faltante"
+    ],
+    "ficha": {
+      "categoria": "DER-FAC-ACN",
+      "codigo_proveedor": "DL-154",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 400,
+      "descripcion": "CREMA DERMALAB CLEAR X 400 ML",
+      "gtin": null,
+      "marca": "DERMALAB",
+      "moneda": null,
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": null,
+      "principio_activo": null,
+      "proveedor_id": "P05",
+      "tipo": "CREMA",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "CLEAR"
+    },
+    "fuentes": {
+      "marca": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "variante": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "contenido": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "categoria": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "proveedor_id": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      }
+    }
+  },
+  {
+    "item_id": "P05:DL-130",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-SOL-ADU",
+      "codigo_proveedor": "DL-130",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 40,
+      "descripcion": "PROTECTOR SOLAR DERMALAB FPS 30 X 40 ML",
+      "gtin": "7791057086095",
+      "marca": "DERMALAB",
+      "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 506.73,
+      "principio_activo": null,
+      "proveedor_id": "P05",
+      "tipo": "PROTECTOR SOLAR",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "FPS 30"
+    },
+    "fuentes": {
+      "marca": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "variante": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "contenido": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 9
+      },
+      "categoria": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 9
+      },
+      "proveedor_id": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 9
+      },
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 9
+      },
+      "precio_costo": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 9
+      },
+      "moneda": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 9
+      }
+    }
+  },
+  {
+    "item_id": "P05:DL-133",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-SOL-INF",
+      "codigo_proveedor": "DL-133",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 50,
+      "descripcion": "PROTECTOR SOLAR DERMALAB KIDS FPS 50+ X 50 ML",
+      "gtin": "7798938462672",
+      "marca": "DERMALAB",
+      "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 567.78,
+      "principio_activo": null,
+      "proveedor_id": "P05",
+      "tipo": "PROTECTOR SOLAR",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "KIDS FPS 50+"
+    },
+    "fuentes": {
+      "marca": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "variante": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "contenido": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 10
+      },
+      "categoria": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 10
+      },
+      "proveedor_id": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 10
+      },
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 10
+      },
+      "precio_costo": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 10
+      },
+      "moneda": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 10
+      }
+    }
+  },
+  {
+    "item_id": "P05:DL-136",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-SOL-POS",
+      "codigo_proveedor": "DL-136",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 200,
+      "descripcion": "GEL DERMALAB AFTER SUN X 200 ML",
+      "gtin": "7798006871252",
+      "marca": "DERMALAB",
+      "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 627.19,
+      "principio_activo": null,
+      "proveedor_id": "P05",
+      "tipo": "GEL",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "AFTER SUN"
+    },
+    "fuentes": {
+      "marca": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "tipo": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "variante": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "contenido": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidad": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "unidades_por_envase": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 11
+      },
+      "categoria": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "descripcion": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 1
+      },
+      "codigo_proveedor": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 11
+      },
+      "proveedor_id": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 11
+      },
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 11
+      },
+      "precio_costo": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 11
+      },
+      "moneda": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 11
+      }
+    }
+  },
+  {
+    "item_id": "P05:DL-139",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-SOL-ADU",
+      "codigo_proveedor": "DL-139",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 200,
+      "descripcion": "PROTECTOR SOLAR DERMALAB FPS 50 X 200 ML",
+      "gtin": "7798937409364",
+      "marca": "DERMALAB",
+      "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 379.41,
+      "principio_activo": null,
+      "proveedor_id": "P05",
+      "tipo": "PROTECTOR SOLAR",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "FPS 50"
+    },
+    "fuentes": {
+      "marca": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "tipo": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "variante": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "contenido": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "unidad": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "unidades_por_envase": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 12
+      },
+      "categoria": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "descripcion": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "codigo_proveedor": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 12
+      },
+      "proveedor_id": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 12
+      },
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 12
+      },
+      "precio_costo": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 12
+      },
+      "moneda": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 12
+      }
+    }
+  },
+  {
+    "item_id": "P05:DL-142",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-FAC-LIM",
+      "codigo_proveedor": "DL-142",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 50,
+      "descripcion": "AGUA MICELAR DERMALAB SENSITIVE X 50 ML",
+      "gtin": "7798622877447",
+      "marca": "DERMALAB",
+      "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 514.27,
+      "principio_activo": null,
+      "proveedor_id": "P05",
+      "tipo": "AGUA MICELAR",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "SENSITIVE"
+    },
+    "fuentes": {
+      "marca": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "tipo": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "variante": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "contenido": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "unidad": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "unidades_por_envase": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 13
+      },
+      "categoria": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "descripcion": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "codigo_proveedor": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 13
+      },
+      "proveedor_id": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 13
+      },
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 13
+      },
+      "precio_costo": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 13
+      },
+      "moneda": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 13
+      }
+    }
+  },
+  {
+    "item_id": "P05:DL-145",
+    "estado": "lista_para_alta",
+    "duplicado_de": null,
+    "motivos_revision": [],
+    "ficha": {
+      "categoria": "DER-COR-HID",
+      "codigo_proveedor": "DL-145",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 200,
+      "descripcion": "CREMA DERMALAB UREA 10 % X 200 ML",
+      "gtin": "7794743202533",
+      "marca": "DERMALAB",
+      "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 271.28,
+      "principio_activo": null,
+      "proveedor_id": "P05",
+      "tipo": "CREMA",
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": "UREA 10 %"
+    },
+    "fuentes": {
+      "marca": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "tipo": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "variante": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "contenido": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "unidad": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "unidades_por_envase": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 14
+      },
+      "categoria": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "descripcion": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "codigo_proveedor": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 14
+      },
+      "proveedor_id": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 14
+      },
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 14
+      },
+      "precio_costo": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 14
+      },
+      "moneda": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 14
+      }
+    }
+  },
+  {
+    "item_id": "P05:DL-148",
+    "estado": "a_revision",
+    "duplicado_de": null,
+    "motivos_revision": [
+      "dato_obligatorio_faltante"
+    ],
+    "ficha": {
+      "categoria": null,
+      "codigo_proveedor": "DL-148",
+      "concentracion": null,
+      "condicion_venta": null,
+      "contenido": 200,
+      "descripcion": null,
+      "gtin": "7796703472314",
+      "marca": null,
+      "moneda": "UYU",
+      "numero_onu": null,
+      "peligro_deposito": null,
+      "precio_costo": 458.22,
+      "principio_activo": null,
+      "proveedor_id": "P05",
+      "tipo": null,
+      "unidad": "ML",
+      "unidades_por_envase": 1,
+      "variante": null
+    },
+    "fuentes": {
+      "contenido": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "unidad": {
+        "archivo": "Dermalab_lanzamientos_2026.pdf",
+        "pagina": 2
+      },
+      "unidades_por_envase": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 15
+      },
+      "codigo_proveedor": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 15
+      },
+      "proveedor_id": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 15
+      },
+      "gtin": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 15
+      },
+      "precio_costo": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 15
+      },
+      "moneda": {
+        "archivo": "Dermalab_lista_precios.xlsx",
+        "hoja": "Lista",
+        "fila": 15
+      }
+    }
+  }
+]

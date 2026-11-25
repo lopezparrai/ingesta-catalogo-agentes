@@ -182,11 +182,48 @@ corrida anterior (ver abajo por qué).
 - **Hooks de esquema en el loop.** En una corrida real, `hook_esquema` frenó una fuente con un campo inventado
   (`linea` de más) y el modelo la corrigió en el siguiente intento.
 
+## El proveedor apartado (Dermalab, P05), una sola corrida
+
+Dermalab se apartó desde el principio y no se usó para ajustar nada. Se corrió **una vez**, con el sistema ya
+commiteado (`py lote.py P05_Dermalab --modo tiempo-real`): 18 fichas en 124 s, USD 0,0398 (**USD 0,0022 por
+ficha**), 0 frenos de hooks. El sistema dijo 13 `lista_para_alta`, 5 `a_revision` y ninguna falla. Eso es lo que
+parecía; lo que pasó es otra cosa.
+
+**Qué falló.** Dermalab manda una lista de precios (Excel: código, EAN y costo) y un PDF de lanzamientos
+(nombre, tipo, contenido y código). En el PDF cada producto es un bloque: **el nombre va arriba y el código
+abajo**. El sistema le asignó a cada código el nombre del bloque **siguiente**. Chequeado contra el PDF, los 18
+productos quedaron con un nombre equivocado; el último (DL-148) quedó sin nombre porque no tenía bloque
+siguiente. Con el nombre equivocado, también quedaron mal la categoría y la variante. Lo que sí quedó bien es
+lo que no dependía del nombre: el contenido, el EAN y el precio.
+
+**Por qué importa.** 13 fichas con el nombre de otro producto salieron como `lista_para_alta`, o sea, listas para
+cargar con el EAN y el precio de un producto y el nombre de otro. Las 5 que fueron a revisión lo hicieron por
+otra razón, correcta (4 códigos no están en la lista de precios, así que no hay EAN ni costo, y DL-148 no tenía
+nombre): el error de fondo no lo detectó nadie (la comparación producto por producto está en `diagnostico_dermalab.md`). El cruce del Excel con el PDF por código funcionó bien.
+
+**Por qué no lo frenó ningún hook.** Los hooks controlan forma y coherencia: esquema, vocabulario, GTIN,
+fuentes, estado contra motivos. La ficha equivocada es perfectamente válida: el nombre "SERUM DERMALAB LIFT X
+400 ML" cumple todas las reglas, y la fuente que cita existe. No hay ninguna regla que mire si el nombre y el
+código **son del mismo bloque**. Además, con una sola fuente por campo, la cita del nombre apunta a una página
+que sí contiene ese texto, así que tampoco se detecta por ahí.
+
+**Mi hipótesis de la causa (no verificada).** Con los demás proveedores el código viene antes o en la misma fila
+que el nombre; con este PDF la lectura asoció cada código con el título que tenía a continuación. No pude
+confirmarlo porque `lote.py` no guarda la salida de los extractores (sí lo hace `orquestador.py`), y repetir la
+extracción sería abrir el apartado por segunda vez.
+
+**Qué haría (no aplicado).** (1) Que el extractor devuelva, junto con cada fila, el texto exacto del bloque del
+que sacó nombre y código, y que un hook compruebe que ambos estén en el mismo bloque. (2) Un control de
+coherencia entre el tipo que dice el bloque ("Crema", "Gel", "Sérum") y la categoría de la ficha: acá se habría
+visto en casi todos los casos. (3) Guardar la salida de los extractores también en `lote.py`, para poder
+diagnosticar.
+
 ## Límites conocidos
 
 - El modelo no es determinista: la misma lista puede dar descripciones o variantes distintas entre corridas.
 - El Batch tarda minutos por ronda (42 minutos los 8 proveedores); hay que tener el proceso corriendo hasta que termine.
 - Con un GTIN inválido, la corrida por Batch dejó el GTIN en la ficha (con su fuente) y las otras corridas lo dejaron vacío; el estado y el motivo (`a_revision`, `gtin_invalido`) son los mismos.
+- Dermalab (el apartado) salió con los nombres de los productos corridos un bloque: ver la sección anterior.
 - Pendiente: asistente de consultas sobre lo generado (`consultas/consultas.json`).
 
 ## Archivos
