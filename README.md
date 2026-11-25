@@ -255,8 +255,8 @@ citadas y abstención. Resultado actual: **29 de 29**. Tres cosas para leerlo bi
 
 ## Demo Day: app y slides
 
-- `streamlit run app/demo_app.py` (`pip install -r requirements.txt`): pestañas Archivo nuevo (con cargador de archivo y corrida guardada), Fichas y revisión,
-  Consultas, Costos, Proveedores (calidad de datos por proveedor: intervalos de Wilson, tests de permutación con corrección de Holm, estimación
-  con contracción y pedido al proveedor armado por código) y Confianza. Todo lee de `resultados/` y `asistente/resultados/`; el logo y los colores están en
-  `app/assets/` y `.streamlit/config.toml`.
-- `demo/slides_demo_day.html`: las 7 slides. `demo/GUION_DEMO.md`: el minuto a minuto.
+- `streamlit run app/demo_app.py` (`pip install -r requirements.txt`): pestaña Archivo nuevo (cargador de archivo o corrida guardada; fichas, cola de revisión,
+  origen de cada dato, costo y tokens), Consultas (el asistente) y Calidad por proveedor (intervalos de Wilson, tests de permutación con corrección de Holm,
+  contracción bayesiana y pedido al proveedor armado por código; logos en `app/assets/proveedores/`). Costos, Dermalab y la carga completa están en las slides.
+  La versión con todas las pestañas quedó en `app/archivo/demo_app_completa.py`. Logo y colores en `app/assets/` y `.streamlit/config.toml`.
+- `demo/slides_demo_day.html`: las 8 slides (tema oscuro). `demo/GUION_DEMO.md`: el minuto a minuto.

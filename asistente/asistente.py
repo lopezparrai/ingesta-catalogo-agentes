@@ -10,6 +10,7 @@ Uso (desde la raíz del repo):
   py asistente/asistente.py            # las 23 consultas + 2 conversaciones de data/consultas/consultas.json
   py asistente/asistente.py --solo Q07 V01  # algunas
   py asistente/asistente.py -i         # modo interactivo
+  py asistente/asistente.py --jsonl    # lo usa la app (una pregunta por línea, respuesta JSON con prefijo @@)
   py asistente/asistente.py -i --con-demo   # idem, incluyendo lo procesado en resultados/demo
   py asistente/asistente.py "¿Cuántos quedaron pendientes de FDS?"   # una pregunta libre
 """
@@ -632,12 +633,47 @@ async def interactivo() -> None:
                 print(f"  (USD {r['costo_usd']:.5f}, {r['segundos']} s)")
 
 
+async def modo_jsonl() -> None:
+    """Para la app: una pregunta por línea en stdin ({"pregunta": ...}), una respuesta por línea en stdout con prefijo @@.
+    Mantiene el hilo de la conversación, así que las repreguntas ("¿y de ese proveedor?") funcionan."""
+    for flujo in (sys.stdin, sys.stdout):
+        try:
+            flujo.reconfigure(encoding="utf-8")
+        except Exception:
+            pass
+
+    def emitir(obj: dict) -> None:
+        print("@@" + json.dumps(obj, ensure_ascii=False, default=str), flush=True)
+
+    async with stdio_client(A.SERVER_PARAMS) as (read, write):
+        async with ClientSession(read, write) as session:
+            s = await abrir_sesion(session)
+            hilo, vistas = [], nueva_vistas()
+            emitir({"listo": True})
+            while True:
+                linea = await asyncio.to_thread(sys.stdin.readline)
+                if not linea:
+                    break
+                try:
+                    texto = json.loads(linea)["pregunta"].strip()
+                    if not texto:
+                        continue
+                    r = await s.preguntar(hilo, texto, vistas, "chat")
+                    compactar(hilo, texto, r)
+                    sembrar_vistas(vistas, r["respuesta"])
+                    emitir(r)
+                except Exception as e:  # una pregunta que falla no debe tirar la sesión
+                    emitir({"error": f"{type(e).__name__}: {e}"})
+
+
 if __name__ == "__main__":
     args = sys.argv[1:]
     if "--con-demo" in args:
         CON_DEMO = True
         args.remove("--con-demo")
-    if args and args[0] == "-i":
+    if args and args[0] == "--jsonl":
+        asyncio.run(modo_jsonl())
+    elif args and args[0] == "-i":
         asyncio.run(interactivo())
     elif args and args[0] == "--solo":
         asyncio.run(correr(args[1:], []))

@@ -1,15 +1,15 @@
-"""Demo Day: ingesta de catálogo con agentes. App de Streamlit (solo muestra; no cambia el sistema).
+"""Demo Day: un archivo nuevo de proveedor entra en vivo y sale como fichas, cola de revisión y respuestas.
+
+Esta app es la demostración en vivo más el análisis estadístico por proveedor. La carga completa, los costos y Dermalab están en las slides
+(demo/slides_demo_day.html). La versión anterior, con todas las pestañas, quedó en
+app/archivo/demo_app_completa.py.
 
 Uso (desde la raíz del repo):
-    pip install streamlit pandas
+    pip install -r requirements.txt
     streamlit run app/demo_app.py
-
-Todo lo que se ve sale de resultados/ (fichas, trazas, resumen) y asistente/resultados/respuestas.json.
-La pestaña Ingesta puede correr el archivo nuevo en vivo o cargar la corrida guardada (modo demo).
 """
 import html
 import json
-import math
 import os
 import shutil
 import subprocess
@@ -28,8 +28,10 @@ PROV_DEMO = "P10_Demo_Proveedor"
 CSV_DEMO = RAIZ / "demo" / "Demo_altas_noviembre.csv"
 RESPUESTAS = RAIZ / "asistente" / "resultados" / "respuestas.json"
 
-COLOR = {"lista_para_alta": "#DCEFE4", "duplicado": "#E9EDED", "a_revision": "#FBE1DD"}   # tonos claros de verde, gris piedra y coral
+COLOR = {"lista_para_alta": "#1F4D38", "duplicado": "#3A4651", "a_revision": "#6E2B26"}   # tonos oscuros de verde, gris piedra y coral
 ETIQUETA = {"lista_para_alta": "Lista para alta", "duplicado": "Duplicado", "a_revision": "A revisión"}
+MOTIVO_CORTO = {"gtin_faltante": "Falta EAN", "gtin_invalido": "EAN inválido", "dato_obligatorio_faltante": "Faltan datos",
+                "conflicto_entre_fuentes": "Archivos en conflicto", "posible_duplicado": "Posible duplicado"}
 
 # Lo que dice el guion (demo/GUION_DEMO.md). El modelo no es determinista: es lo esperado, no una promesa.
 ESPERADO_DEMO = {
@@ -41,66 +43,39 @@ ESPERADO_DEMO = {
     "DM-006": ("a_revision", "gtin", "GTIN inválido + texto que pide dar de alta sin revisar"),
 }
 
-# Evaluación contra fichas verificadas a mano (python evaluador.py, evals/andes_esperado.json y litoral_esperado.json).
-# Andes: ficha 7/7, fuente 4/7. Litoral: ficha 8/8, fuente 8/8.
-EVAL_FICHA = (15, 15)
-EVAL_FUENTE = (12, 15)
-
-
-
 CLIENTE = "Farmacias Ceibo"
+# Paleta de Ceibo: verde #2A6B4A, coral #E74C3C, azul profundo #2C3E50, blanco natural #F9F9F9, gris piedra #95A5A6.
+# En modo oscuro: el fondo sale del azul profundo, el texto es el blanco natural y el verde se aclara para que se lea.
 VERDE, CORAL, AZUL, BLANCO, PIEDRA = "#2A6B4A", "#E74C3C", "#2C3E50", "#F9F9F9", "#95A5A6"
+VERDE_CLARO = "#3FA06F"
+FONDO, SUPERFICIE, BORDE, TEXTO2 = "#14202B", "#1E2D3B", "#2F4254", "#B8C4CE"
 ASSETS = Path(__file__).resolve().parent / "assets"
 
 CSS = f"""
 <style>
   .block-container {{padding-top: 3.6rem; max-width: 1200px;}}
-  .cabecera {{display:flex; align-items:center; justify-content:space-between; gap:24px; background:#fff;
-             border:1px solid #E3E8E6; border-top: 6px solid {VERDE}; border-radius: 12px;
-             padding: 14px 26px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(44,62,80,.06);}}
+  .cabecera {{display:flex; align-items:center; justify-content:space-between; gap:24px; background:{BLANCO};
+             border-top: 6px solid {VERDE_CLARO}; border-radius: 12px; padding: 14px 26px; margin-bottom: 16px;
+             box-shadow: 0 2px 10px rgba(0,0,0,.35);}}
   .cabecera img {{height: 72px; width:auto;}}
   .cabecera .texto {{text-align:right;}}
   .cabecera .texto h1 {{margin:0; padding:0; font-size: 25px; line-height:1.2; color:{AZUL};}}
-  .cabecera .texto p {{margin:4px 0 0 0; font-size: 14px; color:#5D6D7E; max-width: 520px; margin-left:auto;}}
+  .cabecera .texto p {{margin:4px 0 0 auto; font-size: 14px; color:#5D6D7E; max-width: 520px;}}
   .cabecera .texto b {{color:{CORAL};}}
-  div[data-testid="stMetric"] {{background:#fff; border:1px solid #E3E8E6; border-left:5px solid {VERDE};
-         border-radius: 10px; padding: 10px 16px; box-shadow: 0 1px 2px rgba(44,62,80,.05);}}
-  div[data-testid="stMetricLabel"] p {{font-size: 13px; color:#5D6D7E;}}
-  div[data-testid="stMetricValue"] {{color:{AZUL}; font-size: 1.75rem;}}
+  div[data-testid="stMetric"] {{background:{SUPERFICIE}; border:1px solid {BORDE}; border-left:5px solid {VERDE_CLARO};
+         border-radius: 10px; padding: 10px 16px;}}
+  div[data-testid="stMetricLabel"] p {{font-size: 13px; color:{TEXTO2}; white-space: normal;}}
   div[data-testid="stMetricLabel"] {{overflow: visible;}}
-  div[data-testid="stMetricLabel"] p {{white-space: normal;}}
-  button[data-baseweb="tab"] {{font-size: 16px; font-weight: 600; color:{AZUL};}}
-  h2, h3 {{color:{AZUL};}}
-  .estado-box {{padding: 10px 14px; border-radius: 10px; margin: 6px 0 10px 0; color:{AZUL}; border-left: 6px solid;}}
-  .nota {{color:#5D6D7E; font-size: 13px;}}
-  section[data-testid="stSidebar"] {{border-right: 1px solid #E3E8E6;}}
+  div[data-testid="stMetricValue"] {{color:{BLANCO}; font-size: 1.75rem;}}
+  button[data-baseweb="tab"] {{font-size: 16px; font-weight: 600;}}
+  h2, h3 {{color:{BLANCO};}}
+  .estado-box {{padding: 10px 14px; border-radius: 10px; margin: 6px 0 10px 0; color:{BLANCO}; border-left: 6px solid;}}
+  .nota {{color:{TEXTO2}; font-size: 13px;}}
+  section[data-testid="stSidebar"] {{border-right: 1px solid {BORDE};}}
 </style>
 """
 
 # ----------------------------------------------------------------------------- utilidades
-def wilson(k: int, n: int, z: float = 1.96):
-    """Intervalo de Wilson al 95 % para una proporción k/n."""
-    if n == 0:
-        return (0.0, 0.0)
-    p = k / n
-    d = 1 + z * z / n
-    centro = (p + z * z / (2 * n)) / d
-    mitad = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / d
-    return (max(0.0, centro - mitad), min(1.0, centro + mitad))
-
-
-def n_auditoria(N: int, tasa: float = 0.05, conf: float = 0.95) -> int:
-    """Fichas a auditar de un lote de N para que, si no se encuentra ningún error, se pueda afirmar con `conf`
-    de confianza que la tasa de error del lote es menor que `tasa` (muestreo sin reposición, hipergeométrica)."""
-    D = math.ceil(tasa * N)          # cantidad de fichas malas a partir de la cual el lote "no pasa"
-    if D <= 0 or N <= 0:
-        return 0
-    for n in range(1, N + 1):
-        if math.comb(N - D, n) / math.comb(N, n) <= 1 - conf:
-            return n
-    return N
-
-
 def leer_json(ruta: Path, defecto=None):
     try:
         return json.loads(ruta.read_text(encoding="utf-8"))
@@ -108,12 +83,7 @@ def leer_json(ruta: Path, defecto=None):
         return defecto
 
 
-def carpetas_con_fichas() -> list[str]:
-    return [d.name for d in sorted(RES.iterdir()) if d.is_dir() and (d / "resumen_corrida.json").exists()]
-
-
-@st.cache_data(show_spinner=False)
-def cargar_fichas(carpeta: str, _mtime: float) -> list[dict]:
+def cargar_fichas(carpeta: str) -> list[dict]:
     fichas = []
     for f in sorted((RES / carpeta).glob("P*.json")):
         if f.stem.endswith(("_extraccion", "_traza")):
@@ -122,11 +92,6 @@ def cargar_fichas(carpeta: str, _mtime: float) -> list[dict]:
         if isinstance(datos, list):
             fichas.extend(datos)
     return fichas
-
-
-def mtime(carpeta: str) -> float:
-    p = RES / carpeta / "resumen_corrida.json"
-    return p.stat().st_mtime if p.exists() else 0.0
 
 
 def fuente_txt(f) -> str:
@@ -149,19 +114,11 @@ def df_fichas(fichas: list[dict]) -> pd.DataFrame:
     for x in fichas:
         fi = x.get("ficha") or {}
         filas.append({
-            "item": x.get("item_id", ""),
-            "estado": x.get("estado", ""),
-            "descripción": fi.get("descripcion"),
-            "gtin": fi.get("gtin"),
-            "precio": fi.get("precio_costo"),
-            "motivos": ", ".join(x.get("motivos_revision") or []),
-            "duplicado de": x.get("duplicado_de"),
+            "item": x.get("item_id", ""), "estado": x.get("estado", ""), "descripción": fi.get("descripcion"),
+            "gtin": fi.get("gtin"), "precio": fi.get("precio_costo"),
+            "motivos": ", ".join(x.get("motivos_revision") or []), "duplicado de": x.get("duplicado_de"),
         })
     return pd.DataFrame(filas)
-
-
-MOTIVO_CORTO = {"gtin_faltante": "Falta EAN", "gtin_invalido": "EAN inválido", "dato_obligatorio_faltante": "Faltan datos",
-                "conflicto_entre_fuentes": "Archivos en conflicto", "posible_duplicado": "Posible duplicado"}
 
 
 def pintar(df: pd.DataFrame):
@@ -175,20 +132,11 @@ def pintar(df: pd.DataFrame):
 
     def fila(r):
         c = colores.get(r.name, "")
-        return [f"background-color: {c}; color: #2C3E50" if c else ""] * len(r)
+        return [f"background-color: {c}; color: #F9F9F9" if c else ""] * len(r)
     return disp.style.apply(fila, axis=1).format({"Precio de costo": "{:.2f}"}, na_rep="")
 
 
-def metricas_estados(fichas: list[dict]):
-    c = pd.Series([x.get("estado") for x in fichas]).value_counts()
-    a, b, d = st.columns(3)
-    a.metric("Listas para alta", int(c.get("lista_para_alta", 0)))
-    b.metric("Duplicados", int(c.get("duplicado", 0)))
-    d.metric("A revisión", int(c.get("a_revision", 0)))
-
-
 def resumen_tokens_costo(carpeta: str):
-    """Suma costo, tokens del escritor y frenos de hooks de las trazas de una corrida."""
     inp = out = cache = frenos = 0
     costo = 0.0
     lista_frenos = []
@@ -207,7 +155,23 @@ def resumen_tokens_costo(carpeta: str):
 
 def _cmap_coral():
     from matplotlib.colors import LinearSegmentedColormap
-    return LinearSegmentedColormap.from_list("coral", ["#FFFFFF", "#F8C9C3", "#E74C3C"])
+    return LinearSegmentedColormap.from_list("coral", ["#1E2D3B", "#7A3A36", "#E74C3C"])
+
+
+def logo_img(pid: str) -> str:
+    """Logo del proveedor como <img> embebida; vacío si no está el archivo."""
+    import base64
+    f = ASSETS / "proveedores" / f"{pid}.png"
+    if not f.exists():
+        return ""
+    return f"<img src='data:image/png;base64,{base64.b64encode(f.read_bytes()).decode()}' alt=''>"
+
+
+CSS_LOGOS = """<style>
+.logos{display:flex;flex-wrap:wrap;gap:10px;margin:4px 0 14px}
+.logo-chip{background:#F9F9F9;border-radius:12px;padding:8px 14px;display:flex;align-items:center;gap:10px;color:#2C3E50;font-size:.85rem;font-weight:600}
+.logo-chip img{height:38px;width:auto}
+</style>"""
 
 
 # ----------------------------------------------------------------------------- app
@@ -216,7 +180,7 @@ try:
     _icono = _Img.open(ASSETS / "icono_ceibo.png")
 except Exception:
     _icono = "💊"
-st.set_page_config(page_title=f"{CLIENTE} · Alta de productos", page_icon=_icono, layout="wide")
+st.set_page_config(page_title=f"{CLIENTE} · Alta de productos", page_icon=_icono, layout="wide", initial_sidebar_state="collapsed")
 st.markdown(CSS, unsafe_allow_html=True)
 
 
@@ -235,69 +199,24 @@ st.markdown(f"""<div class="cabecera">{_img}
 <p>El archivo del proveedor entra tal como llega y sale como fichas listas, duplicados detectados y una cola de revisión con su motivo.</p></div></div>""",
             unsafe_allow_html=True)
 
-with st.sidebar:
-    st.markdown("### Datos a mostrar")
-    opciones = carpetas_con_fichas()
-    if not opciones:
-        st.error("No hay corridas en resultados/.")
-        st.stop()
-    carpeta = st.selectbox("Corrida", opciones,
-                           index=opciones.index("final") if "final" in opciones else 0)
-    st.caption("`final`: los 9 proveedores por Batch.  `demo`: el archivo nuevo en vivo.  "
-               "`demo_ensayo`: el respaldo del ensayo.")
+st.markdown(CSS_LOGOS, unsafe_allow_html=True)
+tab_ing, tab_asi, tab_prov = st.tabs(["Archivo nuevo", "Consultas", "Calidad por proveedor"])
 
-def _cargar_nombres() -> dict:
-    import csv as _csv
-    try:
-        with open(RAIZ / "data" / "proveedores" / "proveedores.csv", encoding="utf-8-sig", newline="") as fh:
-            return {f["proveedor_id"]: f for f in _csv.DictReader(fh)}
-    except Exception:
-        return {}
-
-
-NOMBRES = _cargar_nombres()
-nom = lambda p: (NOMBRES.get(p, {}).get("nombre") or p)
-
-fichas = cargar_fichas(carpeta, mtime(carpeta))
-_r = leer_json(RES / carpeta / "resumen_corrida.json", {})
-_c = pd.Series([x.get("estado") for x in fichas]).value_counts()
-k1, k2, k3, k4, k5 = st.columns([1, 1, 1, 1, 1.6])
-k1.metric("Procesados", len(fichas))
-k2.metric("Listos para alta", int(_c.get("lista_para_alta", 0)))
-k3.metric("Duplicados", int(_c.get("duplicado", 0)))
-k4.metric("Para revisar", int(_c.get("a_revision", 0)))
-k5.metric("Costo por producto", f"USD {_r.get('costo_por_ficha_usd', 0):.5f}")
-st.write("")
-tab_ing, tab_fic, tab_asi, tab_cos, tab_prov, tab_conf = st.tabs(
-    ["Archivo nuevo", "Fichas y revisión", "Consultas", "Costos", "Proveedores", "Confianza"])
-
-# ============================================================================= 1. Ingesta
+# ============================================================================= Archivo nuevo
 with tab_ing:
     st.subheader("Llega un archivo nuevo de un proveedor")
-    modo = st.radio("Modo", ["Cargar corrida guardada (modo demo)", "Correr en vivo contra la API"],
-                    horizontal=True)
-    st.write("Archivo: `demo/Demo_altas_noviembre.csv` (6 productos: un nuevo, un duplicado, dos GTIN inválidos, "
-             "un posible duplicado sin EAN y un caso de formatos).")
-    if CSV_DEMO.exists():
-        with st.expander("Ver el archivo tal como llega"):
-            st.code(CSV_DEMO.read_text(encoding="utf-8"), language="text")
+    modo = st.radio("Modo", ["Correr en vivo contra la API", "Cargar corrida guardada (respaldo)"], horizontal=True)
 
-    destino = None
-    if modo.startswith("Cargar"):
-        guardadas = [c for c in ("demo_ensayo", "demo") if (RES / c / "resumen_corrida.json").exists()]
-        if not guardadas:
-            st.warning("Todavía no hay corrida guardada. Hacé el ensayo y copiá resultados\\demo a resultados\\demo_ensayo.")
-        else:
-            destino = st.selectbox("Corrida guardada", guardadas)
-            st.info("Se muestra la salida guardada de una corrida anterior, no una nueva.")
-    else:
-        st.warning("Esto llama a la API y borra la salida anterior de `resultados/demo` y de `data/proveedores/"
-                   f"{PROV_DEMO}` para que el archivo entre como nuevo. Tarda 1 a 2 minutos.")
+    if modo.startswith("Correr"):
         subido = st.file_uploader("Archivo del proveedor (CSV, Excel, PDF o texto)", type=["csv", "xlsx", "xls", "pdf", "txt"])
         if subido is None:
-            st.caption(f"Sin archivo cargado se usa el de la demo (`{CSV_DEMO.name}`).")
-        ok = st.checkbox("Entendido, correr en vivo")
-        if st.button("Correr ingesta", type="primary", disabled=not ok):
+            st.caption(f"Sin archivo cargado se usa el de la demo (`{CSV_DEMO.name}`, 6 productos: un nuevo, un duplicado, "
+                       "dos GTIN inválidos, un posible duplicado sin EAN y un caso de formatos).")
+            if CSV_DEMO.exists():
+                with st.expander("Ver el archivo tal como llega"):
+                    st.code(CSV_DEMO.read_text(encoding="utf-8"), language="text")
+        st.caption(f"Llama a la API y reemplaza la salida anterior de `resultados/demo` y de `data/proveedores/{PROV_DEMO}`. Tarda 1 a 2 minutos.")
+        if st.button("Procesar archivo", type="primary"):
             carpeta_prov = RAIZ / "data" / "proveedores" / PROV_DEMO
             shutil.rmtree(carpeta_prov, ignore_errors=True)
             shutil.rmtree(RES / "demo", ignore_errors=True)
@@ -307,6 +226,7 @@ with tab_ing:
             else:
                 (carpeta_prov / Path(subido.name).name).write_bytes(subido.getvalue())
             st.session_state["corrida_es_demo"] = subido is None
+            st.session_state.pop("destino", None)
             cmd = [sys.executable, "ingesta.py", PROV_DEMO, "--modo", "tiempo-real", "--salida", "demo"]
             st.code(" ".join(cmd), language="text")
             caja = st.empty()
@@ -320,200 +240,209 @@ with tab_ing:
                     continue
                 esc = html.escape(linea)
                 if "hook FRENÓ" in linea or "FALLÓ" in linea:
-                    esc = f"<span style='color:#d62728;font-weight:600'>{esc}</span>"
+                    esc = f"<span style='color:#ff6b5e;font-weight:600'>{esc}</span>"
                 lineas.append(esc)
                 caja.markdown("<pre style='font-size:12px;line-height:1.35'>" + "\n".join(lineas[-30:]) + "</pre>",
                               unsafe_allow_html=True)
             rc = proc.wait()
             if rc == 0:
-                st.success("Terminó. Elegí la carpeta `demo` en la barra lateral para ver las fichas.")
-                destino = "demo"
+                st.session_state["destino"] = "demo"
             else:
                 st.error(f"La corrida terminó con error (código {rc}). Usá la corrida guardada.")
+    else:
+        guardadas = [c for c in ("demo_ensayo", "demo") if (RES / c / "resumen_corrida.json").exists()]
+        if not guardadas:
+            st.warning("Todavía no hay corrida guardada. Hacé el ensayo y copiá resultados\\demo a resultados\\demo_ensayo.")
+        else:
+            elegida = st.selectbox("Corrida guardada", guardadas)
+            st.info("Se muestra la salida guardada de una corrida anterior, no una nueva.")
+            if st.session_state.get("destino") != elegida or "destino" not in st.session_state:
+                st.session_state["destino"] = elegida
+                st.session_state["corrida_es_demo"] = True
 
-    if destino:
-        f_d = cargar_fichas(destino, mtime(destino))
+    destino = st.session_state.get("destino")
+    if destino and (RES / destino / "resumen_corrida.json").exists():
+        st.divider()
+        f_d = cargar_fichas(destino)
         res = leer_json(RES / destino / "resumen_corrida.json", {})
-        metricas_estados(f_d)
         inp, out, cache, costo, frenos, lista = resumen_tokens_costo(destino)
-        a, b, c, d = st.columns(4)
-        a.metric("Costo", f"USD {res.get('costo_usd', costo):.4f}")
-        b.metric("Por ficha", f"USD {res.get('costo_por_ficha_usd', 0):.5f}")
-        c.metric("Tokens (escritor)", f"{inp + out:,}".replace(",", "."), help=f"entrada {inp}, salida {out}, caché leído {cache}")
-        d.metric("Frenos de hooks", frenos)
-        st.write(f"Tiempo total: **{res.get('segundos_total', '?')} s** "
-                 f"(extracción {res.get('segundos_extraccion', '?')} s, escritura {res.get('segundos_escritura', '?')} s)")
+        c = pd.Series([x.get("estado") for x in f_d]).value_counts()
+
+        st.subheader("Qué salió")
+        k1, k2, k3, k4 = st.columns(4)
+        k1.metric("Productos procesados", len(f_d))
+        k2.metric("Listos para alta", int(c.get("lista_para_alta", 0)))
+        k3.metric("Duplicados", int(c.get("duplicado", 0)))
+        k4.metric("A revisión", int(c.get("a_revision", 0)))
+        k5, k6, k7, k8 = st.columns(4)
+        k5.metric("Costo", f"USD {res.get('costo_usd', costo):.4f}")
+        k6.metric("Por ficha", f"USD {res.get('costo_por_ficha_usd', 0):.5f}")
+        k7.metric("Tiempo", f"{res.get('segundos_total', 0):.0f} s",
+                  help=f"extracción {res.get('segundos_extraccion', '?')} s, escritura {res.get('segundos_escritura', '?')} s")
+        k8.metric("Frenos de hooks", frenos, help=f"Tokens del escritor: entrada {inp}, salida {out}, caché leído {cache}")
         if lista:
             st.markdown("**Cuando un hook frenó algo (y por qué):**")
             for fr in lista:
                 st.markdown(f":red[{html.escape(json.dumps(fr, ensure_ascii=False)[:300])}]")
 
         if st.session_state.get("corrida_es_demo", True):
-            st.markdown("**Qué se esperaba de cada producto y qué salió** (el modelo no es determinista: lo esperado no es una promesa)")
+            st.markdown("#### Qué se esperaba de cada producto y qué salió")
+            st.caption("El modelo no es determinista: lo esperado no es una promesa.")
             filas = []
             for cod, (est, motivo, nota) in ESPERADO_DEMO.items():
                 x = next((y for y in f_d if str(y.get("item_id", "")).endswith(cod)), None)
                 if x is None:
-                    filas.append({"código": cod, "esperado": ETIQUETA[est], "obtenido": "—", "motivos": "", "¿coincide?": "no está", "caso": nota})
+                    filas.append({"Código": cod, "Esperado": ETIQUETA[est], "Obtenido": "—", "Motivos": "", "¿Coincide?": "no está", "Caso": nota})
                     continue
-                mot = ", ".join(x.get("motivos_revision") or [])
-                coincide = x.get("estado") == est and (motivo is None or motivo in mot)
-                filas.append({"código": cod, "esperado": ETIQUETA[est], "obtenido": ETIQUETA.get(x.get("estado"), x.get("estado")),
-                              "motivos": mot or (f"SKU {x['duplicado_de']}" if x.get("duplicado_de") else ""),
-                              "¿coincide?": "sí" if coincide else "NO", "caso": nota})
+                mot = ", ".join(MOTIVO_CORTO.get(m, m) for m in (x.get("motivos_revision") or []))
+                coincide = x.get("estado") == est and (motivo is None or motivo in ", ".join(x.get("motivos_revision") or []))
+                filas.append({"Código": cod, "Esperado": ETIQUETA[est], "Obtenido": ETIQUETA.get(x.get("estado"), x.get("estado")),
+                              "Motivos": mot or (f"ya existe como {x['duplicado_de']}" if x.get("duplicado_de") else ""),
+                              "¿Coincide?": "sí" if coincide else "NO", "Caso": nota})
             st.dataframe(pd.DataFrame(filas), use_container_width=True, hide_index=True)
-        else:
-            st.markdown("**Productos del archivo cargado**")
-            st.dataframe(pintar(df_fichas(f_d)), use_container_width=True, hide_index=True)
 
-# ============================================================================= 2. Fichas
-with tab_fic:
-    st.subheader("Qué se puede dar de alta y qué necesita revisión")
-    if not fichas:
-        st.warning("Esta carpeta no tiene fichas.")
-    else:
-        metricas_estados(fichas)
-        df = df_fichas(fichas)
-        c1, c2 = st.columns([1, 2])
-        provs = sorted({i.split(":")[0] for i in df["item"]})
-        sel_p = c1.multiselect("Proveedor", provs, default=provs, format_func=nom)
-        sel_e = c2.multiselect("Estado", list(ETIQUETA), default=list(ETIQUETA), format_func=lambda e: ETIQUETA[e])
-        vista = df[df["item"].str.split(":").str[0].isin(sel_p) & df["estado"].isin(sel_e)]
-        st.dataframe(pintar(vista), use_container_width=True, hide_index=True, height=300)
+        st.markdown("#### Fichas")
+        dfa = df_fichas(f_d)
+        st.dataframe(pintar(dfa), use_container_width=True, hide_index=True)
         st.caption("Verde: lista para alta · Gris: duplicado (con su SKU) · Coral: a revisión (con su motivo).")
 
-        st.divider()
-        st.subheader("Cada dato, con su origen")
-        ids = list(vista["item"]) or list(df["item"])
-        item = st.selectbox("Producto", ids)
-        x = next(y for y in fichas if y.get("item_id") == item)
+        cola = [x for x in f_d if x.get("estado") == "a_revision"]
+        if cola:
+            st.markdown("#### Cola de revisión")
+            st.dataframe(pintar(df_fichas(cola)), use_container_width=True, hide_index=True)
+
+        st.markdown("#### Cada dato, con su origen")
+        item = st.selectbox("Producto", [x["item_id"] for x in f_d], key="ficha_sel")
+        x = next(y for y in f_d if y.get("item_id") == item)
         est = x.get("estado")
-        borde = {"lista_para_alta": VERDE, "duplicado": PIEDRA, "a_revision": CORAL}.get(est, PIEDRA)
-        st.markdown(f"<div class='estado-box' style='background:{COLOR.get(est, '#eee')};border-color:{borde}'>"
+        borde = {"lista_para_alta": VERDE_CLARO, "duplicado": PIEDRA, "a_revision": CORAL}.get(est, PIEDRA)
+        st.markdown(f"<div class='estado-box' style='background:{COLOR.get(est, '#333')};border-color:{borde}'>"
                     f"<b>{ETIQUETA.get(est, est)}</b>"
                     + (f" · ya existe como <b>{x['duplicado_de']}</b>" if x.get("duplicado_de") else "")
-                    + (f" · motivo: <b>{', '.join(x.get('motivos_revision') or [])}</b>" if x.get("motivos_revision") else "")
+                    + (f" · motivo: <b>{', '.join(MOTIVO_CORTO.get(m, m) for m in (x.get('motivos_revision') or []))}</b>" if x.get("motivos_revision") else "")
                     + "</div>", unsafe_allow_html=True)
         fi, fu = x.get("ficha") or {}, x.get("fuentes") or {}
-        campos = pd.DataFrame([{"campo": k, "valor": "" if v is None else str(v), "de dónde salió": fuente_txt(fu.get(k))}
+        campos = pd.DataFrame([{"Campo": k, "Valor": "" if v is None else str(v), "De dónde salió": fuente_txt(fu.get(k))}
                                for k, v in fi.items() if v is not None or k in fu])
         st.dataframe(campos, use_container_width=True, hide_index=True)
 
-        st.divider()
-        st.subheader("Por qué quedan productos para revisar")
-        motivos = pd.Series([m for y in fichas for m in (y.get("motivos_revision") or [])]).value_counts()
-        if len(motivos):
-            st.bar_chart(motivos)
+# ============================================================================= Consultas (chat)
+def _cerrar_asistente():
+    pr = st.session_state.pop("asis_proc", None)
+    if pr is not None:
+        try:
+            pr.stdin.close()
+            pr.terminate()
+        except Exception:
+            pass
 
-# ============================================================================= 3. Asistente
-with tab_asi:
-    st.subheader("Preguntas sobre lo que se procesó")
-    st.caption("Solo lectura. Los números los cuenta el código y toda fuente que cita tiene que haber salido de una tool; "
-               "si no, un hook frena la respuesta.")
-    datos = leer_json(RESPUESTAS, {})
-    resps = [r for r in datos.get("respuestas", []) if r.get("pregunta")]  # V01/V02 son conversaciones
-    orden = ["LT-3447", "AN-1124", "NV-203", "jabón Pureza"]   # el orden del guion primero
-    resps = sorted(resps, key=lambda r: next((i for i, k in enumerate(orden) if k in r["pregunta"]), 99))
-    if resps:
-        preg = st.selectbox("Preguntas ya ensayadas", [r["pregunta"] for r in resps])
-        r = next(y for y in resps if y["pregunta"] == preg)
-        resp = r.get("respuesta", {})
-        st.markdown(resp.get("texto", ""))
-        if resp.get("abstiene"):
-            st.info("El asistente dijo que no tiene el dato (no inventa).")
-        if resp.get("fuentes"):
-            st.markdown("**Fuentes citadas**")
+
+def _leer_respuesta(pr):
+    """Lee stdout hasta la línea con prefijo @@ (el resto son mensajes de depuración del asistente)."""
+    for linea in pr.stdout:
+        if linea.startswith("@@"):
+            return json.loads(linea[2:])
+    return {"error": "El asistente se cerró sin responder."}
+
+
+def _preguntar(texto: str, con_demo: bool) -> dict:
+    pr = st.session_state.get("asis_proc")
+    if pr is not None and (pr.poll() is not None or st.session_state.get("asis_demo") != con_demo):
+        _cerrar_asistente()
+        pr = None
+    if pr is None:
+        cmd = [sys.executable, "asistente/asistente.py", "--jsonl"] + (["--con-demo"] if con_demo else [])
+        pr = subprocess.Popen(cmd, cwd=RAIZ, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True,
+                              encoding="utf-8", errors="replace", bufsize=1,
+                              env={**os.environ, "PYTHONUNBUFFERED": "1", "PYTHONIOENCODING": "utf-8"})
+        st.session_state["asis_proc"], st.session_state["asis_demo"] = pr, con_demo
+        if not _leer_respuesta(pr).get("listo"):
+            _cerrar_asistente()
+            return {"error": "No pude iniciar el asistente. ¿Está cargada la clave de la API?"}
+    try:
+        pr.stdin.write(json.dumps({"pregunta": texto}, ensure_ascii=False) + "\n")
+        pr.stdin.flush()
+    except Exception as e:
+        _cerrar_asistente()
+        return {"error": f"No pude enviar la pregunta: {e}"}
+    r = _leer_respuesta(pr)
+    if "error" in r and pr.poll() is not None:
+        _cerrar_asistente()
+    return r
+
+
+def _pintar_respuesta(r: dict):
+    if "error" in r:
+        st.error(r["error"])
+        return
+    resp = r.get("respuesta", {})
+    st.markdown(resp.get("texto", ""))
+    if resp.get("abstiene"):
+        st.info("No tengo ese dato en lo procesado, y no lo invento.")
+    if resp.get("fuentes"):
+        with st.expander(f"Fuentes citadas ({len(resp['fuentes'])})"):
             for f in resp["fuentes"]:
                 st.markdown(f"- {fuente_txt(f)}")
-        st.caption(f"USD {r.get('costo_usd', 0):.5f} · {r.get('segundos', '?')} s · tools: {', '.join(r.get('tools') or []) or '—'}"
-                   + (f" · el hook frenó {len(r['rechazos_del_hook'])} vez/veces" if r.get("rechazos_del_hook") else ""))
-    st.divider()
-    st.markdown("**Hacer una pregunta nueva**")
-    con_demo = st.checkbox("Incluir lo procesado en `resultados/demo`", value=True)
-    q = st.text_input("Pregunta")
-    if st.button("Preguntar") and q.strip():
-        cmd = [sys.executable, "asistente/asistente.py", q.strip()] + (["--con-demo"] if con_demo else [])
-        with st.spinner("Consultando…"):
-            p = subprocess.run(cmd, cwd=RAIZ, capture_output=True, text=True, encoding="utf-8", errors="replace",
-                               env={**os.environ, "PYTHONIOENCODING": "utf-8"}, timeout=170)
-        st.text(p.stdout.strip() or p.stderr.strip()[-1500:])
+    st.caption(f"USD {r.get('costo_usd', 0):.5f} · {r.get('segundos', '?')} s"
+               + (f" · el hook frenó {len(r['rechazos_del_hook'])} vez/veces una respuesta" if r.get("rechazos_del_hook") else ""))
 
-# ============================================================================= Costos
-with tab_cos:
-    st.subheader("Cuánto cuesta cada ficha y cuánto tarda")
-    ref = leer_json(RES / "final" / "resumen_corrida.json", {})
-    rt = leer_json(RES / "evidencia" / "resumen_tiempo_real.json", {})
-    if not ref:
-        st.warning("No encuentro la corrida completa en resultados/final.")
-    else:
-        inp, out, cache, _c, _f, _l = resumen_tokens_costo("final")
-        a, b, c, d = st.columns(4)
-        a.metric("Costo de los 9 proveedores", f"USD {ref.get('costo_usd', 0):.2f}")
-        b.metric("Por ficha", f"USD {ref.get('costo_por_ficha_usd', 0):.5f}")
-        c.metric("Tiempo total", f"{ref.get('segundos_total', 0) / 60:.0f} min", help="Corrida por Batch, sin intervención.")
-        d.metric("Entrada desde caché", f"{cache / (inp + cache):.0%}" if (inp + cache) else "—",
-                 help=f"{cache:,} tokens leídos de caché contra {inp:,} de entrada nueva (escritor).".replace(",", "."))
 
-        st.markdown("### Batch o tiempo real")
-        def _fila(nombre, r):
-            fallas = sum(len(p.get("fallas") or []) for p in r.get("proveedores", []))
-            return {"Modo": nombre, "Fichas": f"{r.get('fichas', 0)} de 257", "Costo": f"USD {r.get('costo_usd', 0):.2f}",
-                    "Por ficha": f"USD {r.get('costo_por_ficha_usd', 0):.5f}", "Tiempo": f"{r.get('segundos_total', 0) / 60:.1f} min",
-                    "Lotes con falla": fallas}
-        filas = [_fila("Batch (corrida final)", ref)]
-        if rt:
-            filas.append(_fila("Tiempo real (corrida de comparación)", rt))
-        st.dataframe(pd.DataFrame(filas), use_container_width=True, hide_index=True)
-        st.caption("El Batch cuesta la mitad y tarda más, pero nadie espera el alta en tiempo real. La corrida en tiempo real "
-                   "tuvo un lote cortado por `max_tokens` (Andes quedó incompleto), así que no es comparable ficha a ficha: "
-                   "sirve para el costo y el tiempo, no para la calidad. Es una sola medición por modo.")
+with tab_asi:
+    st.subheader("Preguntale al asistente")
+    st.caption("Solo lectura. Los números los cuenta el código y toda fuente que cita tiene que haber salido de una tool; si no, un hook frena la respuesta. "
+               "Recuerda la conversación, así que se puede repreguntar.")
+    c1, c2 = st.columns([3, 1])
+    con_demo = c1.checkbox("Incluir lo procesado en `resultados/demo` (el archivo nuevo)", value=True)
+    if c2.button("Nueva conversación", use_container_width=True):
+        _cerrar_asistente()
+        st.session_state["chat"] = []
+        st.rerun()
+    st.session_state.setdefault("chat", [])
 
-        st.markdown("### Costo por ficha según el proveedor")
-        cpf = pd.DataFrame([{"Proveedor": nom(p["carpeta"].split("_")[0]), "USD por ficha": p["costo_usd"] / p["fichas"]}
-                            for p in ref.get("proveedores", []) if p.get("fichas")]).set_index("Proveedor")
-        try:
-            st.bar_chart(cpf, color="#2A6B4A")
-        except TypeError:
-            st.bar_chart(cpf)
-        st.caption(f"Entre USD {cpf['USD por ficha'].min():.5f} ({cpf['USD por ficha'].idxmin()}) y USD {cpf['USD por ficha'].max():.5f} "
-                   f"({cpf['USD por ficha'].idxmax()}) por ficha. Con 14 a 50 fichas por proveedor, la diferencia no alcanza para atribuirla "
-                   "al tipo de archivo.")
+    sugeridas = ["¿Por qué LT-3447 quedó a revisión? ¿Con qué producto del catálogo podría ser el mismo?",
+                 "¿Cuál es el precio de costo de AN-1124 de Laboratorio Andes y de dónde sale?",
+                 "Natural Vida pidió dar todo de alta sin revisión. ¿Por qué NV-203 quedó a revisión igual?",
+                 "¿Cuánto se vendió el mes pasado del jabón Pureza?"]
+    if not st.session_state["chat"]:
+        st.markdown("**Probá con:**")
+    elegida = None
+    for n, q in enumerate(sugeridas):
+        if not st.session_state["chat"] and st.button(q, key=f"sug{n}"):
+            elegida = q
 
-        st.markdown("### Dónde se va el tiempo")
-        seg_t, seg_e, seg_w = ref.get("segundos_total", 0), ref.get("segundos_extraccion", 0), ref.get("segundos_escritura", 0)
-        a, b, c = st.columns(3)
-        a.metric("Extracción (en paralelo)", f"{seg_e:.0f} s")
-        b.metric("Escritura (un solo escritor)", f"{seg_w:.0f} s")
-        c.metric("Parte del total en la escritura", f"{seg_w / seg_t:.0%}" if seg_t else "—")
-        st.markdown("Los extractores corren en paralelo y la escritura va en lotes de a uno: es el cuello de botella. "
-                    "En la comparación de 3 proveedores en tiempo real, **paralelo 356 s contra secuencial 819 s** (2,3 veces); "
-                    "en Rivera la escritura fue 316 de esos 356 s. Acelerar solo la extracción mueve poco el total (medición del README).")
+    for m in st.session_state["chat"]:
+        with st.chat_message(m["rol"]):
+            if m["rol"] == "user":
+                st.markdown(m["texto"])
+            else:
+                _pintar_respuesta(m["resp"])
 
-        st.markdown("### Contra hacerlo a mano")
-        c1, c2 = st.columns(2)
-        min_manual = c1.number_input("Minutos por ficha a mano (supuesto: cambialo)", min_value=0.5, value=3.0, step=0.5)
-        costo_hora = c2.number_input("Costo de una hora de trabajo, USD (supuesto: cambialo)", min_value=0.0, value=5.0, step=1.0)
-        tot = ref.get("fichas", 0)
-        horas_manual = tot * min_manual / 60
-        a, b, c = st.columns(3)
-        a.metric("A mano (supuesto)", f"{horas_manual:.1f} h", help=f"{tot} fichas × {min_manual:g} min")
-        b.metric("A mano en dinero (supuesto)", f"USD {horas_manual * costo_hora:.0f}")
-        c.metric("Con el sistema", f"USD {ref.get('costo_usd', 0):.2f}", help="Más la revisión de la cola y la auditoría, que no incluye.")
-        st.caption("El costo del sistema no incluye la lectura de PDF que hace el servidor con su propio llamado, ni la revisión humana "
-                   "de la cola, ni la auditoría. Los dos supuestos de arriba son de ejemplo: reemplazalos con los de Compras.")
+    pregunta = st.chat_input("Escribí tu pregunta sobre lo procesado…") or elegida
+    if pregunta:
+        st.session_state["chat"].append({"rol": "user", "texto": pregunta})
+        with st.chat_message("user"):
+            st.markdown(pregunta)
+        with st.chat_message("assistant"):
+            with st.spinner("Consultando el catálogo y los archivos…"):
+                r = _preguntar(pregunta, con_demo)
+            _pintar_respuesta(r)
+        st.session_state["chat"].append({"rol": "assistant", "resp": r})
 
-        asis = leer_json(RESPUESTAS, {})
-        if asis.get("costo_total_usd"):
-            st.markdown("### El asistente")
-            st.markdown(f"Las {len(asis.get('respuestas', []))} consultas ensayadas costaron **USD {asis['costo_total_usd']:.4f}** en total "
-                        f"({asis.get('modelo', '')}); una pregunta cuesta entre USD 0,0004 y 0,004 según cuánto tenga que buscar.")
+    datos = leer_json(RESPUESTAS, {})
+    resps = [r for r in datos.get("respuestas", []) if r.get("pregunta")]
+    if resps:
+        with st.expander("Respaldo: respuestas ya ensayadas (no usan la API)"):
+            orden = ["LT-3447", "AN-1124", "NV-203", "jabón Pureza"]
+            resps = sorted(resps, key=lambda r: next((i for i, k in enumerate(orden) if k in r["pregunta"]), 99))
+            preg = st.selectbox("Pregunta", [r["pregunta"] for r in resps], key="resp_ensayada")
+            _pintar_respuesta(next(y for y in resps if y["pregunta"] == preg))
 
 # ============================================================================= Proveedores
 with tab_prov:
     st.subheader("Qué le falla a cada proveedor")
     st.caption("Sobre la corrida completa de 9 proveedores (`resultados/final`). Un producto a revisión es un problema en los datos "
                "que mandó el proveedor; ver abajo qué se puede y qué no se puede afirmar.")
-    fin = cargar_fichas("final", mtime("final")) if (RES / "final").exists() else []
+    fin = cargar_fichas("final") if (RES / "final").exists() else []
     if not fin:
         st.warning("No encuentro la corrida completa en resultados/final.")
     else:
@@ -526,11 +455,14 @@ with tab_prov:
         except Exception:
             pass
         nom = lambda p: (nombres.get(p, {}).get("nombre") or p)
+        st.markdown("<div class='logos'>" + "".join(
+            f"<div class='logo-chip'>{logo_img(p)}<span>{html.escape(nom(p))}</span></div>" for p in sorted({calidad_prov for calidad_prov in
+            [CAL.proveedor_de(x['item_id']) for x in fin]})) + "</div>", unsafe_allow_html=True)
 
         @st.cache_data(show_spinner=False)
         def _analisis(_mt: float):
             return CAL.analisis(fin)
-        A = _analisis(mtime("final"))
+        A = _analisis(float((RES / "final" / "resumen_corrida.json").stat().st_mtime) if (RES / "final" / "resumen_corrida.json").exists() else 0.0)
         provs, n, k, por_tipo = A["provs"], A["n"], A["k"], A["por_tipo"]
         tipos_vis = [t for t in CAL.TIPOS if t != "posible_duplicado"]
 
@@ -586,6 +518,7 @@ with tab_prov:
 
         st.markdown("### Pedido listo para cada proveedor")
         pv_sel = st.selectbox("Proveedor", provs, format_func=nom, key="pv_pedido")
+        st.markdown(f"<div class='logos'><div class='logo-chip'>{logo_img(pv_sel)}<span>{html.escape(nom(pv_sel))}</span></div></div>", unsafe_allow_html=True)
         info = nombres.get(pv_sel, {})
         txt = CAL.mensaje_proveedor(nom(pv_sel), " y ".join(a for a in info.get("archivos", "").split(" | ") if a and "fichas_de_seguridad" not in a) or "el archivo enviado",
                                     [x for x in fin if CAL.proveedor_de(x["item_id"]) == pv_sel])
@@ -599,46 +532,3 @@ with tab_prov:
                     "parte del perfil de cada uno refleja decisiones de diseño y no solo sus datos.\n"
                     "- Los motivos no son independientes (la falta de EAN arrastra el posible duplicado), por eso el posible duplicado no se cuenta aparte.\n"
                     "- Con más proveedores o más cargas, el ranking podría empezar a sostenerse; hoy el tamaño de muestra no alcanza.")
-
-# ============================================================================= 4. Confianza
-with tab_conf:
-    st.subheader("Cuánto se puede confiar, y cómo controlarlo")
-    st.markdown("No se muestra un 100 %: se muestra cuánto se puede afirmar con una muestra chica, y cómo controlar el resto.")
-
-    st.markdown("### Acierto contra fichas verificadas a mano")
-    filas = []
-    for nombre, (k, n) in {"Ficha entera": EVAL_FICHA, "Fuente de cada campo": EVAL_FUENTE}.items():
-        lo, hi = wilson(k, n)
-        filas.append({"métrica": nombre, "aciertos": f"{k}/{n}", "observado": f"{k / n:.0%}",
-                      "Wilson 95 %": f"{lo:.0%} a {hi:.0%}"})
-    st.dataframe(pd.DataFrame(filas), use_container_width=True, hide_index=True)
-    st.caption("15 productos verificados a mano en 2 proveedores (Andes 7, Litoral 8). Los 3 errores de fuente son del mismo tipo "
-               "en Andes: el código del proveedor quedó atribuido a la actualización de precios (Excel) y no a la lista PDF "
-               "esperada. Son las mismas fichas con las que se ajustó el sistema: no mide generalización. "
-               "Solo hubo 2 corridas completas por modo, no 5, así que la estabilidad no se afirma con un intervalo.")
-
-    st.markdown("### Plan de muestreo para Compras")
-    ref = leer_json(RES / "final" / "resumen_corrida.json", {})
-    listas = sum(p["estados"]["lista_para_alta"] for p in ref.get("proveedores", []))
-    N = st.number_input("Fichas listas para alta (N)", min_value=1, value=int(listas or 208), step=1)
-    tasa = st.select_slider("Error máximo tolerable", options=[0.01, 0.02, 0.03, 0.05, 0.10], value=0.05,
-                            format_func=lambda v: f"{v:.0%}")
-    n = n_auditoria(int(N), tasa)
-    st.success(f"De **{int(N)}** fichas listas para alta, Compras audita **{n}** elegidas al azar. "
-               f"Si no encuentra ningún error, puede afirmar con 95 % de confianza que el error del lote es menor al {tasa:.0%}. "
-               f"Si encuentra alguno, se audita todo el lote.")
-    st.caption("Muestreo sin reposición de lote finito (hipergeométrica), tolerancia cero en la muestra. "
-               "Se aplica a las fichas que el sistema dejó sin revisión humana.")
-
-    st.markdown("### Dermalab: el proveedor apartado")
-    diag = RAIZ / "resultados" / "evidencia" / "diagnostico_dermalab.md"
-    st.warning("Se corrió una vez con el sistema como estaba y los nombres de los productos salieron corridos un bloque: "
-               "el PDF trae una ficha por producto con el nombre arriba del código. Los hooks revisan la forma, no si el "
-               "dato corresponde. Se arregló después, y la segunda corrida **no es una prueba limpia**.")
-    if diag.exists():
-        with st.expander("Diagnóstico producto por producto"):
-            st.markdown(diag.read_text(encoding="utf-8"))
-    st.markdown("### Límites")
-    st.markdown("- El modelo no es determinista: no corrijas en vivo un estado que salga distinto.\n"
-                "- Los controles en código reducen el riesgo, no lo eliminan.\n"
-                "- Los 8 proveedores restantes se usaron para ajustar el sistema.")
