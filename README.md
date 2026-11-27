@@ -2,6 +2,8 @@
 
 El sistema toma las listas de productos nuevos que envían los proveedores de Farmacias Ceibo (una cadena ficticia) y las convierte en fichas que cumplen el estándar de la cadena. En el camino reconoce los productos que ya están en el catálogo y manda a revisión lo que no puede resolver, indicando el motivo. Cada campo de cada ficha guarda su origen: archivo y página, hoja y fila, o línea.
 
+**Presentación del Demo Day:** [ver las slides](https://lopezparrai.github.io/ingesta-catalogo-agentes/presentacion/) (el HTML está en `docs/presentacion/`).
+
 Funciona con la API de Anthropic y Claude Haiku 5.5 (claude-haiku-5-5). La auditoría (ver Auditoría) usa un modelo más capaz, Claude Sonnet 5.5, la cual corre por separado y sirve para validar los resultados, no para generarlos.
 
 ## Cómo se usa
@@ -289,6 +291,7 @@ en la muestra: USD 0,73. Resultados en `auditoria/resultados_auditor/` y en la p
 | `resultados/agente_unico/` | La base de M1–M3, contra la que se compara ("vs agente único"). |
 | `auditoria/` | Auditoría de los 9 proveedores: sorteo estratificado de 53 y auditor con Sonnet 5.5 (ver "Auditoría"). |
 | `resultados/evidencia/` | Dermalab: la corrida original y el diagnóstico producto por producto; y las dos corridas con error. |
+| `docs/` | La presentación del Demo Day (`presentacion/index.html`, publicable con GitHub Pages) y las capturas de la app (`capturas/`). |
 
 ## Demo Day: la app
 
@@ -308,3 +311,31 @@ en la muestra: USD 0,73. Resultados en `auditoria/resultados_auditor/` y en la p
 Dos interruptores: **Vista técnica** (arriba a la derecha: agentes, tokens, caché, hooks y tools; apagada es la vista
 de Compras) y **En vivo / Respaldo** (menú lateral: con Respaldo se muestra la corrida y las respuestas ya ensayadas,
 sin API).
+
+### Capturas
+
+Vista de Compras (Vista técnica apagada).
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/capturas/01-archivo-nuevo.png" alt="Pestaña Archivo nuevo">
+      <br><sub><b>Archivo nuevo</b>: se elige el proveedor, se sube el archivo y se elige entre tiempo real o carga masiva (Batch).</sub>
+    </td>
+    <td width="50%" valign="top">
+      <img src="docs/capturas/02-consultas.png" alt="Pestaña Consultas">
+      <br><sub><b>Consultas</b>: el asistente, con cuatro preguntas de arranque; cada respuesta indica archivo, hoja y fila.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/capturas/03-fichas.png" alt="Pestaña Fichas por proveedor">
+      <br><sub><b>Fichas por proveedor</b>: lo procesado (257 productos), el origen de cada dato y el pedido listo para el proveedor.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <img src="docs/capturas/04-scorecard.png" alt="Pestaña Scorecard de calidad">
+      <br><sub><b>Scorecard de calidad</b>: ranking de riesgo de los 9 proveedores con tasa cruda, tasa ajustada e intervalo del 95 %.</sub>
+    </td>
+  </tr>
+</table>
+
